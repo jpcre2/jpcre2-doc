@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>C++ wrapper for PCRE2 library</p>
-<p><a href="https://travis-ci.org/jpcre2/jpcre2/"></a> <a href="http://docs.neurobin.org/jpcre2/index.html"></a> <a href="https://isocpp.org/"></a> <a href="http://www.regular-expressions.info/pcre2.html"></a> <a href="http://www.pcre.org/"></a></p>
+<p><a href="https://travis-ci.org/jpcre2/jpcre2/"></a> <a href="http://docs.neurobin.org/jpcre2/index.html"></a> <a href="https://isocpp.org/"></a> <a href="http://www.pcre.org/"></a></p>
 <blockquote class="doxtable">
 <p>PCRE2 is the name used for a revised API for the PCRE library, which is a set of functions, written in C, that implement regular expression pattern matching using the same syntax and semantics as Perl, with just a few differences. Some features that appeared in Python and the original PCRE before they appeared in Perl are also available using the Python syntax. </p>
 </blockquote>
@@ -303,21 +303,17 @@ The configure script</h1>
 <tr>
 <th>Option </th><th>Details  </th></tr>
 <tr>
-<td><code>--enable-jpcre2-8</code> </td><td>Build JPCRE2 8 bit library (default) </td></tr>
+<td><code>--[enable/disable]-jpcre2-8</code> </td><td>Enable/Disable building JPCRE2 8 bit library (enabled by default) </td></tr>
 <tr>
-<td><code>--enable-jpcre2-16</code> </td><td>Build JPCRE2 16 bit library </td></tr>
+<td><code>--[enable/disable]-jpcre2-16</code> </td><td>Enable/Disable building JPCRE2 16 bit library </td></tr>
 <tr>
-<td><code>--enable-jpcre2-32</code> </td><td>Build JPCRE2 32 bit library </td></tr>
+<td><code>--[enable/disable]-jpcre2-32</code> </td><td>Enable/Disable building JPCRE2 32 bit library </td></tr>
 <tr>
-<td><code>--disable-jpcre2-8</code> </td><td>Do not build JPCRE2 8 bit library </td></tr>
+<td><code>--[enable/disable]-jpcre2-test-compile</code> </td><td>Enable/Disable building the test cpp files (enabled by default). This will be disabled automatically if 8 bit library is not selected to be built. </td></tr>
 <tr>
-<td><code>--disable-jpcre2-16</code> </td><td>Do not build JPCRE2 16 bit library </td></tr>
+<td><code>--[enable/disable]-jpcre2-test-compile-cpp11</code> </td><td>Enable/Disable building the test cpp files that require &gt;=C++11 (disabled by default). No effect if 16 bit and 32 bit libraries weren't selected to be built. </td></tr>
 <tr>
-<td><code>--disable-jpcre2-32</code> </td><td>Do not build JPCRE2 32 bit library </td></tr>
-<tr>
-<td><code>--disable-jpcre2-test-compile</code> </td><td>Do not build the test cpp files (enabled by default). This will be disabled automatically if 8 bit library is not selected to be built. </td></tr>
-<tr>
-<td><code>--enable-jpcre2-test-compile-cpp11</code> </td><td>Build the test cpp files that require &gt;=C++11 (disabled by default). No effect if 16 bit and 32 bit libraries weren't selected to be built. </td></tr>
+<td><code>--[enable/disable]-silent-rules</code> </td><td>Enable/Disable silent rules (enabled by default). You will get prettified <code>make</code> output if enabled. </td></tr>
 </table>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
