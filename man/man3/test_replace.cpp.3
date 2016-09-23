@@ -1,0 +1,70 @@
+.TH "test_replace.cpp" 3 "Fri Sep 23 2016" "Version 10.27.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test_replace.cpp \- An example of doing regex replace with JPCRE2\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include 'jpcre2\&.hpp'\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+An example of doing regex replace with JPCRE2\&. 
+
+
+.PP
+.nf
+
+#include <iostream>
+#define PCRE2_CODE_UNIT_WIDTH 8
+#include "jpcre2\&.hpp"
+
+typedef jpcre2::select<char> jp;
+
+
+int main(){
+    jp::Regex re; 
+
+    //Compile the pattern
+    re\&.setPattern("(?:(?<word>[?\&.#@:]+)|(?<word>\\w+))\\s*(?<digit>\\d+)")     //Set various parameters
+      \&.addModifier("Jin")                                                      //
+      \&.addPcre2Option(0)                                                       //\&.\&.\&.
+      \&.compile();                                                              //Finally compile it\&.
+          
+    if(!re){std::cerr<<re\&.getErrorMessage();}
+        
+    
+    //subject string
+    std::string s="I am a string with words and digits 45 and specials chars: ?\&.#@ 443 অ আ ক খ গ ঘ  56";
+    
+    std::cout<<"\nreplaced string: \n"<<
+    re\&.initReplace()                                                    //Invoke the initReplace() function
+      \&.setSubject(s)                                                    //Set various parameters
+      \&.setReplaceWith("(replaced:$1)(replaced:$2)(replaced:${word})")   //\&.\&.\&.
+      \&.addModifier("xE")                                                //
+      \&.addPcre2Option(0)                                                //\&.\&.\&.
+      \&.replace();                                                       //Finally perform the replace operation\&.
+    
+    if(!re){std::cerr<<re\&.getErrorMessage();}
+    
+    return 0;
+}
+
+.fi
+.PP
+ 
+.PP
+\fBAuthor:\fP
+.RS 4
+\fCMd Jahidul Hamid\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

@@ -1,0 +1,187 @@
+.TH "jpcre2::MOD" 3 "Fri Sep 23 2016" "Version 10.27.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2::MOD \- Namespace for modifier constants\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBC_N\fP"
+.br
+.RI "String of compile modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBC_V\fP []"
+.br
+.RI "Array of compile modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBCJ_N\fP"
+.br
+.RI "String of compile modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBCJ_V\fP []"
+.br
+.RI "Array of compile modifier values for JPCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBM_N\fP"
+.br
+.RI "String of action (match) modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBM_V\fP []"
+.br
+.RI "Array of action (match) modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBMJ_N\fP"
+.br
+.RI "String of action (match) modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBMJ_V\fP []"
+.br
+.RI "Array of action (match) modifier values for JPCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBR_N\fP"
+.br
+.RI "String of action (replace) modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBR_V\fP []"
+.br
+.RI "Array of action (replace) modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBRJ_N\fP"
+.br
+.RI "String of action (replace) modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const \fBUint\fP \fBRJ_V\fP []"
+.br
+.RI "Array of action (replace) modifier values for JPCRE2 options\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Namespace for modifier constants\&. 
+
+For each modifier constant there is a \fBjpcre2::Uint\fP option value\&. Some modifiers may have multiple values set together (ORed in bitwise operation) and thus they may include other modifiers\&. Such an example is the 'n' modifier\&. It is combined together with 'u'\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string jpcre2::MOD::C_N"
+
+.PP
+String of compile modifier characters for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::Regex::changeModifier(), and jpcre2::select8< Char_T >::Regex::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::C_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { PCRE2_MATCH_UNSET_BACKREF,                  
+                                            PCRE2_CASELESS,                             
+                                            PCRE2_ALT_BSUX | PCRE2_MATCH_UNSET_BACKREF, 
+                                            PCRE2_MULTILINE,                            
+                                            PCRE2_UTF | PCRE2_UCP,                      
+                                            PCRE2_DOTALL,                               
+                                            PCRE2_UTF,                                  
+                                            PCRE2_EXTENDED,                             
+                                            PCRE2_ANCHORED,                             
+                                            PCRE2_DOLLAR_ENDONLY,                       
+                                            PCRE2_DUPNAMES,                             
+                                            PCRE2_UNGREEDY                              
+                                          }
+.fi
+.PP
+Array of compile modifier values for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::Regex::changeModifier(), and jpcre2::select8< Char_T >::Regex::getModifier()\&.
+.SS "const std::string jpcre2::MOD::CJ_N"
+
+.PP
+String of compile modifier characters for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::Regex::changeModifier(), and jpcre2::select8< Char_T >::Regex::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::CJ_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { JIT_COMPILE,                                
+                                          }
+.fi
+.PP
+Array of compile modifier values for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::Regex::changeModifier(), and jpcre2::select8< Char_T >::Regex::getModifier()\&.
+.SS "const std::string jpcre2::MOD::M_N"
+
+.PP
+String of action (match) modifier characters for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexMatch::changeModifier(), and jpcre2::select8< Char_T >::RegexMatch::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::M_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { PCRE2_ANCHORED                               
+                                         }
+.fi
+.PP
+Array of action (match) modifier values for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexMatch::changeModifier(), and jpcre2::select8< Char_T >::RegexMatch::getModifier()\&.
+.SS "const std::string jpcre2::MOD::MJ_N"
+
+.PP
+String of action (match) modifier characters for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexMatch::changeModifier(), and jpcre2::select8< Char_T >::RegexMatch::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::MJ_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { FIND_ALL,                                   
+                                          }
+.fi
+.PP
+Array of action (match) modifier values for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexMatch::changeModifier(), and jpcre2::select8< Char_T >::RegexMatch::getModifier()\&.
+.SS "const std::string jpcre2::MOD::R_N"
+
+.PP
+String of action (replace) modifier characters for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexReplace::changeModifier(), and jpcre2::select8< Char_T >::RegexReplace::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::R_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { PCRE2_SUBSTITUTE_UNSET_EMPTY,                
+                                           PCRE2_SUBSTITUTE_UNKNOWN_UNSET | PCRE2_SUBSTITUTE_UNSET_EMPTY,   
+                                           PCRE2_SUBSTITUTE_GLOBAL,                     
+                                           PCRE2_SUBSTITUTE_EXTENDED                    
+                                         }
+.fi
+.PP
+Array of action (replace) modifier values for PCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexReplace::changeModifier(), and jpcre2::select8< Char_T >::RegexReplace::getModifier()\&.
+.SS "const std::string jpcre2::MOD::RJ_N"
+
+.PP
+String of action (replace) modifier characters for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexReplace::changeModifier(), and jpcre2::select8< Char_T >::RegexReplace::getModifier()\&.
+.SS "const \fBjpcre2::Uint\fP jpcre2::MOD::RJ_V"
+\fBInitial value:\fP
+.PP
+.nf
+= { NONE
+                                          }
+.fi
+.PP
+Array of action (replace) modifier values for JPCRE2 options\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::RegexReplace::changeModifier(), and jpcre2::select8< Char_T >::RegexReplace::getModifier()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

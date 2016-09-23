@@ -1,0 +1,141 @@
+.TH "jpcre2" 3 "Fri Sep 23 2016" "Version 10.27.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2 \- Disable all assertions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBERROR\fP"
+.br
+.RI "Namespace for error codes\&. "
+.ti -1c
+.RI " \fBINFO\fP"
+.br
+.RI "Namespace to provide information about JPCRE2 library itself\&. "
+.ti -1c
+.RI " \fBMOD\fP"
+.br
+.RI "Namespace for modifier constants\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCodecvt\fP"
+.br
+.RI "Convenience wrapper of \fCstd::codecvt\fP "
+.ti -1c
+.RI "struct \fBselect\fP"
+.br
+.RI "struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&. "
+.ti -1c
+.RI "struct \fBselect16\fP"
+.br
+.RI "struct to select 16 bit code unit width and the character type\&. "
+.ti -1c
+.RI "struct \fBselect32\fP"
+.br
+.RI "struct to select 32 bit code unit width and the character type\&. "
+.ti -1c
+.RI "struct \fBselect8\fP"
+.br
+.RI "struct to select 8 bit code unit width and the character type\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef PCRE2_SIZE \fBSIZE_T\fP"
+.br
+.RI "Used for match count and vector size\&. "
+.ti -1c
+.RI "typedef uint32_t \fBUint\fP"
+.br
+.RI "Used for options (bitwise operation) "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBNONE\fP = 0x0000000u, \fBFIND_ALL\fP = 0x0000002u, \fBJIT_COMPILE\fP = 0x0000004u }
+.RI "These constants provide JPCRE2 options\&. ""
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBSIZE_T\fP \fBSUBSTITUTE_RESULT_INIT_SIZE\fP = std::numeric_limits<int>::max()"
+.br
+.RI "Used by default to provide big enough initial buffer for replaced string\&. "
+.ti -1c
+.RI "const std::string \fBLOCALE_NONE\fP = 'JPCRE2_NONE'"
+.br
+.RI "Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. "
+.ti -1c
+.RI "const std::string \fBLOCALE_DEFAULT\fP = \fBLOCALE_NONE\fP"
+.br
+.RI "Default locale\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Disable all assertions\&. 
+
+Top level namespace of JPCRE2\&.
+.PP
+All functions, classes/structs, constants, enums that are provided by JPCRE2 belong to this namespace while \fBPCRE2\fP structs, functions, constants remain outside of its scope\&.
+.PP
+If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef PCRE2_SIZE \fBjpcre2::SIZE_T\fP"
+
+.PP
+Used for match count and vector size\&. 
+.SS "typedef uint32_t \fBjpcre2::Uint\fP"
+
+.PP
+Used for options (bitwise operation) 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+These constants provide JPCRE2 options\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINONE \fP\fP
+Option 0 (zero) 
+.TP
+\fB\fIFIND_ALL \fP\fP
+Find all during match (global match) 
+.TP
+\fB\fIJIT_COMPILE \fP\fP
+Perform JIT compilation for optimization\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string jpcre2::LOCALE_DEFAULT = \fBLOCALE_NONE\fP"
+
+.PP
+Default locale\&. Default local to be used\&. 
+.SS "const std::string jpcre2::LOCALE_NONE = 'JPCRE2_NONE'"
+
+.PP
+Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. Nothing to be done on locale\&. 
+.PP
+Referenced by jpcre2::select8< Char_T >::Regex::compile()\&.
+.SS "const \fBjpcre2::SIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = std::numeric_limits<int>::max()"
+
+.PP
+Used by default to provide big enough initial buffer for replaced string\&. Max of int is used as the initial size of replaced string by default\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

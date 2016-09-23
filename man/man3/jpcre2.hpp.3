@@ -1,0 +1,249 @@
+.TH "jpcre2.hpp" 3 "Fri Sep 23 2016" "Version 10.27.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs that uses its functionalities\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <pcre2\&.h>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include <climits>\fP
+.br
+\fC#include <codecvt>\fP
+.br
+\fC#include <locale>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBjpcre2::Codecvt< internT, externT, stateT >\fP"
+.br
+.RI "Convenience wrapper of \fCstd::codecvt\fP "
+.ti -1c
+.RI "struct \fBjpcre2::select8< Char_T >\fP"
+.br
+.RI "struct to select 8 bit code unit width and the character type\&. "
+.ti -1c
+.RI "class \fBjpcre2::select8< Char_T >::RegexMatch\fP"
+.br
+.RI "Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. "
+.ti -1c
+.RI "class \fBjpcre2::select8< Char_T >::RegexReplace\fP"
+.br
+.RI "Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. "
+.ti -1c
+.RI "class \fBjpcre2::select8< Char_T >::Regex\fP"
+.br
+.RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
+.ti -1c
+.RI "struct \fBjpcre2::select16< Char_T >\fP"
+.br
+.RI "struct to select 16 bit code unit width and the character type\&. "
+.ti -1c
+.RI "class \fBjpcre2::select16< Char_T >::RegexMatch\fP"
+.br
+.RI "Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. "
+.ti -1c
+.RI "class \fBjpcre2::select16< Char_T >::RegexReplace\fP"
+.br
+.RI "Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. "
+.ti -1c
+.RI "class \fBjpcre2::select16< Char_T >::Regex\fP"
+.br
+.RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
+.ti -1c
+.RI "struct \fBjpcre2::select32< Char_T >\fP"
+.br
+.RI "struct to select 32 bit code unit width and the character type\&. "
+.ti -1c
+.RI "class \fBjpcre2::select32< Char_T >::RegexMatch\fP"
+.br
+.RI "Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. "
+.ti -1c
+.RI "class \fBjpcre2::select32< Char_T >::RegexReplace\fP"
+.br
+.RI "Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. "
+.ti -1c
+.RI "class \fBjpcre2::select32< Char_T >::Regex\fP"
+.br
+.RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
+.ti -1c
+.RI "struct \fBjpcre2::select< Char_T >\fP"
+.br
+.RI "struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBjpcre2\fP"
+.br
+.RI "Disable all assertions\&. "
+.ti -1c
+.RI " \fBjpcre2::ERROR\fP"
+.br
+.RI "Namespace for error codes\&. "
+.ti -1c
+.RI " \fBjpcre2::INFO\fP"
+.br
+.RI "Namespace to provide information about JPCRE2 library itself\&. "
+.ti -1c
+.RI " \fBjpcre2::MOD\fP"
+.br
+.RI "Namespace for modifier constants\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBJPCRE2_CODE_UNIT_ASSERT\fP   assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);"
+.br
+.RI "Enable a naive validation check on Code unit width and the selected character type\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef PCRE2_SIZE \fBjpcre2::SIZE_T\fP"
+.br
+.RI "Used for match count and vector size\&. "
+.ti -1c
+.RI "typedef uint32_t \fBjpcre2::Uint\fP"
+.br
+.RI "Used for options (bitwise operation) "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2, \fBjpcre2::ERROR::JIT_COMPILE_FAILED\fP = 3 }
+.RI "ERROR numbers\&. ""
+.br
+.ti -1c
+.RI "enum { \fBjpcre2::NONE\fP = 0x0000000u, \fBjpcre2::FIND_ALL\fP = 0x0000002u, \fBjpcre2::JIT_COMPILE\fP = 0x0000004u }
+.RI "These constants provide JPCRE2 options\&. ""
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const SIZE_T \fBjpcre2::SUBSTITUTE_RESULT_INIT_SIZE\fP = std::numeric_limits<int>::max()"
+.br
+.RI "Used by default to provide big enough initial buffer for replaced string\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::LOCALE_NONE\fP = 'JPCRE2_NONE'"
+.br
+.RI "Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::LOCALE_DEFAULT\fP = LOCALE_NONE"
+.br
+.RI "Default locale\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::NAME\fP"
+.br
+.RI "Name of the project\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP"
+.br
+.RI "Full version string\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_GENRE\fP"
+.br
+.RI "Generation, depends on original PCRE2 version\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_MAJOR\fP"
+.br
+.RI "Major version, updated when API change is made\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP"
+.br
+.RI "Minor version, includes bug fix or minor feature upgrade\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP"
+.br
+.RI "Alpha or beta (testing) release version\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::C_N\fP"
+.br
+.RI "String of compile modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::C_V\fP []"
+.br
+.RI "Array of compile modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::CJ_N\fP"
+.br
+.RI "String of compile modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::CJ_V\fP []"
+.br
+.RI "Array of compile modifier values for JPCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::M_N\fP"
+.br
+.RI "String of action (match) modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::M_V\fP []"
+.br
+.RI "Array of action (match) modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::MJ_N\fP"
+.br
+.RI "String of action (match) modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::MJ_V\fP []"
+.br
+.RI "Array of action (match) modifier values for JPCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::R_N\fP"
+.br
+.RI "String of action (replace) modifier characters for PCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::R_V\fP []"
+.br
+.RI "Array of action (replace) modifier values for PCRE2 options\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::MOD::RJ_N\fP"
+.br
+.RI "String of action (replace) modifier characters for JPCRE2 options\&. "
+.ti -1c
+.RI "const Uint \fBjpcre2::MOD::RJ_V\fP []"
+.br
+.RI "Array of action (replace) modifier values for JPCRE2 options\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Main header file for JPCRE2 library to be included by programs that uses its functionalities\&. 
+
+It includes the pcre2\&.h header, therefore you shouldn't include pcre2\&.h separately in your program\&. Make sure to link both JPCRE2 and PCRE2 library when compiling\&.
+.PP
+If you are using JPCRE2 with all of its source files, you won't need to link it with JPCRE2 library, but do remember that you still need to link with PCRE2 library\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+\fCMd Jahidul Hamid\fP 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define JPCRE2_CODE_UNIT_ASSERT   assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);"
+
+.PP
+Enable a naive validation check on Code unit width and the selected character type\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

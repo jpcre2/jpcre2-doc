@@ -1,0 +1,5 @@
+<map id="jpcre2::select8::Regex::changeJpcre2Option" name="jpcre2::select8::Regex::changeJpcre2Option">
+<area shape="rect" id="node2" href="$classjpcre2_1_1select8_1_1RegexReplace.html#a216e83a3fe4e8e2bc36da427c070691d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. " alt="" coords="207,5,408,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select8_1_1RegexMatch.html#a5c5bfd8ce0edb427c1be9bd92084238d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. " alt="" coords="213,71,402,112"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select8_1_1Regex.html#aa74c1c60b37ef2ec77e0dffcf99e0457" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. " alt="" coords="231,136,384,177"/>
+</map>
