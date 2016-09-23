@@ -90,7 +90,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI " \fBjpcre2\fP"
 .br
-.RI "Disable all assertions\&. "
+.RI "Top level namespace of JPCRE2\&. "
 .ti -1c
 .RI " \fBjpcre2::ERROR\fP"
 .br
@@ -108,7 +108,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "#define \fBJPCRE2_CODE_UNIT_ASSERT\fP   assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);"
+.RI "#define \fBNDEBUG\fP"
+.br
+.RI "Disable all assertions\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_CODE_UNIT_ASSERT\fP"
 .br
 .RI "Enable a naive validation check on Code unit width and the selected character type\&. "
 .in -1c
@@ -240,10 +244,14 @@ If you are using JPCRE2 with all of its source files, you won't need to link it 
 
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define JPCRE2_CODE_UNIT_ASSERT   assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);"
+.SS "#define JPCRE2_CODE_UNIT_ASSERT"
 
 .PP
 Enable a naive validation check on Code unit width and the selected character type\&. 
+.SS "#define NDEBUG"
+
+.PP
+Disable all assertions\&. Disable assert() to prevent terminating program in case error/undefined behavior occurs 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

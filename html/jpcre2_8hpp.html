@@ -163,7 +163,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacejpcre2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html">jpcre2</a></td></tr>
-<tr class="memdesc:namespacejpcre2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable all assertions. <br /></td></tr>
+<tr class="memdesc:namespacejpcre2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top level namespace of JPCRE2. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacejpcre2_1_1ERROR"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1ERROR.html">jpcre2::ERROR</a></td></tr>
 <tr class="memdesc:namespacejpcre2_1_1ERROR"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for error codes. <br /></td></tr>
@@ -177,7 +177,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#ae60a3e87696e3e7d32846c7c8d8b330d">JPCRE2_CODE_UNIT_ASSERT</a>&#160;&#160;&#160;assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);</td></tr>
+<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
+<tr class="memdesc:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable all assertions.  <a href="#a8de3ed741dadc9c979a4ff17c0a9116e">More...</a><br /></td></tr>
+<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#ae60a3e87696e3e7d32846c7c8d8b330d">JPCRE2_CODE_UNIT_ASSERT</a></td></tr>
 <tr class="memdesc:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a naive validation check on Code unit width and the selected character type.  <a href="#ae60a3e87696e3e7d32846c7c8d8b330d">More...</a><br /></td></tr>
 <tr class="separator:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -289,12 +292,29 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JPCRE2_CODE_UNIT_ASSERT&#160;&#160;&#160;assert(PCRE2_CODE_UNIT_WIDTH == sizeof(Char)*CHAR_BIT);</td>
+          <td class="memname">#define JPCRE2_CODE_UNIT_ASSERT</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Enable a naive validation check on Code unit width and the selected character type. </p>
+
+</div>
+</div>
+<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&sect;&nbsp;</a></span>NDEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NDEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable all assertions. </p>
+<p>Disable assert() to prevent terminating program in case error/undefined behavior occurs </p>
 
 </div>
 </div>
