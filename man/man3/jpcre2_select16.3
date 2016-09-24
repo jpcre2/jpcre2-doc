@@ -1,4 +1,4 @@
-.TH "jpcre2::select16< Char_T >" 3 "Sat Sep 24 2016" "Version 10.27.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select16< Char_T >" 3 "Sun Sep 25 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -39,10 +39,6 @@ jpcre2::select16< Char_T > \- struct to select 16 bit code unit width and the ch
 .br
 .RI "Map for Named substrings\&. "
 .ti -1c
-.RI "typedef std::map< \fBSIZE_T\fP, \fBString\fP > \fBMapNum\fP"
-.br
-.RI "Map for Numbered substrings\&. "
-.ti -1c
 .RI "typedef std::map< \fBString\fP, \fBSIZE_T\fP > \fBMapNtN\fP"
 .br
 .RI "Substring name to Substring number map\&. "
@@ -63,7 +59,7 @@ jpcre2::select16< Char_T > \- struct to select 16 bit code unit width and the ch
 .br
 .RI "Allow spelling mistake of VecNtN as VecNtn\&. "
 .ti -1c
-.RI "typedef std::vector< \fBMapNum\fP > \fBVecNum\fP"
+.RI "typedef std::vector< NumSub > \fBVecNum\fP"
 .br
 .RI "Vector of matches with numbered substrings\&. "
 .in -1c
@@ -140,10 +136,6 @@ Substring name to Substring number map\&.
 
 .PP
 Allow spelling mistake of MapNtN as MapNtn\&. 
-.SS "template<class Char_T > \fBjpcre2::select16\fP< Char_T >::\fBMapNum\fP"
-
-.PP
-Map for Numbered substrings\&. 
 .SS "template<class Char_T > \fBjpcre2::select16\fP< Char_T >::\fBString\fP"
 
 .PP
