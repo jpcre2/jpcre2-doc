@@ -39,6 +39,10 @@ jpcre2::select32< Char_T > \- struct to select 32 bit code unit width and the ch
 .br
 .RI "Map for Named substrings\&. "
 .ti -1c
+.RI "typedef std::vector< \fBString\fP > \fBNumSub\fP"
+.br
+.RI "Vector for Numbered substrings (Sub container)\&. "
+.ti -1c
 .RI "typedef std::map< \fBString\fP, \fBSIZE_T\fP > \fBMapNtN\fP"
 .br
 .RI "Substring name to Substring number map\&. "
@@ -59,7 +63,7 @@ jpcre2::select32< Char_T > \- struct to select 32 bit code unit width and the ch
 .br
 .RI "Allow spelling mistake of VecNtN as VecNtn\&. "
 .ti -1c
-.RI "typedef std::vector< NumSub > \fBVecNum\fP"
+.RI "typedef std::vector< \fBNumSub\fP > \fBVecNum\fP"
 .br
 .RI "Vector of matches with numbered substrings\&. "
 .in -1c
@@ -136,6 +140,10 @@ Substring name to Substring number map\&.
 
 .PP
 Allow spelling mistake of MapNtN as MapNtn\&. 
+.SS "template<class Char_T > \fBjpcre2::select32\fP< Char_T >::\fBNumSub\fP"
+
+.PP
+Vector for Numbered substrings (Sub container)\&. 
 .SS "template<class Char_T > \fBjpcre2::select32\fP< Char_T >::\fBString\fP"
 
 .PP

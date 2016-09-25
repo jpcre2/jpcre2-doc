@@ -90,6 +90,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a10f9ed2ef39dd5ae2f9d0f5417674754"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="structjpcre2_1_1select8.html#a51df00f6a7c3cbe0ffd1b0e6e5808f58">String</a>, <a class="el" href="structjpcre2_1_1select8.html#a51df00f6a7c3cbe0ffd1b0e6e5808f58">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#a10f9ed2ef39dd5ae2f9d0f5417674754">MapNas</a></td></tr>
 <tr class="memdesc:a10f9ed2ef39dd5ae2f9d0f5417674754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map for Named substrings.  <a href="#a10f9ed2ef39dd5ae2f9d0f5417674754">More...</a><br /></td></tr>
 <tr class="separator:a10f9ed2ef39dd5ae2f9d0f5417674754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b176e5057b98df22262ff0b61abf58e"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="structjpcre2_1_1select8.html#a51df00f6a7c3cbe0ffd1b0e6e5808f58">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#a3b176e5057b98df22262ff0b61abf58e">NumSub</a></td></tr>
+<tr class="memdesc:a3b176e5057b98df22262ff0b61abf58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector for Numbered substrings (Sub container).  <a href="#a3b176e5057b98df22262ff0b61abf58e">More...</a><br /></td></tr>
+<tr class="separator:a3b176e5057b98df22262ff0b61abf58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ecef0e088cd0710816871f6c50d676b"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="structjpcre2_1_1select8.html#a51df00f6a7c3cbe0ffd1b0e6e5808f58">String</a>, <a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#a9ecef0e088cd0710816871f6c50d676b">MapNtN</a></td></tr>
 <tr class="memdesc:a9ecef0e088cd0710816871f6c50d676b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substring name to Substring number map.  <a href="#a9ecef0e088cd0710816871f6c50d676b">More...</a><br /></td></tr>
 <tr class="separator:a9ecef0e088cd0710816871f6c50d676b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,7 +108,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:aa2454abf4740cf61a526b0bb51b8823b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structjpcre2_1_1select8.html#ae00f419cc9ac22683e7c367f727005c7">VecNtN</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#aa2454abf4740cf61a526b0bb51b8823b">VecNtn</a></td></tr>
 <tr class="memdesc:aa2454abf4740cf61a526b0bb51b8823b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow spelling mistake of VecNtN as VecNtn.  <a href="#aa2454abf4740cf61a526b0bb51b8823b">More...</a><br /></td></tr>
 <tr class="separator:aa2454abf4740cf61a526b0bb51b8823b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7edff2964fa8f1b2542a3948f6ced57"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; NumSub &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#ad7edff2964fa8f1b2542a3948f6ced57">VecNum</a></td></tr>
+<tr class="memitem:ad7edff2964fa8f1b2542a3948f6ced57"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="structjpcre2_1_1select8.html#a3b176e5057b98df22262ff0b61abf58e">NumSub</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html#ad7edff2964fa8f1b2542a3948f6ced57">VecNum</a></td></tr>
 <tr class="memdesc:ad7edff2964fa8f1b2542a3948f6ced57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of matches with numbered substrings.  <a href="#ad7edff2964fa8f1b2542a3948f6ced57">More...</a><br /></td></tr>
 <tr class="separator:ad7edff2964fa8f1b2542a3948f6ced57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -253,6 +256,32 @@ template&lt;class Char_T&gt; </div>
 </div><div class="memdoc">
 
 <p>Allow spelling mistake of MapNtN as MapNtn. </p>
+
+</div>
+</div>
+<a id="a3b176e5057b98df22262ff0b61abf58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b176e5057b98df22262ff0b61abf58e">&sect;&nbsp;</a></span>NumSub</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Char_T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structjpcre2_1_1select8.html">jpcre2::select8</a>&lt; Char_T &gt;::<a class="el" href="structjpcre2_1_1select8.html#a3b176e5057b98df22262ff0b61abf58e">NumSub</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector for Numbered substrings (Sub container). </p>
 
 </div>
 </div>
