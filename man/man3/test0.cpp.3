@@ -1,0 +1,56 @@
+.TH "test0.cpp" 3 "Wed Oct 26 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test0.cpp \- An example of handling multi code unit width\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include 'jpcre2\&.hpp'\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+An example of handling multi code unit width\&. 
+
+
+.PP
+.nf
+
+#include <iostream>
+
+#define PCRE2_CODE_UNIT_WIDTH 0
+#include "jpcre2\&.hpp"
+
+typedef jpcre2::select8<char> jp8;
+typedef jpcre2::select32<wchar_t> jp32;
+
+int main(){
+   jp8::Regex   re8 ( "\\d+");
+   jp32::Regex  re32(L"\\d+");
+   
+   re8\&.getMatchObject()\&.setModifier("fdsafsd");
+   std::cout<<re8\&.getErrorMessage();
+   
+   size_t count = re32\&.match(L"I am a subject with digits 32 43 44", "g");
+   std::cout<<"\nMatch count: "<<count;
+   
+   return 0;
+   }
+
+.fi
+.PP
+ 
+.PP
+\fBAuthor:\fP
+.RS 4
+\fCMd Jahidul Hamid\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

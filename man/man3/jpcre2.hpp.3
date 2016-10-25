@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Wed Oct 26 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,8 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 \fC#include <vector>\fP
 .br
 \fC#include <map>\fP
+.br
+\fC#include <limits>\fP
 .br
 \fC#include <codecvt>\fP
 .br
@@ -91,10 +93,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI " \fBjpcre2::INFO\fP"
 .br
 .RI "Namespace to provide information about JPCRE2 library itself\&. "
-.ti -1c
-.RI " \fBjpcre2::MOD\fP"
-.br
-.RI "Namespace for modifier constants\&. "
 .in -1c
 .SS "Macros"
 
@@ -156,78 +154,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Default locale\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::NAME\fP"
-.br
-.RI "Name of the project\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP"
-.br
-.RI "Full version string\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_GENRE\fP"
-.br
-.RI "Generation, depends on original PCRE2 version\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MAJOR\fP"
-.br
-.RI "Major version, updated when API change is made\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP"
-.br
-.RI "Minor version, includes bug fix or minor feature upgrade\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP"
-.br
-.RI "Alpha or beta (testing) release version\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::C_N\fP"
-.br
-.RI "String of compile modifier characters for PCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::C_V\fP []"
-.br
-.RI "Array of compile modifier values for PCRE2 options\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::CJ_N\fP"
-.br
-.RI "String of compile modifier characters for JPCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::CJ_V\fP []"
-.br
-.RI "Array of compile modifier values for JPCRE2 options\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::M_N\fP"
-.br
-.RI "String of action (match) modifier characters for PCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::M_V\fP []"
-.br
-.RI "Array of action (match) modifier values for PCRE2 options\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::MJ_N\fP"
-.br
-.RI "String of action (match) modifier characters for JPCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::MJ_V\fP []"
-.br
-.RI "Array of action (match) modifier values for JPCRE2 options\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::R_N\fP"
-.br
-.RI "String of action (replace) modifier characters for PCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::R_V\fP []"
-.br
-.RI "Array of action (replace) modifier values for PCRE2 options\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::MOD::RJ_N\fP"
-.br
-.RI "String of action (replace) modifier characters for JPCRE2 options\&. "
-.ti -1c
-.RI "const Uint \fBjpcre2::MOD::RJ_V\fP []"
-.br
-.RI "Array of action (replace) modifier values for JPCRE2 options\&. "
-.ti -1c
 .RI "static thread_local std::wstring_convert< Codecvt< char16_t, char, std::mbstate_t >, char16_t > \fBjpcre2::convert16\fP"
 .br
 .RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-16\&. "
@@ -235,6 +161,30 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI "static thread_local std::wstring_convert< Codecvt< char32_t, char, std::mbstate_t >, char32_t > \fBjpcre2::convert32\fP"
 .br
 .RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-32\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::NAME\fP = 'JPCRE2'"
+.br
+.RI "Name of the project\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.27\&.03'"
+.br
+.RI "Full version string\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_GENRE\fP = '10'"
+.br
+.RI "Generation, depends on original PCRE2 version\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_MAJOR\fP = '27'"
+.br
+.RI "Major version, updated when API change is made\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '03'"
+.br
+.RI "Minor version, includes bug fix or minor feature upgrade\&. "
+.ti -1c
+.RI "const std::string \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP = ''"
+.br
+.RI "Alpha or beta (testing) release version\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

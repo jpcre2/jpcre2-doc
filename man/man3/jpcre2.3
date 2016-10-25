@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Wed Oct 26 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,10 +18,6 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .RI " \fBINFO\fP"
 .br
 .RI "Namespace to provide information about JPCRE2 library itself\&. "
-.ti -1c
-.RI " \fBMOD\fP"
-.br
-.RI "Namespace for modifier constants\&. "
 .in -1c
 .SS "Classes"
 
@@ -167,15 +163,15 @@ convert32\&.from_bytes(utf8string)
 .SS "const std::string jpcre2::LOCALE_DEFAULT = \fBLOCALE_NONE\fP"
 
 .PP
-Default locale\&. Default local to be used\&. 
+Default locale\&. 
 .SS "const std::string jpcre2::LOCALE_NONE = 'JPCRE2_NONE'"
 
 .PP
-Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. Nothing to be done on locale\&. 
-.SS "const \fBjpcre2::SIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = std::numeric_limits<int>::max()"
+Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. 
+.SS "const \fBSIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = std::numeric_limits<int>::max()"
 
 .PP
-Used by default to provide big enough initial buffer for replaced string\&. Max of int is used as the initial size of replaced string by default\&. 
+Used by default to provide big enough initial buffer for replaced string\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

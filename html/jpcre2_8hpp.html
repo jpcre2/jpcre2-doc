@@ -85,6 +85,7 @@ $(function() {
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;codecvt&gt;</code><br />
 <code>#include &lt;locale&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -101,13 +102,14 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="jpcre2_8hpp__dep__incl.png" border="0" usemap="#jpcre2_8hppdep" alt=""/></div>
 <map name="jpcre2_8hppdep" id="jpcre2_8hppdep">
-<area shape="rect" id="node2" href="test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string for 16 bi..." alt="" coords="5,80,88,107"/>
-<area shape="rect" id="node3" href="test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string for 32 bi..." alt="" coords="112,80,195,107"/>
-<area shape="rect" id="node4" href="test__match_8cpp.html" title="An example of performing regex match against a pattern with JPCRE2 and getting the match count and ma..." alt="" coords="219,80,331,107"/>
-<area shape="rect" id="node5" href="test__match2_8cpp.html" title="Contains an example to take subject string, pattern and modifier from user input and perform regex ma..." alt="" coords="354,80,473,107"/>
-<area shape="rect" id="node6" href="test__replace_8cpp.html" title="An example of doing regex replace with JPCRE2. " alt="" coords="497,80,615,107"/>
-<area shape="rect" id="node7" href="test__replace2_8cpp.html" title="Contains an example to take subject string, replacement string, modifier and pattern from user input ..." alt="" coords="640,80,765,107"/>
-<area shape="rect" id="node8" href="test__shorts_8cpp.html" title="Contains some short examples of performing regex match and regex replace with JPCRE2. " alt="" coords="789,80,901,107"/>
+<area shape="rect" id="node2" href="test0_8cpp.html" title="An example of handling multi code unit width. " alt="" coords="5,80,81,107"/>
+<area shape="rect" id="node3" href="test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string for 16 bi..." alt="" coords="106,80,189,107"/>
+<area shape="rect" id="node4" href="test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string for 32 bi..." alt="" coords="213,80,295,107"/>
+<area shape="rect" id="node5" href="test__match_8cpp.html" title="An example of performing regex match against a pattern with JPCRE2 and getting the match count and ma..." alt="" coords="319,80,431,107"/>
+<area shape="rect" id="node6" href="test__match2_8cpp.html" title="Contains an example to take subject string, pattern and modifier from user input and perform regex ma..." alt="" coords="455,80,573,107"/>
+<area shape="rect" id="node7" href="test__replace_8cpp.html" title="An example of doing regex replace with JPCRE2. " alt="" coords="597,80,716,107"/>
+<area shape="rect" id="node8" href="test__replace2_8cpp.html" title="Contains an example to take subject string, replacement string, modifier and pattern from user input ..." alt="" coords="741,80,866,107"/>
+<area shape="rect" id="node9" href="test__shorts_8cpp.html" title="Contains some short examples of performing regex match and regex replace with JPCRE2. " alt="" coords="890,80,1002,107"/>
 </map>
 </div>
 </div>
@@ -166,9 +168,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacejpcre2_1_1INFO"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html">jpcre2::INFO</a></td></tr>
 <tr class="memdesc:namespacejpcre2_1_1INFO"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace to provide information about JPCRE2 library itself. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacejpcre2_1_1MOD"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html">jpcre2::MOD</a></td></tr>
-<tr class="memdesc:namespacejpcre2_1_1MOD"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for modifier constants. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -217,75 +216,39 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a80cb201f2e733137b22a8ed98465096a"><td class="memItemLeft" align="right" valign="top">const SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a80cb201f2e733137b22a8ed98465096a">jpcre2::SUBSTITUTE_RESULT_INIT_SIZE</a> = std::numeric_limits&lt;int&gt;::max()</td></tr>
-<tr class="memdesc:a80cb201f2e733137b22a8ed98465096a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by default to provide big enough initial buffer for replaced string.  <a href="namespacejpcre2.html#a80cb201f2e733137b22a8ed98465096a">More...</a><br /></td></tr>
-<tr class="separator:a80cb201f2e733137b22a8ed98465096a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fce118a0293417a890a9038dad7054"><td class="memItemLeft" align="right" valign="top">const SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a84fce118a0293417a890a9038dad7054">jpcre2::SUBSTITUTE_RESULT_INIT_SIZE</a> = std::numeric_limits&lt;int&gt;::max()</td></tr>
+<tr class="memdesc:a84fce118a0293417a890a9038dad7054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by default to provide big enough initial buffer for replaced string.  <a href="namespacejpcre2.html#a84fce118a0293417a890a9038dad7054">More...</a><br /></td></tr>
+<tr class="separator:a84fce118a0293417a890a9038dad7054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06cef13814514454f602bde9fc2f2dcb"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a06cef13814514454f602bde9fc2f2dcb">jpcre2::LOCALE_NONE</a> = &quot;JPCRE2_NONE&quot;</td></tr>
 <tr class="memdesc:a06cef13814514454f602bde9fc2f2dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Don't do anything about locale if it is set to <a class="el" href="namespacejpcre2.html#a06cef13814514454f602bde9fc2f2dcb" title="Don&#39;t do anything about locale if it is set to jpcre2::LOCALE_NONE. ">jpcre2::LOCALE_NONE</a>.  <a href="namespacejpcre2.html#a06cef13814514454f602bde9fc2f2dcb">More...</a><br /></td></tr>
 <tr class="separator:a06cef13814514454f602bde9fc2f2dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6025fe0d160d3be3486ac94d018d3507"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a6025fe0d160d3be3486ac94d018d3507">jpcre2::LOCALE_DEFAULT</a> = LOCALE_NONE</td></tr>
 <tr class="memdesc:a6025fe0d160d3be3486ac94d018d3507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default locale.  <a href="namespacejpcre2.html#a6025fe0d160d3be3486ac94d018d3507">More...</a><br /></td></tr>
 <tr class="separator:a6025fe0d160d3be3486ac94d018d3507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd04238b81b9c55b8cf682e6d40e29f9"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#abd04238b81b9c55b8cf682e6d40e29f9">jpcre2::INFO::NAME</a></td></tr>
-<tr class="memdesc:abd04238b81b9c55b8cf682e6d40e29f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the project.  <a href="namespacejpcre2_1_1INFO.html#abd04238b81b9c55b8cf682e6d40e29f9">More...</a><br /></td></tr>
-<tr class="separator:abd04238b81b9c55b8cf682e6d40e29f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#ab7beb5a54f906abaa52ea4a12bb36e6c">jpcre2::INFO::FULL_VERSION</a></td></tr>
-<tr class="memdesc:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full version string.  <a href="namespacejpcre2_1_1INFO.html#ab7beb5a54f906abaa52ea4a12bb36e6c">More...</a><br /></td></tr>
-<tr class="separator:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6448cb3c0defc36eb18f8b245595f368"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a6448cb3c0defc36eb18f8b245595f368">jpcre2::INFO::VERSION_GENRE</a></td></tr>
-<tr class="memdesc:a6448cb3c0defc36eb18f8b245595f368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generation, depends on original PCRE2 version.  <a href="namespacejpcre2_1_1INFO.html#a6448cb3c0defc36eb18f8b245595f368">More...</a><br /></td></tr>
-<tr class="separator:a6448cb3c0defc36eb18f8b245595f368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5ae50281bdf793a2755853ec241a867"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#ac5ae50281bdf793a2755853ec241a867">jpcre2::INFO::VERSION_MAJOR</a></td></tr>
-<tr class="memdesc:ac5ae50281bdf793a2755853ec241a867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version, updated when API change is made.  <a href="namespacejpcre2_1_1INFO.html#ac5ae50281bdf793a2755853ec241a867">More...</a><br /></td></tr>
-<tr class="separator:ac5ae50281bdf793a2755853ec241a867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a610c579362dc68179b94c0fe70ea3d5c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a610c579362dc68179b94c0fe70ea3d5c">jpcre2::INFO::VERSION_MINOR</a></td></tr>
-<tr class="memdesc:a610c579362dc68179b94c0fe70ea3d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version, includes bug fix or minor feature upgrade.  <a href="namespacejpcre2_1_1INFO.html#a610c579362dc68179b94c0fe70ea3d5c">More...</a><br /></td></tr>
-<tr class="separator:a610c579362dc68179b94c0fe70ea3d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adda8853ced241acd1cf63ac528bd0b84"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#adda8853ced241acd1cf63ac528bd0b84">jpcre2::INFO::VERSION_PRE_RELEASE</a></td></tr>
-<tr class="memdesc:adda8853ced241acd1cf63ac528bd0b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha or beta (testing) release version.  <a href="namespacejpcre2_1_1INFO.html#adda8853ced241acd1cf63ac528bd0b84">More...</a><br /></td></tr>
-<tr class="separator:adda8853ced241acd1cf63ac528bd0b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae91902308c9adfe858bc863032ea78e3"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#ae91902308c9adfe858bc863032ea78e3">jpcre2::MOD::C_N</a></td></tr>
-<tr class="memdesc:ae91902308c9adfe858bc863032ea78e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of compile modifier characters for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#ae91902308c9adfe858bc863032ea78e3">More...</a><br /></td></tr>
-<tr class="separator:ae91902308c9adfe858bc863032ea78e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78025b5470499fcedb9f9bcb7cc0060b"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a78025b5470499fcedb9f9bcb7cc0060b">jpcre2::MOD::C_V</a> []</td></tr>
-<tr class="memdesc:a78025b5470499fcedb9f9bcb7cc0060b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of compile modifier values for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a78025b5470499fcedb9f9bcb7cc0060b">More...</a><br /></td></tr>
-<tr class="separator:a78025b5470499fcedb9f9bcb7cc0060b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab477a158e3f161c5a632775890b7945b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#ab477a158e3f161c5a632775890b7945b">jpcre2::MOD::CJ_N</a></td></tr>
-<tr class="memdesc:ab477a158e3f161c5a632775890b7945b"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of compile modifier characters for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#ab477a158e3f161c5a632775890b7945b">More...</a><br /></td></tr>
-<tr class="separator:ab477a158e3f161c5a632775890b7945b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a455f33361efc25e03e5a8613de8a0fa0"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a455f33361efc25e03e5a8613de8a0fa0">jpcre2::MOD::CJ_V</a> []</td></tr>
-<tr class="memdesc:a455f33361efc25e03e5a8613de8a0fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of compile modifier values for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a455f33361efc25e03e5a8613de8a0fa0">More...</a><br /></td></tr>
-<tr class="separator:a455f33361efc25e03e5a8613de8a0fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae91e5078c95e11d36ed8218414c0d465"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#ae91e5078c95e11d36ed8218414c0d465">jpcre2::MOD::M_N</a></td></tr>
-<tr class="memdesc:ae91e5078c95e11d36ed8218414c0d465"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of action (match) modifier characters for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#ae91e5078c95e11d36ed8218414c0d465">More...</a><br /></td></tr>
-<tr class="separator:ae91e5078c95e11d36ed8218414c0d465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd2150647fee002204e7005aa126289"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a7dd2150647fee002204e7005aa126289">jpcre2::MOD::M_V</a> []</td></tr>
-<tr class="memdesc:a7dd2150647fee002204e7005aa126289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of action (match) modifier values for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a7dd2150647fee002204e7005aa126289">More...</a><br /></td></tr>
-<tr class="separator:a7dd2150647fee002204e7005aa126289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42aa6ca8d334e82bb21a55dc1cecc70b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a42aa6ca8d334e82bb21a55dc1cecc70b">jpcre2::MOD::MJ_N</a></td></tr>
-<tr class="memdesc:a42aa6ca8d334e82bb21a55dc1cecc70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of action (match) modifier characters for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a42aa6ca8d334e82bb21a55dc1cecc70b">More...</a><br /></td></tr>
-<tr class="separator:a42aa6ca8d334e82bb21a55dc1cecc70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02e60618af8087b9a99ae8fbed0b887c"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a02e60618af8087b9a99ae8fbed0b887c">jpcre2::MOD::MJ_V</a> []</td></tr>
-<tr class="memdesc:a02e60618af8087b9a99ae8fbed0b887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of action (match) modifier values for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a02e60618af8087b9a99ae8fbed0b887c">More...</a><br /></td></tr>
-<tr class="separator:a02e60618af8087b9a99ae8fbed0b887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98f5661901f35d78a08e279a99017ed"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#ae98f5661901f35d78a08e279a99017ed">jpcre2::MOD::R_N</a></td></tr>
-<tr class="memdesc:ae98f5661901f35d78a08e279a99017ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of action (replace) modifier characters for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#ae98f5661901f35d78a08e279a99017ed">More...</a><br /></td></tr>
-<tr class="separator:ae98f5661901f35d78a08e279a99017ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adde7332e9b90d54c907c30dfa9fbc4d6"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#adde7332e9b90d54c907c30dfa9fbc4d6">jpcre2::MOD::R_V</a> []</td></tr>
-<tr class="memdesc:adde7332e9b90d54c907c30dfa9fbc4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of action (replace) modifier values for PCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#adde7332e9b90d54c907c30dfa9fbc4d6">More...</a><br /></td></tr>
-<tr class="separator:adde7332e9b90d54c907c30dfa9fbc4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9f76bb3c272294f5b27060c7ea3081"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a5e9f76bb3c272294f5b27060c7ea3081">jpcre2::MOD::RJ_N</a></td></tr>
-<tr class="memdesc:a5e9f76bb3c272294f5b27060c7ea3081"><td class="mdescLeft">&#160;</td><td class="mdescRight">String of action (replace) modifier characters for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a5e9f76bb3c272294f5b27060c7ea3081">More...</a><br /></td></tr>
-<tr class="separator:a5e9f76bb3c272294f5b27060c7ea3081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30011385a69e77d8681517c621c2a140"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">jpcre2::MOD::RJ_V</a> []</td></tr>
-<tr class="memdesc:a30011385a69e77d8681517c621c2a140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of action (replace) modifier values for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">More...</a><br /></td></tr>
-<tr class="separator:a30011385a69e77d8681517c621c2a140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e352b3ffe9982694b4991b84f390de6"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; Codecvt&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a5e352b3ffe9982694b4991b84f390de6">jpcre2::convert16</a></td></tr>
 <tr class="memdesc:a5e352b3ffe9982694b4991b84f390de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="namespacejpcre2.html#a5e352b3ffe9982694b4991b84f390de6">More...</a><br /></td></tr>
 <tr class="separator:a5e352b3ffe9982694b4991b84f390de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae597678360e2463cf59bf32e8367baec"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; Codecvt&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ae597678360e2463cf59bf32e8367baec">jpcre2::convert32</a></td></tr>
 <tr class="memdesc:ae597678360e2463cf59bf32e8367baec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="namespacejpcre2.html#ae597678360e2463cf59bf32e8367baec">More...</a><br /></td></tr>
 <tr class="separator:ae597678360e2463cf59bf32e8367baec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd04238b81b9c55b8cf682e6d40e29f9"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#abd04238b81b9c55b8cf682e6d40e29f9">jpcre2::INFO::NAME</a> = &quot;JPCRE2&quot;</td></tr>
+<tr class="memdesc:abd04238b81b9c55b8cf682e6d40e29f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the project.  <a href="namespacejpcre2_1_1INFO.html#abd04238b81b9c55b8cf682e6d40e29f9">More...</a><br /></td></tr>
+<tr class="separator:abd04238b81b9c55b8cf682e6d40e29f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#ab7beb5a54f906abaa52ea4a12bb36e6c">jpcre2::INFO::FULL_VERSION</a> = &quot;10.27.03&quot;</td></tr>
+<tr class="memdesc:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full version string.  <a href="namespacejpcre2_1_1INFO.html#ab7beb5a54f906abaa52ea4a12bb36e6c">More...</a><br /></td></tr>
+<tr class="separator:ab7beb5a54f906abaa52ea4a12bb36e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6448cb3c0defc36eb18f8b245595f368"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a6448cb3c0defc36eb18f8b245595f368">jpcre2::INFO::VERSION_GENRE</a> = &quot;10&quot;</td></tr>
+<tr class="memdesc:a6448cb3c0defc36eb18f8b245595f368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generation, depends on original PCRE2 version.  <a href="namespacejpcre2_1_1INFO.html#a6448cb3c0defc36eb18f8b245595f368">More...</a><br /></td></tr>
+<tr class="separator:a6448cb3c0defc36eb18f8b245595f368"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ae50281bdf793a2755853ec241a867"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#ac5ae50281bdf793a2755853ec241a867">jpcre2::INFO::VERSION_MAJOR</a> = &quot;27&quot;</td></tr>
+<tr class="memdesc:ac5ae50281bdf793a2755853ec241a867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version, updated when API change is made.  <a href="namespacejpcre2_1_1INFO.html#ac5ae50281bdf793a2755853ec241a867">More...</a><br /></td></tr>
+<tr class="separator:ac5ae50281bdf793a2755853ec241a867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610c579362dc68179b94c0fe70ea3d5c"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a610c579362dc68179b94c0fe70ea3d5c">jpcre2::INFO::VERSION_MINOR</a> = &quot;03&quot;</td></tr>
+<tr class="memdesc:a610c579362dc68179b94c0fe70ea3d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version, includes bug fix or minor feature upgrade.  <a href="namespacejpcre2_1_1INFO.html#a610c579362dc68179b94c0fe70ea3d5c">More...</a><br /></td></tr>
+<tr class="separator:a610c579362dc68179b94c0fe70ea3d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda8853ced241acd1cf63ac528bd0b84"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#adda8853ced241acd1cf63ac528bd0b84">jpcre2::INFO::VERSION_PRE_RELEASE</a> = &quot;&quot;</td></tr>
+<tr class="memdesc:adda8853ced241acd1cf63ac528bd0b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alpha or beta (testing) release version.  <a href="namespacejpcre2_1_1INFO.html#adda8853ced241acd1cf63ac528bd0b84">More...</a><br /></td></tr>
+<tr class="separator:adda8853ced241acd1cf63ac528bd0b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main header file for JPCRE2 library to be included by programs that uses its functionalities. </p>
