@@ -25,7 +25,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.27.02</span>
+   &#160;<span id="projectnumber">10.27.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -93,8 +93,6 @@ $(function() {
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="jpcre2_8hpp__incl.png" border="0" usemap="#jpcre2_8hpp" alt=""/></div>
-<map name="jpcre2_8hpp" id="jpcre2_8hpp">
-</map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -118,7 +116,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1Codecvt.html">jpcre2::Codecvt&lt; internT, externT, stateT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience wrapper of <code>std::codecvt</code>  <a href="structjpcre2_1_1Codecvt.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience wrapper of <code>std::codecvt</code>.  <a href="structjpcre2_1_1Codecvt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select8.html">jpcre2::select8&lt; Char_T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select 8 bit code unit width and the character type.  <a href="structjpcre2_1_1select8.html#details">More...</a><br /></td></tr>
@@ -156,9 +154,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select32_1_1Regex.html">jpcre2::select32&lt; Char_T &gt;::Regex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern.  <a href="classjpcre2_1_1select32_1_1Regex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select&lt; Char_T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -177,12 +172,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a8de3ed741dadc9c979a4ff17c0a9116e">NDEBUG</a></td></tr>
-<tr class="memdesc:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable all assertions.  <a href="#a8de3ed741dadc9c979a4ff17c0a9116e">More...</a><br /></td></tr>
-<tr class="separator:a8de3ed741dadc9c979a4ff17c0a9116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#ae60a3e87696e3e7d32846c7c8d8b330d">JPCRE2_CODE_UNIT_ASSERT</a></td></tr>
-<tr class="memdesc:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a naive validation check on Code unit width and the selected character type.  <a href="#ae60a3e87696e3e7d32846c7c8d8b330d">More...</a><br /></td></tr>
-<tr class="separator:ae60a3e87696e3e7d32846c7c8d8b330d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff91275abcc225454675d6dfc39a58d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#acff91275abcc225454675d6dfc39a58d">PCRE2_CODE_UNIT_WIDTH</a></td></tr>
+<tr class="memdesc:acff91275abcc225454675d6dfc39a58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro must be defined to either 0, 8, 16 or 32 before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.  <a href="#acff91275abcc225454675d6dfc39a58d">More...</a><br /></td></tr>
+<tr class="separator:acff91275abcc225454675d6dfc39a58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9cd83384005dd070f2e21a33f23248"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#aaf9cd83384005dd070f2e21a33f23248">JPCRE2_CODE_UNIT_WIDTH</a></td></tr>
+<tr class="memdesc:aaf9cd83384005dd070f2e21a33f23248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of <a class="el" href="jpcre2_8hpp.html#acff91275abcc225454675d6dfc39a58d" title="This macro must be defined to either 0, 8, 16 or 32 before including jpcre2.hpp. ">PCRE2_CODE_UNIT_WIDTH</a>.  <a href="#aaf9cd83384005dd070f2e21a33f23248">More...</a><br /></td></tr>
+<tr class="separator:aaf9cd83384005dd070f2e21a33f23248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a0db60584acdcc2eae976e0f7e71da4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a1a0db60584acdcc2eae976e0f7e71da4">JPCRE2_ENABLE_CODE_UNIT_VALIDATION</a></td></tr>
+<tr class="memdesc:a1a0db60584acdcc2eae976e0f7e71da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a naive validation check of code unit width if defined before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.  <a href="#a1a0db60584acdcc2eae976e0f7e71da4">More...</a><br /></td></tr>
+<tr class="separator:a1a0db60584acdcc2eae976e0f7e71da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3c1ab11a380eac88ac3abd30d31a81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a6d3c1ab11a380eac88ac3abd30d31a81">JPCRE2_DISABLE_ERROR</a></td></tr>
+<tr class="memdesc:a6d3c1ab11a380eac88ac3abd30d31a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable all assertions if defined before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.  <a href="#a6d3c1ab11a380eac88ac3abd30d31a81">More...</a><br /></td></tr>
+<tr class="separator:a6d3c1ab11a380eac88ac3abd30d31a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -279,42 +280,83 @@ Variables</h2></td></tr>
 <tr class="memitem:a30011385a69e77d8681517c621c2a140"><td class="memItemLeft" align="right" valign="top">const Uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">jpcre2::MOD::RJ_V</a> []</td></tr>
 <tr class="memdesc:a30011385a69e77d8681517c621c2a140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of action (replace) modifier values for JPCRE2 options.  <a href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">More...</a><br /></td></tr>
 <tr class="separator:a30011385a69e77d8681517c621c2a140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e352b3ffe9982694b4991b84f390de6"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; Codecvt&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a5e352b3ffe9982694b4991b84f390de6">jpcre2::convert16</a></td></tr>
+<tr class="memdesc:a5e352b3ffe9982694b4991b84f390de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="namespacejpcre2.html#a5e352b3ffe9982694b4991b84f390de6">More...</a><br /></td></tr>
+<tr class="separator:a5e352b3ffe9982694b4991b84f390de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae597678360e2463cf59bf32e8367baec"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; Codecvt&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ae597678360e2463cf59bf32e8367baec">jpcre2::convert32</a></td></tr>
+<tr class="memdesc:ae597678360e2463cf59bf32e8367baec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="namespacejpcre2.html#ae597678360e2463cf59bf32e8367baec">More...</a><br /></td></tr>
+<tr class="separator:ae597678360e2463cf59bf32e8367baec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main header file for JPCRE2 library to be included by programs that uses its functionalities. </p>
 <p>It includes the pcre2.h header, therefore you shouldn't include pcre2.h separately in your program. Make sure to link both JPCRE2 and PCRE2 library when compiling.</p>
 <p>If you are using JPCRE2 with all of its source files, you won't need to link it with JPCRE2 library, but do remember that you still need to link with PCRE2 library. </p><dl class="section author"><dt>Author</dt><dd><a href="https://github.com/neurobin">Md Jahidul Hamid</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ae60a3e87696e3e7d32846c7c8d8b330d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae60a3e87696e3e7d32846c7c8d8b330d">&sect;&nbsp;</a></span>JPCRE2_CODE_UNIT_ASSERT</h2>
+<a id="aaf9cd83384005dd070f2e21a33f23248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9cd83384005dd070f2e21a33f23248">&sect;&nbsp;</a></span>JPCRE2_CODE_UNIT_WIDTH</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JPCRE2_CODE_UNIT_ASSERT</td>
+          <td class="memname">#define JPCRE2_CODE_UNIT_WIDTH</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable a naive validation check on Code unit width and the selected character type. </p>
+<p>Alias of <a class="el" href="jpcre2_8hpp.html#acff91275abcc225454675d6dfc39a58d" title="This macro must be defined to either 0, 8, 16 or 32 before including jpcre2.hpp. ">PCRE2_CODE_UNIT_WIDTH</a>. </p>
 
 </div>
 </div>
-<a id="a8de3ed741dadc9c979a4ff17c0a9116e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de3ed741dadc9c979a4ff17c0a9116e">&sect;&nbsp;</a></span>NDEBUG</h2>
+<a id="a6d3c1ab11a380eac88ac3abd30d31a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3c1ab11a380eac88ac3abd30d31a81">&sect;&nbsp;</a></span>JPCRE2_DISABLE_ERROR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define NDEBUG</td>
+          <td class="memname">#define JPCRE2_DISABLE_ERROR</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disable all assertions. </p>
-<p>Disable assert() to prevent terminating program in case error/undefined behavior occurs </p>
+<p>Disable all assertions if defined before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>. </p>
+<p>Disable assert() to prevent terminating program in case error/undefined behavior occurs. </p>
+
+</div>
+</div>
+<a id="a1a0db60584acdcc2eae976e0f7e71da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0db60584acdcc2eae976e0f7e71da4">&sect;&nbsp;</a></span>JPCRE2_ENABLE_CODE_UNIT_VALIDATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JPCRE2_ENABLE_CODE_UNIT_VALIDATION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable a naive validation check of code unit width if defined before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>. </p>
+<p>This gives a runtime assertion failure if code unit width mismatch occurs. </p>
+
+</div>
+</div>
+<a id="acff91275abcc225454675d6dfc39a58d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff91275abcc225454675d6dfc39a58d">&sect;&nbsp;</a></span>PCRE2_CODE_UNIT_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PCRE2_CODE_UNIT_WIDTH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This macro must be defined to either 0, 8, 16 or 32 before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>. </p>
+<p>0 means you will be using multiple code unit width in your program.</p>
+<p>The code unit width must match with the bit size of the character type you are going to use. </p>
 
 </div>
 </div>

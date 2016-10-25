@@ -25,7 +25,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.27.02</span>
+   &#160;<span id="projectnumber">10.27.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa18a776154f0465e86ced652cf7fc595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the replacement string.  <a href="#aa18a776154f0465e86ced652cf7fc595">More...</a><br /></td></tr>
 <tr class="separator:aa18a776154f0465e86ced652cf7fc595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a909fdeddfe8dedd32fb923c274c09b61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a909fdeddfe8dedd32fb923c274c09b61">setModifier</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:a909fdeddfe8dedd32fb923c274c09b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the modifier string (overwrites existing JPCRE2 and PCRE2 option).  <a href="#a909fdeddfe8dedd32fb923c274c09b61">More...</a><br /></td></tr>
+<tr class="memdesc:a909fdeddfe8dedd32fb923c274c09b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a216e83a3fe4e8e2bc36da427c070691d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>.  <a href="#a909fdeddfe8dedd32fb923c274c09b61">More...</a><br /></td></tr>
 <tr class="separator:a909fdeddfe8dedd32fb923c274c09b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ff300d0cd778ef53a6ca7154a7a893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a50ff300d0cd778ef53a6ca7154a7a893">setBufferSize</a> (PCRE2_SIZE x)</td></tr>
 <tr class="memdesc:a50ff300d0cd778ef53a6ca7154a7a893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial buffer size to be allocated for replaced string (used by PCRE2)  <a href="#a50ff300d0cd778ef53a6ca7154a7a893">More...</a><br /></td></tr>
@@ -155,7 +155,7 @@ class jpcre2::select8&lt; Char_T &gt;::RegexReplace</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -195,7 +195,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -236,7 +236,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -276,7 +276,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -352,7 +352,7 @@ template&lt;class Char_T &gt; </div>
 <p>After a call to this function PCRE2 and JPCRE2 options will be properly set. </p>
 <p>This function does not initialize or re-initialize options. If you want to set options from scratch, initialize them to 0 before calling this function.</p>
 <p><b>Note:</b> If speed of operation is very crucial, use <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a98e731e632aaf8e71ed722491b3c0cf8" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">RegexReplace::changeJpcre2Option()</a> and <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#ae90df65f81a12814e215a33fc71bc60a" title="Add or remove a PCRE2 option. ">jpcre2::select8&lt;Char_T&gt;::RegexReplace::changePcre2Option()</a> with equivalent options. It will be faster that way.</p>
-<p>If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>If invalid modifier is detected, then the error number for the jpcre2::select8&lt;Char_T&gt;::Regex object will be <a class="el" href="namespacejpcre2_1_1ERROR.html#a4b2998984439438fa9da8d7043909bc2a4115340549b623f4e2da285bf0aa9bff" title="Error number implying that invalid modifier was detected. ">jpcre2::ERROR::INVALID_MODIFIER</a> and error offset will be the modifier character. You can get the message with <a class="el" href="classjpcre2_1_1select8_1_1Regex.html#a5ce3683bdc4690a134a76ab646b26889" title="Returns the last error message. ">jpcre2::select8&lt;Char_T&gt;::Regex::getErrorMessage()</a> function. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Char_T</td><td>Character type </td></tr>
   </table>
@@ -370,19 +370,6 @@ template&lt;class Char_T &gt; </div>
 <dd>
 <a class="el" href="classjpcre2_1_1select8_1_1RegexMatch.html#a5c5bfd8ce0edb427c1be9bd92084238d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">jpcre2::select8&lt;Char_T&gt;::RegexMatch::changeModifier()</a> </dd></dl>
 
-<p>References <a class="el" href="classjpcre2_1_1select8_1_1Regex.html#a104a8e697f08c7454acc6c6b3e15bc75">jpcre2::select8&lt; Char_T &gt;::Regex::changeJpcre2Option()</a>, <a class="el" href="classjpcre2_1_1select8_1_1Regex.html#ad161fefe651933eff904960372f2fccd">jpcre2::select8&lt; Char_T &gt;::Regex::changePcre2Option()</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#ae98f5661901f35d78a08e279a99017ed">jpcre2::MOD::R_N</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#adde7332e9b90d54c907c30dfa9fbc4d6">jpcre2::MOD::R_V</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#a5e9f76bb3c272294f5b27060c7ea3081">jpcre2::MOD::RJ_N</a>, and <a class="el" href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">jpcre2::MOD::RJ_V</a>.</p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classjpcre2_1_1select8_1_1RegexReplace_a216e83a3fe4e8e2bc36da427c070691d_cgraph.png" border="0" usemap="#classjpcre2_1_1select8_1_1RegexReplace_a216e83a3fe4e8e2bc36da427c070691d_cgraph" alt=""/></div>
-<map name="classjpcre2_1_1select8_1_1RegexReplace_a216e83a3fe4e8e2bc36da427c070691d_cgraph" id="classjpcre2_1_1select8_1_1RegexReplace_a216e83a3fe4e8e2bc36da427c070691d_cgraph">
-<area shape="rect" id="node2" href="classjpcre2_1_1select8_1_1Regex.html#a104a8e697f08c7454acc6c6b3e15bc75" title="Add or remove a JPCRE2 option. " alt="" coords="255,5,408,47"/>
-<area shape="rect" id="node3" href="classjpcre2_1_1select8_1_1Regex.html#ad161fefe651933eff904960372f2fccd" title="Add or remove a PCRE2 option. " alt="" coords="255,71,408,112"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="ae90df65f81a12814e215a33fc71bc60a"></a>
@@ -391,7 +378,7 @@ template&lt;class Char_T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -442,7 +429,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -487,7 +474,7 @@ template&lt;class Char_T &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate modifier string from PCRE2 and JPCRE2 options and return it. </p>
-<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a909fdeddfe8dedd32fb923c274c09b61" title="Set the modifier string (overwrites existing JPCRE2 and PCRE2 option). ">RegexReplace::setModifier()</a> will re-set them.</p>
+<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a909fdeddfe8dedd32fb923c274c09b61" title="Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling RegexReplace::change...">RegexReplace::setModifier()</a> will re-set them.</p>
 <p><b>Mixed or combined modifier</b>.</p>
 <p>Some modifier may include other modifiers i.e they have the same meaning of some modifiers combined together. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to <code>PCRE2_UTF | PCRE2_UCP</code>. When you set a modifier like this, both options get set, and when you remove the 'n' modifier <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a216e83a3fe4e8e2bc36da427c070691d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>, both will get removed </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -500,8 +487,6 @@ template&lt;class Char_T &gt; </div>
 <dd>
 <a class="el" href="classjpcre2_1_1select8_1_1Regex.html#aec4fa068ebd2889d7042a6131669c36b" title="Calculate modifier string from PCRE2 and JPCRE2 options and return it. ">jpcre2::select8&lt;Char_T&gt;::Regex::getModifier()</a> </dd></dl>
 
-<p>References <a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e">jpcre2::JIT_COMPILE</a>, <a class="el" href="namespacejpcre2_1_1ERROR.html#a4b2998984439438fa9da8d7043909bc2aa116db5c7b638480ccad3ae938d33c3e">jpcre2::ERROR::JIT_COMPILE_FAILED</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#ae98f5661901f35d78a08e279a99017ed">jpcre2::MOD::R_N</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#adde7332e9b90d54c907c30dfa9fbc4d6">jpcre2::MOD::R_V</a>, <a class="el" href="namespacejpcre2_1_1MOD.html#a5e9f76bb3c272294f5b27060c7ea3081">jpcre2::MOD::RJ_N</a>, and <a class="el" href="namespacejpcre2_1_1MOD.html#a30011385a69e77d8681517c621c2a140">jpcre2::MOD::RJ_V</a>.</p>
-
 </div>
 </div>
 <a id="af23fd377f437fd28c22b6ca25e425fec"></a>
@@ -510,7 +495,7 @@ template&lt;class Char_T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -543,7 +528,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -573,7 +558,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -625,19 +610,6 @@ template&lt;class Char_T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Replaced string </dd></dl>
 
-<p>References <a class="el" href="classjpcre2_1_1select8_1_1Regex.html#a9b95f415a1cf7dbbd0308eb08e1ddb1b">jpcre2::select8&lt; Char_T &gt;::Regex::replace()</a>, and <a class="el" href="structjpcre2_1_1select8.html#ac89c2dcbbd42dbb66e1dbf36bf60a04e">jpcre2::select8&lt; Char_T &gt;::toString()</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classjpcre2_1_1select8_1_1RegexReplace_ae80855aff85b16cd9f5381e7e40a3cdb_cgraph.png" border="0" usemap="#classjpcre2_1_1select8_1_1RegexReplace_ae80855aff85b16cd9f5381e7e40a3cdb_cgraph" alt=""/></div>
-<map name="classjpcre2_1_1select8_1_1RegexReplace_ae80855aff85b16cd9f5381e7e40a3cdb_cgraph" id="classjpcre2_1_1select8_1_1RegexReplace_ae80855aff85b16cd9f5381e7e40a3cdb_cgraph">
-<area shape="rect" id="node2" href="classjpcre2_1_1select8_1_1Regex.html#a9b95f415a1cf7dbbd0308eb08e1ddb1b" title="Perform regex replace and return the replaced string. " alt="" coords="258,5,411,47"/>
-<area shape="rect" id="node3" href="structjpcre2_1_1select8.html#ac89c2dcbbd42dbb66e1dbf36bf60a04e" title="Converts an integer to jpcre2::select8&lt;Char_T&gt;::String. " alt="" coords="255,71,415,98"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="ae29790748d57ed8918ed95f5700672bf"></a>
@@ -646,7 +618,7 @@ template&lt;class Char_T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -708,7 +680,7 @@ template&lt;class Char_T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -745,7 +717,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -785,7 +757,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -805,7 +777,7 @@ template&lt;class Char_T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the modifier string (overwrites existing JPCRE2 and PCRE2 option). </p>
+<p>Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a216e83a3fe4e8e2bc36da427c070691d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>. </p>
 <p><b>Note:</b> If speed of operation is very crucial, use <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#a41e41846f14fc1591c56bde110f7c95d" title="Set JPCRE2 option for replace (overwrite existing option) ">RegexReplace::setJpcre2Option()</a> and <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#abc2fcb32282708ac83ebbc3006f71eee" title="Set PCRE2 option replace (overwrite existing option) ">RegexReplace::setPcre2Option()</a> with equivalent options. It will be faster that way. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Modifier string </td></tr>
@@ -813,9 +785,9 @@ template&lt;class Char_T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html" title="Provides the RegexReplace::replace() function to perform regex replace on a string. ">RegexReplace</a> object </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select8_1_1RegexMatch.html#a1b0337524beeff2e5a7f636ea468fef3" title="Set the modifier (overwrites existing JPCRE2 and PCRE2 option). ">RegexMatch::setModifier()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select8_1_1RegexMatch.html#a1b0337524beeff2e5a7f636ea468fef3" title="Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling RegexMatch::changeModifier(...">RegexMatch::setModifier()</a> </dd>
 <dd>
-<a class="el" href="classjpcre2_1_1select8_1_1Regex.html#aee15c9c603a8c5056ced66c74a39c17c" title="Set the modifier (overwrite existing JPCRE2 and PCRE2 option). ">Regex::setModifier()</a> </dd></dl>
+<a class="el" href="classjpcre2_1_1select8_1_1Regex.html#aee15c9c603a8c5056ced66c74a39c17c" title="Set the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling Regex::changeModifier(). ">Regex::setModifier()</a> </dd></dl>
 
 </div>
 </div>
@@ -825,7 +797,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -865,7 +837,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -902,7 +874,7 @@ template&lt;class Char_T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Char_T&gt; </div>
+template&lt;class Char_T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

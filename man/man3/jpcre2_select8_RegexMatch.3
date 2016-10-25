@@ -1,4 +1,4 @@
-.TH "jpcre2::select8< Char_T >::RegexMatch" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select8< Char_T >::RegexMatch" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ jpcre2::select8< Char_T >::RegexMatch \- Provides the \fBRegexMatch::match()\fP 
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetModifier\fP (const std::string &s)"
 .br
-.RI "Set the modifier (overwrites existing JPCRE2 and PCRE2 option)\&. "
+.RI "Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -114,7 +114,7 @@ Provides chained methods to set various options\&.
 All constructors of this class are private\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing JPCRE2 options for match\&. 
@@ -137,7 +137,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::addModifier (const std::string & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegexMatch::changeModifier()\fP provided for convenience\&.
@@ -162,7 +162,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing PCRE2 options for match\&. 
@@ -185,7 +185,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. Add or remove a JPCRE2 option 
@@ -217,7 +217,7 @@ After a call to this function PCRE2 and JPCRE2 options will be properly set\&. T
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::changeJpcre2Option()\fP and \fBRegexMatch::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program\&. 
+If invalid modifier is detected, then the error number for the jpcre2::select8<Char_T>::Regex object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBjpcre2::select8<Char_T>::Regex::getErrorMessage()\fP function\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
@@ -244,9 +244,7 @@ Reference to the \fBRegexMatch\fP object
 .RE
 .PP
 
-.PP
-References jpcre2::select8< Char_T >::Regex::changeJpcre2Option(), jpcre2::select8< Char_T >::Regex::changePcre2Option(), jpcre2::MOD::M_N, jpcre2::MOD::M_V, jpcre2::MOD::MJ_N, jpcre2::MOD::MJ_V, and jpcre2::select8< Char_T >::toString()\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
@@ -271,7 +269,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -316,9 +314,7 @@ jpcre2::select8<Char_T>::RegexMatchReplace::getModifier()
 .RE
 .PP
 
-.PP
-References jpcre2::MOD::M_N, jpcre2::MOD::M_V, jpcre2::MOD::MJ_N, and jpcre2::MOD::MJ_V\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::getPcre2Option ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::getPcre2Option ()\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -336,7 +332,7 @@ PCRE2 option for match operation
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::getSubject ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::getSubject ()\fC [inline]\fP"
 
 .PP
 Get subject string\&. 
@@ -363,9 +359,7 @@ Match count
 .RE
 .PP
 
-.PP
-References jpcre2::FIND_ALL\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::reset ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state\&. Data in the vectors will retain\&. You will need to pass vector pointers again after calling this function to get match results\&. 
@@ -401,7 +395,7 @@ A reference to the \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setFindAll ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setFindAll ()\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
@@ -414,7 +408,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setFindAll (bool x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setFindAll (bool x)\fC [inline]\fP"
 
 .PP
 Set whether to perform global match\&. 
@@ -430,7 +424,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for match (overwrite existing option) 
@@ -453,10 +447,10 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
-Set the modifier (overwrites existing JPCRE2 and PCRE2 option)\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
+Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::setJpcre2Option()\fP and \fBRegexMatch::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP
@@ -478,7 +472,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNamedSubstringVector (\fBVecNas\fP * v)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNamedSubstringVector (\fBVecNas\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the named substring vector\&. This vector will be populated with named captured groups\&. 
@@ -494,7 +488,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNameToNumberMapVector (\fBVecNtN\fP * v)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNameToNumberMapVector (\fBVecNtN\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the name to number map vector\&. This vector will be populated with name to number map for captured groups\&. 
@@ -510,7 +504,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNumberedSubstringVector (\fBVecNum\fP * v)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setNumberedSubstringVector (\fBVecNum\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the numbered substring vector\&. This vector will be filled with numbered (indexed) captured groups\&. 
@@ -526,7 +520,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option match (overwrite existing option) 
@@ -549,7 +543,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexMatch::setSubject (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexMatch::setSubject (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the subject string for match\&. 

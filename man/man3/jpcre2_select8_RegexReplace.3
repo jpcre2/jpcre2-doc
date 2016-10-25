@@ -1,4 +1,4 @@
-.TH "jpcre2::select8< Char_T >::RegexReplace" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select8< Char_T >::RegexReplace" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -49,7 +49,7 @@ jpcre2::select8< Char_T >::RegexReplace \- Provides the \fBRegexReplace::replace
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetModifier\fP (const std::string &s)"
 .br
-.RI "Set the modifier string (overwrites existing JPCRE2 and PCRE2 option)\&. "
+.RI "Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexReplace::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetBufferSize\fP (PCRE2_SIZE x)"
 .br
@@ -104,7 +104,7 @@ Provides chained methods to set various options\&.
 All constructors of this class are private\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified JPCRE2 option to existing options for replace\&. 
@@ -127,7 +127,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::addModifier (const std::string & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegexReplace::changeModifier()\fP provided for convenience\&.
@@ -152,7 +152,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified PCRE2 option to existing options for replace\&. 
@@ -175,7 +175,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. Add or remove a JPCRE2 option 
@@ -207,7 +207,7 @@ After a call to this function PCRE2 and JPCRE2 options will be properly set\&. T
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::changeJpcre2Option()\fP and \fBjpcre2::select8<Char_T>::RegexReplace::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program\&. 
+If invalid modifier is detected, then the error number for the jpcre2::select8<Char_T>::Regex object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBjpcre2::select8<Char_T>::Regex::getErrorMessage()\fP function\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
@@ -234,9 +234,7 @@ Reference to the \fBRegexReplace\fP object
 .RE
 .PP
 
-.PP
-References jpcre2::select8< Char_T >::Regex::changeJpcre2Option(), jpcre2::select8< Char_T >::Regex::changePcre2Option(), jpcre2::MOD::R_N, jpcre2::MOD::R_V, jpcre2::MOD::RJ_N, and jpcre2::MOD::RJ_V\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
@@ -261,7 +259,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -306,9 +304,7 @@ Calculated modifier string (std::string)
 .RE
 .PP
 
-.PP
-References jpcre2::JIT_COMPILE, jpcre2::ERROR::JIT_COMPILE_FAILED, jpcre2::MOD::R_N, jpcre2::MOD::R_V, jpcre2::MOD::RJ_N, and jpcre2::MOD::RJ_V\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::getPcre2Option ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::getPcre2Option ()\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -326,7 +322,7 @@ PCRE2 option for replace
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::getReplaceWith ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::getReplaceWith ()\fC [inline]\fP"
 
 .PP
 Get replacement string\&. 
@@ -337,7 +333,7 @@ replacement string
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::getSubject ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::getSubject ()\fC [inline]\fP"
 
 .PP
 Get subject string\&. 
@@ -369,9 +365,7 @@ Replaced string
 .RE
 .PP
 
-.PP
-References jpcre2::select8< Char_T >::Regex::replace(), and jpcre2::select8< Char_T >::toString()\&.
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::reset ()\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state\&. 
@@ -407,7 +401,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
 
 .PP
 Set the initial buffer size to be allocated for replaced string (used by PCRE2) 
@@ -423,7 +417,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for replace (overwrite existing option) 
@@ -446,10 +440,10 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
-Set the modifier string (overwrites existing JPCRE2 and PCRE2 option)\&. \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::setJpcre2Option()\fP and \fBRegexReplace::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
+Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexReplace::changeModifier()\fP\&. \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::setJpcre2Option()\fP and \fBRegexReplace::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -469,7 +463,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option replace (overwrite existing option) 
@@ -492,7 +486,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the replacement string\&. 
@@ -508,7 +502,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::RegexReplace::setSubject (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::RegexReplace::setSubject (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the subject string for replace\&. 

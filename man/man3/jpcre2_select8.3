@@ -1,4 +1,4 @@
-.TH "jpcre2::select8< Char_T >" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select8< Char_T >" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -124,43 +124,43 @@ The character type (\fCChar_T\fP) must be in accordance with the definition of P
 
 .SH "Member Typedef Documentation"
 .PP 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBChar\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBChar\fP"
 
 .PP
 Typedef for character (either one of \fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP that was passed with \fC\fBjpcre2::select8\fP<Char_T>\fP)\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBMapNas\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBMapNas\fP"
 
 .PP
 Map for Named substrings\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBMapNtN\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBMapNtN\fP"
 
 .PP
 Substring name to Substring number map\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBMapNtn\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBMapNtn\fP"
 
 .PP
 Allow spelling mistake of MapNtN as MapNtn\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBNumSub\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBNumSub\fP"
 
 .PP
 Vector for Numbered substrings (Sub container)\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBString\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBString\fP"
 
 .PP
 Typedef for string (either one of \fCstd::string\fP, \fCstd::wstring\fP, \fCstd::u16string\fP, \fCstd::u32string\fP)\&. Defined as \fCstd::basic_string<Char_T>\fP\&. May be this list will make more sense: Character String  char std::string wchar_t std::wstring char16_t std::u16string (>=C++11) char32_t std::u32string (>=C++11) 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBVecNas\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBVecNas\fP"
 
 .PP
 Vector of matches with named substrings\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBVecNtN\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBVecNtN\fP"
 
 .PP
 Vector of substring name to substring number map\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBVecNtn\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBVecNtn\fP"
 
 .PP
 Allow spelling mistake of VecNtN as VecNtn\&. 
-.SS "template<class Char_T> \fBjpcre2::select8\fP< Char_T >::\fBVecNum\fP"
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::\fBVecNum\fP"
 
 .PP
 Vector of matches with numbered substrings\&. 
@@ -189,8 +189,6 @@ Error message as a string (\fBjpcre2::select8<Char_T>::String\fP)
 .RE
 .PP
 
-.PP
-References jpcre2::ERROR::JIT_COMPILE_FAILED\&.
 .SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::getPcre2ErrorMessage (int err_num)\fC [static]\fP"
 
 .PP
@@ -209,6 +207,69 @@ Return PCRE2 error message by error number\&.
 \fBReturns:\fP
 .RS 4
 Error message as \fBjpcre2::select8<Char_T>::String\fP 
+.RE
+.PP
+
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (\fBChar\fP a)\fC [static]\fP"
+
+.PP
+Converts a Char_T to \fBjpcre2::select8<Char_T>::String\fP\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIChar_T\fP Character type 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP Character to be converted 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select8<Char_T>::String\fP 
+.RE
+.PP
+
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (PCRE2_UCHAR * a)\fC [static]\fP"
+
+.PP
+Converts a PCRE2_UCHAR* to \fBjpcre2::select8<Char_T>::String\fP\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIChar_T\fP Character type 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP PCRE2_UCHAR pointer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select8<Char_T>::String\fP 
+.RE
+.PP
+
+.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (const \fBChar\fP * a)\fC [static]\fP"
+
+.PP
+Converts an const Char_T* to \fBjpcre2::select8<Char_T>::String\fP\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIChar_T\fP Character type 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP Character pointer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select8<Char_T>::String\fP 
 .RE
 .PP
 
@@ -233,77 +294,6 @@ Converts an integer to \fBjpcre2::select8<Char_T>::String\fP\&.
 .RE
 .PP
 
-.PP
-Referenced by jpcre2::select8< Char_T >::RegexMatch::changeModifier(), jpcre2::select8< Char_T >::RegexReplace::replace(), and jpcre2::select8< Char_T >::toString()\&.
-.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (const \fBChar\fP * a)\fC [static]\fP"
-
-.PP
-Converts an const Char_T* to \fBjpcre2::select8<Char_T>::String\fP\&. 
-.PP
-\fBTemplate Parameters:\fP
-.RS 4
-\fIChar_T\fP Character type 
-.RE
-.PP
-\fBParameters:\fP
-.RS 4
-\fIa\fP Character pointer 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-\fBjpcre2::select8<Char_T>::String\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select8< Char_T >::toString()\&.
-.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (PCRE2_UCHAR * a)\fC [static]\fP"
-
-.PP
-Converts a PCRE2_UCHAR* to \fBjpcre2::select8<Char_T>::String\fP\&. 
-.PP
-\fBTemplate Parameters:\fP
-.RS 4
-\fIChar_T\fP Character type 
-.RE
-.PP
-\fBParameters:\fP
-.RS 4
-\fIa\fP PCRE2_UCHAR pointer 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-\fBjpcre2::select8<Char_T>::String\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select8< Char_T >::toString()\&.
-.SS "template<class Char_T > \fBjpcre2::select8\fP< Char_T >::toString (\fBChar\fP a)\fC [static]\fP"
-
-.PP
-Converts a Char_T to \fBjpcre2::select8<Char_T>::String\fP\&. 
-.PP
-\fBTemplate Parameters:\fP
-.RS 4
-\fIChar_T\fP Character type 
-.RE
-.PP
-\fBParameters:\fP
-.RS 4
-\fIa\fP Character to be converted 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-\fBjpcre2::select8<Char_T>::String\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select8< Char_T >::toString()\&.
 
 .SH "Author"
 .PP 

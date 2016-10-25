@@ -25,7 +25,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.27.02</span>
+   &#160;<span id="projectnumber">10.27.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a167b8d78f0e3ce1e6e7699aacbe65950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the replacement string.  <a href="#a167b8d78f0e3ce1e6e7699aacbe65950">More...</a><br /></td></tr>
 <tr class="separator:a167b8d78f0e3ce1e6e7699aacbe65950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a782611942ff7c8415685907cbdaa9557"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a782611942ff7c8415685907cbdaa9557">setModifier</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:a782611942ff7c8415685907cbdaa9557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the modifier string (overwrites existing JPCRE2 and PCRE2 option).  <a href="#a782611942ff7c8415685907cbdaa9557">More...</a><br /></td></tr>
+<tr class="memdesc:a782611942ff7c8415685907cbdaa9557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a4909c4a9a1b0dbd25f65575c3482b27e" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>.  <a href="#a782611942ff7c8415685907cbdaa9557">More...</a><br /></td></tr>
 <tr class="separator:a782611942ff7c8415685907cbdaa9557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a9e749463dac3fe79c0c112cc4c39df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a0a9e749463dac3fe79c0c112cc4c39df">setBufferSize</a> (PCRE2_SIZE x)</td></tr>
 <tr class="memdesc:a0a9e749463dac3fe79c0c112cc4c39df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the initial buffer size to be allocated for replaced string (used by PCRE2)  <a href="#a0a9e749463dac3fe79c0c112cc4c39df">More...</a><br /></td></tr>
@@ -352,7 +352,7 @@ template&lt;class Char_T &gt; </div>
 <p>After a call to this function PCRE2 and JPCRE2 options will be properly set. </p>
 <p>This function does not initialize or re-initialize options. If you want to set options from scratch, initialize them to 0 before calling this function.</p>
 <p><b>Note:</b> If speed of operation is very crucial, use <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a31f74a9e582721ad749e5fa9b836fc10" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">RegexReplace::changeJpcre2Option()</a> and <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#ade71f33e483802f7c51522820ea4cb50" title="Add or remove a PCRE2 option. ">jpcre2::select32&lt;Char_T&gt;::RegexReplace::changePcre2Option()</a> with equivalent options. It will be faster that way.</p>
-<p>If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>If invalid modifier is detected, then the error number for the jpcre2::select32&lt;Char_T&gt;::Regex object will be <a class="el" href="namespacejpcre2_1_1ERROR.html#a4b2998984439438fa9da8d7043909bc2a4115340549b623f4e2da285bf0aa9bff" title="Error number implying that invalid modifier was detected. ">jpcre2::ERROR::INVALID_MODIFIER</a> and error offset will be the modifier character. You can get the message with <a class="el" href="classjpcre2_1_1select32_1_1Regex.html#a3a19838dde37cbc03c0b7b5df2d2f0d7" title="Returns the last error message. ">jpcre2::select32&lt;Char_T&gt;::Regex::getErrorMessage()</a> function. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Char_T</td><td>Character type </td></tr>
   </table>
@@ -474,7 +474,7 @@ template&lt;class Char_T &gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate modifier string from PCRE2 and JPCRE2 options and return it. </p>
-<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a782611942ff7c8415685907cbdaa9557" title="Set the modifier string (overwrites existing JPCRE2 and PCRE2 option). ">RegexReplace::setModifier()</a> will re-set them.</p>
+<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a782611942ff7c8415685907cbdaa9557" title="Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling RegexReplace::change...">RegexReplace::setModifier()</a> will re-set them.</p>
 <p><b>Mixed or combined modifier</b>.</p>
 <p>Some modifier may include other modifiers i.e they have the same meaning of some modifiers combined together. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to <code>PCRE2_UTF | PCRE2_UCP</code>. When you set a modifier like this, both options get set, and when you remove the 'n' modifier <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a4909c4a9a1b0dbd25f65575c3482b27e" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>, both will get removed </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -777,7 +777,7 @@ template&lt;class Char_T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the modifier string (overwrites existing JPCRE2 and PCRE2 option). </p>
+<p>Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a4909c4a9a1b0dbd25f65575c3482b27e" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. ">RegexReplace::changeModifier()</a>. </p>
 <p><b>Note:</b> If speed of operation is very crucial, use <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a17138a87242504e6d7adf18734e1368c" title="Set JPCRE2 option for replace (overwrite existing option) ">RegexReplace::setJpcre2Option()</a> and <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a92e447520808165370d0e1955eb7cdb1" title="Set PCRE2 option replace (overwrite existing option) ">RegexReplace::setPcre2Option()</a> with equivalent options. It will be faster that way. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Modifier string </td></tr>
@@ -785,9 +785,9 @@ template&lt;class Char_T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html" title="Provides the RegexReplace::replace() function to perform regex replace on a string. ">RegexReplace</a> object </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select32_1_1RegexMatch.html#a30aeb2b2068303538a91bf87a810a7ff" title="Set the modifier (overwrites existing JPCRE2 and PCRE2 option). ">RegexMatch::setModifier()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select32_1_1RegexMatch.html#a30aeb2b2068303538a91bf87a810a7ff" title="Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling RegexMatch::changeModifier(...">RegexMatch::setModifier()</a> </dd>
 <dd>
-<a class="el" href="classjpcre2_1_1select32_1_1Regex.html#a7724b1a898341715ee4826c0be23165f" title="Set the modifier (overwrite existing JPCRE2 and PCRE2 option). ">Regex::setModifier()</a> </dd></dl>
+<a class="el" href="classjpcre2_1_1select32_1_1Regex.html#a7724b1a898341715ee4826c0be23165f" title="Set the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling Regex::changeModifier(). ">Regex::setModifier()</a> </dd></dl>
 
 </div>
 </div>

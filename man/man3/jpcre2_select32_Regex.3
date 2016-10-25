@@ -1,4 +1,4 @@
-.TH "jpcre2::select32< Char_T >::Regex" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select32< Char_T >::Regex" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -99,7 +99,7 @@ Copy constructor. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetModifier\fP (const std::string &x)"
 .br
-.RI "Set the modifier (overwrite existing JPCRE2 and PCRE2 option)\&. "
+.RI "Set the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling \fBRegex::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetLocale\fP (const std::string &x)"
 .br
@@ -373,7 +373,7 @@ Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. This functi
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegex::changeJpcre2Option()\fP and \fBRegex::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program\&. 
+If invalid modifier is detected, then the error number for the jpcre2::select32<Char_T>::Regex object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBjpcre2::select32<Char_T>::Regex::getErrorMessage()\fP function\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
@@ -945,7 +945,7 @@ Reference to the calling \fBRegex\fP object\&.
 .SS "template<class Char_T > \fBjpcre2::select32\fP< Char_T >::Regex::setModifier (const std::string & x)\fC [inline]\fP"
 
 .PP
-Set the modifier (overwrite existing JPCRE2 and PCRE2 option)\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
+Set the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegex::setJpcre2Option()\fP and \fBRegex::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP

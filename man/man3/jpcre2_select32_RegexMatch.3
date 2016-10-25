@@ -1,4 +1,4 @@
-.TH "jpcre2::select32< Char_T >::RegexMatch" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select32< Char_T >::RegexMatch" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,7 +53,7 @@ jpcre2::select32< Char_T >::RegexMatch \- Provides the \fBRegexMatch::match()\fP
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetModifier\fP (const std::string &s)"
 .br
-.RI "Set the modifier (overwrites existing JPCRE2 and PCRE2 option)\&. "
+.RI "Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -217,7 +217,7 @@ After a call to this function PCRE2 and JPCRE2 options will be properly set\&. T
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::changeJpcre2Option()\fP and \fBRegexMatch::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If JPCRE2_ASSERT_INVALID_MODIFIER macro is defined, invalid modifier will give you runtime error and yield to immediate termination of the program\&. 
+If invalid modifier is detected, then the error number for the jpcre2::select32<Char_T>::Regex object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBjpcre2::select32<Char_T>::Regex::getErrorMessage()\fP function\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
@@ -450,7 +450,7 @@ Reference to the calling \fBRegexMatch\fP object
 .SS "template<class Char_T > \fBjpcre2::select32\fP< Char_T >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
-Set the modifier (overwrites existing JPCRE2 and PCRE2 option)\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
+Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::setJpcre2Option()\fP and \fBRegexMatch::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP

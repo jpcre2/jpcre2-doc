@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Sun Oct 16 2016" "Version 10.27.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Tue Oct 25 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -26,7 +26,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "struct \fBjpcre2::Codecvt< internT, externT, stateT >\fP"
 .br
-.RI "Convenience wrapper of \fCstd::codecvt\fP "
+.RI "Convenience wrapper of \fCstd::codecvt\fP\&. "
 .ti -1c
 .RI "struct \fBjpcre2::select8< Char_T >\fP"
 .br
@@ -75,10 +75,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI "class \fBjpcre2::select32< Char_T >::Regex\fP"
 .br
 .RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
-.ti -1c
-.RI "struct \fBjpcre2::select< Char_T >\fP"
-.br
-.RI "struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&. "
 .in -1c
 .SS "Namespaces"
 
@@ -104,13 +100,21 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "#define \fBNDEBUG\fP"
+.RI "#define \fBPCRE2_CODE_UNIT_WIDTH\fP"
 .br
-.RI "Disable all assertions\&. "
+.RI "This macro must be defined to either 0, 8, 16 or 32 before including \fBjpcre2\&.hpp\fP\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_CODE_UNIT_ASSERT\fP"
+.RI "#define \fBJPCRE2_CODE_UNIT_WIDTH\fP"
 .br
-.RI "Enable a naive validation check on Code unit width and the selected character type\&. "
+.RI "Alias of \fBPCRE2_CODE_UNIT_WIDTH\fP\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_ENABLE_CODE_UNIT_VALIDATION\fP"
+.br
+.RI "Enable a naive validation check of code unit width if defined before including \fBjpcre2\&.hpp\fP\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_DISABLE_ERROR\fP"
+.br
+.RI "Disable all assertions if defined before including \fBjpcre2\&.hpp\fP\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -223,6 +227,14 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI "const Uint \fBjpcre2::MOD::RJ_V\fP []"
 .br
 .RI "Array of action (replace) modifier values for JPCRE2 options\&. "
+.ti -1c
+.RI "static thread_local std::wstring_convert< Codecvt< char16_t, char, std::mbstate_t >, char16_t > \fBjpcre2::convert16\fP"
+.br
+.RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-16\&. "
+.ti -1c
+.RI "static thread_local std::wstring_convert< Codecvt< char32_t, char, std::mbstate_t >, char32_t > \fBjpcre2::convert32\fP"
+.br
+.RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-32\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -240,14 +252,24 @@ If you are using JPCRE2 with all of its source files, you won't need to link it 
 
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define JPCRE2_CODE_UNIT_ASSERT"
+.SS "#define JPCRE2_CODE_UNIT_WIDTH"
 
 .PP
-Enable a naive validation check on Code unit width and the selected character type\&. 
-.SS "#define NDEBUG"
+Alias of \fBPCRE2_CODE_UNIT_WIDTH\fP\&. 
+.SS "#define JPCRE2_DISABLE_ERROR"
 
 .PP
-Disable all assertions\&. Disable assert() to prevent terminating program in case error/undefined behavior occurs 
+Disable all assertions if defined before including \fBjpcre2\&.hpp\fP\&. Disable assert() to prevent terminating program in case error/undefined behavior occurs\&. 
+.SS "#define JPCRE2_ENABLE_CODE_UNIT_VALIDATION"
+
+.PP
+Enable a naive validation check of code unit width if defined before including \fBjpcre2\&.hpp\fP\&. This gives a runtime assertion failure if code unit width mismatch occurs\&. 
+.SS "#define PCRE2_CODE_UNIT_WIDTH"
+
+.PP
+This macro must be defined to either 0, 8, 16 or 32 before including \fBjpcre2\&.hpp\fP\&. 0 means you will be using multiple code unit width in your program\&.
+.PP
+The code unit width must match with the bit size of the character type you are going to use\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.
