@@ -1,5 +1,0 @@
-<map id="jpcre2::select8::toString" name="jpcre2::select8::toString">
-<area shape="rect" id="node2" href="$classjpcre2_1_1select8_1_1RegexMatch.html#a5c5bfd8ce0edb427c1be9bd92084238d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. " alt="" coords="219,5,409,47"/>
-<area shape="rect" id="node3" href="$classjpcre2_1_1select8_1_1RegexReplace.html#ae80855aff85b16cd9f5381e7e40a3cdb" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr..." alt="" coords="213,71,415,112"/>
-<area shape="rect" id="node4" href="$structjpcre2_1_1select8.html#a881bbc46acf86f1af44d78b3271fed58" title="Converts an const Char_T* to jpcre2::select8&lt;Char_T&gt;::String. " alt="" coords="234,137,394,163"/>
-</map>

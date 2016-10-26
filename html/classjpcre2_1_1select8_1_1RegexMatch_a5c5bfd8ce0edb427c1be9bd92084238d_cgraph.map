@@ -1,7 +1,0 @@
-<map id="jpcre2::select8::RegexMatch::changeModifier" name="jpcre2::select8::RegexMatch::changeModifier">
-<area shape="rect" id="node2" href="$classjpcre2_1_1select8_1_1Regex.html#a104a8e697f08c7454acc6c6b3e15bc75" title="Add or remove a JPCRE2 option. " alt="" coords="246,5,399,47"/>
-<area shape="rect" id="node3" href="$classjpcre2_1_1select8_1_1Regex.html#ad161fefe651933eff904960372f2fccd" title="Add or remove a PCRE2 option. " alt="" coords="246,71,399,112"/>
-<area shape="rect" id="node4" href="$namespacejpcre2_1_1MOD.html#a7e770c6f3c25c16ded3fe23194028694" title="String of action (match) modifier characters for PCRE2 options. " alt="" coords="257,137,389,163"/>
-<area shape="rect" id="node5" href="$namespacejpcre2_1_1MOD.html#a7de5dbc51085133e3eb0462eee598485" title="String of action (match) modifier characters for JPCRE2 options. " alt="" coords="253,187,392,214"/>
-<area shape="rect" id="node6" href="$structjpcre2_1_1select8.html#ac89c2dcbbd42dbb66e1dbf36bf60a04e" title="Converts an integer to jpcre2::select8&lt;Char_T&gt;::String. " alt="" coords="243,238,403,265"/>
-</map>

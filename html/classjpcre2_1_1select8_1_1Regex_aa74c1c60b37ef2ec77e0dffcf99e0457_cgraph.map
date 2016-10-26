@@ -1,6 +1,0 @@
-<map id="jpcre2::select8::Regex::changeModifier" name="jpcre2::select8::Regex::changeModifier">
-<area shape="rect" id="node2" href="$namespacejpcre2_1_1MOD.html#a06ca3d045d80c0d98822466a59e03570" title="String of compile modifier characters for PCRE2 options. " alt="" coords="218,5,349,32"/>
-<area shape="rect" id="node3" href="$classjpcre2_1_1select8_1_1Regex.html#a104a8e697f08c7454acc6c6b3e15bc75" title="Add or remove a JPCRE2 option. " alt="" coords="207,57,360,98"/>
-<area shape="rect" id="node4" href="$classjpcre2_1_1select8_1_1Regex.html#ad161fefe651933eff904960372f2fccd" title="Add or remove a PCRE2 option. " alt="" coords="207,122,360,163"/>
-<area shape="rect" id="node5" href="$namespacejpcre2_1_1MOD.html#a8130d2b84feab52918fa32056881c7a7" title="String of compile modifier characters for JPCRE2 options. " alt="" coords="214,188,353,215"/>
-</map>
