@@ -83,6 +83,8 @@ Dependency</h1>
 <h1><a class="anchor" id="install-or-include"></a>
 Install or Include</h1>
 <p>The <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> header should be included in the source file that uses JPCRE2 functionalities.</p>
+<p><b>You must define <code>PCRE2_CODE_UNIT_WIDTH</code> as 0 or 8 or 16 or 32 before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></b>. 0 means you are going to use all of the libraries. See <a href="#code-unit-and-character-type">Code unit width and character type</a> for details.</p>
+<p>On windows you must define <code>#define PCRE2_STATIC</code> before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> if you link against static library.</p>
 <h2><a class="anchor" id="use-as-library"></a>
 Use as library</h2>
 <p>To build and install it as library in a Unix based system, run:</p>
@@ -90,7 +92,6 @@ Use as library</h2>
 <div class="fragment"><div class="line">./configure --enable-jpcre2-16 --enable-jpcre2-32</div><div class="line">make</div><div class="line">make install # or sudo make install</div></div><!-- fragment --><p> <a href="#the-configure-script">See here</a> for more options to the configure script.</p>
 <p>If you have <code>&gt;=c++11</code> support, then build the libraries with c++11 features:</p>
 <div class="fragment"><div class="line">./configure --enable-jpcre2-16 --enable-jpcre2-32 --enable-jpcre2-cpp11</div><div class="line">make</div><div class="line">make install # or sudo make install</div></div><!-- fragment --><p>Now <code>#include &lt;<a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>&gt;</code> in your code and build/compile by linking with both JPCRE2 and PCRE2 library.</p>
-<p><b>You must define <code>PCRE2_CODE_UNIT_WIDTH</code> as 0 or 8 or 16 or 32 before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></b>. 0 means you are going to use all of the libraries. See <a href="#code-unit-and-character-type">Code unit width and character type</a> for details.</p>
 <p>An example command to compile your code with GCC would be:</p>
 <div class="fragment"><div class="line">g++  mycpp.cpp -ljpcre2-8 -lpcre2-8 #sequence is important</div></div><!-- fragment --><p> An example command to build a program with multi-code unit width support:</p>
 <div class="fragment"><div class="line">g++ mycpp.cpp -ljpcre2-8 -ljpcre2-16 -ljpcre2-32 -lpcre2-8 -lpcre2-16 -lpcre2-32</div></div><!-- fragment --><p>i.e if you use all three code unit width in your application you will have to link with all three JPCRE2 and all three PCRE2 libraries.</p>
