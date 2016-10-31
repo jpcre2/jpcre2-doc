@@ -308,7 +308,7 @@ Portable coding</h1>
 Error handling</h1>
 <p>When a known error is occurred during pattern compilation or match or replace, the error number and error offsets are set to corresponding variables of <code>jp::Regex</code> class. You can get the error number, error offset and error message with <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a233916fa1a3a6144293fc6b384289975" title="Returns the last error number. ">jp::Regex::getErrorNumber()</a></code>, <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a17cad33f376fa97a243569139b7cf41e" title="Returns the last error offset. ">jp::Regex::getErrorOffset()</a></code> and <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a3a79db473540396e22fcb35e3e85c4fb" title="Returns the last error message. ">jp::Regex::getErrorMessage()</a></code> functions respectively.</p>
 <p><b>Note</b> that, these errors always gets overwritten by previous error, so you only get the last error that occurred.</p>
-<p><b>Also note</b> that, these errors never get re-initialized (se to zero), they are always there even when everything else worked great (except some previous error).</p>
+<p><b>Also note</b> that, these errors never get re-initialized (set to zero), they are always there even when everything else worked great (except some previous error).</p>
 <p>If you do experiment with various erroneous situations, make use of the <code>resetErrors()</code> function. You can call it from anywhere in your method chain and immediately set the errors to zero. This function is defined for all three classes and do the same thing.</p>
 <h1><a class="anchor" id="short-examples"></a>
 Short examples</h1>
