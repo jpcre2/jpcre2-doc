@@ -295,7 +295,7 @@ Portable coding</h1>
 <li>In a system where <code>char</code> is 32 bit, it will use 32-bit library and UTF-32 in UTF-mode.</li>
 <li>In a system where <code>char</code> is not 8, 16 or 32 bit, it will yield compile error.</li>
 </ol>
-<p>So, if you don't want to be so aware of the code unit width of the character type/s you are using, just link your program against all PCRE2 libraries. The code unit width will be handled automatically (unless you use explicit code unit width like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char, 8&gt;</code>) and if anything unsupported is encountered, you will get compile time error.</p>
+<p>So, if you don't want to be so aware of the code unit width of the character type/s you are using, link your program against all PCRE2 libraries. The code unit width will be handled automatically (unless you use explicit code unit width like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char, 8&gt;</code>) and if anything unsupported is encountered, you will get compile time error.</p>
 <p>A common example in this regard can be the use of <code>wchar_t</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;wchar_t&gt;::Regex</a> re;</div></div><!-- fragment --><ol type="1">
 <li>In windows, the above code will use 16-bit library and UTF-16 in UTF mode.</li>
