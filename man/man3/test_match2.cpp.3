@@ -1,4 +1,4 @@
-.TH "test_match2.cpp" 3 "Thu Oct 27 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "test_match2.cpp" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,7 +27,7 @@ Contains an example to take subject string, pattern and modifier from user input
 
 #define getLine(a) std::getline(std::cin,a,'\n')
 
-typedef jpcre2::select<char> jp;
+typedef jpcre2::select<char, 8> jp;
 
 int main(){
 

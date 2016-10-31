@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['select',['select',['../structjpcre2_1_1select.html',1,'jpcre2']]],
-  ['select16',['select16',['../structjpcre2_1_1select16.html',1,'jpcre2']]],
-  ['select32',['select32',['../structjpcre2_1_1select32.html',1,'jpcre2']]],
-  ['select8',['select8',['../structjpcre2_1_1select8.html',1,'jpcre2']]]
+  ['regex',['Regex',['../classjpcre2_1_1select_1_1Regex.html',1,'jpcre2::select']]],
+  ['regexmatch',['RegexMatch',['../classjpcre2_1_1select_1_1RegexMatch.html',1,'jpcre2::select']]],
+  ['regexreplace',['RegexReplace',['../classjpcre2_1_1select_1_1RegexReplace.html',1,'jpcre2::select']]]
 ];

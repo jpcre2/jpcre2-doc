@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classjpcre2_1_1select8_1_1Regex.html#a64a8b4c735520559e8113158254a7d1c',1,'jpcre2::select8::Regex::operator bool()'],['../classjpcre2_1_1select16_1_1Regex.html#ad8a286c1765be2f1ac9c24401fb4ad88',1,'jpcre2::select16::Regex::operator bool()'],['../classjpcre2_1_1select32_1_1Regex.html#a48fd536ff70855e359f75a63863a6b18',1,'jpcre2::select32::Regex::operator bool()']]],
-  ['operator_21',['operator!',['../classjpcre2_1_1select8_1_1Regex.html#a7fd09986b3df282c675350973a6f653d',1,'jpcre2::select8::Regex::operator!()'],['../classjpcre2_1_1select16_1_1Regex.html#a0f332266b05aceabf70ea1b07d44e8fe',1,'jpcre2::select16::Regex::operator!()'],['../classjpcre2_1_1select32_1_1Regex.html#ad649d44b9588df0c3045cc99e6d5ccf2',1,'jpcre2::select32::Regex::operator!()']]],
-  ['operator_3d',['operator=',['../classjpcre2_1_1select8_1_1Regex.html#a50c7fabe4e84c01be3a84b7b31a1dee1',1,'jpcre2::select8::Regex::operator=()'],['../classjpcre2_1_1select16_1_1Regex.html#a313f65ada47bc2a0487de8d6e5acafc3',1,'jpcre2::select16::Regex::operator=()'],['../classjpcre2_1_1select32_1_1Regex.html#a631bc69a977b491f0cead1a7202b64b5',1,'jpcre2::select32::Regex::operator=()']]]
+  ['operator_20bool',['operator bool',['../classjpcre2_1_1select_1_1Regex.html#a28ae9a7b5565f1f5ac42d5d8df584c4f',1,'jpcre2::select::Regex']]],
+  ['operator_21',['operator!',['../classjpcre2_1_1select_1_1Regex.html#a7bdac3bf6fd9729f050119d72b3b7543',1,'jpcre2::select::Regex']]],
+  ['operator_3d',['operator=',['../classjpcre2_1_1select_1_1Regex.html#a0418f93d1902402527cb33b1efb32f60',1,'jpcre2::select::Regex']]]
 ];

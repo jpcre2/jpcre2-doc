@@ -1,40 +1,262 @@
-.TH "jpcre2::select" 3 "Thu Oct 27 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select \- struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&.  
+jpcre2::select< Char_T, BS > \- struct to select code unit width and the character type\&.  
 
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <jpcre2\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBRegex\fP"
+.br
+.RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
+.ti -1c
+.RI "class \fBRegexMatch\fP"
+.br
+.RI "Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. "
+.ti -1c
+.RI "class \fBRegexReplace\fP"
+.br
+.RI "Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Validate_Code_Unit_Width< BS==sizeof(Char_T) *CHAR_BIT, Char_T >::ValidChar \fBChar\fP"
+.br
+.RI "Typedef for character (either one of \fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) "
+.ti -1c
+.RI "typedef std::basic_string< Char_T > \fBString\fP"
+.br
+.RI "Typedef for string (either one of \fCstd::string\fP, \fCstd::wstring\fP, \fCstd::u16string\fP, \fCstd::u32string\fP)\&. "
+.ti -1c
+.RI "typedef std::map< \fBString\fP, \fBString\fP > \fBMapNas\fP"
+.br
+.RI "Map for Named substrings\&. "
+.ti -1c
+.RI "typedef std::vector< \fBString\fP > \fBNumSub\fP"
+.br
+.RI "Vector for Numbered substrings (Sub container)\&. "
+.ti -1c
+.RI "typedef std::map< \fBString\fP, \fBSIZE_T\fP > \fBMapNtN\fP"
+.br
+.RI "Substring name to Substring number map\&. "
+.ti -1c
+.RI "typedef \fBMapNtN\fP \fBMapNtn\fP"
+.br
+.RI "Allow spelling mistake of MapNtN as MapNtn\&. "
+.ti -1c
+.RI "typedef std::vector< \fBMapNas\fP > \fBVecNas\fP"
+.br
+.RI "Vector of matches with named substrings\&. "
+.ti -1c
+.RI "typedef std::vector< \fBMapNtN\fP > \fBVecNtN\fP"
+.br
+.RI "Vector of substring name to substring number map\&. "
+.ti -1c
+.RI "typedef \fBVecNtN\fP \fBVecNtn\fP"
+.br
+.RI "Allow spelling mistake of VecNtN as VecNtn\&. "
+.ti -1c
+.RI "typedef std::vector< \fBNumSub\fP > \fBVecNum\fP"
+.br
+.RI "Vector of matches with numbered substrings\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBString\fP \fBtoString\fP (\fBChar\fP a)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::String\fP\&. "
+.ti -1c
+.RI "static \fBString\fP \fBtoString\fP (const \fBChar\fP *a)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a Char_T* (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP\&. "
+.ti -1c
+.RI "static \fBString\fP \fBtoString\fP (Pcre2Uchar *a)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a PCRE2_UCHAR to String\&. "
+.ti -1c
+.RI "static \fBString\fP \fBgetPcre2ErrorMessage\fP (int err_num)"
+.br
+.RI "Retruns error message from PCRE2 error number\&. "
+.ti -1c
+.RI "static \fBString\fP \fBgetErrorMessage\fP (int err_num, int err_off)"
+.br
+.RI "Retruns error message (either JPCRE2 or PCRE2) from error number and error offset\&. "
+.in -1c
 .SH "Detailed Description"
 .PP 
-struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&. 
 
-If you define PCRE2_CODE_UNIT_WIDTH to be 8, 16 or 32, the templated struct \fBjpcre2::select\fP will inherit one of the original struct from \fBjpcre2::select8\fP, \fBjpcre2::select16\fP or \fBjpcre2::select32\fP respectively and have complete access to the public API\&.
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT>
+.br
+struct jpcre2::select< Char_T, BS >"
+struct to select code unit width and the character type\&. 
+
+Usage: \fC\fBjpcre2::select\fP<Char_T, BS>\fP\&.
 .PP
-Implementation of \fBjpcre2::select8\fP, \fBjpcre2::select16\fP or \fBjpcre2::select32\fP are the same with same types of members, typdefs etc \&.\&.\&.
-.PP
-Usage: \fC\fBjpcre2::select\fP<Char_T>\fP\&.
-.PP
-The character type (\fCChar_T\fP) must be in accordance with the definition of PCRE2_CODE_UNIT_WIDTH\&. If it doesn't match with the character type, then the behavior is undefined\&. If the macro \fCJPCRE2_ENABLE_CODE_UNIT_VALIDATION\fP is defined , then such behavior will cause an assertion failure and immediate termination of the program\&.
-.PP
-When working with a single code unit width, \fBjpcre2::select\fP can be used in place of \fBjpcre2::select8\fP for 8bit, or in place of \fBjpcre2::select16\fP for 16bit, or in place of \fBjpcre2::select32\fP for 32bit\&.
-.PP
-When working with multiple code unit width, \fBjpcre2::select\fP family of strcuts must be called with their original names\&. 
+The character type (\fCChar_T\fP) must be in accordance with PCRE2_CODE_UNIT_WIDTH (BS)\&. If it doesn't match with the character type, compile time error will be produced if not suppressed by defining the macro \fCJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
-\fIChar_T\fP Character type (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP)\&. 
+\fIBS\fP Code unit width (8, 16 or 32) 
+.br
+\fIChar_T\fP Character type (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) If BS is not given, i\&.e it is called like 
+.PP
+.nf
+jpcre2::select<Char_T>
+
+.fi
+.PP
+ then \fCsizeof(Char_T)*CHAR_BIT\fP will be taken as the value for BS\&. It may come in handy in many situation but it will somewhat degrade the readability of your code\&. Passing the code unit width as a template parameter with \fBjpcre2::select\fP will keep things clear\&. 
 .RE
 .PP
-\fBSee also:\fP
+
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef Validate_Code_Unit_Width<BS == sizeof( Char_T ) * CHAR_BIT, Char_T>::ValidChar \fBjpcre2::select\fP< Char_T, BS >::\fBChar\fP"
+
+.PP
+Typedef for character (either one of \fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::map<\fBString\fP, \fBString\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBMapNas\fP"
+
+.PP
+Map for Named substrings\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::map<\fBString\fP, \fBSIZE_T\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBMapNtN\fP"
+
+.PP
+Substring name to Substring number map\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef \fBMapNtN\fP \fBjpcre2::select\fP< Char_T, BS >::\fBMapNtn\fP"
+
+.PP
+Allow spelling mistake of MapNtN as MapNtn\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::vector<\fBString\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBNumSub\fP"
+
+.PP
+Vector for Numbered substrings (Sub container)\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::basic_string<Char_T> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP"
+
+.PP
+Typedef for string (either one of \fCstd::string\fP, \fCstd::wstring\fP, \fCstd::u16string\fP, \fCstd::u32string\fP)\&. Defined as \fCstd::basic_string<Char_T>\fP\&. May be this list will make more sense: Character String  char std::string wchar_t std::wstring char16_t std::u16string (>=C++11) char32_t std::u32string (>=C++11) 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::vector<\fBMapNas\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBVecNas\fP"
+
+.PP
+Vector of matches with named substrings\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::vector<\fBMapNtN\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBVecNtN\fP"
+
+.PP
+Vector of substring name to substring number map\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef \fBVecNtN\fP \fBjpcre2::select\fP< Char_T, BS >::\fBVecNtn\fP"
+
+.PP
+Allow spelling mistake of VecNtN as VecNtn\&. 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef std::vector<\fBNumSub\fP> \fBjpcre2::select\fP< Char_T, BS >::\fBVecNum\fP"
+
+.PP
+Vector of matches with numbered substrings\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::getErrorMessage (int err_num, int err_off)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Retruns error message (either JPCRE2 or PCRE2) from error number and error offset\&. 
+.PP
+\fBParameters:\fP
 .RS 4
-\fBjpcre2::select8\fP 
+\fIerr_num\fP error number (negative for PCRE2, positive for JPCRE2) 
+.br
+\fIerr_off\fP error offset 
+.RE
 .PP
-\fBjpcre2::select16\fP 
+\fBReturns:\fP
+.RS 4
+message as \fBjpcre2::select::String\fP\&. 
+.RE
 .PP
-\fBjpcre2::select32\fP 
+
+.PP
+References jpcre2::ERROR::INVALID_MODIFIER, and jpcre2::ERROR::JIT_COMPILE_FAILED\&.
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::getPcre2ErrorMessage (int err_num)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Retruns error message from PCRE2 error number\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIerr_num\fP error number (negative) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+message as \fBjpcre2::select::String\fP\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (\fBChar\fP a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::String\fP\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIa\fP Char_T 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select::String\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (const \fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a Char_T* (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIa\fP const Char_T* 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select::String\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (Pcre2Uchar * a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+Converts a PCRE2_UCHAR to String\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP PCRE2_UCHAR 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select::String\fP 
 .RE
 .PP
 

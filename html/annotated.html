@@ -10,6 +10,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.27.03</span>
+   &#160;<span id="projectnumber">10.28.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -48,6 +55,20 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('annotated.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,27 +92,22 @@ $(function() {
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><a class="el" href="namespacejpcre2.html" target="_self">jpcre2</a></td><td class="desc">Top level namespace of JPCRE2 </td></tr>
 <tr id="row_0_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1Codecvt.html" target="_self">Codecvt</a></td><td class="desc">Convenience wrapper of <code>std::codecvt</code> </td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1select.html" target="_self">select</a></td><td class="desc">Struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width </td></tr>
-<tr id="row_0_2_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_2_" class="arrow" onclick="toggleFolder('0_2_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1select16.html" target="_self">select16</a></td><td class="desc">Struct to select 16 bit code unit width and the character type </td></tr>
-<tr id="row_0_2_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select16_1_1Regex.html" target="_self">Regex</a></td><td class="desc">Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern </td></tr>
-<tr id="row_0_2_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select16_1_1RegexMatch.html" target="_self">RegexMatch</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select16_1_1RegexMatch.html#a4ec8c86b0c7451774294c8ad737e4437" title="Perfor match operaton using info from class variables and return the match count. ...">RegexMatch::match()</a> function to perform regex matching </td></tr>
-<tr id="row_0_2_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select16_1_1RegexReplace.html" target="_self">RegexReplace</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select16_1_1RegexReplace.html#a27bd436473a5c4f669213b290bbdc19e" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr...">RegexReplace::replace()</a> function to perform regex replace on a string </td></tr>
-<tr id="row_0_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_3_" class="arrow" onclick="toggleFolder('0_3_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1select32.html" target="_self">select32</a></td><td class="desc">Struct to select 32 bit code unit width and the character type </td></tr>
-<tr id="row_0_3_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select32_1_1Regex.html" target="_self">Regex</a></td><td class="desc">Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern </td></tr>
-<tr id="row_0_3_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select32_1_1RegexMatch.html" target="_self">RegexMatch</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select32_1_1RegexMatch.html#a0d6f1be75006fc1010e9ef129b9d6ca5" title="Perfor match operaton using info from class variables and return the match count. ...">RegexMatch::match()</a> function to perform regex matching </td></tr>
-<tr id="row_0_3_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html" target="_self">RegexReplace</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select32_1_1RegexReplace.html#a32e1e2f35295a87db1288b42fe141cf5" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr...">RegexReplace::replace()</a> function to perform regex replace on a string </td></tr>
-<tr id="row_0_4_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_4_" class="arrow" onclick="toggleFolder('0_4_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1select8.html" target="_self">select8</a></td><td class="desc">Struct to select 8 bit code unit width and the character type </td></tr>
-<tr id="row_0_4_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select8_1_1Regex.html" target="_self">Regex</a></td><td class="desc">Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern </td></tr>
-<tr id="row_0_4_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select8_1_1RegexMatch.html" target="_self">RegexMatch</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select8_1_1RegexMatch.html#a2bb18b97fc3e0296c4b1ea1de3eae2d9" title="Perfor match operaton using info from class variables and return the match count. ...">RegexMatch::match()</a> function to perform regex matching </td></tr>
-<tr id="row_0_4_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html" target="_self">RegexReplace</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select8_1_1RegexReplace.html#ae80855aff85b16cd9f5381e7e40a3cdb" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr...">RegexReplace::replace()</a> function to perform regex replace on a string </td></tr>
+<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1ParseInt.html" target="_self">ParseInt</a></td><td class="desc">Contains function that parses integer </td></tr>
+<tr id="row_0_2_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_2_" class="arrow" onclick="toggleFolder('0_2_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structjpcre2_1_1select.html" target="_self">select</a></td><td class="desc">Struct to select code unit width and the character type </td></tr>
+<tr id="row_0_2_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select_1_1Regex.html" target="_self">Regex</a></td><td class="desc">Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern </td></tr>
+<tr id="row_0_2_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" target="_self">RegexMatch</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a5cb2be5e1b5a5a9a84aae5b4d80eb609" title="Perform match operaton using info from class variables and return the match count and store the resul...">RegexMatch::match()</a> function to perform regex matching </td></tr>
+<tr id="row_0_2_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html" target="_self">RegexReplace</a></td><td class="desc">Provides the <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr...">RegexReplace::replace()</a> function to perform regex replace on a string </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
-<div id="bt-foot">
-<hr class="footer"/><address class="footer"><small>
-Authored by <a href="https://github.com/neurobin">Md Jahidul Hamid</a>.&#160;Doc created with <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.13
-</small></address></div>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Authored by <a href="https://github.com/neurobin">Md Jahidul Hamid</a>.
+    Doc created with <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

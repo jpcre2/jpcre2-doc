@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Thu Oct 27 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,21 +27,13 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .br
 .RI "Convenience wrapper of \fCstd::codecvt\fP\&. "
 .ti -1c
+.RI "struct \fBParseInt\fP"
+.br
+.RI "Contains function that parses integer\&. "
+.ti -1c
 .RI "struct \fBselect\fP"
 .br
-.RI "struct to select the character type and PCRE2_CODE_UNIT_WIDTH as the code unit width\&. "
-.ti -1c
-.RI "struct \fBselect16\fP"
-.br
-.RI "struct to select 16 bit code unit width and the character type\&. "
-.ti -1c
-.RI "struct \fBselect32\fP"
-.br
-.RI "struct to select 32 bit code unit width and the character type\&. "
-.ti -1c
-.RI "struct \fBselect8\fP"
-.br
-.RI "struct to select 8 bit code unit width and the character type\&. "
+.RI "struct to select code unit width and the character type\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -67,7 +59,7 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 
 .in +1c
 .ti -1c
-.RI "const \fBSIZE_T\fP \fBSUBSTITUTE_RESULT_INIT_SIZE\fP = std::numeric_limits<int>::max()"
+.RI "const \fBSIZE_T\fP \fBSUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
 .br
 .RI "Used by default to provide big enough initial buffer for replaced string\&. "
 .ti -1c
@@ -124,7 +116,7 @@ Find all during match (global match)
 Perform JIT compilation for optimization\&. 
 .SH "Variable Documentation"
 .PP 
-.SS "jpcre2::convert16\fC [static]\fP"
+.SS "thread_local std::wstring_convert<\fBCodecvt\fP<char16_t,char,std::mbstate_t>,char16_t> jpcre2::convert16\fC [static]\fP"
 
 .PP
 This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-16\&. Convert UTF-16 to UTF-8 
@@ -142,7 +134,7 @@ convert16\&.from_bytes(utf8string)
 .fi
 .PP
  
-.SS "jpcre2::convert32\fC [static]\fP"
+.SS "thread_local std::wstring_convert<\fBCodecvt\fP<char32_t,char,std::mbstate_t>,char32_t> jpcre2::convert32\fC [static]\fP"
 
 .PP
 This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-32\&. Convert UTF-32 to UTF-8: 
@@ -168,10 +160,12 @@ Default locale\&.
 
 .PP
 Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. 
-.SS "const \fBSIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = std::numeric_limits<int>::max()"
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::compile()\&.
+.SS "const \fBSIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = 0"
 
 .PP
-Used by default to provide big enough initial buffer for replaced string\&. 
+Used by default to provide big enough initial buffer for replaced string\&. 0 or insufficient values will force a second call to pcre2_substitute(), If that is not desirable, pass a big enough buffer size with RegexReplace::setBufferSize() function to make it a single call operation\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

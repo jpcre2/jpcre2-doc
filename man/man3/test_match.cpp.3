@@ -1,4 +1,4 @@
-.TH "test_match.cpp" 3 "Thu Oct 27 2016" "Version 10.27.03" "JPCRE2" \" -*- nroff -*-
+.TH "test_match.cpp" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,7 +25,7 @@ Shows how to iterate over the match results to get the captured groups/substring
 #include "jpcre2\&.hpp"
 
 
-typedef jpcre2::select<char> jp;
+typedef jpcre2::select<char, 8> jp;
 
 int main(){
     jp::VecNum vec_num;   //Vector to store numbered substring vectors\&.
