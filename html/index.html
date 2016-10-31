@@ -124,7 +124,7 @@ Coding guide</h1>
 Compile a regex pattern</h2>
 <p>Select a character type according to the library you want to use. In this doc we are going to use 8 bit library as reference and we will use <code>char</code> as the character type. If <code>char</code> in your system is 16-bit you will have to link against 16-bit library instead, same goes for 32-bit. Other bit sizes are not supported by PCRE2.</p>
 <p>Let's use a typedef to shorten the code:</p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"><span class="comment">// You have to select the basic data type (char, wchar_t, char16_t or char32_t)</span></div><div class="line"><span class="comment">// And this data type must be of the same bit size as code unit wdith to be used</span></div></div><!-- fragment --><h3><a class="anchor" id="a-regex-object"></a>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"><span class="comment">// You have to select the basic data type (char, wchar_t, char16_t or char32_t)</span></div></div><!-- fragment --><h3><a class="anchor" id="a-regex-object"></a>
 A Regex object</h3>
 <p>(You can use temporary object too, see <a href="#short-examples">short examples</a>).</p>
 <p>This object will hold the pattern, modifiers (PCRE2 and JPCRE2 options) and compiled pattern.</p>
