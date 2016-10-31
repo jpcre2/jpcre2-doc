@@ -288,7 +288,7 @@ Code unit width &amp; character type</h1>
 <h1><a class="anchor" id="portable-coding"></a>
 Portable coding</h1>
 <p>JPCRE2 codes are portable when you use the selector (<code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a></code>) without an explicit bit size. In this case, code will get compiled according to the code unit width defined by your system. Consider the following example, where you do :</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> This is what will happen if the code is compiled in different systems:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> This is what will happen when you compile:</p>
 <ol type="1">
 <li>In a system where <code>char</code> is 8 bit, it will use 8-bit library and UTF-8 in UTF-mode.</li>
 <li>In a system where <code>char</code> is 16 bit, it will use 16-bit library and UTF-16 in UTF-mode.</li>
@@ -296,7 +296,7 @@ Portable coding</h1>
 <li>In a system where <code>char</code> is not 8, 16 or 32 bit, it will yield compile error.</li>
 </ol>
 <p>So, if you don't know or do not care to know about the code unit width of the character type/s you are using, just link your program against all PCRE2 libraries. The code unit width will be handled automatically (unless you use explicit code unit width like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char, 8&gt;</code>) and if anything unsupported is encountered, you will get compile time error.</p>
-<p>The most common example in this regard can be the use of <code>wchar_t</code>:</p>
+<p>A common example in this regard can be the use of <code>wchar_t</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;wchar_t&gt;::Regex</a> re;</div></div><!-- fragment --><ol type="1">
 <li>In windows, the above code will use 16-bit library and UTF-16 in UTF mode.</li>
 <li>In Linux, the above code will use 32-bit library and UTF-32 in UTF mode.</li>
