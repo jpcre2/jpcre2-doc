@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.02</span>
+   &#160;<span id="projectnumber">10.28.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -127,6 +127,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a078242d38221a13fb3543b9edd78c099"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a078242d38221a13fb3543b9edd78c099">Uint</a></td></tr>
 <tr class="memdesc:a078242d38221a13fb3543b9edd78c099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for options (bitwise operation)  <a href="#a078242d38221a13fb3543b9edd78c099">More...</a><br /></td></tr>
 <tr class="separator:a078242d38221a13fb3543b9edd78c099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">Ush</a></td></tr>
+<tr class="memdesc:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 bit unsigned integer.  <a href="#ace32c5cb1dfea02d9b64a7d0d61522ce">More...</a><br /></td></tr>
+<tr class="separator:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ccc266a390de1ebae13849ae3b6115"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">Convert16</a></td></tr>
+<tr class="memdesc:ab3ccc266a390de1ebae13849ae3b6115"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="#ab3ccc266a390de1ebae13849ae3b6115">More...</a><br /></td></tr>
+<tr class="separator:ab3ccc266a390de1ebae13849ae3b6115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade5700ff03148cd742312d03b46f2106"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">Convert32</a></td></tr>
+<tr class="memdesc:ade5700ff03148cd742312d03b46f2106"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="#ade5700ff03148cd742312d03b46f2106">More...</a><br /></td></tr>
+<tr class="separator:ade5700ff03148cd742312d03b46f2106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -152,18 +161,44 @@ Variables</h2></td></tr>
 <tr class="memitem:a6025fe0d160d3be3486ac94d018d3507"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a6025fe0d160d3be3486ac94d018d3507">LOCALE_DEFAULT</a> = <a class="el" href="namespacejpcre2.html#a06cef13814514454f602bde9fc2f2dcb">LOCALE_NONE</a></td></tr>
 <tr class="memdesc:a6025fe0d160d3be3486ac94d018d3507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default locale.  <a href="#a6025fe0d160d3be3486ac94d018d3507">More...</a><br /></td></tr>
 <tr class="separator:a6025fe0d160d3be3486ac94d018d3507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeb61891a9a4fbc9f2b0cc9fadab1948"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#adeb61891a9a4fbc9f2b0cc9fadab1948">convert16</a></td></tr>
-<tr class="memdesc:adeb61891a9a4fbc9f2b0cc9fadab1948"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="#adeb61891a9a4fbc9f2b0cc9fadab1948">More...</a><br /></td></tr>
-<tr class="separator:adeb61891a9a4fbc9f2b0cc9fadab1948"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a900b169a40f688a8f61761537e137faf"><td class="memItemLeft" align="right" valign="top">static thread_local std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a900b169a40f688a8f61761537e137faf">convert32</a></td></tr>
-<tr class="memdesc:a900b169a40f688a8f61761537e137faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="#a900b169a40f688a8f61761537e137faf">More...</a><br /></td></tr>
-<tr class="separator:a900b169a40f688a8f61761537e137faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Top level namespace of JPCRE2. </p>
 <p>All functions, classes/structs, constants, enums that are provided by JPCRE2 belong to this namespace while <b>PCRE2</b> structs, functions, constants remain outside of its scope.</p>
 <p>If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="ab3ccc266a390de1ebae13849ae3b6115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ccc266a390de1ebae13849ae3b6115">&sect;&nbsp;</a></span>Convert16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char16_t, char, std::mbstate_t&gt;,char16_t&gt; <a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">jpcre2::Convert16</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. </p>
+<p>Convert UTF-16 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">Convert16</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf16string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-16 </p><div class="fragment"><div class="line">std::u16string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ade5700ff03148cd742312d03b46f2106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5700ff03148cd742312d03b46f2106">&sect;&nbsp;</a></span>Convert32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char32_t, char, std::mbstate_t&gt;,char32_t&gt; <a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">jpcre2::Convert32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. </p>
+<p>Convert UTF-32 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">Convert32</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf32string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-32 </p><div class="fragment"><div class="line">std::u32string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="a1992f5f6f7d03fe854ad0c4de3352ec5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1992f5f6f7d03fe854ad0c4de3352ec5">&sect;&nbsp;</a></span>SIZE_T</h2>
 
@@ -196,6 +231,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ace32c5cb1dfea02d9b64a7d0d61522ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace32c5cb1dfea02d9b64a7d0d61522ce">&sect;&nbsp;</a></span>Ush</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">jpcre2::Ush</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>8 bit unsigned integer. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a85c143271501e383843f45b9999c2f00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85c143271501e383843f45b9999c2f00">&sect;&nbsp;</a></span>anonymous enum</h2>
@@ -222,54 +273,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="adeb61891a9a4fbc9f2b0cc9fadab1948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeb61891a9a4fbc9f2b0cc9fadab1948">&sect;&nbsp;</a></span>convert16</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">thread_local std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char16_t,char,std::mbstate_t&gt;,char16_t&gt; jpcre2::convert16</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. </p>
-<p>Convert UTF-16 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#adeb61891a9a4fbc9f2b0cc9fadab1948">convert16</a>.to_bytes(utf16string)</div></div><!-- fragment --><p> Convert UTF-8 to UTF-16 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#adeb61891a9a4fbc9f2b0cc9fadab1948">convert16</a>.from_bytes(utf8string)</div></div><!-- fragment --> 
-</div>
-</div>
-<a id="a900b169a40f688a8f61761537e137faf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a900b169a40f688a8f61761537e137faf">&sect;&nbsp;</a></span>convert32</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">thread_local std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char32_t,char,std::mbstate_t&gt;,char32_t&gt; jpcre2::convert32</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This is a convenience object (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. </p>
-<p>Convert UTF-32 to UTF-8: </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#a900b169a40f688a8f61761537e137faf">convert32</a>.to_bytes(utf32string)</div></div><!-- fragment --><p> Convert UTF-8 to UTF-32.. </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#a900b169a40f688a8f61761537e137faf">convert32</a>.from_bytes(utf8string)</div></div><!-- fragment --> 
-</div>
-</div>
 <a id="a6025fe0d160d3be3486ac94d018d3507"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6025fe0d160d3be3486ac94d018d3507">&sect;&nbsp;</a></span>LOCALE_DEFAULT</h2>
 

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Tue Nov 1 2016" "Version 10.28.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -194,7 +194,7 @@ Copy constructor. "
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT>
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
 .br
 class jpcre2::select< Char_T, BS >::Regex"
 Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. 
@@ -204,11 +204,11 @@ Each regex pattern needs an object of this class\&.
 A pattern must be compiled either by explicitly calling the compile function or using one of the parameterized constructors\&. 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex ()\fC [inline]\fP"
 
 .PP
 Default Constructor\&. Initializes all class variables to defaults\&. Does not perform any pattern compilation\&. 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re)\fC [inline]\fP"
 
 .PP
 Compile pattern with initialization\&. 
@@ -219,7 +219,7 @@ Compile pattern with initialization\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
@@ -232,7 +232,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
@@ -245,7 +245,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
@@ -260,19 +260,19 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBRegex\fP & r)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBRegex\fP & r)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
 .PP
 Copy constructor. Performs a deep copy\&. 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::~Regex ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::~Regex ()\fC [inline]\fP"
 
 .PP
 Destructor\&. Deletes all memory used by \fBRegex\fP, \fBRegexMatch\fP and \fBRegexReplace\fP object including compiled code and JIT memory\&. There should be no memory leak when an object is destroyed\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing JPCRE2 options for compile\&. 
@@ -295,7 +295,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addModifier (const std::string & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegex::changeModifier()\fP provided for convenience\&.
@@ -320,7 +320,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing PCRE2 options for compile\&. 
@@ -343,7 +343,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a JPCRE2 option\&. 
@@ -368,7 +368,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegex\fP & \fBjpcre2::select\fP< Char_T, BS >::Regex::changeModifier (const std::string & mod, bool x)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegex\fP & \fBjpcre2::select\fP< Char_T, BS >::Regex::changeModifier (const std::string & mod, bool x)"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
@@ -397,7 +397,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
@@ -422,7 +422,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (void)"
+.SS "template<typename Char_T , jpcre2::Ush BS> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (void)"
 
 .PP
 Compile pattern using info from class variables\&. Prefer using one of its variants when compiling pattern for an already declared \fBRegex\fP object\&. A use of 
@@ -449,7 +449,7 @@ re = jpcre2::select<8, char>::Regex("pattern");
 
 .PP
 References jpcre2::JIT_COMPILE, jpcre2::ERROR::JIT_COMPILE_FAILED, and jpcre2::LOCALE_NONE\&.
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
@@ -464,7 +464,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
@@ -477,7 +477,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
@@ -490,7 +490,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
@@ -501,7 +501,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorMessage ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorMessage ()\fC [inline]\fP"
 
 .PP
 Returns the last error message\&. 
@@ -512,7 +512,7 @@ Last error message
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorNumber ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorNumber ()\fC [inline]\fP"
 
 .PP
 Returns the last error number\&. 
@@ -523,7 +523,7 @@ Last error number
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorOffset ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorOffset ()\fC [inline]\fP"
 
 .PP
 Returns the last error offset\&. 
@@ -534,7 +534,7 @@ Last error offset
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -552,7 +552,7 @@ Compile time JPCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getLocale ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getLocale ()\fC [inline]\fP"
 
 .PP
 Get locale as a string\&. 
@@ -563,7 +563,7 @@ LC_CTYPE as std::string
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getMatchObject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getMatchObject ()\fC [inline]\fP"
 
 .PP
 Returns a reference to existing match object\&. If there was no match object, it will create a new and act similarly to \fBRegex::initMatch()\fP 
@@ -579,7 +579,7 @@ Reference to a \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier ()"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegex::setModifier()\fP will re-set them\&.
@@ -606,7 +606,7 @@ Calculated modifier string (std::string)
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPattern ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPattern ()\fC [inline]\fP"
 
 .PP
 Get pattern string\&. 
@@ -617,7 +617,7 @@ pattern string of type \fBjpcre2::select::String\fP
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPcre2Option ()\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -635,7 +635,7 @@ Compile time PCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getReplaceObject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getReplaceObject ()\fC [inline]\fP"
 
 .PP
 Returns a reference to the existing \fBRegexReplace\fP object\&. If there was no replace object, it will create a new one and act similarly to \fBRegex::initReplace()\fP\&. 
@@ -651,7 +651,7 @@ reference to a \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatch ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatch ()\fC [inline]\fP"
 
 .PP
 Create and initialize a new match object and return a reference to it\&. Options can be set with the setter functions of \fBRegexMatch\fP class in-between the \fBRegex::initMatch()\fP and \fBRegexMatch::match()\fP call\&.
@@ -667,7 +667,7 @@ Reference to a new \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initReplace ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initReplace ()\fC [inline]\fP"
 
 .PP
 Creates a new \fBRegexReplace\fP object and returns its reference\&. Options can be set with the setter functions of \fBRegexReplace\fP class in-between the \fBRegex::initReplace()\fP and \fBRegexReplace::replace()\fP call\&. 
@@ -683,7 +683,7 @@ Reference to a new \fBRegexReplace\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod)\fC [inline]\fP"
 
 .PP
 Perform regex match and return match count\&. This function takes the parameters, then sets the parameters to \fBRegexMatch\fP class and calls \fBRegexMatch::match()\fP which returns the result\&.
@@ -708,7 +708,7 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -724,7 +724,7 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 Provides boolean check for the status of the object\&. This overlaoded boolean operator needs to be declared explicit to prevent implicit conversion and overloading issues\&.
@@ -753,7 +753,7 @@ true if regex compiled successfully, false otherwise\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> bool \fBjpcre2::select\fP< Char_T, BS >::Regex::operator! () const\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> bool \fBjpcre2::select\fP< Char_T, BS >::Regex::operator! () const\fC [inline]\fP"
 
 .PP
 Provides boolean check for the status of the object\&. This is a safe boolean approach (no implicit conversion or overloading)\&. We don't need the explicit keyword here and thus it's the preferable method to check for object status that will work well with older compilers\&. e\&.g:
@@ -788,7 +788,7 @@ true if regex compiled successfully, false otherwise\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (const \fBRegex\fP & r)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (const \fBRegex\fP & r)\fC [inline]\fP"
 
 .PP
 Overloaded assignment operator\&. Performs a deep copy\&.
@@ -816,7 +816,7 @@ re = Regex("new pattern");
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
 
 .PP
 Perform regex replace and return the replaced string\&. This function takes the parameters, then sets the parameters to \fBRegexReplace\fP class and calls \fBRegexReplace::replace()\fP which returns the result\&.
@@ -843,7 +843,7 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -866,7 +866,7 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::reset ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state\&. Release any memory used by existing compiled pattern, \fBRegexMatch\fP, \fBRegexReplace\fP objects\&. 
@@ -877,7 +877,7 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetErrors ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetErrors ()\fC [inline]\fP"
 
 .PP
 Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
@@ -897,7 +897,7 @@ A reference to the \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for compile (overwrites existing option) 
@@ -920,7 +920,7 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setLocale (const std::string & x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setLocale (const std::string & x)\fC [inline]\fP"
 
 .PP
 Set the locale (LC_CTYPE) 
@@ -936,7 +936,7 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifier (const std::string & x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifier (const std::string & x)\fC [inline]\fP"
 
 .PP
 et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
@@ -961,7 +961,7 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (const \fBString\fP & re)\fC [inline]\fP"
 
 .PP
 Set the Pattern string to compile\&. 
@@ -977,7 +977,7 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option for compile (overwrites existing option) 

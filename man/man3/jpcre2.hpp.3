@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Tue Nov 1 2016" "Version 10.28.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -97,6 +97,18 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI "typedef uint32_t \fBjpcre2::Uint\fP"
 .br
 .RI "Used for options (bitwise operation) "
+.ti -1c
+.RI "typedef uint8_t \fBjpcre2::Ush\fP"
+.br
+.RI "8 bit unsigned integer\&. "
+.ti -1c
+.RI "typedef std::wstring_convert< Codecvt< char16_t, char, std::mbstate_t >, char16_t > \fBjpcre2::Convert16\fP"
+.br
+.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. "
+.ti -1c
+.RI "typedef std::wstring_convert< Codecvt< char32_t, char, std::mbstate_t >, char32_t > \fBjpcre2::Convert32\fP"
+.br
+.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. "
 .in -1c
 .SS "Enumerations"
 
@@ -126,19 +138,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Default locale\&. "
 .ti -1c
-.RI "static thread_local std::wstring_convert< Codecvt< char16_t, char, std::mbstate_t >, char16_t > \fBjpcre2::convert16\fP"
-.br
-.RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-16\&. "
-.ti -1c
-.RI "static thread_local std::wstring_convert< Codecvt< char32_t, char, std::mbstate_t >, char32_t > \fBjpcre2::convert32\fP"
-.br
-.RI "This is a convenience object (>=C++11) to convert between UTF-8 <> UTF-32\&. "
-.ti -1c
 .RI "const std::string \fBjpcre2::INFO::NAME\fP = 'JPCRE2'"
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.28\&.02'"
+.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.28\&.03'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -150,7 +154,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '02'"
+.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '03'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c

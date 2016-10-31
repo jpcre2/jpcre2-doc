@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Tue Nov 1 2016" "Version 10.28.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -106,7 +106,7 @@ This function just calls \fBRegexMatch::setFindAll(bool x)\fP with \fCtrue\fP as
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT>
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
 .br
 class jpcre2::select< Char_T, BS >::RegexMatch"
 Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. 
@@ -116,7 +116,7 @@ Provides chained methods to set various options\&.
 All constructors of this class are private\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing JPCRE2 options for match\&. 
@@ -139,7 +139,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addModifier (const std::string & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegexMatch::changeModifier()\fP provided for convenience\&.
@@ -164,7 +164,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing PCRE2 options for match\&. 
@@ -187,7 +187,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. Add or remove a JPCRE2 option 
@@ -212,7 +212,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexMatch\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changeModifier (const std::string & mod, bool x)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexMatch\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changeModifier (const std::string & mod, bool x)"
 
 .PP
 After a call to this function PCRE2 and JPCRE2 options will be properly set\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
@@ -241,7 +241,7 @@ Reference to the \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
@@ -266,7 +266,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -284,7 +284,7 @@ JPCRE2 options for math operation
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> std::string \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getModifier ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getModifier ()"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegexMatch::setModifier()\fP will re-set them\&.
@@ -306,7 +306,7 @@ RegexMatchReplace::getModifier()
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getPcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getPcre2Option ()\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -324,7 +324,7 @@ PCRE2 option for match operation
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubject ()\fC [inline]\fP"
 
 .PP
 Get subject string\&. 
@@ -340,7 +340,7 @@ subject string
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::SIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (void)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::SIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (void)"
 
 .PP
 Perform match operaton using info from class variables and return the match count and store the results in specified vectors\&. 
@@ -353,7 +353,7 @@ Match count
 
 .PP
 References jpcre2::FIND_ALL\&.
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::reset ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state\&. Data in the vectors will retain (It won't delete previous data in vectors) You will need to pass vector pointers again after calling this function to get match results\&. 
@@ -364,7 +364,7 @@ Reference to the calling \fBRegexMatch\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexMatch\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::resetErrors ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexMatch\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::resetErrors ()"
 
 .PP
 Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
@@ -384,7 +384,7 @@ A reference to the \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setFindAll (bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setFindAll (bool x)\fC [inline]\fP"
 
 .PP
 Set whether to perform global match\&. 
@@ -402,7 +402,7 @@ Reference to the calling \fBRegexMatch\fP object
 
 .PP
 References jpcre2::FIND_ALL\&.
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setFindAll ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setFindAll ()\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
@@ -415,7 +415,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for match (overwrite existing option) 
@@ -438,7 +438,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
 Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
@@ -463,7 +463,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNamedSubstringVector (\fBVecNas\fP * v)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNamedSubstringVector (\fBVecNas\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the named substring vector\&. This vector will be populated with named captured groups\&. 
@@ -479,7 +479,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNameToNumberMapVector (\fBVecNtN\fP * v)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNameToNumberMapVector (\fBVecNtN\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the name to number map vector\&. This vector will be populated with name to number map for captured groups\&. 
@@ -495,7 +495,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNumberedSubstringVector (\fBVecNum\fP * v)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setNumberedSubstringVector (\fBVecNum\fP * v)\fC [inline]\fP"
 
 .PP
 Set a pointer to the numbered substring vector\&. This vector will be filled with numbered (indexed) captured groups\&. 
@@ -511,7 +511,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option match (overwrite existing option) 
@@ -534,7 +534,7 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setSubject (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setSubject (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the subject string for match\&. 

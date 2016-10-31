@@ -6,6 +6,6 @@ var searchData=
   ['char',['Char',['../structjpcre2_1_1select.html#a8f2f9cae503d0f1020c435d406e925df',1,'jpcre2::select']]],
   ['codecvt',['Codecvt',['../structjpcre2_1_1Codecvt.html',1,'jpcre2']]],
   ['compile',['compile',['../classjpcre2_1_1select_1_1Regex.html#a98d0b04808c0cce52851c65e6317bdea',1,'jpcre2::select::Regex::compile(void)'],['../classjpcre2_1_1select_1_1Regex.html#a642fd0499ec8ababc6a5fdc2748e4664',1,'jpcre2::select::Regex::compile(const String &amp;re, Uint po, Uint jo)'],['../classjpcre2_1_1select_1_1Regex.html#aa241190d4fb5c8c29d2bec27b480c299',1,'jpcre2::select::Regex::compile(const String &amp;re, Uint po)'],['../classjpcre2_1_1select_1_1Regex.html#a5993e1b98080fadaf23865220ffff8d9',1,'jpcre2::select::Regex::compile(const String &amp;re, const std::string &amp;mod)'],['../classjpcre2_1_1select_1_1Regex.html#a3f2d8ea89c0da13a1cd391e20a2124ad',1,'jpcre2::select::Regex::compile(const String &amp;re)']]],
-  ['convert16',['convert16',['../namespacejpcre2.html#adeb61891a9a4fbc9f2b0cc9fadab1948',1,'jpcre2']]],
-  ['convert32',['convert32',['../namespacejpcre2.html#a900b169a40f688a8f61761537e137faf',1,'jpcre2']]]
+  ['convert16',['Convert16',['../namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115',1,'jpcre2']]],
+  ['convert32',['Convert32',['../namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106',1,'jpcre2']]]
 ];

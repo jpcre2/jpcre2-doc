@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Tue Nov 1 2016" "Version 10.28.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -96,7 +96,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides the \fBRegexReplace::repl
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT>
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
 .br
 class jpcre2::select< Char_T, BS >::RegexReplace"
 Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. 
@@ -106,7 +106,7 @@ Provides chained methods to set various options\&.
 All constructors of this class are private\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified JPCRE2 option to existing options for replace\&. 
@@ -129,7 +129,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addModifier (const std::string & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegexReplace::changeModifier()\fP provided for convenience\&.
@@ -154,7 +154,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified PCRE2 option to existing options for replace\&. 
@@ -177,7 +177,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. Add or remove a JPCRE2 option 
@@ -202,7 +202,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexReplace\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changeModifier (const std::string & mod, bool x)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexReplace\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changeModifier (const std::string & mod, bool x)"
 
 .PP
 After a call to this function PCRE2 and JPCRE2 options will be properly set\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
@@ -233,7 +233,7 @@ Reference to the \fBRegexReplace\fP object
 
 .PP
 Referenced by jpcre2::select< Char_T, BS >::RegexReplace::resetErrors()\&.
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
@@ -258,7 +258,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -276,7 +276,7 @@ JPCRE2 option for replace
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> std::string \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getModifier ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getModifier ()"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegexReplace::setModifier()\fP will re-set them\&.
@@ -298,7 +298,7 @@ Calculated modifier string (std::string)
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getPcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getPcre2Option ()\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -316,7 +316,7 @@ PCRE2 option for replace
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getReplaceWith ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getReplaceWith ()\fC [inline]\fP"
 
 .PP
 Get replacement string\&. 
@@ -327,7 +327,7 @@ replacement string
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getSubject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getSubject ()\fC [inline]\fP"
 
 .PP
 Get subject string\&. 
@@ -343,7 +343,7 @@ subject string
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (void)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (void)"
 
 .PP
 Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables\&. 
@@ -354,7 +354,7 @@ Replaced string
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::reset ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state\&. 
@@ -365,7 +365,7 @@ Reference to the calling \fBRegexReplace\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , int BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexReplace\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::resetErrors ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexReplace\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::resetErrors ()"
 
 .PP
 Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
@@ -387,7 +387,7 @@ Reference to the calling \fBRegexReplace\fP object
 
 .PP
 References jpcre2::select< Char_T, BS >::RegexReplace::changeModifier()\&.
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
 
 .PP
 Set the initial buffer size to be allocated for replaced string (used by PCRE2) 
@@ -403,7 +403,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for replace (overwrite existing option) 
@@ -426,7 +426,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
 Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexReplace::changeModifier()\fP\&. \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::setJpcre2Option()\fP and \fBRegexReplace::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
@@ -449,7 +449,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option replace (overwrite existing option) 
@@ -472,7 +472,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the replacement string\&. 
@@ -488,7 +488,7 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setSubject (const \fBString\fP & s)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setSubject (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 Set the subject string for replace\&. 

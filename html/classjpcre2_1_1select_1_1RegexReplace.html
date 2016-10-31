@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.02</span>
+   &#160;<span id="projectnumber">10.28.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -161,7 +161,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaba6964fdc26c8039c1f2d986107a856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt;<br />
+<div class="textblock"><h3>template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt;<br />
 class jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</h3>
 
 <p>Provides the <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr...">RegexReplace::replace()</a> function to perform regex replace on a string. </p>
@@ -174,7 +174,7 @@ class jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -214,7 +214,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -255,7 +255,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -295,7 +295,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -346,7 +346,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T , int BS&gt; </div>
+template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::<a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">RegexReplace</a> &amp; <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::changeModifier </td>
@@ -403,7 +403,7 @@ template&lt;typename Char_T , int BS&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -454,7 +454,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -487,7 +487,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T , int BS&gt; </div>
+template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::string <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::getModifier </td>
@@ -514,7 +514,7 @@ template&lt;typename Char_T , int BS&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -547,7 +547,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -577,7 +577,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -608,7 +608,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T , int BS&gt; </div>
+template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::<a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a> <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::replace </td>
@@ -631,7 +631,7 @@ template&lt;typename Char_T , int BS&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -661,7 +661,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T , int BS&gt; </div>
+template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::<a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">RegexReplace</a> &amp; <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::resetErrors </td>
@@ -699,7 +699,7 @@ template&lt;typename Char_T , int BS&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -736,7 +736,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -776,7 +776,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -816,7 +816,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -856,7 +856,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -893,7 +893,7 @@ template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
