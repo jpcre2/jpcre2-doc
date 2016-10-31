@@ -171,10 +171,12 @@ struct jpcre2::select&lt; Char_T, BS &gt;</h3>
 <p>The character type (<code>Char_T</code>) must be in accordance with PCRE2_CODE_UNIT_WIDTH (BS). If it doesn't match with the character type, compile time error will be produced if not suppressed by defining the macro <code>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">BS</td><td>Code unit width (8, 16 or 32) </td></tr>
-    <tr><td class="paramname">Char_T</td><td>Character type (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>) If BS is not given, i.e it is called like <div class="fragment"><div class="line"><a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a></div></div><!-- fragment --> then <code>sizeof(Char_T)*CHAR_BIT</code> will be taken as the value for BS. It may come in handy in many situation but it will somewhat degrade the readability of your code. Passing the code unit width as a template parameter with <a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a> will keep things clear. </td></tr>
+    <tr><td class="paramname">Char_T</td><td>Character type (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>) If BS is not given, i.e it is called like <div class="fragment"><div class="line"><a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a></div></div><!-- fragment --> then <code>sizeof(Char_T)*CHAR_BIT</code> will be taken as the value for BS.</td></tr>
   </table>
   </dd>
 </dl>
+<p>It may be possible to write portable code by using jpcre2::select&lt;Char_T&gt; i.e by not defining the bit size explicitly.</p>
+<p>But, when you define a single code unit width, explicity pass the bit size with the selctor, it will improve readability of code. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8f2f9cae503d0f1020c435d406e925df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f2f9cae503d0f1020c435d406e925df">&sect;&nbsp;</a></span>Char</h2>

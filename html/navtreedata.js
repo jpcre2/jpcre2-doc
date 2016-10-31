@@ -3,7 +3,7 @@ var NAVTREE =
   [ "JPCRE2", "index.html", [
     [ "Dependency", "index.html#dependency", null ],
     [ "Getting started", "index.html#getting-started", null ],
-    [ "Start coding", "index.html#start-coding", [
+    [ "Coding guide", "index.html#coding-guide", [
       [ "Compile a regex pattern", "index.html#compile-a-regex-pattern", [
         [ "A Regex object", "index.html#a-regex-object", null ],
         [ "Compile the regex", "index.html#compile-the-regex", null ],
@@ -31,9 +31,10 @@ var NAVTREE =
     ] ],
     [ "Options", "index.html#options", [
       [ "JPCRE2 options", "index.html#jpcre-options", null ],
-      [ "PCRE2 options", "index.html#pcre2-options", null ],
-      [ "Code unit width & character type", "index.html#code-unit-and-character-type", null ]
+      [ "PCRE2 options", "index.html#pcre2-options", null ]
     ] ],
+    [ "Code unit width & character type", "index.html#code-unit-and-character-type", null ],
+    [ "Portable coding", "index.html#portable-coding", null ],
     [ "Error handling", "index.html#exception-handling", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],

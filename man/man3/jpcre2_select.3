@@ -122,10 +122,12 @@ jpcre2::select<Char_T>
 
 .fi
 .PP
- then \fCsizeof(Char_T)*CHAR_BIT\fP will be taken as the value for BS\&. It may come in handy in many situation but it will somewhat degrade the readability of your code\&. Passing the code unit width as a template parameter with \fBjpcre2::select\fP will keep things clear\&. 
+ then \fCsizeof(Char_T)*CHAR_BIT\fP will be taken as the value for BS\&.
 .RE
 .PP
-
+It may be possible to write portable code by using jpcre2::select<Char_T> i\&.e by not defining the bit size explicitly\&.
+.PP
+But, when you define a single code unit width, explicity pass the bit size with the selctor, it will improve readability of code\&. 
 .SH "Member Typedef Documentation"
 .PP 
 .SS "template<typename Char_T, int BS = sizeof( Char_T ) * CHAR_BIT> typedef Validate_Code_Unit_Width<BS == sizeof( Char_T ) * CHAR_BIT, Char_T>::ValidChar \fBjpcre2::select\fP< Char_T, BS >::\fBChar\fP"
