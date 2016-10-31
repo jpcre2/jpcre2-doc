@@ -302,7 +302,7 @@ Code unit width &amp; character type</h1>
 <p>By default a code unit width validation check is turned on. It will give you compile time errors if you try to use character type whose bit size does not match with code unit width being used. You can however, disable this validation check by defining the following macro:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</span></div><div class="line"><span class="preprocessor">#include &lt;jpcre2.h&gt;</span></div></div><!-- fragment --><h1><a class="anchor" id="portable-coding"></a>
 Portable coding</h1>
-<p>It is possible to write portable code with JPCRE2 that can be compiled across multiple systems without any modifications in the source. In this case, code will get compiled according to the system environment. Consider the following example, where you do :</p>
+<p>It is possible to write portable code with JPCRE2 that can be compiled across multiple systems. In this case, code will get compiled according to the system environment. Consider the following example, where you do :</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#define PCRE2_CODE_UNIT_WIDTH 0</span></div><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> The point to be noted that:</p>
 <ol type="1">
 <li><code>0</code> is used as the <code>PCRE2_CODE_UNIT_WIDTH</code> i.e all (8-bit, 16-bit, 32-bit) PCRE2 libraries are being linked.</li>
@@ -323,6 +323,9 @@ Portable coding</h1>
 </ol>
 <blockquote class="doxtable">
 <p>When <code>PCRE2_CODE_UNIT_WIDTH</code> is defined as <code>0</code>, this macro loses its significance in JPCRE2 context, i.e the quirk introduced by the macro <code>PCRE2_CODE_UNIT_WIDTH</code> can be suppressed by defining it as <code>0</code>. </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>With this portable coding approach, you can have single code unit width as well as multi-code unit width in a single program. To be precise you won't need to worry about code unit width and you can use whatever character type (Char_T) you want, as long as its' code unit width is supported. If the code unit width of a character type you used is not supported, you will get compile time error. </p>
 </blockquote>
 <blockquote class="doxtable">
 <p>If you do care about the consistency of the code unit width among multiple systems, use the selector with an explicit bit size <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T, BS&gt;</code>), but in this case, your code will not be portable, and you will get compile time error (if not suppressed) when code unit width mismatch occurs. </p>
