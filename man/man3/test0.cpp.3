@@ -1,4 +1,4 @@
-.TH "test0.cpp" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
+.TH "test0.cpp" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,12 +21,10 @@ An example of handling multi code unit width\&.
 .nf
 
 #include <iostream>
-
-#define PCRE2_CODE_UNIT_WIDTH 0
 #include "jpcre2\&.hpp"
 
 typedef jpcre2::select<char> jp8;
-typedef jpcre2::select<wchar_t> jp32;
+typedef jpcre2::select<wchar_t, 32> jp32;
 
 int main(){
    jp8::Regex   re8 ( "\\d+");

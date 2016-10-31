@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.01</span>
+   &#160;<span id="projectnumber">10.28.02</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -103,29 +103,15 @@ Dependency</h1>
 <p>If the required PCRE2 version is not available in the official channel, you can download <a href="https://github.com/jpcre2/pcre2">my fork of the library</a>.</p>
 <h1><a class="anchor" id="getting-started"></a>
 Getting started</h1>
-<p>This is a header only library. All you need to do is include the header <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> in your program.</p>
-<p>Define <code>PCRE2_CODE_UNIT_WDTH</code> before including this header. Valid values for this macro are:</p>
-<table class="doxtable">
-<tr>
-<th>Value </th><th>Library to be linked </th><th>Remarks  </th></tr>
-<tr>
-<td>0 </td><td>All( 8, 16 , 32 bit) </td><td>Multi code unit width support </td></tr>
-<tr>
-<td>8 </td><td>Only 8-bit </td><td>Single code unit width </td></tr>
-<tr>
-<td>16 </td><td>Only 16-bit </td><td>Single code unit width </td></tr>
-<tr>
-<td>32 </td><td>Only 32-bit </td><td>Single code unit width </td></tr>
-</table>
-<p>Example:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#define PCRE2_CODE_UNIT_WDTH 0</span></div><div class="line"><span class="preprocessor">#include &quot;jpcre2.hpp&quot;</span></div></div><!-- fragment --><p><b>Note:</b> On windows, if you are working with a static PCRE2 library, you must define <code>PCRE2_STATIC</code> before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.</p>
+<p>This is a <b>header only</b> library. All you need to do is include the header <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> in your program.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&quot;</span></div></div><!-- fragment --><p><b>Note:</b> On windows, if you are working with a static PCRE2 library, you must define <code>PCRE2_STATIC</code> before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.</p>
 <p><b>Install:</b></p>
 <p>You can copy this header to a standard include directory (folder) so that it becomes available from a standard include path.</p>
 <p>On Unix you can do:</p>
 <div class="fragment"><div class="line">./configure</div><div class="line">make</div><div class="line">make install #(may require root privilege)</div></div><!-- fragment --><p> This will compile some examples (for 8-bit) and install the header. For other tests or compile options see <a href="#the-configure-script">configure script</a></p>
 <p><b>Compile/Build:</b></p>
-<p>Compile/Build your code with corresponding PCRE2 libraries linked. For 8-bit, you need to link with 8-bit and so on. If you want to use multiple code unit width, link against all 8-bit, 16-bit and 32-bit libraries and define <code>PCRE2_CODE_UNIT_WDTH</code> as <code>0</code>.</p>
-<p><b>Examples of compile command for g++:</b></p>
+<p>Compile/Build your code with corresponding PCRE2 libraries linked. For 8-bit code unit width, you need to link with 8-bit library, for 16-bit, 16-bit library and so on. If you want to use multiple code unit width, link against all 8-bit, 16-bit and 32-bit libraries. See <a href="#code-unit-and-character-type">code unit width and character type</a> for details.</p>
+<p><b>Example compilation with g++:</b></p>
 <div class="fragment"><div class="line">g++ main.cpp <a class="code" href="namespacejpcre2.html">jpcre2</a>.hpp -lpcre2-8</div><div class="line">g++ multi.cpp <a class="code" href="namespacejpcre2.html">jpcre2</a>.hpp -lpcre2-8 -lpcre2-16 -lpcre2-32</div></div><!-- fragment --><p> If PCRE2 is not installed in the standard path, add the path with <code>-L</code> option:</p>
 <div class="fragment"><div class="line">g++ main.cpp <a class="code" href="namespacejpcre2.html">jpcre2</a>.hpp -L/my/library/path -lpcre2-8</div></div><!-- fragment --><h1><a class="anchor" id="coding-guide"></a>
 Coding guide</h1>
@@ -136,9 +122,9 @@ Coding guide</h1>
 </ol>
 <h2><a class="anchor" id="compile-a-regex-pattern"></a>
 Compile a regex pattern</h2>
-<p>Select a character type according to <code>PCRE2_CODE_UNIT_WDTH</code>. In this doc we are going to use 8 bit code unit width as reference and we will use <code>char</code> as the character type.</p>
+<p>Select a character type according to the library you want to use. In this doc we are going to use 8 bit library as reference and we will use <code>char</code> as the character type. If <code>char</code> in your system is 16-bit you will have to link against 16-bit library instead, same goes for 32-bit. Other bit sizes are not supported by PCRE2.</p>
 <p>Let's use a typedef to shorten the code:</p>
-<div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char, 8&gt;</a> jp; <span class="comment">//explicit 8 makes it clear that it&#39;s 8-bit</span></div><div class="line"><span class="comment">// You have to select the basic data type (char, wchar_t, char16_t or char32_t)</span></div><div class="line"><span class="comment">// And this data type must be of the same bit size as code unit wdith to be used</span></div></div><!-- fragment --><h3><a class="anchor" id="a-regex-object"></a>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"><span class="comment">// You have to select the basic data type (char, wchar_t, char16_t or char32_t)</span></div><div class="line"><span class="comment">// And this data type must be of the same bit size as code unit wdith to be used</span></div></div><!-- fragment --><h3><a class="anchor" id="a-regex-object"></a>
 A Regex object</h3>
 <p>(You can use temporary object too, see <a href="#short-examples">short examples</a>).</p>
 <p>This object will hold the pattern, modifiers (PCRE2 and JPCRE2 options) and compiled pattern.</p>
@@ -226,9 +212,9 @@ Compile modifiers</h2>
 <tr>
 <td><code>j</code><sup>*</sup> </td><td><code>\u \U \x</code> and unset back-references will act as JavaScript standard. <ul>
 <li>
-<code></code> matches an upper case "U" character (by default it causes a compile time error if this option is not set).</li>
+<code></code> matches an upper case "U" character (by default it causes a compile error if this option is not set).</li>
 <li>
-<code></code> matches a lower case "u" character unless it is followed by four hexadecimal digits, in which case the hexadecimal number defines the code point to match (by default it causes a compile time error if this option is not set).</li>
+<code></code> matches a lower case "u" character unless it is followed by four hexadecimal digits, in which case the hexadecimal number defines the code point to match (by default it causes a compile error if this option is not set).</li>
 <li>
 <code></code> matches a lower case "x" character unless it is followed by two hexadecimal digits, in which case the hexadecimal number defines the code point to match (By default, as in Perl, a hexadecimal number is always expected after <code></code>, but it may have zero, one, or two digits (so, for example, <code></code> matches a binary zero character followed by z) ).</li>
 <li>
@@ -298,37 +284,27 @@ PCRE2 options</h2>
 <p>While having its own way of doing things, JPCRE2 also supports the traditional PCRE2 options to be passed (and it's faster than passing modifier). We use the <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a9508480db2b5563d8342301c9c9fe18c" title="Add option to existing PCRE2 options for compile. ">jp::Regex::addPcre2Option()</a></code> family of functions to pass the PCRE2 options. These options are the same as the PCRE2 library and have the same meaning. For example instead of passing the 'g' modifier to the replacement operation we can also pass its PCRE2 equivalent <code>PCRE2_SUBSTITUTE_GLOBAL</code> to have the same effect.</p>
 <h1><a class="anchor" id="code-unit-and-character-type"></a>
 Code unit width &amp; character type</h1>
-<p>The bit size of character type must match with <code>PCRE2_CODE_UNIT_WIDTH</code> (8, 16, or 32). That is, if you are compiling in a machine where <code>char</code> is 32 bit, you need to use the 32-bit library. The bit size of <code>char</code> can be 8 bit, 16 bit, 32 bit, 64 bit (not supported ) etc... depending on the system. Same goes for <code>wchar_t</code>. In Linux <code>wchar_t</code> is 32 bit, where in Windows, it's 16 bit. A system which only have 8 bit support will define <code>wchar_t</code> as 8 bit.</p>
-<p>By default a code unit width validation check is turned on. It will give you compile time errors if you try to use character type whose bit size does not match with code unit width being used. You can however, disable this validation check by defining the following macro:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</span></div><div class="line"><span class="preprocessor">#include &lt;jpcre2.h&gt;</span></div></div><!-- fragment --><h1><a class="anchor" id="portable-coding"></a>
+<p>The bit size of character type must match with the PCRE2 library you are linking against. There are three PCRE2 libraries according to code unit width, namely 8, 16 and 32 bit libraries. So, if you use a character type (e.g <code>char</code> which is generally 8 bit) of 8-bit code unit width then you will have to link your program against the 8-bit PCRE2 library. If it's 16-bit character, you will need 16-bit library. If you use a combination of various code unit width supported or use all of them, you will have to link your program against their corresponding PCRE2 libraries. Missing library will yield to compile time error.</p>
+<p><b>Implementation defined behavior:</b></p>
+<p>Size of integral types (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>) is implementation defined. <code>char</code> may be 8, 16, 32 or 64 (not supported) bit. Same goes for <code>wchar_t</code> and others. In Linux <code>wchar_t</code> is 32 bit and in windows it's 16 bit.</p>
+<h1><a class="anchor" id="portable-coding"></a>
 Portable coding</h1>
-<p>It is possible to write portable code with JPCRE2 that can be compiled across multiple systems. In this case, code will get compiled according to the system environment. Consider the following example, where you do :</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#define PCRE2_CODE_UNIT_WIDTH 0</span></div><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> The point to be noted that:</p>
-<ol type="1">
-<li><code>0</code> is used as the <code>PCRE2_CODE_UNIT_WIDTH</code> i.e all (8-bit, 16-bit, 32-bit) PCRE2 libraries are being linked.</li>
-<li>The selector <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char&gt;</code> is used without an explicit code unit width (i.e <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char, 8&gt;</code>)</li>
-</ol>
-<p>This is what will happen if the code is compiled in different systems:</p>
+<p>JPCRE2 codes are portable when you use the selector (<code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a></code>) without an explicit bit size. In this case, code will get compiled according to the code unit width defined by your system. Consider the following example, where you do :</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> This is what will happen if the code is compiled in different systems:</p>
 <ol type="1">
 <li>In a system where <code>char</code> is 8 bit, it will use 8-bit library and UTF-8 in UTF-mode.</li>
 <li>In a system where <code>char</code> is 16 bit, it will use 16-bit library and UTF-16 in UTF-mode.</li>
 <li>In a system where <code>char</code> is 32 bit, it will use 32-bit library and UTF-32 in UTF-mode.</li>
-<li>In a system where <code>char</code> is not 8, 16 or 32 bit, it will yield compile time error.</li>
+<li>In a system where <code>char</code> is not 8, 16 or 32 bit, it will yield compile error.</li>
 </ol>
-<p>The most common example can be the use of <code>wchar_t</code>. If you use</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#define PCRE2_CODE_UNIT_WIDTH 0</span></div></div><!-- fragment --><p> with all PCRE2 libraries linked and use the selector without an explicit bit size, then your code will act according to your system conventions:</p>
+<p>So, if you don't know or do not care to know about the code unit width of the character type/s you are using, just link your program against all PCRE2 libraries. The code unit width will be handled automatically (unless you use explicit code unit width like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;char, 8&gt;</code>) and if anything unsupported is encountered, you will get compile time error.</p>
+<p>The most common example in this regard can be the use of <code>wchar_t</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;wchar_t&gt;::Regex</a> re;</div></div><!-- fragment --><ol type="1">
-<li>In windows, the above code will be compiled with 16-bit library and UTF-16 in UTF mode.</li>
-<li>In Linux, the above code will be compiled with 32-bit library and UTF-32 in UTF mode.</li>
+<li>In windows, the above code will use 16-bit library and UTF-16 in UTF mode.</li>
+<li>In Linux, the above code will use 32-bit library and UTF-32 in UTF mode.</li>
 </ol>
 <blockquote class="doxtable">
-<p>When <code>PCRE2_CODE_UNIT_WIDTH</code> is defined as <code>0</code>, this macro loses its significance in JPCRE2 context, i.e the quirk introduced by the macro <code>PCRE2_CODE_UNIT_WIDTH</code> can be suppressed by defining it as <code>0</code>. </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>With this portable coding approach, you can have single code unit width as well as multi-code unit width in a single program. To be precise you won't need to worry about code unit width and you can use whatever character type (Char_T) you want, as long as its' code unit width is supported. If the code unit width of a character type you used is not supported, you will get compile time error. </p>
-</blockquote>
-<blockquote class="doxtable">
-<p>If you do care about the consistency of the code unit width among multiple systems, use the selector with an explicit bit size <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T, BS&gt;</code>), but in this case, your code will not be portable, and you will get compile time error (if not suppressed) when code unit width mismatch occurs. </p>
+<p>If you want to fix the code unit width, use an explicit bit size such as <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T, BS&gt;</code>, but in this case, your code will not be portable, and you will get compile error (if not suppressed) when code unit width mismatch occurs. </p>
 </blockquote>
 <h1><a class="anchor" id="exception-handling"></a>
 Error handling</h1>

@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -78,13 +78,13 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "#define \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP"
-.br
-.RI "By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile time error\&. "
-.ti -1c
 .RI "#define \fBPCRE2_CODE_UNIT_WIDTH\fP   0"
 .br
-.RI "The macro PCRE2_CODE_UNIT_WIDTH must be defined before including \fBjpcre2\&.hpp\fP\&. "
+.RI "This macro does not have any significance in JPCRE2 context\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP"
+.br
+.RI "By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -138,7 +138,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.28\&.01'"
+.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.28\&.02'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -150,7 +150,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '01'"
+.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '02'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
@@ -175,11 +175,11 @@ It includes the pcre2\&.h header, therefore you shouldn't include pcre2\&.h sepa
 .SS "#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION"
 
 .PP
-By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile time error\&. This check can be disabled by defining this macro\&. 
+By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. This check can be disabled by defining this macro\&. 
 .SS "#define PCRE2_CODE_UNIT_WIDTH   0"
 
 .PP
-The macro PCRE2_CODE_UNIT_WIDTH must be defined before including \fBjpcre2\&.hpp\fP\&. The valid values for this macro are: Value Library to be linked Remarks  0 All( 8, 16 , 32 bit) Multi code unit width support 8 Only 8-bit Single code unit width 16 Only 16-bit Single code unit width 32 Only 32-bit Single code unit width 
+This macro does not have any significance in JPCRE2 context\&. It is defined as 0 by default\&. Defining it before including \fBjpcre2\&.hpp\fP will override the default (0), but still it will have no effect in a JPCRE2 perspective\&. Defining it with an invalid value will yield to compile error\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

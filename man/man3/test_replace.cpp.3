@@ -1,4 +1,4 @@
-.TH "test_replace.cpp" 3 "Mon Oct 31 2016" "Version 10.28.01" "JPCRE2" \" -*- nroff -*-
+.TH "test_replace.cpp" 3 "Tue Nov 1 2016" "Version 10.28.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,10 +21,9 @@ An example of doing regex replace with JPCRE2\&.
 .nf
 
 #include <iostream>
-#define PCRE2_CODE_UNIT_WIDTH 8
 #include "jpcre2\&.hpp"
 
-typedef jpcre2::select<char, 8> jp;
+typedef jpcre2::select<char> jp;
 
 
 int main(){
