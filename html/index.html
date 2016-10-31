@@ -104,7 +104,12 @@ Dependency</h1>
 <h1><a class="anchor" id="getting-started"></a>
 Getting started</h1>
 <p>This is a <b>header only</b> library. All you need to do is include the header <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> in your program.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&quot;</span></div></div><!-- fragment --><p><b>Note:</b> On windows, if you are working with a static PCRE2 library, you must define <code>PCRE2_STATIC</code> before including <a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&quot;</span></div></div><!-- fragment --><p><b>Notes:</b></p>
+<ul>
+<li><code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> #includes <code>pcre2.h</code>, thus you should not include <code>pcre2.h</code> manually in your program.</li>
+<li>There's no need to define <code>PCRE2_CODE_UNIT_WIDTH</code> before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code>.</li>
+<li>On windows, if you are working with a static PCRE2 library, you must define <code>PCRE2_STATIC</code> before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code>.</li>
+</ul>
 <p><b>Install:</b></p>
 <p>You can copy this header to a standard include directory (folder) so that it becomes available from a standard include path.</p>
 <p>On Unix you can do:</p>
