@@ -34,7 +34,12 @@ var NAVTREE =
       [ "PCRE2 options", "index.html#pcre2-options", null ]
     ] ],
     [ "Code unit width & character type", "index.html#code-unit-and-character-type", null ],
-    [ "Portable coding", "index.html#portable-coding", null ],
+    [ "Portable coding", "index.html#portable-coding", [
+      [ "Code unit width quirk", "index.html#code-unit-width-quirk", null ],
+      [ "Use of string class", "index.html#use-of-string-class", null ],
+      [ "Use of vectors", "index.html#use-of-vectors", null ],
+      [ "Other typedefs", "index.html#other-typedefs", null ]
+    ] ],
     [ "Error handling", "index.html#exception-handling", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],

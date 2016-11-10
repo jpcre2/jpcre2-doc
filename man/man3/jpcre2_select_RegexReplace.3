@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Tue Nov 1 2016" "Version 10.28.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Thu Nov 10 2016" "Version 10.28.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -346,7 +346,7 @@ subject string
 .SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (void)"
 
 .PP
-Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables\&. 
+Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables\&. In the replacement string (see \fBRegexReplace::setReplaceWith()\fP) \fC$\fP is a special character which implies captured group\&. A literal \fC$\fP can be given as \fC$$\fP in the replacement string\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -475,7 +475,7 @@ Reference to the calling \fBRegexReplace\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
-Set the replacement string\&. 
+Set the replacement string\&. \fC$\fP is a special char\&. It denotes a captured group, e\&.g \fC$0\fP is the whole match, $1 is the caputred group no\&. 1, \fC${name}\fP is the captured group \fCname\fP\&. To isolate a capture group, wrap the number with \fC{}\fP e\&.g ${12} is the 12th captured group\&. To pass a literal \fC$\fP you must use \fC$$\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4

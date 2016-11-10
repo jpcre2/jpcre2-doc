@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.03</span>
+   &#160;<span id="projectnumber">10.28.04</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -292,6 +292,8 @@ Code unit width &amp; character type</h1>
 <p>Size of integral types (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>) is implementation defined. <code>char</code> may be 8, 16, 32 or 64 (not supported) bit. Same goes for <code>wchar_t</code> and others. In Linux <code>wchar_t</code> is 32 bit and in windows it's 16 bit.</p>
 <h1><a class="anchor" id="portable-coding"></a>
 Portable coding</h1>
+<h2><a class="anchor" id="code-unit-width-quirk"></a>
+Code unit width quirk</h2>
 <p>JPCRE2 codes are portable when you use the selector (<code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a></code>) without an explicit bit size. In this case, code will get compiled according to the code unit width defined by your system. Consider the following example, where you do :</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> jp;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(){</div><div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> This is what will happen when you compile:</p>
 <ol type="1">
@@ -309,6 +311,30 @@ Portable coding</h1>
 <blockquote class="doxtable">
 <p>If you want to fix the code unit width, use an explicit bit size such as <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T, BS&gt;</code>, but in this case, your code will not be portable, and you will get compile error (if not suppressed) when code unit width mismatch occurs. </p>
 </blockquote>
+<h2><a class="anchor" id="use-of-string-class"></a>
+Use of string class</h2>
+<p>For portable code, instead of using the standard names <code>std::string</code> or such, use <code><a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9" title="Typedef for string (either one of std::string, std::wstring, std::u16string, std::u32string). ">jp::String</a></code> (you may further typedef it as <code>String</code> or whatever). It will be defined to an appropriate string class according to the basic character type you selected and thus provide all the functionalities and conveniences you get with <code>std::string</code> and such. Being said that, there's no harm if you use the standard names (<code>std::string</code> and such). Using <code><a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9" title="Typedef for string (either one of std::string, std::wstring, std::u16string, std::u32string). ">jp::String</a></code> will just ensure that you are using the correct string class for the correct character type. If you need to use the basic character type, use <code><a class="el" href="structjpcre2_1_1select.html#a8f2f9cae503d0f1020c435d406e925df" title="Typedef for character (either one of char, wchar_t, char16_t, char32_t) ">jp::Char</a></code>.</p>
+<h2><a class="anchor" id="use-of-vectors"></a>
+Use of vectors</h2>
+<p>Instead of using full names like <code>std::vector&lt;std::string&gt;</code> and such for storing match result, use the typedefs:</p>
+<ol type="1">
+<li><code><a class="el" href="structjpcre2_1_1select.html#a8c0e25dacfe6eb3e2573861d9ee6e3cd" title="Vector for Numbered substrings (Sub container). ">jp::NumSub</a></code>: Equivalent to <code>std::vector&lt;std::string&gt;</code></li>
+<li><code><a class="el" href="structjpcre2_1_1select.html#a94c40fe24bf849dd5a0501aa45d418c4" title="Map for Named substrings. ">jp::MapNas</a></code>: Equivalent to <code>std::map&lt;std::string, std::string&gt;</code></li>
+<li><code><a class="el" href="structjpcre2_1_1select.html#ac942c8cfbf92b193a48be794d8fdc911" title="Substring name to Substring number map. ">jp::MapNtN</a></code>: Equivalent to <code>std::map&lt;std::string, size_t&gt;</code></li>
+<li><code><a class="el" href="structjpcre2_1_1select.html#a878faaca0dfdddae69c90dce46554cad" title="Vector of matches with numbered substrings. ">jp::VecNum</a></code>: Equivalent to <code>std::vector&lt;<a class="el" href="structjpcre2_1_1select.html#a8c0e25dacfe6eb3e2573861d9ee6e3cd" title="Vector for Numbered substrings (Sub container). ">jp::NumSub</a>&gt;</code></li>
+<li><code><a class="el" href="structjpcre2_1_1select.html#a0e58815cb26ca7686dc64be0968c9590" title="Vector of matches with named substrings. ">jp::VecNas</a></code>: Equivalent to <code>std::vector&lt;<a class="el" href="structjpcre2_1_1select.html#a94c40fe24bf849dd5a0501aa45d418c4" title="Map for Named substrings. ">jp::MapNas</a>&gt;</code></li>
+<li><code><a class="el" href="structjpcre2_1_1select.html#a2be38d80f7add849c5aa9a58e8518277" title="Vector of substring name to substring number map. ">jp::VecNtN</a></code>: Equivalent to <code>std::vector&lt;<a class="el" href="structjpcre2_1_1select.html#ac942c8cfbf92b193a48be794d8fdc911" title="Substring name to Substring number map. ">jp::MapNtN</a>&gt;</code></li>
+</ol>
+<h2><a class="anchor" id="other-typedefs"></a>
+Other typedefs</h2>
+<p>Other typedefs are mostly for internal use</p>
+<ul>
+<li>You can use <code><a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. ">jpcre2::Convert16</a></code> to convert between UTF-8 and UTF-16. (<code>&gt;=C++11</code>)</li>
+<li>You can use <code><a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. ">jpcre2::Convert32</a></code> to convert between UTF-8 and UTF-32. (<code>&gt;=C++11</code>)</li>
+<li>You should not use the <code><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce" title="8 bit unsigned integer. ">jpcre2::Ush</a></code> as unsigned short. In JPCRE2 context, it is the smallest unsigned integer type to cover at least the numbers from 1 to 126.</li>
+<li><code><a class="el" href="namespacejpcre2.html#a078242d38221a13fb3543b9edd78c099" title="Used for options (bitwise operation) ">jpcre2::Uint</a></code> is a fixed width unsigned integer type and will be at least 32 bit wide.</li>
+<li><code><a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5" title="Used for match count and vector size. ">jpcre2::SIZE_T</a></code> is the same as <code>PCRE2_SIZE</code> which is defined as <code>size_t</code>.</li>
+</ul>
 <h1><a class="anchor" id="exception-handling"></a>
 Error handling</h1>
 <p>When a known error is occurred during pattern compilation or match or replace, the error number and error offsets are set to corresponding variables of <code>jp::Regex</code> class. You can get the error number, error offset and error message with <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a233916fa1a3a6144293fc6b384289975" title="Returns the last error number. ">jp::Regex::getErrorNumber()</a></code>, <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a17cad33f376fa97a243569139b7cf41e" title="Returns the last error offset. ">jp::Regex::getErrorOffset()</a></code> and <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a3a79db473540396e22fcb35e3e85c4fb" title="Returns the last error message. ">jp::Regex::getErrorMessage()</a></code> functions respectively.</p>

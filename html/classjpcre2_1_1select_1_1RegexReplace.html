@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.03</span>
+   &#160;<span id="projectnumber">10.28.04</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -621,7 +621,7 @@ template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
 </div><div class="memdoc">
 
 <p>Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables. </p>
-<dl class="section return"><dt>Returns</dt><dd>Replaced string </dd></dl>
+<p>In the replacement string (see <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a9a1ad5f1af91ce858c5d89e2dec9df34" title="Set the replacement string. ">RegexReplace::setReplaceWith()</a>) <code>$</code> is a special character which implies captured group. A literal <code>$</code> can be given as <code>$$</code> in the replacement string. </p><dl class="section return"><dt>Returns</dt><dd>Replaced string </dd></dl>
 
 </div>
 </div>
@@ -877,7 +877,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </div><div class="memdoc">
 
 <p>Set the replacement string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p><code>$</code> is a special char. It denotes a captured group, e.g <code>$0</code> is the whole match, $1 is the caputred group no. 1, <code>${name}</code> is the captured group <code>name</code>. To isolate a capture group, wrap the number with <code>{}</code> e.g ${12} is the 12th captured group. To pass a literal <code>$</code> you must use <code>$$</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>String to replace with </td></tr>
   </table>

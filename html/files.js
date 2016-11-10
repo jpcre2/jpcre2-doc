@@ -1,6 +1,7 @@
 var files =
 [
     [ "jpcre2.hpp", "jpcre2_8hpp.html", "jpcre2_8hpp" ],
+    [ "test.hpp", "test_8hpp_source.html", null ],
     [ "test0.cpp", "test0_8cpp.html", null ],
     [ "test16.cpp", "test16_8cpp.html", null ],
     [ "test32.cpp", "test32_8cpp.html", null ],
