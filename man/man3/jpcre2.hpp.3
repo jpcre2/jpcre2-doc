@@ -66,13 +66,13 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Top level namespace of JPCRE2\&. "
 .ti -1c
-.RI " \fBjpcre2::ERROR\fP"
-.br
-.RI "Namespace for error codes\&. "
-.ti -1c
 .RI " \fBjpcre2::INFO\fP"
 .br
 .RI "Namespace to provide information about JPCRE2 library itself\&. "
+.ti -1c
+.RI " \fBjpcre2::ERROR\fP"
+.br
+.RI "Namespace for error codes\&. "
 .in -1c
 .SS "Macros"
 
@@ -115,7 +115,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .in +1c
 .ti -1c
 .RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2, \fBjpcre2::ERROR::JIT_COMPILE_FAILED\fP = 3 }
-.RI "ERROR numbers\&. ""
+.RI "Error numbers for JPCRE2\&. ""
 .br
 .ti -1c
 .RI "enum { \fBjpcre2::NONE\fP = 0x0000000u, \fBjpcre2::FIND_ALL\fP = 0x0000002u, \fBjpcre2::JIT_COMPILE\fP = 0x0000004u }
@@ -126,41 +126,33 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "const SIZE_T \fBjpcre2::SUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
-.br
-.RI "Used by default to provide big enough initial buffer for replaced string\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::LOCALE_NONE\fP = 'JPCRE2_NONE'"
-.br
-.RI "Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::LOCALE_DEFAULT\fP = LOCALE_NONE"
-.br
-.RI "Default locale\&. "
-.ti -1c
-.RI "const std::string \fBjpcre2::INFO::NAME\fP = 'JPCRE2'"
+.RI "static const char \fBjpcre2::INFO::NAME\fP [] = 'JPCRE2'"
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::FULL_VERSION\fP = '10\&.28\&.04'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.04'"
 .br
 .RI "Full version string\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_GENRE\fP = '10'"
+.RI "static const char \fBjpcre2::INFO::VERSION_GENRE\fP [] = '10'"
 .br
 .RI "Generation, depends on original PCRE2 version\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MAJOR\fP = '28'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '28'"
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_MINOR\fP = '04'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '04'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
-.RI "const std::string \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP = ''"
+.RI "static const char \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP [] = ''"
 .br
 .RI "Alpha or beta (testing) release version\&. "
+.ti -1c
+.RI "static const SIZE_T \fBjpcre2::SUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
+.br
+.RI "Used by default to provide big enough initial buffer for replaced string\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 

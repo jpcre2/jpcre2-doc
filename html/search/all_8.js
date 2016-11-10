@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['NAME',['../namespacejpcre2_1_1INFO.html#abd04238b81b9c55b8cf682e6d40e29f9',1,'jpcre2::INFO']]],
-  ['none',['NONE',['../namespacejpcre2.html#a85c143271501e383843f45b9999c2f00aecf4a781b081ff541006fbe84e143fb9',1,'jpcre2']]],
-  ['numsub',['NumSub',['../structjpcre2_1_1select.html#a8c0e25dacfe6eb3e2573861d9ee6e3cd',1,'jpcre2::select']]]
+  ['operator_20bool',['operator bool',['../classjpcre2_1_1select_1_1Regex.html#a28ae9a7b5565f1f5ac42d5d8df584c4f',1,'jpcre2::select::Regex']]],
+  ['operator_21',['operator!',['../classjpcre2_1_1select_1_1Regex.html#a7bdac3bf6fd9729f050119d72b3b7543',1,'jpcre2::select::Regex']]],
+  ['operator_3d',['operator=',['../classjpcre2_1_1select_1_1Regex.html#a0418f93d1902402527cb33b1efb32f60',1,'jpcre2::select::Regex']]]
 ];

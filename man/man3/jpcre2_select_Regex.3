@@ -61,7 +61,7 @@ Copy constructor. "
 .ti -1c
 .RI "\fBRegex\fP & \fBresetErrors\fP ()"
 .br
-.RI "Reset errors to zero\&. "
+.RI "Reset regex compile related errors to zero\&. "
 .ti -1c
 .RI "\fBString\fP \fBgetPattern\fP ()"
 .br
@@ -101,7 +101,7 @@ Copy constructor. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetModifier\fP (const std::string &x)"
 .br
-.RI "et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling \fBRegex::changeModifier()\fP\&. "
+.RI "set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetLocale\fP (const std::string &x)"
 .br
@@ -428,8 +428,8 @@ Reference to the calling \fBRegex\fP object
 Compile pattern using info from class variables\&. Prefer using one of its variants when compiling pattern for an already declared \fBRegex\fP object\&. A use of 
 .PP
 .nf
-jpcre2::select<8, char>::Regex re;
-re = jpcre2::select<8, char>::Regex("pattern");
+jpcre2::select<char>::Regex re;
+re = jpcre2::select<char>::Regex("pattern");
 
 .fi
 .PP
@@ -448,7 +448,7 @@ re = jpcre2::select<8, char>::Regex("pattern");
 .PP
 
 .PP
-References jpcre2::JIT_COMPILE, jpcre2::ERROR::JIT_COMPILE_FAILED, and jpcre2::LOCALE_NONE\&.
+References jpcre2::select< Char_T, BS >::RegexReplace::changeModifier(), jpcre2::JIT_COMPILE, and jpcre2::ERROR::JIT_COMPILE_FAILED\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
@@ -586,7 +586,7 @@ Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do reme
 .PP
 \fBMixed or combined modifier\fP\&.
 .PP
-Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier \fBRegex::changeModifier()\fP, both will get removed 
+Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegex::changeModifier()\fP\fP), both will get removed\&. 
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
@@ -737,7 +737,7 @@ This helps us to check the status of the compiled regex like this:
 .PP
 .PP
 .nf
-jpcre2::select<8, char>::Regex re("pat", "mod");
+jpcre2::select<char>::Regex re("pat", "mod");
 if(re) {
     std::cout<<"Compile success";
 } else {
@@ -760,7 +760,7 @@ Provides boolean check for the status of the object\&. This is a safe boolean ap
 .PP
 .PP
 .nf
-jpcre2::select<8, char>::Regex re("pat","mod");
+jpcre2::select<char>::Regex re("pat","mod");
 if(!re) {
     std::cout<<"Compile failed";
 } else {
@@ -772,7 +772,7 @@ if(!re) {
 .PP
 .PP
 .nf
-jpcre2::select<8, char>::Regex re("pat","mod");
+jpcre2::select<char>::Regex re("pat","mod");
 if(!!re) {
     std::cout<<"Compiled successfully";
 } else {
@@ -784,7 +784,7 @@ if(!!re) {
 .PP
 \fBReturns:\fP
 .RS 4
-true if regex compiled successfully, false otherwise\&. 
+true if regex compile failed, false otherwise\&. 
 .RE
 .PP
 
@@ -880,9 +880,7 @@ Reference to the calling \fBRegex\fP object\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetErrors ()\fC [inline]\fP"
 
 .PP
-Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
-.PP
-This function is callable from everywhere in a method chain, i\&.e other copy of this function for other classes are available and they do the exactly same thing\&. 
+Reset regex compile related errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -939,7 +937,7 @@ Reference to the calling \fBRegex\fP object\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifier (const std::string & x)\fC [inline]\fP"
 
 .PP
-et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
+set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegex::setJpcre2Option()\fP and \fBRegex::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP

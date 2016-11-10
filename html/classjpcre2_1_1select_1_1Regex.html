@@ -133,7 +133,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2bb1642f3ee08fdbcfbee8cfabb37266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all class variables to its default (initial) state.  <a href="#a2bb1642f3ee08fdbcfbee8cfabb37266">More...</a><br /></td></tr>
 <tr class="separator:a2bb1642f3ee08fdbcfbee8cfabb37266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9caf9e2164533c652789becfa0f155"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6b9caf9e2164533c652789becfa0f155">resetErrors</a> ()</td></tr>
-<tr class="memdesc:a6b9caf9e2164533c652789becfa0f155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset errors to zero.  <a href="#a6b9caf9e2164533c652789becfa0f155">More...</a><br /></td></tr>
+<tr class="memdesc:a6b9caf9e2164533c652789becfa0f155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset regex compile related errors to zero.  <a href="#a6b9caf9e2164533c652789becfa0f155">More...</a><br /></td></tr>
 <tr class="separator:a6b9caf9e2164533c652789becfa0f155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd4595f16e63a3cb106d23bf1756d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html#accd4595f16e63a3cb106d23bf1756d49">getPattern</a> ()</td></tr>
 <tr class="memdesc:accd4595f16e63a3cb106d23bf1756d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pattern string.  <a href="#accd4595f16e63a3cb106d23bf1756d49">More...</a><br /></td></tr>
@@ -163,7 +163,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abd7d2437b58e9b1ba334e0fc490cfc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Pattern string to compile.  <a href="#abd7d2437b58e9b1ba334e0fc490cfc3e">More...</a><br /></td></tr>
 <tr class="separator:abd7d2437b58e9b1ba334e0fc490cfc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05ff1da9420c8780286aa84d50ceecd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a05ff1da9420c8780286aa84d50ceecd2">setModifier</a> (const std::string &amp;x)</td></tr>
-<tr class="memdesc:a05ff1da9420c8780286aa84d50ceecd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a>.  <a href="#a05ff1da9420c8780286aa84d50ceecd2">More...</a><br /></td></tr>
+<tr class="memdesc:a05ff1da9420c8780286aa84d50ceecd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the modifier (resets all JPCRE2 and PCRE2 options) by calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a>.  <a href="#a05ff1da9420c8780286aa84d50ceecd2">More...</a><br /></td></tr>
 <tr class="separator:a05ff1da9420c8780286aa84d50ceecd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc0800f8f3863f16d16535e7def1d9b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html#abc0800f8f3863f16d16535e7def1d9b0">setLocale</a> (const std::string &amp;x)</td></tr>
 <tr class="memdesc:abc0800f8f3863f16d16535e7def1d9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the locale (LC_CTYPE)  <a href="#abc0800f8f3863f16d16535e7def1d9b0">More...</a><br /></td></tr>
@@ -803,7 +803,7 @@ template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
 </div><div class="memdoc">
 
 <p>Compile pattern using info from class variables. </p>
-<p>Prefer using one of its variants when compiling pattern for an already declared <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Implements public overloaded and copy constructors, provides functions to set/unset various options a...">Regex</a> object. A use of </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;8, char&gt;::Regex</a> re;</div><div class="line">re = <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;8, char&gt;::Regex</a>(<span class="stringliteral">&quot;pattern&quot;</span>);</div></div><!-- fragment --><p> (or such) is discouraged. see <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a0418f93d1902402527cb33b1efb32f60" title="Overloaded assignment operator. ">Regex::operator=(const Regex&amp; r)</a></code> for details. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a642fd0499ec8ababc6a5fdc2748e4664" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">Regex::compile(const String&amp; re, Uint po, Uint jo)</a> </dd>
+<p>Prefer using one of its variants when compiling pattern for an already declared <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Implements public overloaded and copy constructors, provides functions to set/unset various options a...">Regex</a> object. A use of </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char&gt;::Regex</a> re;</div><div class="line">re = <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char&gt;::Regex</a>(<span class="stringliteral">&quot;pattern&quot;</span>);</div></div><!-- fragment --><p> (or such) is discouraged. see <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a0418f93d1902402527cb33b1efb32f60" title="Overloaded assignment operator. ">Regex::operator=(const Regex&amp; r)</a></code> for details. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a642fd0499ec8ababc6a5fdc2748e4664" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">Regex::compile(const String&amp; re, Uint po, Uint jo)</a> </dd>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1Regex.html#aa241190d4fb5c8c29d2bec27b480c299" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">Regex::compile(const String&amp; re, Uint po)</a> </dd>
 <dd>
@@ -811,7 +811,17 @@ template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a3f2d8ea89c0da13a1cd391e20a2124ad" title="This is an overloaded member function, provided for convenience. It differs from the above function o...">Regex::compile(const String&amp; re)</a> </dd></dl>
 
-<p>References <a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e">jpcre2::JIT_COMPILE</a>, <a class="el" href="namespacejpcre2_1_1ERROR.html#a4b2998984439438fa9da8d7043909bc2aa116db5c7b638480ccad3ae938d33c3e">jpcre2::ERROR::JIT_COMPILE_FAILED</a>, and <a class="el" href="namespacejpcre2.html#a06cef13814514454f602bde9fc2f2dcb">jpcre2::LOCALE_NONE</a>.</p>
+<p>References <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#af40e61488e7c24b39899f68021e5ea03">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace::changeModifier()</a>, <a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e">jpcre2::JIT_COMPILE</a>, and <a class="el" href="namespacejpcre2_1_1ERROR.html#a4b2998984439438fa9da8d7043909bc2aa116db5c7b638480ccad3ae938d33c3e">jpcre2::ERROR::JIT_COMPILE_FAILED</a>.</p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classjpcre2_1_1select_1_1Regex_a98d0b04808c0cce52851c65e6317bdea_cgraph.png" border="0" usemap="#classjpcre2_1_1select_1_1Regex_a98d0b04808c0cce52851c65e6317bdea_cgraph" alt=""/></div>
+<map name="classjpcre2_1_1select_1_1Regex_a98d0b04808c0cce52851c65e6317bdea_cgraph" id="classjpcre2_1_1select_1_1Regex_a98d0b04808c0cce52851c65e6317bdea_cgraph">
+<area shape="rect" id="node2" href="classjpcre2_1_1select_1_1RegexReplace.html#af40e61488e7c24b39899f68021e5ea03" title="After a call to this function PCRE2 and JPCRE2 options will be properly set. " alt="" coords="200,5,395,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1201,9 +1211,9 @@ template&lt;typename Char_T , jpcre2::Ush BS&gt; </div>
 </div><div class="memdoc">
 
 <p>Calculate modifier string from PCRE2 and JPCRE2 options and return it. </p>
-<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a05ff1da9420c8780286aa84d50ceecd2" title="et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling Regex::changeModifier(). ">Regex::setModifier()</a> will re-set them.</p>
+<p>Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly. Calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a05ff1da9420c8780286aa84d50ceecd2" title="set the modifier (resets all JPCRE2 and PCRE2 options) by calling Regex::changeModifier(). ">Regex::setModifier()</a> will re-set them.</p>
 <p><b>Mixed or combined modifier</b>.</p>
-<p>Some modifier may include other modifiers i.e they have the same meaning of some modifiers combined together. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to <code>PCRE2_UTF | PCRE2_UCP</code>. When you set a modifier like this, both options get set, and when you remove the 'n' modifier <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a>, both will get removed </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Some modifier may include other modifiers i.e they have the same meaning of some modifiers combined together. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to <code>PCRE2_UTF | PCRE2_UCP</code>. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with <code><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a></code>), both will get removed. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">Char_T</td><td>Character type </td></tr>
   </table>
@@ -1490,7 +1500,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <p>We will only enable it if &gt;=C++11 is being used, as the explicit keyword for a function other than constructor is not supported in older compilers.</p>
 <p>If you are dealing with legacy code/compilers use the Double bang trick mentioned in <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a7bdac3bf6fd9729f050119d72b3b7543" title="Provides boolean check for the status of the object. ">Regex::operator!()</a>.</p>
 <p>This helps us to check the status of the compiled regex like this:</p>
-<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;8, char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>, <span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile success&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if regex compiled successfully, false otherwise. </dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>, <span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile success&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if regex compiled successfully, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1521,8 +1531,8 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 
 <p>Provides boolean check for the status of the object. </p>
 <p>This is a safe boolean approach (no implicit conversion or overloading). We don't need the explicit keyword here and thus it's the preferable method to check for object status that will work well with older compilers. e.g:</p>
-<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;8, char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>,<span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(!re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compiled successfully&quot;</span>;</div><div class="line">}</div></div><!-- fragment --><p> Double bang trick:</p>
-<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;8, char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>,<span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(!!re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compiled successfully&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if regex compiled successfully, false otherwise. </dd></dl>
+<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>,<span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(!re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compiled successfully&quot;</span>;</div><div class="line">}</div></div><!-- fragment --><p> Double bang trick:</p>
+<div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char&gt;::Regex</a> re(<span class="stringliteral">&quot;pat&quot;</span>,<span class="stringliteral">&quot;mod&quot;</span>);</div><div class="line"><span class="keywordflow">if</span>(!!re) {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compiled successfully&quot;</span>;</div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Compile failed&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if regex compile failed, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1726,12 +1736,11 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reset errors to zero. </p>
-<p>If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls.</p>
-<p>This function is callable from everywhere in a method chain, i.e other copy of this function for other classes are available and they do the exactly same thing. </p><dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Implements public overloaded and copy constructors, provides functions to set/unset various options a...">Regex</a> object </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a55107d95918eba967c06f3ae0da17f19" title="Reset errors to zero. ">RegexReplace::resetErrors()</a> </dd>
+<p>Reset regex compile related errors to zero. </p>
+<p>If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls. </p><dl class="section return"><dt>Returns</dt><dd>A reference to the <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Implements public overloaded and copy constructors, provides functions to set/unset various options a...">Regex</a> object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a460633e9765890f8680597363954c40a" title="Reset replace related errors to zero. ">RegexReplace::resetErrors()</a> </dd>
 <dd>
-<a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a9dd605ce39fdb757bcab747d7b58c4b2" title="Reset errors to zero. ">RegexMatch::resetErrors()</a> </dd></dl>
+<a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ac70a8a31708cc176f1d71ba8a064cdd0" title="Reset match related errors to zero. ">RegexMatch::resetErrors()</a> </dd></dl>
 
 </div>
 </div>
@@ -1838,7 +1847,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>et the modifier (overwrite existing JPCRE2 and PCRE2 option) by calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a>. </p>
+<p>set the modifier (resets all JPCRE2 and PCRE2 options) by calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">Regex::changeModifier()</a>. </p>
 <p>Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options.</p>
 <p><b>Note:</b> If speed of operation is very crucial, use <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a4e5c8e4e252e027ac1b4e86176a5d5d4" title="Set JPCRE2 option for compile (overwrites existing option) ">Regex::setJpcre2Option()</a> and <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a59f139aaefa47fce86cbb26b72c5c4fc" title="Set PCRE2 option for compile (overwrites existing option) ">Regex::setPcre2Option()</a> with equivalent options. It will be faster that way. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1847,9 +1856,9 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Implements public overloaded and copy constructors, provides functions to set/unset various options a...">Regex</a> object. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aa011cfe63bcd7e1b1eb8e63b1b9f8066" title="Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling RegexMatch::changeModifier(...">RegexMatch::setModifier()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aa011cfe63bcd7e1b1eb8e63b1b9f8066" title="Set the modifier (resets all JPCRE2 and PCRE2 options) by calling RegexMatch::changeModifier(). ">RegexMatch::setModifier()</a> </dd>
 <dd>
-<a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a476fafb8f2cdabe470c8441e7653cae4" title="Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling RegexReplace::change...">RegexReplace::setModifier()</a> </dd></dl>
+<a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a476fafb8f2cdabe470c8441e7653cae4" title="Set the modifier string (resets all JPCRE2 and PCRE2 options) by calling RegexReplace::changeModifier...">RegexReplace::setModifier()</a> </dd></dl>
 
 </div>
 </div>

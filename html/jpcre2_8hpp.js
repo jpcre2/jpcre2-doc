@@ -18,13 +18,11 @@ var jpcre2_8hpp =
     [ "JIT_COMPILE", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e", null ],
     [ "INVALID_MODIFIER", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2a4115340549b623f4e2da285bf0aa9bff", null ],
     [ "JIT_COMPILE_FAILED", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2aa116db5c7b638480ccad3ae938d33c3e", null ],
-    [ "FULL_VERSION", "jpcre2_8hpp.html#ab7beb5a54f906abaa52ea4a12bb36e6c", null ],
-    [ "LOCALE_DEFAULT", "jpcre2_8hpp.html#a6025fe0d160d3be3486ac94d018d3507", null ],
-    [ "LOCALE_NONE", "jpcre2_8hpp.html#a06cef13814514454f602bde9fc2f2dcb", null ],
-    [ "NAME", "jpcre2_8hpp.html#abd04238b81b9c55b8cf682e6d40e29f9", null ],
+    [ "FULL_VERSION", "jpcre2_8hpp.html#a5b22133d85a57f47012176fa934a7085", null ],
+    [ "NAME", "jpcre2_8hpp.html#a057688caad3ff7866a6449be627224a5", null ],
     [ "SUBSTITUTE_RESULT_INIT_SIZE", "jpcre2_8hpp.html#a84fce118a0293417a890a9038dad7054", null ],
-    [ "VERSION_GENRE", "jpcre2_8hpp.html#a6448cb3c0defc36eb18f8b245595f368", null ],
-    [ "VERSION_MAJOR", "jpcre2_8hpp.html#ac5ae50281bdf793a2755853ec241a867", null ],
-    [ "VERSION_MINOR", "jpcre2_8hpp.html#a610c579362dc68179b94c0fe70ea3d5c", null ],
-    [ "VERSION_PRE_RELEASE", "jpcre2_8hpp.html#adda8853ced241acd1cf63ac528bd0b84", null ]
+    [ "VERSION_GENRE", "jpcre2_8hpp.html#a3ced5e142d1e4d77a651384e5517f1f7", null ],
+    [ "VERSION_MAJOR", "jpcre2_8hpp.html#a959830e1cf1d7aa5932363b84452947e", null ],
+    [ "VERSION_MINOR", "jpcre2_8hpp.html#a7724bf02b0c6ecef1371926c97729b9a", null ],
+    [ "VERSION_PRE_RELEASE", "jpcre2_8hpp.html#a478b949e145c0c694d2074acddeb1789", null ]
 ];

@@ -19,7 +19,19 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBresetErrors\fP ()"
 .br
-.RI "Reset errors to zero\&. "
+.RI "Reset match related errors to zero\&. "
+.ti -1c
+.RI "int \fBgetErrorNumber\fP ()"
+.br
+.RI "Returns the last error number\&. "
+.ti -1c
+.RI "int \fBgetErrorOffset\fP ()"
+.br
+.RI "Returns the last error offset\&. "
+.ti -1c
+.RI "\fBString\fP \fBgetErrorMessage\fP ()"
+.br
+.RI "Returns the last error message\&. "
 .ti -1c
 .RI "\fBString\fP \fBgetSubject\fP ()"
 .br
@@ -55,7 +67,7 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetModifier\fP (const std::string &s)"
 .br
-.RI "Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. "
+.RI "Set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegexMatch::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -219,7 +231,7 @@ After a call to this function PCRE2 and JPCRE2 options will be properly set\&. T
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::changeJpcre2Option()\fP and \fBRegexMatch::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If invalid modifier is detected, then the error number for the \fBRegex\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegex::getErrorMessage()\fP function\&. 
+If invalid modifier is detected, then the error number for the \fBRegexMatch\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegexMatch::getErrorMessage()\fP function\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -266,6 +278,39 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorMessage ()\fC [inline]\fP"
+
+.PP
+Returns the last error message\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error message 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorNumber ()\fC [inline]\fP"
+
+.PP
+Returns the last error number\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error number 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorOffset ()\fC [inline]\fP"
+
+.PP
+Returns the last error offset\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error offset 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getJpcre2Option ()\fC [inline]\fP"
 
 .PP
@@ -291,7 +336,7 @@ Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do reme
 .PP
 \fBMixed or combined modifier\fP\&.
 .PP
-Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier \fBRegexMatch::changeModifier()\fP, both will get removed 
+Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegexMatch::changeModifier()\fP\fP), both will get removed\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -302,7 +347,7 @@ Calculated modifier string (std::string)
 .RS 4
 \fBRegex::getModifier()\fP 
 .PP
-RegexMatchReplace::getModifier() 
+\fBRegexReplace::getModifier()\fP 
 .RE
 .PP
 
@@ -364,12 +409,10 @@ Reference to the calling \fBRegexMatch\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexMatch\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::resetErrors ()"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::resetErrors ()\fC [inline]\fP"
 
 .PP
-Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
-.PP
-This function is callable from everywhere in a method chain, i\&.e other copy of this function for other classes are available and they do the exactly same thing\&. 
+Reset match related errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -441,7 +484,7 @@ Reference to the calling \fBRegexMatch\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
-Set the modifier (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexMatch::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
+Set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegexMatch::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier to set their equivalent options\&.
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexMatch::setJpcre2Option()\fP and \fBRegexMatch::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP

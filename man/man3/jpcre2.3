@@ -71,17 +71,9 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 
 .in +1c
 .ti -1c
-.RI "const \fBSIZE_T\fP \fBSUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
+.RI "static const \fBSIZE_T\fP \fBSUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
 .br
 .RI "Used by default to provide big enough initial buffer for replaced string\&. "
-.ti -1c
-.RI "const std::string \fBLOCALE_NONE\fP = 'JPCRE2_NONE'"
-.br
-.RI "Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. "
-.ti -1c
-.RI "const std::string \fBLOCALE_DEFAULT\fP = \fBLOCALE_NONE\fP"
-.br
-.RI "Default locale\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -162,17 +154,7 @@ Find all during match (global match)
 Perform JIT compilation for optimization\&. 
 .SH "Variable Documentation"
 .PP 
-.SS "const std::string jpcre2::LOCALE_DEFAULT = \fBLOCALE_NONE\fP"
-
-.PP
-Default locale\&. 
-.SS "const std::string jpcre2::LOCALE_NONE = 'JPCRE2_NONE'"
-
-.PP
-Don't do anything about locale if it is set to \fBjpcre2::LOCALE_NONE\fP\&. 
-.PP
-Referenced by jpcre2::select< Char_T, BS >::Regex::compile()\&.
-.SS "const \fBSIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = 0"
+.SS "const \fBSIZE_T\fP jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = 0\fC [static]\fP"
 
 .PP
 Used by default to provide big enough initial buffer for replaced string\&. 0 or insufficient values will force a second call to pcre2_substitute(), If that is not desirable, pass a big enough buffer size with RegexReplace::setBufferSize() function to make it a single call operation\&. 

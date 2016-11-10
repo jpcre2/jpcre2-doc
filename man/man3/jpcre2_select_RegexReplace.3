@@ -19,7 +19,19 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides the \fBRegexReplace::repl
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBresetErrors\fP ()"
 .br
-.RI "Reset errors to zero\&. "
+.RI "Reset replace related errors to zero\&. "
+.ti -1c
+.RI "int \fBgetErrorNumber\fP ()"
+.br
+.RI "Returns the last error number\&. "
+.ti -1c
+.RI "int \fBgetErrorOffset\fP ()"
+.br
+.RI "Returns the last error offset\&. "
+.ti -1c
+.RI "\fBString\fP \fBgetErrorMessage\fP ()"
+.br
+.RI "Returns the last error message\&. "
 .ti -1c
 .RI "\fBString\fP \fBgetReplaceWith\fP ()"
 .br
@@ -51,7 +63,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides the \fBRegexReplace::repl
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetModifier\fP (const std::string &s)"
 .br
-.RI "Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexReplace::changeModifier()\fP\&. "
+.RI "Set the modifier string (resets all JPCRE2 and PCRE2 options) by calling \fBRegexReplace::changeModifier()\fP\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetBufferSize\fP (PCRE2_SIZE x)"
 .br
@@ -209,7 +221,7 @@ After a call to this function PCRE2 and JPCRE2 options will be properly set\&. T
 .PP
 \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::changeJpcre2Option()\fP and \fBRegexReplace::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
-If invalid modifier is detected, then the error number for the \fBRegex\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegex::getErrorMessage()\fP function\&. 
+If invalid modifier is detected, then the error number for the \fBRegexReplace\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegexReplace::getErrorMessage()\fP function\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -232,7 +244,7 @@ Reference to the \fBRegexReplace\fP object
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::RegexReplace::resetErrors()\&.
+Referenced by jpcre2::select< Char_T, BS >::Regex::compile()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
@@ -255,6 +267,39 @@ Reference to the calling \fBRegexReplace\fP object
 \fBRegexMatch::changePcre2Option()\fP 
 .PP
 \fBRegex::changePcre2Option()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getErrorMessage ()\fC [inline]\fP"
+
+.PP
+Returns the last error message\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error message 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getErrorNumber ()\fC [inline]\fP"
+
+.PP
+Returns the last error number\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error number 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getErrorOffset ()\fC [inline]\fP"
+
+.PP
+Returns the last error offset\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last error offset 
 .RE
 .PP
 
@@ -283,7 +328,7 @@ Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do reme
 .PP
 \fBMixed or combined modifier\fP\&.
 .PP
-Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier \fBRegexReplace::changeModifier()\fP, both will get removed 
+Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegexReplace::changeModifier()\fP\fP), both will get removed\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -365,12 +410,10 @@ Reference to the calling \fBRegexReplace\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegexReplace\fP & \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::resetErrors ()"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::resetErrors ()\fC [inline]\fP"
 
 .PP
-Reset errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&.
-.PP
-This function is callable from everywhere in a method chain, i\&.e other copy of this function for other classes are available and they do the exactly same thing\&. 
+Reset replace related errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -385,8 +428,6 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::changeModifier()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
 
 .PP
@@ -429,7 +470,7 @@ Reference to the calling \fBRegexReplace\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
-Set the modifier string (overwrites existing JPCRE2 and PCRE2 option) by calling \fBRegexReplace::changeModifier()\fP\&. \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::setJpcre2Option()\fP and \fBRegexReplace::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
+Set the modifier string (resets all JPCRE2 and PCRE2 options) by calling \fBRegexReplace::changeModifier()\fP\&. \fBNote:\fP If speed of operation is very crucial, use \fBRegexReplace::setJpcre2Option()\fP and \fBRegexReplace::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
 .PP
 \fBParameters:\fP
 .RS 4

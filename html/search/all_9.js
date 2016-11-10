@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classjpcre2_1_1select_1_1Regex.html#a28ae9a7b5565f1f5ac42d5d8df584c4f',1,'jpcre2::select::Regex']]],
-  ['operator_21',['operator!',['../classjpcre2_1_1select_1_1Regex.html#a7bdac3bf6fd9729f050119d72b3b7543',1,'jpcre2::select::Regex']]],
-  ['operator_3d',['operator=',['../classjpcre2_1_1select_1_1Regex.html#a0418f93d1902402527cb33b1efb32f60',1,'jpcre2::select::Regex']]]
+  ['parseint',['ParseInt',['../structjpcre2_1_1ParseInt.html',1,'jpcre2']]],
+  ['pcre2_5fcode_5funit_5fwidth',['PCRE2_CODE_UNIT_WIDTH',['../jpcre2_8hpp.html#acff91275abcc225454675d6dfc39a58d',1,'jpcre2.hpp']]]
 ];
