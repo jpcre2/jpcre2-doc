@@ -10,6 +10,8 @@ var searchData=
   ['setnumberedsubstringvector',['setNumberedSubstringVector',['../classjpcre2_1_1select_1_1RegexMatch.html#a5c79c21725d369f6b7ea1253417b8a5b',1,'jpcre2::select::RegexMatch']]],
   ['setpattern',['setPattern',['../classjpcre2_1_1select_1_1Regex.html#abd7d2437b58e9b1ba334e0fc490cfc3e',1,'jpcre2::select::Regex']]],
   ['setpcre2option',['setPcre2Option',['../classjpcre2_1_1select_1_1RegexMatch.html#a2d244b4bfbfdc37a319cb6addcacef78',1,'jpcre2::select::RegexMatch::setPcre2Option()'],['../classjpcre2_1_1select_1_1RegexReplace.html#ac3cd6b77e6ec0f421ed78d79ddc66936',1,'jpcre2::select::RegexReplace::setPcre2Option()'],['../classjpcre2_1_1select_1_1Regex.html#a59f139aaefa47fce86cbb26b72c5c4fc',1,'jpcre2::select::Regex::setPcre2Option()']]],
+  ['setregexobject',['setRegexObject',['../classjpcre2_1_1select_1_1RegexMatch.html#a1fc70f17abb075d58ce654b840303970',1,'jpcre2::select::RegexMatch::setRegexObject()'],['../classjpcre2_1_1select_1_1RegexReplace.html#a0bd5895ceeef8a01700ef4a5669c716c',1,'jpcre2::select::RegexReplace::setRegexObject()']]],
   ['setreplacewith',['setReplaceWith',['../classjpcre2_1_1select_1_1RegexReplace.html#a9a1ad5f1af91ce858c5d89e2dec9df34',1,'jpcre2::select::RegexReplace']]],
+  ['setstartoffset',['setStartOffset',['../classjpcre2_1_1select_1_1RegexMatch.html#a764d567e130c7596dd9479da91f64a14',1,'jpcre2::select::RegexMatch']]],
   ['setsubject',['setSubject',['../classjpcre2_1_1select_1_1RegexMatch.html#a7f6a47d6ceb8b3c9ea80dff026d24907',1,'jpcre2::select::RegexMatch::setSubject()'],['../classjpcre2_1_1select_1_1RegexReplace.html#aa07c3051ff2bdd7d1f968fa60b8c76ac',1,'jpcre2::select::RegexReplace::setSubject()']]]
 ];

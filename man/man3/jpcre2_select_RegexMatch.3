@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Thu Nov 10 2016" "Version 10.28.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Sat Nov 12 2016" "Version 10.28.05" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,6 +12,10 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .SS "Public Member Functions"
 
 .in +1c
+.ti -1c
+.RI "\fBRegexMatch\fP (\fBRegex\fP *r)"
+.br
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBreset\fP ()"
 .br
@@ -49,6 +53,22 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .br
 .RI "Get JPCRE2 option\&. "
 .ti -1c
+.RI "PCRE2_SIZE \fBgetStartOffset\fP ()"
+.br
+.RI "Get offset from where match will start in the subject\&. "
+.ti -1c
+.RI "PCRE2_SIZE \fBgetEndOffset\fP ()"
+.br
+.RI "Get offset where last match operation has ended\&. "
+.ti -1c
+.RI "\fBRegex\fP & \fBgetRegexObject\fP ()"
+.br
+.RI "Get a reference to the associated \fBRegex\fP object\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBsetRegexObject\fP (\fBRegex\fP *r)"
+.br
+.RI "Set the associated regex object\&. "
+.ti -1c
 .RI "\fBRegexMatch\fP & \fBsetNumberedSubstringVector\fP (\fBVecNum\fP *v)"
 .br
 .RI "Set a pointer to the numbered substring vector\&. "
@@ -83,11 +103,13 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetFindAll\fP ()"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-This function just calls \fBRegexMatch::setFindAll(bool x)\fP with \fCtrue\fP as the parameter\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBRegexMatch\fP & \fBchangeModifier\fP (const std::string &, bool)"
+.RI "\fBRegexMatch\fP & \fBsetStartOffset\fP (PCRE2_SIZE offset)"
+.br
+.RI "Set offset from where match starts When FIND_ALL is set, a global match would not be performed on all positions on the subject, rather it will be performed from the start offset and onwards\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBchangeModifier\fP (const std::string &mod, bool x)"
 .br
 .RI "After a call to this function PCRE2 and JPCRE2 options will be properly set\&. "
 .ti -1c
@@ -114,6 +136,22 @@ This function just calls \fBRegexMatch::setFindAll(bool x)\fP with \fCtrue\fP as
 .RI "\fBSIZE_T\fP \fBmatch\fP (void)"
 .br
 .RI "Perform match operaton using info from class variables and return the match count and store the results in specified vectors\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, std::string const &mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, PCRE2_SIZE start_offset)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, std::string const &mod, PCRE2_SIZE start_offset)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -125,7 +163,20 @@ Provides the \fBRegexMatch::match()\fP function to perform regex matching\&.
 
 Provides chained methods to set various options\&.
 .PP
-All constructors of this class are private\&. 
+Provides a public constructor to create \fBRegexMatch\fP objects\&. There is no copy constructor or copy-assignment operator for this class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::RegexMatch (\fBRegex\fP * r)\fC [inline]\fP"
+
+.PP
+Constructor\&. Creates a \fBRegexMatch\fP object associating a \fBRegex\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIr\fP pointer to a \fBRegex\fP object 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
@@ -278,6 +329,17 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getEndOffset ()\fC [inline]\fP"
+
+.PP
+Get offset where last match operation has ended\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+End offset 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorMessage ()\fC [inline]\fP"
 
 .PP
@@ -369,6 +431,28 @@ PCRE2 option for match operation
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getRegexObject ()\fC [inline]\fP"
+
+.PP
+Get a reference to the associated \fBRegex\fP object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the associated \fBRegex\fP object\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getStartOffset ()\fC [inline]\fP"
+
+.PP
+Get offset from where match will start in the subject\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Start offset 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubject ()\fC [inline]\fP"
 
 .PP
@@ -398,6 +482,88 @@ Match count
 
 .PP
 References jpcre2::FIND_ALL\&.
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites subject before match 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Subject string 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, std::string const & mod)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.IP "\(bu" 2
+Overwrites subject string before match
+.IP "\(bu" 2
+Resets all JPCRE2 and PCRE2 options and initializes them according to new modifier string
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Subject string 
+.br
+\fImod\fP Modifier string 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, PCRE2_SIZE start_offset)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites subject string and start offset before match 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Subject string 
+.br
+\fIstart_offset\fP Start offset to start the match from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, std::string const & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.IP "\(bu" 2
+Overwrites subject string and start offset before match
+.IP "\(bu" 2
+Resets all JPCRE2 and PCRE2 options and initializes them according to new modifier string\&.
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Subject string 
+.br
+\fImod\fP Modifier string 
+.br
+\fIstart_offset\fP Start offset to start the match from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::reset ()\fC [inline]\fP"
 
 .PP
@@ -448,9 +614,7 @@ References jpcre2::FIND_ALL\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setFindAll ()\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-This function just calls \fBRegexMatch::setFindAll(bool x)\fP with \fCtrue\fP as the parameter\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. This function just calls \fBRegexMatch::setFindAll(bool x)\fP with \fCtrue\fP as the parameter 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -574,6 +738,38 @@ Reference to the calling \fBRegexMatch\fP object
 \fBRegexReplace::setPcre2Option()\fP 
 .PP
 \fBRegex::setPcre2Option()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setRegexObject (\fBRegex\fP * r)\fC [inline]\fP"
+
+.PP
+Set the associated regex object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIr\fP Pointer to a \fBRegex\fP object\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexMatch\fP object\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setStartOffset (PCRE2_SIZE offset)\fC [inline]\fP"
+
+.PP
+Set offset from where match starts When FIND_ALL is set, a global match would not be performed on all positions on the subject, rather it will be performed from the start offset and onwards\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoffset\fP Start offset 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexMatch\fP object 
 .RE
 .PP
 

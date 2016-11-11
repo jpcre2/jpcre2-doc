@@ -1,4 +1,4 @@
-.TH "jpcre2::ParseInt< Char_T >" 3 "Thu Nov 10 2016" "Version 10.28.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ParseInt< Char_T >" 3 "Sat Nov 12 2016" "Version 10.28.05" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,21 +19,15 @@ jpcre2::ParseInt< Char_T > \- Contains function that parses integer\&.
 .ti -1c
 .RI "template<> std::wstring \fBtoString\fP (int x)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::wstring\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
 .RI "template<> std::u16string \fBtoString\fP (int x)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::u16string\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
 .RI "template<> std::u32string \fBtoString\fP (int x)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::u32string\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -65,9 +59,7 @@ std::string from the integer
 .SS "template<> std::wstring \fBjpcre2::ParseInt\fP< wchar_t >::toString (int x)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::wstring\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Converts integer to std::wstring 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -83,9 +75,7 @@ std::wstring from the integer
 .SS "template<> std::u16string \fBjpcre2::ParseInt\fP< char16_t >::toString (int x)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::u16string\&. Uses codecvt to convert to utf16 from utf8 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Converts integer to std::u16string\&. Uses codecvt to convert to utf16 from utf8 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -101,9 +91,7 @@ std::u16string from the integer
 .SS "template<> std::u32string \fBjpcre2::ParseInt\fP< char32_t >::toString (int x)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
-.PP
-Converts integer to std::u32string\&. Uses codecvt to convert to utf32 from utf8 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Converts integer to std::u32string\&. Uses codecvt to convert to utf32 from utf8 
 .PP
 \fBParameters:\fP
 .RS 4

@@ -1,5 +1,6 @@
 var classjpcre2_1_1select_1_1RegexReplace =
 [
+    [ "RegexReplace", "classjpcre2_1_1select_1_1RegexReplace.html#a70785bd817e3c9f963e1b7a58f1dfb6f", null ],
     [ "addJpcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#af36062154bd4aa10117211daf1bb6ebb", null ],
     [ "addModifier", "classjpcre2_1_1select_1_1RegexReplace.html#a71dc7c85e63424da6f06c9047051782a", null ],
     [ "addPcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#a80ec6cbc2a0e7d5a20eee7c55977f3c5", null ],
@@ -12,15 +13,20 @@ var classjpcre2_1_1select_1_1RegexReplace =
     [ "getJpcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#a1e2dd34fb4311e4129ecbaa0c13528f5", null ],
     [ "getModifier", "classjpcre2_1_1select_1_1RegexReplace.html#a48293e49a9ab0ed056dc82c7fb26867d", null ],
     [ "getPcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#adfe5a685d4537522ca644e361b10e714", null ],
+    [ "getRegexObject", "classjpcre2_1_1select_1_1RegexReplace.html#ab39548c1bd07db9b66c515cc0d86726e", null ],
     [ "getReplaceWith", "classjpcre2_1_1select_1_1RegexReplace.html#a694696ec69ba0adeec6f57d164824d92", null ],
     [ "getSubject", "classjpcre2_1_1select_1_1RegexReplace.html#a57b9f80122afbd3582616b5477f2c45e", null ],
     [ "replace", "classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856", null ],
+    [ "replace", "classjpcre2_1_1select_1_1RegexReplace.html#a192fcb6cb8eda266583b4d591609a221", null ],
+    [ "replace", "classjpcre2_1_1select_1_1RegexReplace.html#a1a2121c71d5c67bbb0b4b341903b56c2", null ],
+    [ "replace", "classjpcre2_1_1select_1_1RegexReplace.html#aa5aed5a93809c33ce19fc76e1ee3f34b", null ],
     [ "reset", "classjpcre2_1_1select_1_1RegexReplace.html#a58f6cc2a7f49b32b534ed93dc2a8a376", null ],
     [ "resetErrors", "classjpcre2_1_1select_1_1RegexReplace.html#a460633e9765890f8680597363954c40a", null ],
     [ "setBufferSize", "classjpcre2_1_1select_1_1RegexReplace.html#a1e9a34830e78bc4aaaa2d27e48d3f28e", null ],
     [ "setJpcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#ab0aee505d050ceeadcff692d8f76abd1", null ],
     [ "setModifier", "classjpcre2_1_1select_1_1RegexReplace.html#a476fafb8f2cdabe470c8441e7653cae4", null ],
     [ "setPcre2Option", "classjpcre2_1_1select_1_1RegexReplace.html#ac3cd6b77e6ec0f421ed78d79ddc66936", null ],
+    [ "setRegexObject", "classjpcre2_1_1select_1_1RegexReplace.html#a0bd5895ceeef8a01700ef4a5669c716c", null ],
     [ "setReplaceWith", "classjpcre2_1_1select_1_1RegexReplace.html#a9a1ad5f1af91ce858c5d89e2dec9df34", null ],
     [ "setSubject", "classjpcre2_1_1select_1_1RegexReplace.html#aa07c3051ff2bdd7d1f968fa60b8c76ac", null ]
 ];

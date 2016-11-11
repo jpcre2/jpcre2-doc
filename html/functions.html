@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.04</span>
+   &#160;<span id="projectnumber">10.28.05</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>changeModifier()
 : <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
-, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a48fbbc0a549f51fa17e330cf547a6445">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a187707ab77beddc9a5f46c33461429b5">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 , <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#af40e61488e7c24b39899f68021e5ea03">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
 <li>changePcre2Option()
@@ -131,6 +131,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>getEndOffset()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#acf480d05df0f5049e3db8c67d95dba93">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+</li>
 <li>getErrorMessage()
 : <a class="el" href="structjpcre2_1_1select.html#ade8ba3ed83d14a887c56c51ea9b3f5ac">jpcre2::select&lt; Char_T, BS &gt;</a>
 , <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a3a79db473540396e22fcb35e3e85c4fb">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
@@ -174,11 +177,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a1b869a422db03e3e61dcb91ee22b7eca">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 , <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#adfe5a685d4537522ca644e361b10e714">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
+<li>getRegexObject()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a21473a4a46abb9dea32dce96db656015">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#ab39548c1bd07db9b66c515cc0d86726e">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
 <li>getReplaceObject()
 : <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a072e0f35ac3248ad8fee7393fb42e1f9">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
 </li>
 <li>getReplaceWith()
 : <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a694696ec69ba0adeec6f57d164824d92">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
+<li>getStartOffset()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a2c571845564270732883c6e7d13052b1">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 </li>
 <li>getSubject()
 : <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ac2550b7dbe85c52515f91dc4b7d4a435">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
@@ -208,8 +218,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="structjpcre2_1_1select.html#afcf8f8bb2a431477334eb1baedd39d31">jpcre2::select&lt; Char_T, BS &gt;</a>
 </li>
 <li>match()
-: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#aa89c8973664bc0b5e54952be12de4bbc">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
-, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a5cb2be5e1b5a5a9a84aae5b4d80eb609">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a4745f96e35548ac0b9245adb39bb17ab">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a9058c59d85a45aaa2cf96bb990ab605e">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 </li>
 </ul>
 
@@ -238,9 +248,15 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Regex()
 : <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a9d362da0d8cb2960ef8088e833784a8e">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
 </li>
+<li>RegexMatch()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ad159dc8ade93ba159a37883ca7761ae1">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+</li>
+<li>RegexReplace()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a70785bd817e3c9f963e1b7a58f1dfb6f">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
 <li>replace()
-: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a74e2eeb633cf93cd904a098a3710c606">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
-, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#ae50328ab531f05870aa572bf32bafc30">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a192fcb6cb8eda266583b4d591609a221">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
 <li>reset()
 : <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a2bb1642f3ee08fdbcfbee8cfabb37266">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
@@ -292,8 +308,15 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a2d244b4bfbfdc37a319cb6addcacef78">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 , <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#ac3cd6b77e6ec0f421ed78d79ddc66936">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
+<li>setRegexObject()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a1fc70f17abb075d58ce654b840303970">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a0bd5895ceeef8a01700ef4a5669c716c">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
 <li>setReplaceWith()
 : <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a9a1ad5f1af91ce858c5d89e2dec9df34">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
+<li>setStartOffset()
+: <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a764d567e130c7596dd9479da91f64a14">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 </li>
 <li>setSubject()
 : <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a7f6a47d6ceb8b3c9ea80dff026d24907">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
@@ -317,11 +340,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>VecNas
 : <a class="el" href="structjpcre2_1_1select.html#a0e58815cb26ca7686dc64be0968c9590">jpcre2::select&lt; Char_T, BS &gt;</a>
 </li>
-<li>VecNtn
-: <a class="el" href="structjpcre2_1_1select.html#aa425bc62afcb3c895bc205599994806b">jpcre2::select&lt; Char_T, BS &gt;</a>
-</li>
 <li>VecNtN
 : <a class="el" href="structjpcre2_1_1select.html#a2be38d80f7add849c5aa9a58e8518277">jpcre2::select&lt; Char_T, BS &gt;</a>
+</li>
+<li>VecNtn
+: <a class="el" href="structjpcre2_1_1select.html#aa425bc62afcb3c895bc205599994806b">jpcre2::select&lt; Char_T, BS &gt;</a>
 </li>
 <li>VecNum
 : <a class="el" href="structjpcre2_1_1select.html#a878faaca0dfdddae69c90dce46554cad">jpcre2::select&lt; Char_T, BS &gt;</a>

@@ -18,11 +18,13 @@ var NAVTREE =
         [ "Access a capture group by name", "index.html#access-substring-by-name", null ],
         [ "Get the position of a capture group name", "index.html#get-number-to-name", null ],
         [ "Iterate through match result", "index.html#iterate", null ],
-        [ "Re-use a match object", "index.html#re-use-a-match-object", null ]
+        [ "Re-use a match object", "index.html#re-use-a-match-object", null ],
+        [ "Independent match object", "index.html#independent-match-object", null ]
       ] ],
       [ "Replace or Substitute", "index.html#replace", [
         [ "Simple replacement", "index.html#simple-replace", null ],
-        [ "Using method chain", "index.html#using-method-chain", null ]
+        [ "Using method chain", "index.html#using-method-chain", null ],
+        [ "Independent replace object", "index.html#independent-replace-object", null ]
       ] ]
     ] ],
     [ "Modifiers", "index.html#modifiers", [
@@ -37,7 +39,7 @@ var NAVTREE =
     [ "Portable coding", "index.html#portable-coding", [
       [ "Code unit width quirk", "index.html#code-unit-width-quirk", null ],
       [ "Use of string class", "index.html#use-of-string-class", null ],
-      [ "Use of vectors", "index.html#use-of-vectors", null ],
+      [ "Use of vectors for match result", "index.html#use-of-vectors-for-match-result", null ],
       [ "Other typedefs", "index.html#other-typedefs", null ]
     ] ],
     [ "Error handling", "index.html#exception-handling", null ],

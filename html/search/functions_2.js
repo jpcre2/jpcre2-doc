@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getendoffset',['getEndOffset',['../classjpcre2_1_1select_1_1RegexMatch.html#acf480d05df0f5049e3db8c67d95dba93',1,'jpcre2::select::RegexMatch']]],
   ['geterrormessage',['getErrorMessage',['../structjpcre2_1_1select.html#ade8ba3ed83d14a887c56c51ea9b3f5ac',1,'jpcre2::select::getErrorMessage()'],['../classjpcre2_1_1select_1_1RegexMatch.html#a7af1c6ce9dbe5a34eeaac7465b9b558b',1,'jpcre2::select::RegexMatch::getErrorMessage()'],['../classjpcre2_1_1select_1_1RegexReplace.html#a7835a490547518f820897a27cdef0ec7',1,'jpcre2::select::RegexReplace::getErrorMessage()'],['../classjpcre2_1_1select_1_1Regex.html#a3a79db473540396e22fcb35e3e85c4fb',1,'jpcre2::select::Regex::getErrorMessage()']]],
   ['geterrornumber',['getErrorNumber',['../classjpcre2_1_1select_1_1RegexMatch.html#a78a3b1c196f6951e9482b64fae2fa470',1,'jpcre2::select::RegexMatch::getErrorNumber()'],['../classjpcre2_1_1select_1_1RegexReplace.html#a54fdecf98d3170876bfde1195f86a46b',1,'jpcre2::select::RegexReplace::getErrorNumber()'],['../classjpcre2_1_1select_1_1Regex.html#a233916fa1a3a6144293fc6b384289975',1,'jpcre2::select::Regex::getErrorNumber()']]],
   ['geterroroffset',['getErrorOffset',['../classjpcre2_1_1select_1_1RegexMatch.html#a4a284cf7db0236ba5943e272efe28452',1,'jpcre2::select::RegexMatch::getErrorOffset()'],['../classjpcre2_1_1select_1_1RegexReplace.html#a89c2c217788fefe8b4f2ef16feb9bc1f',1,'jpcre2::select::RegexReplace::getErrorOffset()'],['../classjpcre2_1_1select_1_1Regex.html#a17cad33f376fa97a243569139b7cf41e',1,'jpcre2::select::Regex::getErrorOffset()']]],
@@ -10,7 +11,9 @@ var searchData=
   ['getpattern',['getPattern',['../classjpcre2_1_1select_1_1Regex.html#accd4595f16e63a3cb106d23bf1756d49',1,'jpcre2::select::Regex']]],
   ['getpcre2errormessage',['getPcre2ErrorMessage',['../structjpcre2_1_1select.html#a2681b23749af9bd278e7021c10427150',1,'jpcre2::select']]],
   ['getpcre2option',['getPcre2Option',['../classjpcre2_1_1select_1_1RegexMatch.html#a1b869a422db03e3e61dcb91ee22b7eca',1,'jpcre2::select::RegexMatch::getPcre2Option()'],['../classjpcre2_1_1select_1_1RegexReplace.html#adfe5a685d4537522ca644e361b10e714',1,'jpcre2::select::RegexReplace::getPcre2Option()'],['../classjpcre2_1_1select_1_1Regex.html#ad7a52f83be5ba88f29095e8af445143b',1,'jpcre2::select::Regex::getPcre2Option()']]],
+  ['getregexobject',['getRegexObject',['../classjpcre2_1_1select_1_1RegexMatch.html#a21473a4a46abb9dea32dce96db656015',1,'jpcre2::select::RegexMatch::getRegexObject()'],['../classjpcre2_1_1select_1_1RegexReplace.html#ab39548c1bd07db9b66c515cc0d86726e',1,'jpcre2::select::RegexReplace::getRegexObject()']]],
   ['getreplaceobject',['getReplaceObject',['../classjpcre2_1_1select_1_1Regex.html#a072e0f35ac3248ad8fee7393fb42e1f9',1,'jpcre2::select::Regex']]],
   ['getreplacewith',['getReplaceWith',['../classjpcre2_1_1select_1_1RegexReplace.html#a694696ec69ba0adeec6f57d164824d92',1,'jpcre2::select::RegexReplace']]],
+  ['getstartoffset',['getStartOffset',['../classjpcre2_1_1select_1_1RegexMatch.html#a2c571845564270732883c6e7d13052b1',1,'jpcre2::select::RegexMatch']]],
   ['getsubject',['getSubject',['../classjpcre2_1_1select_1_1RegexMatch.html#ac2550b7dbe85c52515f91dc4b7d4a435',1,'jpcre2::select::RegexMatch::getSubject()'],['../classjpcre2_1_1select_1_1RegexReplace.html#a57b9f80122afbd3582616b5477f2c45e',1,'jpcre2::select::RegexReplace::getSubject()']]]
 ];
