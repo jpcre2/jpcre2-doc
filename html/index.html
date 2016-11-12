@@ -271,7 +271,7 @@ Action modifiers</h2>
 <td><code>E</code> </td><td>replace </td><td>Extension of <code>e</code> modifier. Sets even unknown groups to empty string. Equivalent to PCRE2_SUBSTITUTE_UNSET_EMPTY | PCRE2_SUBSTITUTE_UNKNOWN_UNSET </td></tr>
 <tr>
 <td><code>g</code> </td><td>match<br />
-replace </td><td>Global. Will perform global matching or replacement if passed. Equivalent to <code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c" title="Find all during match (global match) ">jpcre2::FIND_ALL</a></code>. </td></tr>
+replace </td><td>Global. Will perform global matching or replacement if passed. Equivalent to <code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c" title="Find all during match (global match) ">jpcre2::FIND_ALL</a></code> for match and <code>PCRE2_SUBSTITUTE_GLOBAL</code> for replace. </td></tr>
 <tr>
 <td><code>x</code> </td><td>replace </td><td>Extended replacement operation. Equivalent to <code>PCRE2_SUBSTITUTE_EXTENDED</code>. It enables some Bash like features:<br />
 <code>${&lt;n&gt;:-&lt;string&gt;}</code><br />
@@ -290,7 +290,7 @@ JPCRE2 options</h2>
 <tr>
 <td><code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00aecf4a781b081ff541006fbe84e143fb9" title="Option 0 (zero) ">jpcre2::NONE</a></code> </td><td>This is the default option. Equivalent to 0 (zero). </td></tr>
 <tr>
-<td><code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c" title="Find all during match (global match) ">jpcre2::FIND_ALL</a></code> </td><td>This option will do a global matching if passed during matching. The same can be achieved by passing the 'g' modifier with <code><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aa011cfe63bcd7e1b1eb8e63b1b9f8066" title="Set the modifier (resets all JPCRE2 and PCRE2 options) by calling RegexMatch::changeModifier(). ">jp::RegexMatch::setModifier()</a></code> function. </td></tr>
+<td><code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c" title="Find all during match (global match) ">jpcre2::FIND_ALL</a></code> </td><td>This option will do a global match if passed during matching. The same can be achieved by passing the 'g' modifier with <code><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aa4521bbda3f1018a28814b2b2bcb5136" title="Parse modifier string and add equivalent PCRE2 and JPCRE2 options. ">jp::RegexMatch::addModifier()</a></code> function. </td></tr>
 <tr>
 <td><code><a class="el" href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e" title="Perform JIT compilation for optimization. ">jpcre2::JIT_COMPILE</a></code> </td><td>This is same as passing the <code>S</code> modifier during pattern compilation. </td></tr>
 </table>
