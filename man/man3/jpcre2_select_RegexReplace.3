@@ -910,7 +910,15 @@ Reference to the calling \fBRegexReplace\fP object\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
-Set the replacement string\&. \fC$\fP is a special char\&. It denotes a captured group, e\&.g \fC$0\fP is the whole match, $1 is the caputred group no\&. 1, \fC${name}\fP is the captured group \fCname\fP\&. To isolate a capture group, wrap the number with \fC{}\fP e\&.g ${12} is the 12th captured group\&. To pass a literal \fC$\fP you must use \fC$$\fP\&.
+Set the replacement string\&. \fC$\fP is a special character which implies captured group\&.
+.PP
+.IP "1." 4
+A numbered substring can be referenced with \fC$n\fP or \fC${n}\fP where n is the group number\&.
+.IP "2." 4
+A named substring can be referenced with \fC${name}\fP, where 'name' is the group name\&.
+.IP "3." 4
+A literal \fC$\fP can be given as \fC$$\fP\&.
+.PP
 .PP
 \fBNote:\fP This function makes a copy of the string\&. If no copy is desired or you are working with big text, consider passing the string with pointer\&.
 .PP
