@@ -361,7 +361,7 @@ API change notice</h1>
 <blockquote class="doxtable">
 <p>For complete changes see the changelog file </p>
 </blockquote>
-<p>If you are using the previous version of JPCRE2 (10.27), you can easily migrate to this latest API by replacing all <code>jpcre2::select8</code> or <code>jpcre2::select16</code> or <code>jpcre2::select32</code> with <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a></code> in your code.</p>
+<p>All versions prior to 10.28.06 were discarded due to serious memory leaks. From 10.28.06, valgrind tests are performed to ensure proper memory management.</p>
 <h1><a class="anchor" id="test-suit"></a>
 Test suit</h1>
 <p>The <code><a class="el" href="test_8cpp.html" title="A test experimenting on different situations (sanity check). ">src/test.cpp</a></code> is written to check for major flaws like segfault, memory leak and crucial input/output validation. This is how you can run the test suit:</p>
