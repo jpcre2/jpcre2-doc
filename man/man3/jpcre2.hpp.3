@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Sat Nov 12 2016" "Version 10.28.05" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -48,15 +48,15 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "class \fBjpcre2::select< Char_T, BS >::RegexMatch\fP"
 .br
-.RI "Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. "
+.RI "Provides public constructors to create \fBRegexMatch\fP objects\&. "
 .ti -1c
 .RI "class \fBjpcre2::select< Char_T, BS >::RegexReplace\fP"
 .br
-.RI "Provides the \fBRegexReplace::replace()\fP function to perform regex replace on a string\&. "
+.RI "Provides public constructors to create \fBRegexReplace\fP objects\&. "
 .ti -1c
 .RI "class \fBjpcre2::select< Char_T, BS >::Regex\fP"
 .br
-.RI "Implements public overloaded and copy constructors, provides functions to set/unset various options and perform regex match and replace against a compiled pattern\&. "
+.RI "Provides public constructos to create \fBRegex\fP object\&. "
 .in -1c
 .SS "Namespaces"
 
@@ -114,7 +114,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2, \fBjpcre2::ERROR::JIT_COMPILE_FAILED\fP = 3 }
+.RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2 }
 .RI "Error numbers for JPCRE2\&. ""
 .br
 .ti -1c
@@ -130,7 +130,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.05'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.06'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -142,7 +142,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '05'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '06'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c

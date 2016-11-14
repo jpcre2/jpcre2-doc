@@ -1,0 +1,51 @@
+.TH "test.cpp" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test.cpp \- A test experimenting on different situations (sanity check)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include 'jpcre2\&.hpp'\fP
+.br
+\fC#include <cassert>\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+A test experimenting on different situations (sanity check)\&. 
+
+The goal of this test is to go through every nook and cranny of the library and touch every bit of code\&. Most of this test is just to see if there's any major error like segfault or memory leak\&. It is also to measure the efficiency of various blocks code\&.
+.PP
+Primary goals of this test:
+.PP
+.IP "1." 4
+Check for memory leak
+.IP "2." 4
+Check for segfault\&.
+.IP "3." 4
+Some test on input/output (assert)\&.
+.IP "4." 4
+Estimate code coverage\&.
+.PP
+.PP
+\fBNotes:\fP
+.PP
+.IP "\(bu" 2
+This test is not intended for client review, it's primarily for developers to make sure nothing is broken\&.
+.IP "\(bu" 2
+This test doesn't check for input/output (mostly) i\&.e only calls are made, validity of output is not tested\&.
+.PP
+.PP
+\fBAuthor:\fP
+.RS 4
+\fCMd Jahidul Hamid\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

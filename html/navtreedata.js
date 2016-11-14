@@ -45,6 +45,7 @@ var NAVTREE =
     [ "Error handling", "index.html#exception-handling", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],
+    [ "Test suit", "index.html#test-suit", null ],
     [ "The configure script", "index.html#the-configure-script", null ],
     [ "LICENCE", "index.html#licence", null ],
     [ "Namespaces", null, [
@@ -77,7 +78,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"structjpcre2_1_1ParseInt.html#ab1e3a51531d4cc76c7be25f07b956798"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

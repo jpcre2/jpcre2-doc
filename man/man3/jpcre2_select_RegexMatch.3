@@ -1,8 +1,8 @@
-.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Sat Nov 12 2016" "Version 10.28.05" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\fP function to perform regex matching\&.  
+jpcre2::select< Char_T, BS >::RegexMatch \- Provides public constructors to create \fBRegexMatch\fP objects\&.  
 
 .SH SYNOPSIS
 .br
@@ -13,9 +13,29 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 
 .in +1c
 .ti -1c
+.RI "\fBRegexMatch\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
 .RI "\fBRegexMatch\fP (\fBRegex\fP *r)"
 .br
-.RI "Constructor\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP (const \fBRegexMatch\fP &rm)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBoperator=\fP (const \fBRegexMatch\fP &rm)"
+.br
+.RI "Overloaded copy-assignment operator Allowes assigning objects like this: 
+.PP
+.nf
+RegexMatch rm;
+rm = RegexMatch(&re);
+
+.fi
+.PP
+\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBreset\fP ()"
 .br
@@ -41,6 +61,10 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .br
 .RI "Get subject string\&. "
 .ti -1c
+.RI "const \fBString\fP * \fBgetSubjectPointer\fP ()"
+.br
+.RI "Get pointer to subject string\&. "
+.ti -1c
 .RI "std::string \fBgetModifier\fP ()"
 .br
 .RI "Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. "
@@ -61,13 +85,13 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .br
 .RI "Get offset where last match operation has ended\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBgetRegexObject\fP ()"
+.RI "const \fBRegex\fP * \fBgetRegexObject\fP ()"
 .br
-.RI "Get a reference to the associated \fBRegex\fP object\&. "
+.RI "Get a pointer to the associated \fBRegex\fP object\&. "
 .ti -1c
-.RI "\fBRegexMatch\fP & \fBsetRegexObject\fP (\fBRegex\fP *r)"
+.RI "\fBRegexMatch\fP & \fBsetRegexObject\fP (const \fBRegex\fP *r)"
 .br
-.RI "Set the associated regex object\&. "
+.RI "Set pointer to the associated regex object\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetNumberedSubstringVector\fP (\fBVecNum\fP *v)"
 .br
@@ -84,6 +108,10 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .RI "\fBRegexMatch\fP & \fBsetSubject\fP (const \fBString\fP &s)"
 .br
 .RI "Set the subject string for match\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBsetSubject\fP (const \fBString\fP *s)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetModifier\fP (const std::string &s)"
 .br
@@ -137,19 +165,39 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .br
 .RI "Perform match operaton using info from class variables and return the match count and store the results in specified vectors\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (PCRE2_SIZE start_offset)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, std::string const &mod)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, PCRE2_SIZE start_offset)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, std::string const &mod, PCRE2_SIZE start_offset)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, PCRE2_SIZE start_offset)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, PCRE2_SIZE start_offset)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod, PCRE2_SIZE start_offset)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod, PCRE2_SIZE start_offset)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .in -1c
@@ -159,21 +207,48 @@ jpcre2::select< Char_T, BS >::RegexMatch \- Provides the \fBRegexMatch::match()\
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
 .br
 class jpcre2::select< Char_T, BS >::RegexMatch"
-Provides the \fBRegexMatch::match()\fP function to perform regex matching\&. 
+Provides public constructors to create \fBRegexMatch\fP objects\&. 
 
-Provides chained methods to set various options\&.
+Every \fBRegexMatch\fP object should be associated with a \fBRegex\fP object\&. This class stores a pointer to its' associated \fBRegex\fP object, thus when the content of the associated \fBRegex\fP object is changed, there's no need to set the pointer again\&.
 .PP
-Provides a public constructor to create \fBRegexMatch\fP objects\&. There is no copy constructor or copy-assignment operator for this class\&. 
+Examples:
+.PP
+.PP
+.nf
+Regex re;
+RegexMatch rm;
+rm\&.setRegexObject(&re);
+rm\&.match("subject", "g");  // 0 match
+re\&.compile("\\w");
+rm\&.match();  // 7 matches
+.fi
+.PP
+ 
 .SH "Constructor & Destructor Documentation"
 .PP 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::RegexMatch ()\fC [inline]\fP"
+
+.PP
+Default constructor\&. 
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::RegexMatch (\fBRegex\fP * r)\fC [inline]\fP"
 
 .PP
-Constructor\&. Creates a \fBRegexMatch\fP object associating a \fBRegex\fP object\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Creates a \fBRegexMatch\fP object associating a \fBRegex\fP object\&. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fIr\fP pointer to a \fBRegex\fP object 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::RegexMatch (const \fBRegexMatch\fP & rm)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor\&. Performs deep copy\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrm\fP Reference to \fBRegexMatch\fP object 
 .RE
 .PP
 
@@ -431,14 +506,14 @@ PCRE2 option for match operation
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getRegexObject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> const \fBRegex\fP* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getRegexObject ()\fC [inline]\fP"
 
 .PP
-Get a reference to the associated \fBRegex\fP object\&. 
+Get a pointer to the associated \fBRegex\fP object\&. If no actual \fBRegex\fP object is associated, null is returned\&. 
 .PP
 \fBReturns:\fP
 .RS 4
-A reference to the associated \fBRegex\fP object\&. 
+A pointer to the associated \fBRegex\fP object or null\&. 
 .RE
 .PP
 
@@ -469,6 +544,22 @@ subject string
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> const \fBString\fP* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubjectPointer ()\fC [inline]\fP"
+
+.PP
+Get pointer to subject string\&. Data can not be changed with this pointer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+subject string pointer 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBRegexReplace::getSubjectPointer()\fP 
+.RE
+.PP
+
 .SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::SIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (void)"
 
 .PP
@@ -480,9 +571,23 @@ Match count
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (PCRE2_SIZE start_offset)\fC [inline]\fP"
+
 .PP
-References jpcre2::FIND_ALL\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s)\fC [inline]\fP"
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites start offset before match 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstart_offset\fP Start offset to start the match from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites subject before match 
@@ -498,7 +603,23 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, std::string const & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP * s)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites pointer to subject before match 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Pointer to subject string 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP & s, const std::string & mod)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -521,7 +642,30 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, PCRE2_SIZE start_offset)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP * s, const std::string & mod)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.IP "\(bu" 2
+Overwrites pointer to subject string before match
+.IP "\(bu" 2
+Resets all JPCRE2 and PCRE2 options and initializes them according to new modifier string
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Pointer to subject string 
+.br
+\fImod\fP Modifier string 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP & s, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites subject string and start offset before match 
@@ -539,7 +683,25 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (\fBString\fP const & s, std::string const & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP * s, PCRE2_SIZE start_offset)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites start offset and pointer to subject string before match 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Pointer to subject string 
+.br
+\fIstart_offset\fP Start offset to start the match from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP & s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -561,6 +723,55 @@ Resets all JPCRE2 and PCRE2 options and initializes them according to new modifi
 \fBReturns:\fP
 .RS 4
 Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (const \fBString\fP * s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.IP "\(bu" 2
+Overwrites start offset and pointer to subject string before match
+.IP "\(bu" 2
+Resets all JPCRE2 and PCRE2 options and initializes them according to new modifier string\&.
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Pointer to subject string 
+.br
+\fImod\fP Modifier string 
+.br
+\fIstart_offset\fP Start offset to start the match from 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Match count 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::operator= (const \fBRegexMatch\fP & rm)\fC [inline]\fP"
+
+.PP
+Overloaded copy-assignment operator Allowes assigning objects like this: 
+.PP
+.nf
+RegexMatch rm;
+rm = RegexMatch(&re);
+
+.fi
+.PP
+\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrm\fP \fBRegexMatch\fP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBRegexMatch\fP object\&. 
 .RE
 .PP
 
@@ -741,10 +952,10 @@ Reference to the calling \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setRegexObject (\fBRegex\fP * r)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setRegexObject (const \fBRegex\fP * r)\fC [inline]\fP"
 
 .PP
-Set the associated regex object\&. 
+Set pointer to the associated regex object\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -776,11 +987,32 @@ Reference to the calling \fBRegexMatch\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setSubject (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
-Set the subject string for match\&. 
+Set the subject string for match\&. This makes a copy of the subject string\&. If a copy is not desirable or you are working with huge text, consider passing a pointer instead of a constant reference\&. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fIs\fP Subject string 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexMatch\fP object 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBRegexReplace::setSubject()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setSubject (const \fBString\fP * s)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set pointer to the subject string for match\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Pointer to subject string 
 .RE
 .PP
 \fBReturns:\fP

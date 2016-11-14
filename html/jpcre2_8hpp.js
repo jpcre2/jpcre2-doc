@@ -17,7 +17,6 @@ var jpcre2_8hpp =
     [ "FIND_ALL", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c", null ],
     [ "JIT_COMPILE", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e", null ],
     [ "INVALID_MODIFIER", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2a4115340549b623f4e2da285bf0aa9bff", null ],
-    [ "JIT_COMPILE_FAILED", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2aa116db5c7b638480ccad3ae938d33c3e", null ],
     [ "FULL_VERSION", "jpcre2_8hpp.html#a5b22133d85a57f47012176fa934a7085", null ],
     [ "NAME", "jpcre2_8hpp.html#a057688caad3ff7866a6449be627224a5", null ],
     [ "SUBSTITUTE_RESULT_INIT_SIZE", "jpcre2_8hpp.html#a84fce118a0293417a890a9038dad7054", null ],

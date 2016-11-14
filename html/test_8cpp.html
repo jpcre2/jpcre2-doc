@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JPCRE2: File Members</title>
+<title>JPCRE2: test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('globals_defs.html','');});
+$(document).ready(function(){initNavTree('test_8cpp.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -83,21 +83,50 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">test.cpp File Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION
-: <a class="el" href="jpcre2_8hpp.html#ac2ed8f7e16b413e7b160fc968b6395f2">jpcre2.hpp</a>
-</li>
-<li>PCRE2_CODE_UNIT_WIDTH
-: <a class="el" href="jpcre2_8hpp.html#acff91275abcc225454675d6dfc39a58d">jpcre2.hpp</a>
-</li>
+
+<p>A test experimenting on different situations (sanity check).  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="jpcre2_8hpp_source.html">jpcre2.hpp</a>&quot;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for test.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="test_8cpp__incl.png" border="0" usemap="#test_8cpp" alt=""/></div>
+<map name="test_8cpp" id="test_8cpp">
+<area shape="rect" id="node3" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. " alt="" coords="401,80,483,107"/>
+</map>
+</div>
+</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A test experimenting on different situations (sanity check). </p>
+<p>The goal of this test is to go through every nook and cranny of the library and touch every bit of code. Most of this test is just to see if there's any major error like segfault or memory leak. It is also to measure the efficiency of various blocks code.</p>
+<p>Primary goals of this test:</p>
+<ol type="1">
+<li>Check for memory leak</li>
+<li>Check for segfault.</li>
+<li>Some test on input/output (assert).</li>
+<li>Estimate code coverage.</li>
+</ol>
+<p><b>Notes:</b></p>
+<ul>
+<li>This test is not intended for client review, it's primarily for developers to make sure nothing is broken.</li>
+<li>This test doesn't check for input/output (mostly) i.e only calls are made, validity of output is not tested.</li>
 </ul>
-</div><!-- contents -->
+<dl class="section author"><dt>Author</dt><dd><a href="https://github.com/neurobin">Md Jahidul Hamid</a> </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="test_8cpp.html">test.cpp</a></li>
     <li class="footer">Authored by <a href="https://github.com/neurobin">Md Jahidul Hamid</a>.
     Doc created with <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.13 </li>
   </ul>
