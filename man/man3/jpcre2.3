@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,13 +23,13 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 
 .in +1c
 .ti -1c
-.RI "struct \fBCodecvt\fP"
+.RI "struct \fBConvInt\fP"
 .br
-.RI "Convenience wrapper of \fCstd::codecvt\fP\&. "
+.RI "Contains a function to convert integer to string\&. "
 .ti -1c
-.RI "struct \fBParseInt\fP"
+.RI "struct \fBConvUTF\fP"
 .br
-.RI "Contains function that parses integer\&. "
+.RI "\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (\fC>=C++11\fP)\&. "
 .ti -1c
 .RI "struct \fBselect\fP"
 .br
@@ -51,11 +51,11 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .br
 .RI "8 bit unsigned integer\&. "
 .ti -1c
-.RI "typedef std::wstring_convert< \fBCodecvt\fP< char16_t, char, std::mbstate_t >, char16_t > \fBConvert16\fP"
+.RI "typedef \fBConvUTF\fP< char16_t >::Converter \fBConvert16\fP"
 .br
 .RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. "
 .ti -1c
-.RI "typedef std::wstring_convert< \fBCodecvt\fP< char32_t, char, std::mbstate_t >, char32_t > \fBConvert32\fP"
+.RI "typedef \fBConvUTF\fP< char32_t >::Converter \fBConvert32\fP"
 .br
 .RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. "
 .in -1c
@@ -84,10 +84,10 @@ All functions, classes/structs, constants, enums that are provided by JPCRE2 bel
 If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such\&. 
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef std::wstring_convert<\fBCodecvt\fP<char16_t, char, std::mbstate_t>,char16_t> \fBjpcre2::Convert16\fP"
+.SS "typedef \fBConvUTF\fP<char16_t>::Converter \fBjpcre2::Convert16\fP"
 
 .PP
-This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. Convert UTF-16 to UTF-8 
+This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. Convert UTF-16 to UTF-8: 
 .PP
 .nf
 Convert16 conv;
@@ -95,7 +95,7 @@ std::string s = conv\&.to_bytes(utf16string);
 
 .fi
 .PP
- Convert UTF-8 to UTF-16 
+ Convert UTF-8 to UTF-16: 
 .PP
 .nf
 std::u16string us = conv\&.from_bytes(utf8string);
@@ -103,7 +103,7 @@ std::u16string us = conv\&.from_bytes(utf8string);
 .fi
 .PP
  
-.SS "typedef std::wstring_convert<\fBCodecvt\fP<char32_t, char, std::mbstate_t>,char32_t> \fBjpcre2::Convert32\fP"
+.SS "typedef \fBConvUTF\fP<char32_t>::Converter \fBjpcre2::Convert32\fP"
 
 .PP
 This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. Convert UTF-32 to UTF-8 

@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.06</span>
+   &#160;<span id="projectnumber">10.28.07</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -109,11 +109,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience wrapper of <code>std::codecvt</code>.  <a href="structjpcre2_1_1Codecvt.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvInt.html">ConvInt</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a function to convert integer to string.  <a href="structjpcre2_1_1ConvInt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ParseInt.html">ParseInt</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains function that parses integer.  <a href="structjpcre2_1_1ParseInt.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (<code>&gt;=C++11</code>).  <a href="structjpcre2_1_1ConvUTF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">select</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select code unit width and the character type.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
@@ -130,12 +130,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">Ush</a></td></tr>
 <tr class="memdesc:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 bit unsigned integer.  <a href="#ace32c5cb1dfea02d9b64a7d0d61522ce">More...</a><br /></td></tr>
 <tr class="separator:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3ccc266a390de1ebae13849ae3b6115"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">Convert16</a></td></tr>
-<tr class="memdesc:ab3ccc266a390de1ebae13849ae3b6115"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="#ab3ccc266a390de1ebae13849ae3b6115">More...</a><br /></td></tr>
-<tr class="separator:ab3ccc266a390de1ebae13849ae3b6115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade5700ff03148cd742312d03b46f2106"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; <a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">Convert32</a></td></tr>
-<tr class="memdesc:ade5700ff03148cd742312d03b46f2106"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="#ade5700ff03148cd742312d03b46f2106">More...</a><br /></td></tr>
-<tr class="separator:ade5700ff03148cd742312d03b46f2106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf513ced7a87393062267af2678fbe0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a>&lt; char16_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">Convert16</a></td></tr>
+<tr class="memdesc:a9bf513ced7a87393062267af2678fbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="#a9bf513ced7a87393062267af2678fbe0">More...</a><br /></td></tr>
+<tr class="separator:a9bf513ced7a87393062267af2678fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a961b20d74d0da112a2a010ca8bac6"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a>&lt; char32_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">Convert32</a></td></tr>
+<tr class="memdesc:a40a961b20d74d0da112a2a010ca8bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="#a40a961b20d74d0da112a2a010ca8bac6">More...</a><br /></td></tr>
+<tr class="separator:a40a961b20d74d0da112a2a010ca8bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -161,36 +161,36 @@ Variables</h2></td></tr>
 <p>All functions, classes/structs, constants, enums that are provided by JPCRE2 belong to this namespace while <b>PCRE2</b> structs, functions, constants remain outside of its scope.</p>
 <p>If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab3ccc266a390de1ebae13849ae3b6115"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3ccc266a390de1ebae13849ae3b6115">&#9670;&nbsp;</a></span>Convert16</h2>
+<a id="a9bf513ced7a87393062267af2678fbe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf513ced7a87393062267af2678fbe0">&#9670;&nbsp;</a></span>Convert16</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char16_t, char, std::mbstate_t&gt;,char16_t&gt; <a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">jpcre2::Convert16</a></td>
+          <td class="memname">typedef <a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a>&lt;char16_t&gt;::Converter <a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">jpcre2::Convert16</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. </p>
-<p>Convert UTF-16 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">Convert16</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf16string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-16 </p><div class="fragment"><div class="line">std::u16string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
+<p>Convert UTF-16 to UTF-8: </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">Convert16</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf16string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-16: </p><div class="fragment"><div class="line">std::u16string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
 </div>
 </div>
-<a id="ade5700ff03148cd742312d03b46f2106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade5700ff03148cd742312d03b46f2106">&#9670;&nbsp;</a></span>Convert32</h2>
+<a id="a40a961b20d74d0da112a2a010ca8bac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a961b20d74d0da112a2a010ca8bac6">&#9670;&nbsp;</a></span>Convert32</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::wstring_convert&lt;<a class="el" href="structjpcre2_1_1Codecvt.html">Codecvt</a>&lt;char32_t, char, std::mbstate_t&gt;,char32_t&gt; <a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">jpcre2::Convert32</a></td>
+          <td class="memname">typedef <a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a>&lt;char32_t&gt;::Converter <a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">jpcre2::Convert32</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. </p>
-<p>Convert UTF-32 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">Convert32</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf32string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-32 </p><div class="fragment"><div class="line">std::u32string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
+<p>Convert UTF-32 to UTF-8 </p><div class="fragment"><div class="line"><a class="code" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">Convert32</a> conv;</div><div class="line">std::string s = conv.to_bytes(utf32string);</div></div><!-- fragment --><p> Convert UTF-8 to UTF-32 </p><div class="fragment"><div class="line">std::u32string us = conv.from_bytes(utf8string);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a1992f5f6f7d03fe854ad0c4de3352ec5"></a>

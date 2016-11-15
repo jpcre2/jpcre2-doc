@@ -1,6 +1,6 @@
 var namespacejpcre2 =
 [
-    [ "Codecvt", "structjpcre2_1_1Codecvt.html", null ],
-    [ "ParseInt", "structjpcre2_1_1ParseInt.html", "structjpcre2_1_1ParseInt" ],
+    [ "ConvInt", "structjpcre2_1_1ConvInt.html", "structjpcre2_1_1ConvInt" ],
+    [ "ConvUTF", "structjpcre2_1_1ConvUTF.html", null ],
     [ "select", "structjpcre2_1_1select.html", "structjpcre2_1_1select" ]
 ];

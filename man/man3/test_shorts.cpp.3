@@ -1,4 +1,4 @@
-.TH "test_shorts.cpp" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
+.TH "test_shorts.cpp" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,8 +34,6 @@ int main(){
      */
     if(jp::Regex("(\\d)|(\\w)")\&.match("I am the subject"))
         std::cout<<"\nmatched";
-    else
-        std::cout<<"\nno match";
     /*
      * Using the modifier S (i\&.e jpcre2::JIT_COMPILE) with temporary object may or may not give you
      * any performance boost (depends on the complexity of the pattern)\&. The more complex

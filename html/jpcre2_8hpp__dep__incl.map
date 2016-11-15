@@ -1,11 +1,12 @@
 <map id="jpcre2.hpp" name="jpcre2.hpp">
 <area shape="rect" id="node2" href="$test_8cpp.html" title="A test experimenting on different situations (sanity check). " alt="" coords="5,80,75,107"/>
-<area shape="rect" id="node3" href="$test0_8cpp.html" title="An example of handling multi code unit width. " alt="" coords="99,80,175,107"/>
-<area shape="rect" id="node4" href="$test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string for 16 bi..." alt="" coords="200,80,283,107"/>
-<area shape="rect" id="node5" href="$test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string for 32 bi..." alt="" coords="307,80,389,107"/>
+<area shape="rect" id="node3" href="$test0_8cpp.html" title="An example of handling std::string and std::wstring. " alt="" coords="99,80,175,107"/>
+<area shape="rect" id="node4" href="$test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string. " alt="" coords="200,80,283,107"/>
+<area shape="rect" id="node5" href="$test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string. " alt="" coords="307,80,389,107"/>
 <area shape="rect" id="node6" href="$test__match_8cpp.html" title="An example of performing regex match against a pattern with JPCRE2 and getting the match count and ma..." alt="" coords="413,80,525,107"/>
 <area shape="rect" id="node7" href="$test__match2_8cpp.html" title="Contains an example to take subject string, pattern and modifier from user input and perform regex ma..." alt="" coords="549,80,667,107"/>
 <area shape="rect" id="node8" href="$test__replace_8cpp.html" title="An example of doing regex replace with JPCRE2. " alt="" coords="691,80,810,107"/>
 <area shape="rect" id="node9" href="$test__replace2_8cpp.html" title="Contains an example to take subject string, replacement string, modifier and pattern from user input ..." alt="" coords="835,80,960,107"/>
 <area shape="rect" id="node10" href="$test__shorts_8cpp.html" title="Contains some short examples of performing regex match and regex replace with JPCRE2. " alt="" coords="984,80,1096,107"/>
+<area shape="rect" id="node11" href="$testio_8cpp.html" title="A test suit to check for code validity. " alt="" coords="1121,80,1199,107"/>
 </map>

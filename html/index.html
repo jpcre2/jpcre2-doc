@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.06</span>
+   &#160;<span id="projectnumber">10.28.07</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -113,7 +113,7 @@ Getting started</h1>
 <p><b>Install:</b></p>
 <p>You can copy this header to a standard include directory (folder) so that it becomes available from a standard include path.</p>
 <p>On Unix you can do:</p>
-<div class="fragment"><div class="line">./configure</div><div class="line">make</div><div class="line">make install #(may require root privilege)</div></div><!-- fragment --><p> This will compile some examples (for 8-bit) and install the header. For other compile options see <a href="#the-configure-script">configure script</a></p>
+<div class="fragment"><div class="line">./configure</div><div class="line">make</div><div class="line">make install #(may require root privilege)</div></div><!-- fragment --><p> It will check if all dependencies are satisfied and install the header in a standard include path.</p>
 <p><b>Compile/Build:</b></p>
 <p>Compile/Build your code with corresponding PCRE2 libraries linked. For 8-bit code unit width, you need to link with 8-bit library, for 16-bit, 16-bit library and so on. If you want to use multiple code unit width, link against all 8-bit, 16-bit and 32-bit libraries. See <a href="#code-unit-and-character-type">code unit width and character type</a> for details.</p>
 <p><b>Example compilation with g++:</b></p>
@@ -342,8 +342,8 @@ Use of vectors for match result</h2>
 Other typedefs</h2>
 <p>Other typedefs are mostly for internal use</p>
 <ul>
-<li>You can use <code><a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. ">jpcre2::Convert16</a></code> to convert between UTF-8 and UTF-16. (<code>&gt;=C++11</code>)</li>
-<li>You can use <code><a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. ">jpcre2::Convert32</a></code> to convert between UTF-8 and UTF-32. (<code>&gt;=C++11</code>)</li>
+<li>You can use <code><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16. ">jpcre2::Convert16</a></code> to convert between UTF-8 and UTF-16. (<code>&gt;=C++11</code>)</li>
+<li>You can use <code><a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6" title="This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32. ">jpcre2::Convert32</a></code> to convert between UTF-8 and UTF-32. (<code>&gt;=C++11</code>)</li>
 <li>You should not use the <code><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce" title="8 bit unsigned integer. ">jpcre2::Ush</a></code> as unsigned short. In JPCRE2 context, it is the smallest unsigned integer type to cover at least the numbers from 1 to 126.</li>
 <li><code><a class="el" href="namespacejpcre2.html#a078242d38221a13fb3543b9edd78c099" title="Used for options (bitwise operation) ">jpcre2::Uint</a></code> is a fixed width unsigned integer type and will be at least 32 bit wide.</li>
 <li><code><a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5" title="Used for match count and vector size. ">jpcre2::SIZE_T</a></code> is the same as <code>PCRE2_SIZE</code> which is defined as <code>size_t</code>.</li>
@@ -364,30 +364,26 @@ API change notice</h1>
 <p>All versions prior to 10.28.06 were discarded due to serious memory leaks. From 10.28.06, valgrind tests are performed to ensure proper memory management.</p>
 <h1><a class="anchor" id="test-suit"></a>
 Test suit</h1>
-<p>The <code><a class="el" href="test_8cpp.html" title="A test experimenting on different situations (sanity check). ">src/test.cpp</a></code> is written to check for major flaws like segfault, memory leak and crucial input/output validation. This is how you can run the test suit:</p>
-<div class="fragment"><div class="line">#requires valgrind to be installed in the system</div><div class="line">./configure --enable-valgrind</div><div class="line">make</div><div class="line">make check</div></div><!-- fragment --><p>You can prepare a coverage report:</p>
-<div class="fragment"><div class="line">#requires lcov and genhtml to be installed in the system</div><div class="line">./configure --enable-coverage</div><div class="line">make</div><div class="line">make coverage</div></div><!-- fragment --><h1><a class="anchor" id="the-configure-script"></a>
+<p>Some test programs are written to check for major flaws like segfault, memory leak and crucial input/output validation. Before trying to run the tests, make sure you have all 3 PCRE2 libraries installed on your system.</p>
+<p>For the simplest (minimal) test, run:</p>
+<div class="fragment"><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-test</div><div class="line">make check</div></div><!-- fragment --><p> To check with <code>valgrind</code>, run:</p>
+<div class="fragment"><div class="line">#requires valgrind to be installed on the system</div><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-valgrind</div><div class="line">make check</div></div><!-- fragment --><p> To prepare a coverage report, run:</p>
+<div class="fragment"><div class="line">#requires lcov and genhtml to be installed on the system</div><div class="line">#enable cpp11 to cover cpp11 codes.</div><div class="line">#clean any previous make</div><div class="line">make distclean #ignore errors</div><div class="line">./configure --enable-coverage --enable-cpp11</div><div class="line">make coverage</div></div><!-- fragment --><h1><a class="anchor" id="the-configure-script"></a>
 The configure script</h1>
 <p>The configure script generated by autotools checks for availability of several programs and let's you set several options to control your testing environment. These are the options supported by configure scipt:</p>
 <table class="doxtable">
 <tr>
 <th>Option </th><th>Details  </th></tr>
 <tr>
-<td><code>--[enable/disable]-test-8</code> </td><td>Enable/Disable building 8 bit examples (enabled by default). </td></tr>
+<td><code>--[enable/disable]-test</code> </td><td>Enable/Disable test suit. </td></tr>
 <tr>
-<td><code>--[enable/disable]-test-16</code> </td><td>Enable/Disable building 16 bit examples. </td></tr>
-<tr>
-<td><code>--[enable/disable]-test-32</code> </td><td>Enable/Disable building 32 bit examples. </td></tr>
-<tr>
-<td><code>--[enable/disable]-cpp11</code> </td><td>Enable/Disable building examples with C++11 features. </td></tr>
-<tr>
-<td><code>--[enable/disable]-test-multi</code> </td><td>Enable/Disable building examples for multi code unit width support. (includes all previous ones.) </td></tr>
-<tr>
-<td><code>--[enable/disable]-silent-rules</code> </td><td>Enable/Disable silent rules (enabled by default). You will get prettified <code>make</code> output if enabled. </td></tr>
+<td><code>--[enable/disable]-cpp11</code> </td><td>Enable/Disable building tests with C++11 features. </td></tr>
 <tr>
 <td><code>--[enable/disable]-valgrind</code> </td><td>Enable/Disable valgrind test (memory leak test). </td></tr>
 <tr>
 <td><code>--[enable/disable]-coverage</code> </td><td>Enable/Disable coverage report. </td></tr>
+<tr>
+<td><code>--[enable/disable]-silent-rules</code> </td><td>Enable/Disable silent rules (enabled by default). You will get prettified <code>make</code> output if enabled. </td></tr>
 </table>
 <h1><a class="anchor" id="licence"></a>
 LICENCE</h1>

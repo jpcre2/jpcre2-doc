@@ -9,5 +9,6 @@ var files =
     [ "test_match2.cpp", "test__match2_8cpp.html", null ],
     [ "test_replace.cpp", "test__replace_8cpp.html", null ],
     [ "test_replace2.cpp", "test__replace2_8cpp.html", null ],
-    [ "test_shorts.cpp", "test__shorts_8cpp.html", null ]
+    [ "test_shorts.cpp", "test__shorts_8cpp.html", null ],
+    [ "testio.cpp", "testio_8cpp.html", null ]
 ];

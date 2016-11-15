@@ -1,4 +1,4 @@
-.TH "test.cpp" 3 "Tue Nov 15 2016" "Version 10.28.06" "JPCRE2" \" -*- nroff -*-
+.TH "test.cpp" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -18,7 +18,7 @@ test.cpp \- A test experimenting on different situations (sanity check)\&.
 .PP 
 A test experimenting on different situations (sanity check)\&. 
 
-The goal of this test is to go through every nook and cranny of the library and touch every bit of code\&. Most of this test is just to see if there's any major error like segfault or memory leak\&. It is also to measure the efficiency of various blocks code\&.
+The goal of this test is to go through every nook and cranny of the library and touch every bit of code\&. Most of this test is just to see if there's any major error like segfault or memory leak\&. It is also to measure the efficiency of various blocks of code\&.
 .PP
 Primary goals of this test:
 .PP
@@ -37,7 +37,7 @@ Estimate code coverage\&.
 .IP "\(bu" 2
 This test is not intended for client review, it's primarily for developers to make sure nothing is broken\&.
 .IP "\(bu" 2
-This test doesn't check for input/output (mostly) i\&.e only calls are made, validity of output is not tested\&.
+This test doesn't check for input/output (mostly) i\&.e only calls are made, validity of output is not tested\&. See \fBtestio\&.cpp\fP for input/output test\&.
 .PP
 .PP
 \fBAuthor:\fP

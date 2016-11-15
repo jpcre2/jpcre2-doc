@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.06</span>
+   &#160;<span id="projectnumber">10.28.07</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;clocale&gt;</code><br />
 <code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;codecvt&gt;</code><br />
 <code>#include &lt;locale&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -115,8 +116,6 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="jpcre2_8hpp__incl.png" border="0" usemap="#jpcre2_8hpp" alt=""/></div>
-<map name="jpcre2_8hpp" id="jpcre2_8hpp">
-</map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -126,14 +125,15 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 <div class="center"><img src="jpcre2_8hpp__dep__incl.png" border="0" usemap="#jpcre2_8hppdep" alt=""/></div>
 <map name="jpcre2_8hppdep" id="jpcre2_8hppdep">
 <area shape="rect" id="node2" href="test_8cpp.html" title="A test experimenting on different situations (sanity check). " alt="" coords="5,80,75,107"/>
-<area shape="rect" id="node3" href="test0_8cpp.html" title="An example of handling multi code unit width. " alt="" coords="99,80,175,107"/>
-<area shape="rect" id="node4" href="test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string for 16 bi..." alt="" coords="200,80,283,107"/>
-<area shape="rect" id="node5" href="test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string for 32 bi..." alt="" coords="307,80,389,107"/>
+<area shape="rect" id="node3" href="test0_8cpp.html" title="An example of handling std::string and std::wstring. " alt="" coords="99,80,175,107"/>
+<area shape="rect" id="node4" href="test16_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u16string. " alt="" coords="200,80,283,107"/>
+<area shape="rect" id="node5" href="test32_8cpp.html" title="An example of performing regex match and regex replace with std::wstring and std::u32string. " alt="" coords="307,80,389,107"/>
 <area shape="rect" id="node6" href="test__match_8cpp.html" title="An example of performing regex match against a pattern with JPCRE2 and getting the match count and ma..." alt="" coords="413,80,525,107"/>
 <area shape="rect" id="node7" href="test__match2_8cpp.html" title="Contains an example to take subject string, pattern and modifier from user input and perform regex ma..." alt="" coords="549,80,667,107"/>
 <area shape="rect" id="node8" href="test__replace_8cpp.html" title="An example of doing regex replace with JPCRE2. " alt="" coords="691,80,810,107"/>
 <area shape="rect" id="node9" href="test__replace2_8cpp.html" title="Contains an example to take subject string, replacement string, modifier and pattern from user input ..." alt="" coords="835,80,960,107"/>
 <area shape="rect" id="node10" href="test__shorts_8cpp.html" title="Contains some short examples of performing regex match and regex replace with JPCRE2. " alt="" coords="984,80,1096,107"/>
+<area shape="rect" id="node11" href="testio_8cpp.html" title="A test suit to check for code validity. " alt="" coords="1121,80,1199,107"/>
 </map>
 </div>
 </div>
@@ -141,11 +141,11 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1Codecvt.html">jpcre2::Codecvt&lt; internT, externT, stateT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience wrapper of <code>std::codecvt</code>.  <a href="structjpcre2_1_1Codecvt.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvUTF.html">jpcre2::ConvUTF&lt; Char_T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (<code>&gt;=C++11</code>).  <a href="structjpcre2_1_1ConvUTF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ParseInt.html">jpcre2::ParseInt&lt; Char_T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains function that parses integer.  <a href="structjpcre2_1_1ParseInt.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvInt.html">jpcre2::ConvInt&lt; Char_T, T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a function to convert integer to string.  <a href="structjpcre2_1_1ConvInt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select&lt; Char_T, BS &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select code unit width and the character type.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
@@ -192,12 +192,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">jpcre2::Ush</a></td></tr>
 <tr class="memdesc:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 bit unsigned integer.  <a href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">More...</a><br /></td></tr>
 <tr class="separator:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3ccc266a390de1ebae13849ae3b6115"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; Codecvt&lt; char16_t, char, std::mbstate_t &gt;, char16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">jpcre2::Convert16</a></td></tr>
-<tr class="memdesc:ab3ccc266a390de1ebae13849ae3b6115"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="namespacejpcre2.html#ab3ccc266a390de1ebae13849ae3b6115">More...</a><br /></td></tr>
-<tr class="separator:ab3ccc266a390de1ebae13849ae3b6115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade5700ff03148cd742312d03b46f2106"><td class="memItemLeft" align="right" valign="top">typedef std::wstring_convert&lt; Codecvt&lt; char32_t, char, std::mbstate_t &gt;, char32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">jpcre2::Convert32</a></td></tr>
-<tr class="memdesc:ade5700ff03148cd742312d03b46f2106"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="namespacejpcre2.html#ade5700ff03148cd742312d03b46f2106">More...</a><br /></td></tr>
-<tr class="separator:ade5700ff03148cd742312d03b46f2106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf513ced7a87393062267af2678fbe0"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char16_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">jpcre2::Convert16</a></td></tr>
+<tr class="memdesc:a9bf513ced7a87393062267af2678fbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">More...</a><br /></td></tr>
+<tr class="separator:a9bf513ced7a87393062267af2678fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a961b20d74d0da112a2a010ca8bac6"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char32_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">jpcre2::Convert32</a></td></tr>
+<tr class="memdesc:a40a961b20d74d0da112a2a010ca8bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">More...</a><br /></td></tr>
+<tr class="separator:a40a961b20d74d0da112a2a010ca8bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
