@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexMatch" 3 "Fri Nov 18 2016" "Version 10.28.08" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -81,10 +81,6 @@ rm = RegexMatch(&re);
 .br
 .RI "Get offset from where match will start in the subject\&. "
 .ti -1c
-.RI "PCRE2_SIZE \fBgetEndOffset\fP ()"
-.br
-.RI "Get offset where last match operation has ended\&. "
-.ti -1c
 .RI "const \fBRegex\fP * \fBgetRegexObject\fP ()"
 .br
 .RI "Get a pointer to the associated \fBRegex\fP object\&. "
@@ -104,6 +100,14 @@ rm = RegexMatch(&re);
 .RI "\fBRegexMatch\fP & \fBsetNameToNumberMapVector\fP (\fBVecNtN\fP *v)"
 .br
 .RI "Set a pointer to the name to number map vector\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBsetMatchStartOffsetVector\fP (\fBVecOff\fP *v)"
+.br
+.RI "Set the pointer to a vector to store the offsets where matches start in the subject\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP & \fBsetMatchEndOffsetVector\fP (\fBVecOff\fP *v)"
+.br
+.RI "Set the pointer to a vector to store the offsets where matches end in the subject\&. "
 .ti -1c
 .RI "\fBRegexMatch\fP & \fBsetSubject\fP (const \fBString\fP &s)"
 .br
@@ -401,17 +405,6 @@ Reference to the calling \fBRegexMatch\fP object
 \fBRegexReplace::changePcre2Option()\fP 
 .PP
 \fBRegex::changePcre2Option()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getEndOffset ()\fC [inline]\fP"
-
-.PP
-Get offset where last match operation has ended\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-End offset 
 .RE
 .PP
 
@@ -853,6 +846,38 @@ Reference to the calling \fBRegexMatch\fP object
 \fBRegexReplace::setJpcre2Option()\fP 
 .PP
 \fBRegex::setJpcre2Option()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setMatchEndOffsetVector (\fBVecOff\fP * v)\fC [inline]\fP"
+
+.PP
+Set the pointer to a vector to store the offsets where matches end in the subject\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP Pointer to a VecOff vector (std::vector<size_t>) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexMatch\fP object 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::setMatchStartOffsetVector (\fBVecOff\fP * v)\fC [inline]\fP"
+
+.PP
+Set the pointer to a vector to store the offsets where matches start in the subject\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP Pointer to a \fBjpcre2::VecOff\fP vector (std::vector<size_t>) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexMatch\fP object 
 .RE
 .PP
 

@@ -43,6 +43,7 @@ var NAVTREE =
       [ "Other typedefs", "index.html#other-typedefs", null ]
     ] ],
     [ "Error handling", "index.html#exception-handling", null ],
+    [ "Multi threading", "index.html#multi-threading", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],
     [ "Test suit", "index.html#test-suit", null ],
@@ -79,7 +80,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structjpcre2_1_1select.html#a0e58815cb26ca7686dc64be0968c9590"
+"structjpcre2_1_1ConvUTF.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

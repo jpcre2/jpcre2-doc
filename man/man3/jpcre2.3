@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Fri Nov 18 2016" "Version 10.28.08" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -50,6 +50,10 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .RI "typedef uint8_t \fBUsh\fP"
 .br
 .RI "8 bit unsigned integer\&. "
+.ti -1c
+.RI "typedef std::vector< PCRE2_SIZE > \fBVecOff\fP"
+.br
+.RI "vector of size_t "
 .ti -1c
 .RI "typedef \fBConvUTF\fP< char16_t >::Converter \fBConvert16\fP"
 .br
@@ -134,6 +138,10 @@ Used for options (bitwise operation)
 
 .PP
 8 bit unsigned integer\&. 
+.SS "typedef std::vector<PCRE2_SIZE> \fBjpcre2::VecOff\fP"
+
+.PP
+vector of size_t 
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "anonymous enum"

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Wed Nov 16 2016" "Version 10.28.07" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Fri Nov 18 2016" "Version 10.28.08" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -77,6 +77,10 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .br
 .RI "Reset regex compile related errors to zero\&. "
 .ti -1c
+.RI "\fBRegex\fP & \fBresetCharacterTables\fP ()"
+.br
+.RI "Reset character tables used by PCRE2\&. "
+.ti -1c
 .RI "\fBRegexMatch\fP & \fBinitMatch\fP ()"
 .br
 .RI "Create and initialize a new match object and return a reference to it\&. "
@@ -100,14 +104,6 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .RI "const \fBString\fP * \fBgetPatternPointer\fP ()"
 .br
 .RI "Get pointer to pattern string\&. "
-.ti -1c
-.RI "std::string \fBgetLocale\fP ()"
-.br
-.RI "Get locale as a string\&. "
-.ti -1c
-.RI "int \fBgetLocaleTypeId\fP ()"
-.br
-.RI "Get the category/type identifier for the locale that is being used to compile, match and replace\&. "
 .ti -1c
 .RI "std::string \fBgetModifier\fP ()"
 .br
@@ -160,10 +156,6 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .RI "\fBRegex\fP & \fBsetModifier\fP (const std::string &x)"
 .br
 .RI "set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. "
-.ti -1c
-.RI "\fBRegex\fP & \fBsetLocale\fP (int category, const std::string &locale)"
-.br
-.RI "Set the locale\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -796,28 +788,6 @@ Compile time JPCRE2 option value
 \fBRegexReplace::getJpcre2Option()\fP 
 .PP
 \fBRegexMatch::getJpcre2Option()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getLocale ()\fC [inline]\fP"
-
-.PP
-Get locale as a string\&. To get the type id, call \fBRegex::getLocaleTypeId()\fP 
-.PP
-\fBReturns:\fP
-.RS 4
-locale as std::string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getLocaleTypeId ()\fC [inline]\fP"
-
-.PP
-Get the category/type identifier for the locale that is being used to compile, match and replace\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-Locale Type identifier\&. 
 .RE
 .PP
 
@@ -1612,6 +1582,17 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetCharacterTables ()\fC [inline]\fP"
+
+.PP
+Reset character tables used by PCRE2\&. You should call this function after changing the locale to remake the character tables according to the new locale\&. These character tables are used to compile the regex and used by match and replace operation\&. A separate call to \fBcompile()\fP will be required to apply the new character tables\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegex\fP object\&. 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetErrors ()\fC [inline]\fP"
 
 .PP
@@ -1650,24 +1631,6 @@ Reference to the calling \fBRegex\fP object\&.
 \fBRegexMatch::setJpcre2Option()\fP 
 .PP
 \fBRegexReplace::setJpcre2Option()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setLocale (int category, const std::string & locale)\fC [inline]\fP"
-
-.PP
-Set the locale\&. Locale is set temporarily to create character tables\&. After creating character tables, locale is restored to its' prior state\&. \fBNote:\fP This function may or may not be thread safe (depends on std::setlocale())\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIcategory\fP locale category identifier, one of the LC_xxx macros\&. May be 0\&. 
-.br
-\fIlocale\fP system-specific locale identifier\&. Can be '' for the user-preferred locale or 'C' for the minimal locale\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 

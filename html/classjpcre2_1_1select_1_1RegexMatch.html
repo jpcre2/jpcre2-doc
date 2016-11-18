@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.07</span>
+   &#160;<span id="projectnumber">10.28.08</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -144,9 +144,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c571845564270732883c6e7d13052b1"><td class="memItemLeft" align="right" valign="top">PCRE2_SIZE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a2c571845564270732883c6e7d13052b1">getStartOffset</a> ()</td></tr>
 <tr class="memdesc:a2c571845564270732883c6e7d13052b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get offset from where match will start in the subject.  <a href="#a2c571845564270732883c6e7d13052b1">More...</a><br /></td></tr>
 <tr class="separator:a2c571845564270732883c6e7d13052b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf480d05df0f5049e3db8c67d95dba93"><td class="memItemLeft" align="right" valign="top">PCRE2_SIZE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#acf480d05df0f5049e3db8c67d95dba93">getEndOffset</a> ()</td></tr>
-<tr class="memdesc:acf480d05df0f5049e3db8c67d95dba93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get offset where last match operation has ended.  <a href="#acf480d05df0f5049e3db8c67d95dba93">More...</a><br /></td></tr>
-<tr class="separator:acf480d05df0f5049e3db8c67d95dba93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d11557ebb6422a46c7dd4a73dbcdc57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a3d11557ebb6422a46c7dd4a73dbcdc57">getRegexObject</a> ()</td></tr>
 <tr class="memdesc:a3d11557ebb6422a46c7dd4a73dbcdc57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the associated <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructos to create Regex object. ">Regex</a> object.  <a href="#a3d11557ebb6422a46c7dd4a73dbcdc57">More...</a><br /></td></tr>
 <tr class="separator:a3d11557ebb6422a46c7dd4a73dbcdc57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +159,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac66056d7f40012949afd5e309fa5b05b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ac66056d7f40012949afd5e309fa5b05b">setNameToNumberMapVector</a> (<a class="el" href="structjpcre2_1_1select.html#a2be38d80f7add849c5aa9a58e8518277">VecNtN</a> *v)</td></tr>
 <tr class="memdesc:ac66056d7f40012949afd5e309fa5b05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pointer to the name to number map vector.  <a href="#ac66056d7f40012949afd5e309fa5b05b">More...</a><br /></td></tr>
 <tr class="separator:ac66056d7f40012949afd5e309fa5b05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c15f9df9c370a79d75901a7924d1f80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a5c15f9df9c370a79d75901a7924d1f80">setMatchStartOffsetVector</a> (<a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">VecOff</a> *v)</td></tr>
+<tr class="memdesc:a5c15f9df9c370a79d75901a7924d1f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer to a vector to store the offsets where matches start in the subject.  <a href="#a5c15f9df9c370a79d75901a7924d1f80">More...</a><br /></td></tr>
+<tr class="separator:a5c15f9df9c370a79d75901a7924d1f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032b3f99b9fb939f2d6fa4c7e17481e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a032b3f99b9fb939f2d6fa4c7e17481e2">setMatchEndOffsetVector</a> (<a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">VecOff</a> *v)</td></tr>
+<tr class="memdesc:a032b3f99b9fb939f2d6fa4c7e17481e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pointer to a vector to store the offsets where matches end in the subject.  <a href="#a032b3f99b9fb939f2d6fa4c7e17481e2">More...</a><br /></td></tr>
+<tr class="separator:a032b3f99b9fb939f2d6fa4c7e17481e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6a47d6ceb8b3c9ea80dff026d24907"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a7f6a47d6ceb8b3c9ea80dff026d24907">setSubject</a> (const <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a> &amp;s)</td></tr>
 <tr class="memdesc:a7f6a47d6ceb8b3c9ea80dff026d24907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the subject string for match.  <a href="#a7f6a47d6ceb8b3c9ea80dff026d24907">More...</a><br /></td></tr>
 <tr class="separator:a7f6a47d6ceb8b3c9ea80dff026d24907"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,36 +613,6 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a55042dbf57ffb515ea569a091d5a8b97" title="Add or remove a PCRE2 option. ">RegexReplace::changePcre2Option()</a> </dd>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1Regex.html#aa03c5a5f569eeff07968e5cf4d643ae3" title="Add or remove a PCRE2 option. ">Regex::changePcre2Option()</a> </dd></dl>
-
-</div>
-</div>
-<a id="acf480d05df0f5049e3db8c67d95dba93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf480d05df0f5049e3db8c67d95dba93">&#9670;&nbsp;</a></span>getEndOffset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PCRE2_SIZE <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexMatch::getEndOffset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get offset where last match operation has ended. </p>
-<dl class="section return"><dt>Returns</dt><dd>End offset </dd></dl>
 
 </div>
 </div>
@@ -1606,6 +1579,80 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#ab0aee505d050ceeadcff692d8f76abd1" title="Set JPCRE2 option for replace (overwrite existing option) ">RegexReplace::setJpcre2Option()</a> </dd>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a4e5c8e4e252e027ac1b4e86176a5d5d4" title="Set JPCRE2 option for compile (overwrites existing option) ">Regex::setJpcre2Option()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a032b3f99b9fb939f2d6fa4c7e17481e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032b3f99b9fb939f2d6fa4c7e17481e2">&#9670;&nbsp;</a></span>setMatchEndOffsetVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a>&amp; <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexMatch::setMatchEndOffsetVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">VecOff</a> *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the pointer to a vector to store the offsets where matches end in the subject. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Pointer to a VecOff vector (std::vector&lt;size_t&gt;) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> object </dd></dl>
+
+</div>
+</div>
+<a id="a5c15f9df9c370a79d75901a7924d1f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c15f9df9c370a79d75901a7924d1f80">&#9670;&nbsp;</a></span>setMatchStartOffsetVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a>&amp; <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexMatch::setMatchStartOffsetVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">VecOff</a> *&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the pointer to a vector to store the offsets where matches start in the subject. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Pointer to a <a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137" title="vector of size_t ">jpcre2::VecOff</a> vector (std::vector&lt;size_t&gt;) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> object </dd></dl>
 
 </div>
 </div>
