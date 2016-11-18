@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Fri Nov 18 2016" "Version 10.28.08" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Sat Nov 19 2016" "Version 10.28.08" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -612,15 +612,7 @@ Reference to the calling \fBRegex\fP object
 .SS "template<typename Char_T , jpcre2::Ush BS> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (void)"
 
 .PP
-Compile pattern using info from class variables\&. Prefer using one of its variants when compiling pattern for an already declared \fBRegex\fP object\&. A use of 
-.PP
-.nf
-jpcre2::select<char>::Regex re;
-re = jpcre2::select<char>::Regex("pattern");
-
-.fi
-.PP
- (or such) is discouraged\&. see \fC\fBRegex::operator=(const Regex& r)\fP\fP for details\&. 
+Compile pattern using info from class variables\&. 
 .PP
 \fBSee also:\fP
 .RS 4
@@ -1300,9 +1292,7 @@ re = Regex("new pattern");
 
 .fi
 .PP
- However, use of this method is discouraged (Use \fBRegex::compile()\fP instead), because a call to this function requires an additional call to PCRE2 internal function pcre2_code_copy()\&. If the pattern was JIT compiled, it requires another additional JIT compilation because JIT memory was not copied by pcre2_code_copy()\&.
-.PP
-\fBMemory management:\fP Old JIT memory will be released along with the old compiled code\&. 
+ 
 .PP
 \fBParameters:\fP
 .RS 4
