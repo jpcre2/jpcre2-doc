@@ -582,6 +582,8 @@ A named substring can be referenced with \fC${name}\fP, where 'name' is the grou
 A literal \fC$\fP can be given as \fC$$\fP\&.
 .PP
 .PP
+Note: This function calls pcre2_substitute() to do the replacement\&. 
+.PP
 \fBReturns:\fP
 .RS 4
 Replaced string 

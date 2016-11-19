@@ -556,7 +556,7 @@ subject string pointer
 .SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::SIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::match (void)"
 
 .PP
-Perform match operaton using info from class variables and return the match count and store the results in specified vectors\&. 
+Perform match operaton using info from class variables and return the match count and store the results in specified vectors\&. Note: This function uses pcre2_match() function to do the match\&. 
 .PP
 \fBReturns:\fP
 .RS 4
