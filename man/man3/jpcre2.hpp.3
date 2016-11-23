@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Sat Nov 19 2016" "Version 10.28.09" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Wed Nov 23 2016" "Version 10.28.10" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -80,7 +80,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "This macro does not have any significance in JPCRE2 context\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_VERSION\fP   102809L"
+.RI "#define \fBJPCRE2_VERSION\fP   102810L"
 .br
 .RI "Define for JPCRE2 version\&. "
 .ti -1c
@@ -136,7 +136,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.09'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.10'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -148,7 +148,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '09'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '10'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
@@ -178,7 +178,7 @@ It includes the pcre2\&.h header, therefore you shouldn't include pcre2\&.h sepa
 
 .PP
 By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. This check can be disabled by defining this macro\&. 
-.SS "#define JPCRE2_VERSION   102809L"
+.SS "#define JPCRE2_VERSION   102810L"
 
 .PP
 Define for JPCRE2 version\&. It can be used to support changes in different versions of the lib\&. 

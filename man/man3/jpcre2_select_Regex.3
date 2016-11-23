@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Sat Nov 19 2016" "Version 10.28.09" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Wed Nov 23 2016" "Version 10.28.10" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -445,7 +445,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBRegex\fP & r)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor. Performs a deep copy\&. The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor. Performs a deep copy\&. The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&. A separate and new compile is performed from the copied options\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1287,8 +1287,8 @@ The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copi
 Allows assigning objects like this: 
 .PP
 .nf
-Regex re;
-re = Regex("new pattern");
+Regex re2;
+re2 = re;
 
 .fi
 .PP
