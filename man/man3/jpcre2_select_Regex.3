@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Mon Dec 5 2016" "Version 10.28.11" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Tue Dec 20 2016" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,7 +65,7 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .br
 .RI "Provides boolean check for the status of the object\&. "
 .ti -1c
-.RI "\fB~Regex\fP ()"
+.RI "virtual \fB~Regex\fP ()"
 .br
 .RI "Destructor\&. "
 .ti -1c
@@ -97,35 +97,35 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .br
 .RI "Copy the replace object into this \fBRegex\fP object\&. "
 .ti -1c
-.RI "\fBString\fP \fBgetPattern\fP ()"
+.RI "\fBString\fP \fBgetPattern\fP () const"
 .br
 .RI "Get pattern string\&. "
 .ti -1c
-.RI "const \fBString\fP * \fBgetPatternPointer\fP ()"
+.RI "const \fBString\fP * \fBgetPatternPointer\fP () const"
 .br
 .RI "Get pointer to pattern string\&. "
 .ti -1c
-.RI "std::string \fBgetModifier\fP ()"
+.RI "std::string \fBgetModifier\fP () const"
 .br
 .RI "Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. "
 .ti -1c
-.RI "\fBUint\fP \fBgetPcre2Option\fP ()"
+.RI "\fBUint\fP \fBgetPcre2Option\fP () const"
 .br
 .RI "Get PCRE2 option\&. "
 .ti -1c
-.RI "\fBUint\fP \fBgetJpcre2Option\fP ()"
+.RI "\fBUint\fP \fBgetJpcre2Option\fP () const"
 .br
 .RI "Get JPCRE2 option\&. "
 .ti -1c
-.RI "int \fBgetErrorNumber\fP ()"
+.RI "int \fBgetErrorNumber\fP () const"
 .br
 .RI "Returns the last error number\&. "
 .ti -1c
-.RI "int \fBgetErrorOffset\fP ()"
+.RI "int \fBgetErrorOffset\fP () const"
 .br
 .RI "Returns the last error offset\&. "
 .ti -1c
-.RI "\fBString\fP \fBgetErrorMessage\fP ()"
+.RI "\fBString\fP \fBgetErrorMessage\fP () const"
 .br
 .RI "Returns the last error message\&. "
 .ti -1c
@@ -453,7 +453,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::~Regex ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBjpcre2::select\fP< Char_T, BS >::Regex::~Regex ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Destructor\&. Deletes all memory used by \fBRegex\fP, \fBRegexMatch\fP and \fBRegexReplace\fP object including compiled code and JIT memory\&. 
@@ -732,7 +732,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorMessage ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorMessage () const\fC [inline]\fP"
 
 .PP
 Returns the last error message\&. 
@@ -743,7 +743,7 @@ Last error message
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorNumber ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorNumber () const\fC [inline]\fP"
 
 .PP
 Returns the last error number\&. 
@@ -754,7 +754,7 @@ Last error number
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorOffset ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> int \fBjpcre2::select\fP< Char_T, BS >::Regex::getErrorOffset () const\fC [inline]\fP"
 
 .PP
 Returns the last error offset\&. 
@@ -765,7 +765,7 @@ Last error offset
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getJpcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getJpcre2Option () const\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -799,7 +799,7 @@ Reference to a \fBRegexMatch\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier ()"
+.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier () const"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegex::setModifier()\fP will re-set them\&.
@@ -848,7 +848,7 @@ PCRE2_NEWLINE_ANY       Any Unicode newline sequence
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPattern ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPattern () const\fC [inline]\fP"
 
 .PP
 Get pattern string\&. 
@@ -859,7 +859,7 @@ pattern string of type \fBjpcre2::select::String\fP
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> const \fBString\fP* \fBjpcre2::select\fP< Char_T, BS >::Regex::getPatternPointer ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> const \fBString\fP* \fBjpcre2::select\fP< Char_T, BS >::Regex::getPatternPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to pattern string\&. 
@@ -870,7 +870,7 @@ Pointer to pattern string
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPcre2Option ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getPcre2Option () const\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 

@@ -1,0 +1,74 @@
+.TH "jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 >" 3 "Tue Dec 20 2016" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 > \- This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback funtion to the \fC\fBMatchEvaluator\fP\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <jpcre2\&.hpp>\fP
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
+.br
+template<typename T1, typename T2, typename T3>
+.br
+struct jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 >"
+This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback funtion to the \fC\fBMatchEvaluator\fP\fP\&. 
+
+\fCstd::function\fP is selected when \fC>=C++11\fP is being used and the macro \fCJPCRE2_USE_FUNCTIONAL_CALLBACK\fP is defined before including this header, otherwise function pointer is selected\&. \fBIf you are using lamda function with capture, you must use the \fCstd::function\fP approach i\&.e use \fC>=C++11\fP compiler and define \fCJPCRE2_USE_FUNCTIONAL_CALLBACK\fP before including the header:\fP 
+.PP
+.nf
+#define JPCRE2_USE_FUNCTIONAL_CALLBACK
+#include <jpcre2\&.hpp>
+
+.fi
+.PP
+ The callback function takes exactly three positional arguments: 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT1\fP The first argument must be \fC\fBjp::NumSub\fP\fP aka \fCstd::vector<String>\fP (or \fCvoid*\fP if not needed)\&. 
+.br
+\fIT2\fP The second argument must be \fC\fBjp::MapNas\fP\fP aka \fCstd::map<String, size_t>\fP (or \fCvoid*\fP if not needed)\&. 
+.br
+\fIT3\fP The third argument must be \fC\fBjp::MapNtN\fP\fP aka \fCstd::map<String, String>\fP (or \fCvoid*\fP if not needed)\&.
+.RE
+.PP
+\fBExamples:\fP 
+.PP
+.nf
+typedef jpcre2::select<char> jp;
+jp::String myCallBack1(jp::NumSub m1, void*, void*){
+    return "("+m1[0]+")";
+}
+
+jp::String myCallBack2(jp::NumSub m1, jp::MapNas m2, void*){
+    return "("+m1[0]+"/"+m2["total"]+")";
+}
+//Now you can pass these functions in MatchEvaluator constructors
+jp::MatchEvaluator me1(myCallBack1); 
+
+//Examples with lambda (>=C++11)
+jp::MatchEvaluator me2([](jp::NumSub m1, void*, void*)
+                        {
+                            return "("+m1[0]+")";
+                        });
+
+.fi
+.PP
+ 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBMatchEvaluator\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

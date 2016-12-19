@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >" 3 "Mon Dec 5 2016" "Version 10.28.11" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >" 3 "Tue Dec 20 2016" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,6 +12,14 @@ jpcre2::select< Char_T, BS > \- struct to select code unit width and the charact
 .SS "Classes"
 
 .in +1c
+.ti -1c
+.RI "class \fBMatchEvaluator\fP"
+.br
+.RI "This class inherits \fBRegexMatch\fP and provides a similar functionality\&. "
+.ti -1c
+.RI "struct \fBMatchEvaluatorCallBack\fP"
+.br
+.RI "This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback funtion to the \fC\fBMatchEvaluator\fP\fP\&. "
 .ti -1c
 .RI "class \fBRegex\fP"
 .br
@@ -78,6 +86,10 @@ jpcre2::select< Char_T, BS > \- struct to select code unit width and the charact
 .RI "Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::String\fP\&. "
 .ti -1c
 .RI "static \fBString\fP \fBtoString\fP (const \fBChar\fP *a)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "static \fBString\fP \fBtoString\fP (\fBChar\fP *a)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
@@ -228,6 +240,22 @@ Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::Stri
 .PP
 
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (const \fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Converts a const Char_T* (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP const Char_T* 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBjpcre2::select::String\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (\fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Converts a Char_T* (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP 
