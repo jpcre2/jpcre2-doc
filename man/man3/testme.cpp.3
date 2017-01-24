@@ -121,18 +121,22 @@ int main(){
     rr\&.setRegexObject(&re)\&.setPcre2Option(0)\&.nreplace(me1);
     
     
-    me2 = jp::MatchEvaluator(callback3);
+    me2 = jp::MatchEvaluator(callback2);
     me1 = me2;
     rr\&.nreplace(me1);
     me2 = me1;
     me1 = jp::MatchEvaluator(callback3);
     rr\&.nreplace(me1);
     me3 = me1;
-    me1 = jp::MatchEvaluator(callback3);
+    me1 = jp::MatchEvaluator(callback4);
     
     rr\&.nreplace(me1);
     me2 = me1;
     me1 = me3;
+    me1 = jp::MatchEvaluator(callback5);
+    me1 = jp::MatchEvaluator(callback6);
+    me1 = jp::MatchEvaluator(callback7);
+    me1 = jp::MatchEvaluator(callback1);
 
     return 0;
 }
