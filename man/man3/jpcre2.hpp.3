@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Sun Jan 22 2017" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Wed Jan 25 2017" "Version 10.29.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,11 +25,9 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 \fC#include <cstring>\fP
 .br
-\fC#include <functional>\fP
-.br
-\fC#include <codecvt>\fP
-.br
 \fC#include <locale>\fP
+.br
+\fC#include <functional>\fP
 .br
 
 .SS "Classes"
@@ -38,7 +36,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "struct \fBjpcre2::ConvUTF< Char_T >\fP"
 .br
-.RI "\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (\fC>=C++11\fP)\&. "
+.RI "\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (>=C++11)\&. "
 .ti -1c
 .RI "struct \fBjpcre2::ConvInt< Char_T, T >\fP"
 .br
@@ -54,7 +52,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "struct \fBjpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 >\fP"
 .br
-.RI "This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback funtion to the \fC\fBMatchEvaluator\fP\fP\&. "
+.RI "This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback function to the \fC\fBMatchEvaluator\fP\fP\&. "
 .ti -1c
 .RI "class \fBjpcre2::select< Char_T, BS >::MatchEvaluator\fP"
 .br
@@ -66,7 +64,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "class \fBjpcre2::select< Char_T, BS >::Regex\fP"
 .br
-.RI "Provides public constructos to create \fBRegex\fP object\&. "
+.RI "Provides public constructors to create \fBRegex\fP object\&. "
 .in -1c
 .SS "Namespaces"
 
@@ -92,17 +90,21 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "This macro does not have any significance in JPCRE2 context\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_VERSION\fP   102812L"
+.RI "#define \fBJPCRE2_VERSION\fP   102901L"
 .br
 .RI "Define for JPCRE2 version\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_DISABLE_CHAR1632\fP"
+.br
+.RI "Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&. "
+.ti -1c
+.RI "#define \fBJPCRE2_USE_FUNCTION_POINTER_CALLBACK\fP"
+.br
+.RI "Use function pointer in all cases for MatchEvaluatorCallback function\&. "
 .ti -1c
 .RI "#define \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP"
 .br
 .RI "By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. "
-.ti -1c
-.RI "#define \fBJPCRE2_USE_FUNCTIONAL_CALLBACK\fP"
-.br
-.RI "By default function pointer is used for callback in MatchEvaluator\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -152,7 +154,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.28\&.12'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.29\&.01'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -160,27 +162,23 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Generation, depends on original PCRE2 version\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '28'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '29'"
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '12'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '01'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
 .RI "static const char \fBjpcre2::INFO::VERSION_PRE_RELEASE\fP [] = ''"
 .br
 .RI "Alpha or beta (testing) release version\&. "
-.ti -1c
-.RI "static const SIZE_T \fBjpcre2::SUBSTITUTE_RESULT_INIT_SIZE\fP = 0"
-.br
-.RI "Used by default to provide big enough initial buffer for replaced string\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Main header file for JPCRE2 library to be included by programs that uses its functionalities\&. 
 
-It includes the pcre2\&.h header, therefore you shouldn't include pcre2\&.h separately in your program\&. Make sure to link PCRE2 library when compiling\&. 
+It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2\&.h\fP, neither should you define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fC\fBjpcre2\&.hpp\fP\fP\&. If your \fCpcre2\&.h\fP header is not in standard include paths, you may include \fCpcre2\&.h\fP with correct path before including \fC\fBjpcre2\&.hpp\fP\fP manually\&. In this case you will have to define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fCpcre2\&.h\fP\&. Make sure to link required PCRE2 libraries when compiling\&.
 .PP
 \fBAuthor:\fP
 .RS 4
@@ -190,22 +188,28 @@ It includes the pcre2\&.h header, therefore you shouldn't include pcre2\&.h sepa
 
 .SH "Macro Definition Documentation"
 .PP 
+.SS "#define JPCRE2_DISABLE_CHAR1632"
+
+.PP
+Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&. Older compiler which supposedly supports C++11 but does not have \fCstd::wstring_convert\fP will not work with \fCchar16_t\fP and \fCchar32_t\fP, in this case define this macro before including \fC\fBjpcre2\&.hpp\fP\fP to disable \fCchar16_t\fP and \fCchar32_t\fP support\&. 
 .SS "#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION"
 
 .PP
 By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. This check can be disabled by defining this macro\&. 
-.SS "#define JPCRE2_USE_FUNCTIONAL_CALLBACK"
+.SS "#define JPCRE2_USE_FUNCTION_POINTER_CALLBACK"
 
 .PP
-By default function pointer is used for callback in MatchEvaluator\&. If this macro is defined before including \fBjpcre2\&.hpp\fP, \fCstd::function\fP wrapper will be used instead\&. This may be required when using lambda function with captures\&. 
-.SS "#define JPCRE2_VERSION   102812L"
+Use function pointer in all cases for MatchEvaluatorCallback function\&. By default function pointer is used for callback in MatchEvaluator when using <C++11 compiler, but for \fC>=C++11\fP compiler \fCstd::function\fP instead of function pointer is used\&. If this macro is defined before including \fBjpcre2\&.hpp\fP, function pointer will be used in all cases\&. It you are using lambda function with captures, stick with \fCstd::function\fP, on the other hand, if you are using older compilers, you might want to use function pointer instead\&.
+.PP
+For example, with gcc-4\&.7, \fCstd::function\fP will give compile error in C++11 mode, in such cases where full C++11 support is not available, use function pointer\&. 
+.SS "#define JPCRE2_VERSION   102901L"
 
 .PP
 Define for JPCRE2 version\&. It can be used to support changes in different versions of the lib\&. 
 .SS "#define PCRE2_CODE_UNIT_WIDTH   0"
 
 .PP
-This macro does not have any significance in JPCRE2 context\&. It is defined as 0 by default\&. Defining it before including \fBjpcre2\&.hpp\fP will override the default (0), but still it will have no effect in a JPCRE2 perspective\&. Defining it with an invalid value will yield to compile error\&. 
+This macro does not have any significance in JPCRE2 context\&. It is defined as 0 by default\&. Defining it before including \fBjpcre2\&.hpp\fP will override the default (discouraged as it will make it harder for you to detect problems), but still it will have no effect in a JPCRE2 perspective\&. Defining it with an invalid value will yield to compile error\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

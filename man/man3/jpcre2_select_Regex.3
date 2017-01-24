@@ -1,8 +1,8 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Sun Jan 22 2017" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Wed Jan 25 2017" "Version 10.29.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fBRegex\fP object\&.  
+jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \fBRegex\fP object\&.  
 
 .SH SYNOPSIS
 .br
@@ -227,11 +227,13 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod, PCRE2_SIZE start_offset)"
 .br
-.RI "Perform regex match and return match count\&. "
+.RI "Perform regex match and return match count using a temporary match object\&. "
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod, PCRE2_SIZE start_offset)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod)"
 .br
@@ -239,7 +241,9 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, PCRE2_SIZE start_offset)"
 .br
@@ -247,7 +251,9 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, PCRE2_SIZE start_offset)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s)"
 .br
@@ -255,59 +261,63 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (PCRE2_SIZE start_offset)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBSIZE_T\fP \fBmatch\fP ()"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "Shorthand for \fBgetMatchObject()\fP\&.\fBmatch()\fP This uses previously initiated match object i\&.e call \fBRegexMatch::match()\fP with all previous options intact\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl, const std::string &mod)"
 .br
-.RI "Perform regex replace and return the replaced string\&. "
+.RI "Perform regex replace and return the replaced string using a temporary replace object\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl, const std::string &mod)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl, const std::string &mod)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl, const std::string &mod)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. "
 .ti -1c
 .RI "\fBString\fP \fBreplace\fP ()"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "Shorthand for \fBgetReplaceObject()\fP\&.\fBreplace()\fP All previously set options will be used\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -315,9 +325,9 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructos to create \fB
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
 .br
 class jpcre2::select< Char_T, BS >::Regex"
-Provides public constructos to create \fBRegex\fP object\&. 
+Provides public constructors to create \fBRegex\fP object\&. 
 
-Each regex pattern needs an object of this class and each pattern needs to be compiled\&. Pattern compilation can be done using one of its' overloaded constructors or the \fC\fBRegex::compile()\fP\fP memeber function\&.
+Each regex pattern needs an object of this class and each pattern needs to be compiled\&. Pattern compilation can be done using one of its' overloaded constructors or the \fC\fBRegex::compile()\fP\fP member function\&.
 .PP
 This class can contain a \fBRegexMatch\fP or \fBRegexReplace\fP object if desired\&. \fBRegexMatch\fP object can be created either with \fBRegex::initMatch()\fP or \fBRegex::getMatchObject()\fP member function\&. Similar functions are available for \fBRegexReplace\fP\&.
 .PP
@@ -341,7 +351,7 @@ Default Constructor\&. Initializes all class variables to defaults\&. Does not p
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re)\fC [inline]\fP"
 
 .PP
-Compile pattern with initialization\&. 
+Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -352,7 +362,7 @@ Compile pattern with initialization\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re)\fC [inline]\fP"
 
 .PP
-Compile pattern with initialization\&. 
+Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -363,7 +373,7 @@ Compile pattern with initialization\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -376,7 +386,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -389,7 +399,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -402,7 +412,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -415,7 +425,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -430,7 +440,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -445,7 +455,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBRegex\fP & r)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor. Performs a deep copy\&. The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&. A separate and new compile is performed from the copied options\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor. Performs a deep copy\&. The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&. A separate and new compile is performed from the copied options\&.
+.PP
+Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -612,7 +624,13 @@ Reference to the calling \fBRegex\fP object
 .SS "template<typename Char_T , jpcre2::Ush BS> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (void)"
 
 .PP
-Compile pattern using info from class variables\&. 
+Compile pattern using info from class variables\&. \fBThread safety:\fP
+.PP
+.IP "1." 4
+(C) MT safe if JIT compile is not done\&.
+.IP "2." 4
+MT unsafe if JIT compile is done (e\&.g passing the 'S' modifier)
+.PP
 .PP
 \fBSee also:\fP
 .RS 4
@@ -631,7 +649,9 @@ References jpcre2::select< Char_T, BS >::RegexReplace::changeModifier(), and jpc
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using information from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -646,7 +666,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using information from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -661,7 +683,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -674,7 +698,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -687,7 +713,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -700,7 +728,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -713,7 +743,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -724,7 +756,9 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
+.PP
+Set the specified parameters, then compile the pattern using options from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -923,7 +957,7 @@ Reference to a new \fBRegexMatch\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatchFrom (const \fBRegexMatch\fP & rmo)\fC [inline]\fP"
 
 .PP
-Copy the match object into this \fBRegex\fP object\&. The match object passed is copied into the \fBRegex\fP object leaving the original unchanged\&. After copying, the associated \fBRegex\fP object for this new internal match object is changed to this object\&. 
+Copy the match object into this \fBRegex\fP object\&. The match object passed is copied into the \fBRegex\fP object leaving the original unchanged\&. After copying, the associated \fBRegex\fP object for this new internal match object is set (corrected) to this object\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -971,17 +1005,9 @@ Reference to the calling \fBRegex\fP object
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
-Perform regex match and return match count\&. This function takes the parameters, then sets the parameters to \fBRegexMatch\fP class and calls \fBRegexMatch::match()\fP which returns the result\&.
+Perform regex match and return match count using a temporary match object\&. No previously set options are used or changed\&. A match is performed with just the options that were passed as parameters\&.
 .PP
-.IP "1." 4
-It makes use of any previously initialized match object i\&.e it uses \fBRegex::getMatchObject()\fP function to get a reference to the match object\&.
-.IP "2." 4
-It retains all options that are set previously unless overridden\&.
-.IP "3." 4
-Resets all JPCRE2 and PCRE2 options and re-initializes them according to modifier string\&.
-.IP "4." 4
-Overwrites subject string for match\&.
-.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1003,10 +1029,14 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1023,19 +1053,12 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.IP "1." 4
-Uses previously set start offset and other options\&.
-.IP "2." 4
-Resets all JPCRE2 and PCRE2 options and re-initializes them according to modifier string\&.
-.IP "3." 4
-Overwrites subject string for match\&.
-.IP "4." 4
-Be ware that previous value of start offset is used\&.
-.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1055,10 +1078,14 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1078,15 +1105,12 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.IP "\(bu" 2
-Overwrites subject string and start offset\&.
-.IP "\(bu" 2
-Uses previously set options\&.
-.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1106,10 +1130,14 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1129,15 +1157,12 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.IP "1." 4
-Overwrites subject string for match\&.
-.IP "2." 4
-Uses previously set start offset and other options\&.
-.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1155,10 +1180,14 @@ Match count
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1176,31 +1205,12 @@ Match count
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (PCRE2_SIZE start_offset)\fC [inline]\fP"
-
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIstart_offset\fP Offset from where matching will start in the subject string\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
+References jpcre2::select< Char_T, BS >::RegexMatch::match(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (void)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Uses previously set start offset and other options\&. 
+Shorthand for \fBgetMatchObject()\fP\&.\fBmatch()\fP This uses previously initiated match object i\&.e call \fBRegexMatch::match()\fP with all previous options intact\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -1216,7 +1226,7 @@ Match count
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
-Provides boolean check for the status of the object\&. This overlaoded boolean operator needs to be declared explicit to prevent implicit conversion and overloading issues\&.
+Provides boolean check for the status of the object\&. This overloaded boolean operator needs to be declared explicit to prevent implicit conversion and overloading issues\&.
 .PP
 We will only enable it if >=C++11 is being used, as the explicit keyword for a function other than constructor is not supported in older compilers\&.
 .PP
@@ -1292,7 +1302,7 @@ re2 = re;
 
 .fi
 .PP
- 
+ Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1308,13 +1318,9 @@ re2 = re;
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
 
 .PP
-Perform regex replace and return the replaced string\&. This function takes the parameters, then sets the parameters to \fBRegexReplace\fP class and calls \fBRegexReplace::replace()\fP which returns the result\&.
+Perform regex replace and return the replaced string using a temporary replace object\&. This function takes the parameters, creates a temporary replace object and then sets the parameters to the newly created \fBRegexReplace\fP object and calls \fBRegexReplace::replace()\fP which returns the result\&.
 .PP
-.IP "1." 4
-It makes use of any previously initialized replace object i\&.e it uses \fBRegex::getReplaceObject()\fP function to get a reference to the replace object\&.
-.IP "2." 4
-Resets all JPCRE2 and PCRE2 options and re-initializes them according to modifier string\&.
-.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1336,10 +1342,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1361,10 +1371,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1386,10 +1400,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1411,10 +1429,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1434,10 +1456,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP & repl)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1457,10 +1483,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP * repl)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1480,10 +1510,14 @@ Resultant string after regex replace
 .RE
 .PP
 
+.PP
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP * repl)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
+.PP
+This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1503,52 +1537,12 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains)\fC [inline]\fP"
-
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
+References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (void)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+Shorthand for \fBgetReplaceObject()\fP\&.\fBreplace()\fP All previously set options will be used\&. It's just a short hand for calling \fCre\&.getReplaceObject()\&.\fBreplace()\fP\fP 
 .PP
 \fBReturns:\fP
 .RS 4

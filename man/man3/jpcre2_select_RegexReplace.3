@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Sun Jan 22 2017" "Version 10.28.12" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Wed Jan 25 2017" "Version 10.29.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -125,6 +125,14 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .br
 .RI "Set PCRE2 option replace (overwrite existing option) "
 .ti -1c
+.RI "\fBRegexReplace\fP & \fBsetMatchContext\fP (MatchContext *match_context)"
+.br
+.RI "Set the match context to be used\&. "
+.ti -1c
+.RI "\fBRegexReplace\fP & \fBsetMatchData\fP (MatchData *match_data)"
+.br
+.RI "Set the match data to be used\&. "
+.ti -1c
 .RI "\fBRegexReplace\fP & \fBchangeModifier\fP (const std::string &mod, bool)"
 .br
 .RI "After a call to this function PCRE2 and JPCRE2 options will be properly set\&. "
@@ -152,46 +160,6 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .RI "\fBString\fP \fBreplace\fP (void)"
 .br
 .RI "Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
 .RI "\fBString\fP \fBnreplace\fP (\fBMatchEvaluator\fP me)"
 .br
@@ -574,13 +542,14 @@ Pointer to subject string
 .PP
 JPCRE2 native replace function\&. A different name is adopted to distinguish itself from the regular \fBreplace()\fP function which uses pcre2_substitute() to do the replacement; contrary to that, it will provide a JPCRE2 native way of replacement operation\&. It takes a \fBMatchEvaluator\fP object which provides a callback function that is used to generate replacement string on the fly\&. Any replacement string set with \fC\fBRegexReplace::setReplaceWith()\fP\fP function will have no effect\&. The string returned by the callback function will be treated as literal and will not go through any further processing\&.
 .PP
-This function modifies the associated \fBMatchEvaluator\fP as mentioned below:
+This function works on a copy of the \fBMatchEvaluator\fP, and thus makes no changes to the original\&. The copy is modified as below:
+.PP
 .IP "1." 4
 Global replacment will set FIND_ALL for match, unset otherwise\&.
 .IP "2." 4
 Bad matching options such as \fCPCRE2_PARTIAL_HARD|PCRE2_PARTIAL_SOFT\fP will be removed\&.
 .IP "3." 4
-subject, start_offset and \fBRegex\fP object will change accoding to the \fBRegexReplace\fP object\&.
+subject, start_offset and \fBRegex\fP object will change according to the \fBRegexReplace\fP object\&.
 .PP
 .PP
 \fBParameters:\fP
@@ -645,195 +614,8 @@ Replaced string
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP & mains)\fC [inline]\fP"
-
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites the subject before replace\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP * mains)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites pointer to the subject before replace\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP & mains, const \fBString\fP & repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites the subject and replacement string 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP Replacement string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP * mains, const \fBString\fP & repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites replacement string and pointer to the subject string 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Replacement string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP & mains, const \fBString\fP * repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites the subject string and pointer to replacement string 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP Pointer to replacement string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP * mains, const \fBString\fP * repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Overwrites pointer to replacement and the subject string 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Pointer to replacement string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP & mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.IP "\(bu" 2
-Resets all JPCRE2 and PCRE2 options and resets them according to new modifier string\&.
-.IP "\(bu" 2
-Overwrites the subject and replacement string
-.PP
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP Replacement string 
-.br
-\fImod\fP Modifier string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP * mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Replacement string 
-.br
-\fImod\fP Modifier string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP & mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP Pointer to replacement string 
-.br
-\fImod\fP Modifier string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::replace (const \fBString\fP * mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Pointer to replacement string 
-.br
-\fImod\fP Modifier string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-replaced string 
-.RE
-.PP
-
+Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::reset ()\fC [inline]\fP"
 
 .PP
@@ -902,6 +684,38 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setMatchContext (MatchContext * match_context)\fC [inline]\fP"
+
+.PP
+Set the match context to be used\&. Native PCRE2 API may be used to create match context\&. The memory of the match context is not handled by \fBRegexReplace\fP object and not freed\&. User will be responsible for freeing memory\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImatch_context\fP Pointer to match context\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexReplace\fP object\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setMatchData (MatchData * match_data)\fC [inline]\fP"
+
+.PP
+Set the match data to be used\&. Native PCRE2 API may be used to create match data\&. The memory of the match data is not handled by \fBRegexReplace\fP object and not freed\&. User will be responsible for freeing memory\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImatch_data\fP Pointer to match data\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexReplace\fP object\&. 
+.RE
+.PP
+
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setModifier (const std::string & s)\fC [inline]\fP"
 
 .PP
@@ -925,6 +739,8 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
@@ -990,6 +806,8 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP * s)\fC [inline]\fP"
 
 .PP
@@ -1043,6 +861,8 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setSubject (const \fBString\fP * s)\fC [inline]\fP"
 
 .PP

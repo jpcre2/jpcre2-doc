@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.12</span>
+   &#160;<span id="projectnumber">10.29.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -105,10 +105,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class inherits <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> and provides a similar functionality.  <a href="classjpcre2_1_1select_1_1MatchEvaluator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html">MatchEvaluatorCallBack</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains a typedef of a function pointer or a templated function wrapper (<code>std::function</code>) to provide callback funtion to the <code><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a></code>.  <a href="structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains a typedef of a function pointer or a templated function wrapper (<code>std::function</code>) to provide callback function to the <code><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a></code>.  <a href="structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructos to create <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructos to create Regex object. ">Regex</a> object.  <a href="classjpcre2_1_1select_1_1Regex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object.  <a href="classjpcre2_1_1select_1_1Regex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> objects.  <a href="classjpcre2_1_1select_1_1RegexMatch.html#details">More...</a><br /></td></tr>
@@ -168,7 +168,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2681b23749af9bd278e7021c10427150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retruns error message from PCRE2 error number.  <a href="#a2681b23749af9bd278e7021c10427150">More...</a><br /></td></tr>
 <tr class="separator:a2681b23749af9bd278e7021c10427150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade8ba3ed83d14a887c56c51ea9b3f5ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html#ade8ba3ed83d14a887c56c51ea9b3f5ac">getErrorMessage</a> (int err_num, int err_off)</td></tr>
-<tr class="memdesc:ade8ba3ed83d14a887c56c51ea9b3f5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retruns error message (either JPCRE2 or PCRE2) from error number and error offset.  <a href="#ade8ba3ed83d14a887c56c51ea9b3f5ac">More...</a><br /></td></tr>
+<tr class="memdesc:ade8ba3ed83d14a887c56c51ea9b3f5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns error message (either JPCRE2 or PCRE2) from error number and error offset.  <a href="#ade8ba3ed83d14a887c56c51ea9b3f5ac">More...</a><br /></td></tr>
 <tr class="separator:ade8ba3ed83d14a887c56c51ea9b3f5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -416,7 +416,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Retruns error message (either JPCRE2 or PCRE2) from error number and error offset. </p>
+<p>Returns error message (either JPCRE2 or PCRE2) from error number and error offset. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">err_num</td><td>error number (negative for PCRE2, positive for JPCRE2) </td></tr>

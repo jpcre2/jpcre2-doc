@@ -43,8 +43,12 @@ var NAVTREE =
       [ "Use of vectors for match result", "index.html#use-of-vectors-for-match-result", null ],
       [ "Other typedefs", "index.html#other-typedefs", null ]
     ] ],
-    [ "Error handling", "index.html#exception-handling", null ],
-    [ "Multi threading", "index.html#multi-threading", null ],
+    [ "Error handling", "index.html#error-handling", null ],
+    [ "Multi threading", "index.html#multi-threading", [
+      [ "Functions", "index.html#functions-thread-safety", null ],
+      [ "Objects", "index.html#objects-thread-safety", null ]
+    ] ],
+    [ "Compatibility with compilers", "index.html#compatibility-with-compilers", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],
     [ "Test suit", "index.html#test-suit", null ],
@@ -82,7 +86,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"index.html#licence"
+"jpcre2_8hpp.html#a1992f5f6f7d03fe854ad0c4de3352ec5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.28.12</span>
+   &#160;<span id="projectnumber">10.29.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -88,8 +88,7 @@ $(document).ready(function(){initNavTree('namespacejpcre2.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">jpcre2 Namespace Reference</div>  </div>
 </div><!--header-->
@@ -113,7 +112,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a function to convert integer to string.  <a href="structjpcre2_1_1ConvInt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (<code>&gt;=C++11</code>).  <a href="structjpcre2_1_1ConvUTF.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11).  <a href="structjpcre2_1_1ConvUTF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">select</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select code unit width and the character type.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
@@ -152,12 +151,6 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a85c143271501e383843f45b9999c2f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">These constants provide JPCRE2 options.  <a href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a85c143271501e383843f45b9999c2f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a84fce118a0293417a890a9038dad7054"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a84fce118a0293417a890a9038dad7054">SUBSTITUTE_RESULT_INIT_SIZE</a> = 0</td></tr>
-<tr class="memdesc:a84fce118a0293417a890a9038dad7054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by default to provide big enough initial buffer for replaced string.  <a href="#a84fce118a0293417a890a9038dad7054">More...</a><br /></td></tr>
-<tr class="separator:a84fce118a0293417a890a9038dad7054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Top level namespace of JPCRE2. </p>
@@ -282,32 +275,6 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e"></a>JIT_COMPILE&#160;</td><td class="fielddoc"><p>Perform JIT compilation for optimization. </p>
 </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a84fce118a0293417a890a9038dad7054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84fce118a0293417a890a9038dad7054">&#9670;&nbsp;</a></span>SUBSTITUTE_RESULT_INIT_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> jpcre2::SUBSTITUTE_RESULT_INIT_SIZE = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Used by default to provide big enough initial buffer for replaced string. </p>
-<p>0 or insufficient values will force a second call to pcre2_substitute(), If that is not desirable, pass a big enough buffer size with RegexReplace::setBufferSize() function to make it a single call operation. </p>
 
 </div>
 </div>
