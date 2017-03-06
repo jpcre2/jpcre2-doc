@@ -21,7 +21,7 @@ var classjpcre2_1_1select_1_1RegexReplace =
     [ "getStartOffset", "classjpcre2_1_1select_1_1RegexReplace.html#aff17f42a6c23493a21c77119c8036e2a", null ],
     [ "getSubject", "classjpcre2_1_1select_1_1RegexReplace.html#a7eb60618f2d8f776794f81fa15012e95", null ],
     [ "getSubjectPointer", "classjpcre2_1_1select_1_1RegexReplace.html#a2b435a094bc47c730bb9998d1cdcc2cd", null ],
-    [ "nreplace", "classjpcre2_1_1select_1_1RegexReplace.html#a49b8ea766d07757f9bc6af28597ae545", null ],
+    [ "nreplace", "classjpcre2_1_1select_1_1RegexReplace.html#a5ddf959c087d88bd007ee8a2e43ca431", null ],
     [ "operator=", "classjpcre2_1_1select_1_1RegexReplace.html#af0f588087b913c5e757ab0fc861c8c61", null ],
     [ "replace", "classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856", null ],
     [ "reset", "classjpcre2_1_1select_1_1RegexReplace.html#a58f6cc2a7f49b32b534ed93dc2a8a376", null ],

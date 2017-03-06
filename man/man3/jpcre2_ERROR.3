@@ -1,4 +1,4 @@
-.TH "jpcre2::ERROR" 3 "Sat Mar 4 2017" "Version 10.29.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ERROR" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -11,7 +11,7 @@ jpcre2::ERROR \- Namespace for error codes\&.
 
 .in +1c
 .ti -1c
-.RI "enum { \fBINVALID_MODIFIER\fP = 2 }
+.RI "enum { \fBINVALID_MODIFIER\fP = 2, \fBINSUFFICIENT_OVECTOR\fP = 3 }
 .RI "Error numbers for JPCRE2\&. ""
 .br
 .in -1c
@@ -31,7 +31,10 @@ Error numbers for JPCRE2\&. JPCRE2 error numbers are positive integers while PCR
 .in +1c
 .TP
 \fB\fIINVALID_MODIFIER \fP\fP
-Error number implying that invalid modifier was detected\&. 
+Invalid modifier was detected\&. 
+.TP
+\fB\fIINSUFFICIENT_OVECTOR \fP\fP
+Ovector was not big enough during a match\&. 
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

@@ -1,7 +1,8 @@
 var structjpcre2_1_1select =
 [
+    [ "callback", "structjpcre2_1_1select_1_1callback.html", "structjpcre2_1_1select_1_1callback" ],
     [ "MatchEvaluator", "classjpcre2_1_1select_1_1MatchEvaluator.html", "classjpcre2_1_1select_1_1MatchEvaluator" ],
-    [ "MatchEvaluatorCallBack", "structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html", null ],
+    [ "MatchEvaluatorCallback", "structjpcre2_1_1select_1_1MatchEvaluatorCallback.html", null ],
     [ "Regex", "classjpcre2_1_1select_1_1Regex.html", "classjpcre2_1_1select_1_1Regex" ],
     [ "RegexMatch", "classjpcre2_1_1select_1_1RegexMatch.html", "classjpcre2_1_1select_1_1RegexMatch" ],
     [ "RegexReplace", "classjpcre2_1_1select_1_1RegexReplace.html", "classjpcre2_1_1select_1_1RegexReplace" ],

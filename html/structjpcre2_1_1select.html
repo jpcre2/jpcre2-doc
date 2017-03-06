@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.29.02</span>
+   &#160;<span id="projectnumber">10.29.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -101,11 +101,14 @@ $(document).ready(function(){initNavTree('structjpcre2_1_1select.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1callback.html">callback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides some default static callback functions.  <a href="structjpcre2_1_1select_1_1callback.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html">MatchEvaluator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class inherits <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> and provides a similar functionality.  <a href="classjpcre2_1_1select_1_1MatchEvaluator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html">MatchEvaluatorCallBack</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains a typedef of a function pointer or a templated function wrapper (<code>std::function</code>) to provide callback function to the <code><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a></code>.  <a href="structjpcre2_1_1select_1_1MatchEvaluatorCallBack.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1MatchEvaluatorCallback.html">MatchEvaluatorCallback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains a typedef of a function pointer or a templated function wrapper (<code>std::function</code>) to provide callback function to the <code><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a></code>.  <a href="structjpcre2_1_1select_1_1MatchEvaluatorCallback.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object.  <a href="classjpcre2_1_1select_1_1Regex.html#details">More...</a><br /></td></tr>
@@ -156,13 +159,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1301f73534f0ae34b03bcabd5883f333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Char_T (char, wchar_t, char16_t, char32_t) to <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9" title="Typedef for string (either one of std::string, std::wstring, std::u16string, std::u32string). ">jpcre2::select::String</a>.  <a href="#a1301f73534f0ae34b03bcabd5883f333">More...</a><br /></td></tr>
 <tr class="separator:a1301f73534f0ae34b03bcabd5883f333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae880db85599724a97c884bc4df2b1a52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html#ae880db85599724a97c884bc4df2b1a52">toString</a> (const <a class="el" href="structjpcre2_1_1select.html#a8f2f9cae503d0f1020c435d406e925df">Char</a> *a)</td></tr>
-<tr class="memdesc:ae880db85599724a97c884bc4df2b1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="#ae880db85599724a97c884bc4df2b1a52">More...</a><br /></td></tr>
+<tr class="memdesc:ae880db85599724a97c884bc4df2b1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ...  <a href="#ae880db85599724a97c884bc4df2b1a52">More...</a><br /></td></tr>
 <tr class="separator:ae880db85599724a97c884bc4df2b1a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ea3f207af7145271b262b3f3815c9e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html#a9ea3f207af7145271b262b3f3815c9e3">toString</a> (<a class="el" href="structjpcre2_1_1select.html#a8f2f9cae503d0f1020c435d406e925df">Char</a> *a)</td></tr>
-<tr class="memdesc:a9ea3f207af7145271b262b3f3815c9e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="#a9ea3f207af7145271b262b3f3815c9e3">More...</a><br /></td></tr>
+<tr class="memdesc:a9ea3f207af7145271b262b3f3815c9e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ...  <a href="#a9ea3f207af7145271b262b3f3815c9e3">More...</a><br /></td></tr>
 <tr class="separator:a9ea3f207af7145271b262b3f3815c9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a0214a4ac9e3618ff7632e6c711c58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html#a56a0214a4ac9e3618ff7632e6c711c58">toString</a> (Pcre2Uchar *a)</td></tr>
-<tr class="memdesc:a56a0214a4ac9e3618ff7632e6c711c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.  <a href="#a56a0214a4ac9e3618ff7632e6c711c58">More...</a><br /></td></tr>
+<tr class="memdesc:a56a0214a4ac9e3618ff7632e6c711c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ...  <a href="#a56a0214a4ac9e3618ff7632e6c711c58">More...</a><br /></td></tr>
 <tr class="separator:a56a0214a4ac9e3618ff7632e6c711c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2681b23749af9bd278e7021c10427150"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html#a2681b23749af9bd278e7021c10427150">getPcre2ErrorMessage</a> (int err_num)</td></tr>
 <tr class="memdesc:a2681b23749af9bd278e7021c10427150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retruns error message from PCRE2 error number.  <a href="#a2681b23749af9bd278e7021c10427150">More...</a><br /></td></tr>
@@ -184,9 +187,9 @@ struct jpcre2::select&lt; Char_T, BS &gt;</h3>
   </table>
   </dd>
 </dl>
-<p>If BS is not given, i.e it is called like </p><div class="fragment"><div class="line"><a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a></div></div><!-- fragment --><p> then <code>sizeof(Char_T)*CHAR_BIT</code> will be taken as the value for BS.</p>
+<p>If BS is not given, i.e it is called like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T&gt;</code>. then <code>sizeof(Char_T)*CHAR_BIT</code> will be taken as the value for BS.</p>
 <p>It is possible to write portable code by using <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T&gt;</code> i.e by not defining the bit size explicitly.</p>
-<p>If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector. e.g: </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char, 8&gt;::Regex</a> re;</div></div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<p>If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector. e.g: </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char, 8&gt;::Regex</a> re;</div></div><!-- fragment --><p> We will use the following typedef throughout this doc: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a> jp;</div></div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8f2f9cae503d0f1020c435d406e925df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f2f9cae503d0f1020c435d406e925df">&#9670;&nbsp;</a></span>Char</h2>
 
@@ -530,7 +533,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ... </p>
 <p>Converts a const Char_T* (char*, wchar_t*, char16_t*, char32_t*) to <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9" title="Typedef for string (either one of std::string, std::wstring, std::u16string, std::u32string). ">jpcre2::select::String</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>const Char_T* </td></tr>
@@ -567,7 +570,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ... </p>
 <p>Converts a Char_T* (char*, wchar_t*, char16_t*, char32_t*) to <a class="el" href="structjpcre2_1_1select.html#acf8811bd4ad5567d99f613cf5cf70db9" title="Typedef for string (either one of std::string, std::wstring, std::u16string, std::u32string). ">jpcre2::select::String</a> </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>const Char_T* </td></tr>
@@ -604,7 +607,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+<p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. ... </p>
 <p>Converts a PCRE2_UCHAR to String </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>PCRE2_UCHAR </td></tr>

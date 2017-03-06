@@ -11,6 +11,7 @@ var files =
     [ "test_replace.cpp", "test__replace_8cpp.html", null ],
     [ "test_replace2.cpp", "test__replace2_8cpp.html", null ],
     [ "test_shorts.cpp", "test__shorts_8cpp.html", null ],
+    [ "testcovme.cpp", "testcovme_8cpp.html", null ],
     [ "testio.cpp", "testio_8cpp.html", null ],
     [ "testme.cpp", "testme_8cpp.html", null ],
     [ "teststdthread.cpp", "teststdthread_8cpp.html", null ]

@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Sat Mar 4 2017" "Version 10.29.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -51,7 +51,7 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .br
 .RI "8 bit unsigned integer\&. "
 .ti -1c
-.RI "typedef std::vector< PCRE2_SIZE > \fBVecOff\fP"
+.RI "typedef std::vector< \fBSIZE_T\fP > \fBVecOff\fP"
 .br
 .RI "vector of size_t "
 .ti -1c
@@ -70,6 +70,14 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .RI "enum { \fBNONE\fP = 0x0000000u, \fBFIND_ALL\fP = 0x0000002u, \fBJIT_COMPILE\fP = 0x0000004u }
 .RI "These constants provide JPCRE2 options\&. ""
 .br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBassert\fP (bool cond, std::string msg, std::string file, size_t line)"
+.br
+.RI "JPCRE2 assert function\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -130,7 +138,7 @@ Used for options (bitwise operation)
 
 .PP
 8 bit unsigned integer\&. 
-.SS "typedef std::vector<PCRE2_SIZE> \fBjpcre2::VecOff\fP"
+.SS "typedef std::vector<\fBSIZE_T\fP> \fBjpcre2::VecOff\fP"
 
 .PP
 vector of size_t 
@@ -152,6 +160,25 @@ Find all during match (global match)
 .TP
 \fB\fIJIT_COMPILE \fP\fP
 Perform JIT compilation for optimization\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void jpcre2::assert (bool cond, std::string msg, std::string file, size_t line)"
+
+.PP
+JPCRE2 assert function\&. Aborts with an error message if condition fails\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcond\fP boolean condition 
+.br
+\fImsg\fP message (std::string) 
+.br
+\fIfile\fP file where assert was called\&. 
+.br
+\fIline\fP line number where assert was called\&. 
+.RE
+.PP
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for JPCRE2 from the source code\&.

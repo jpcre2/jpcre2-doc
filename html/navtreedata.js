@@ -19,13 +19,19 @@ var NAVTREE =
         [ "Get the position of a capture group name", "index.html#get-number-to-name", null ],
         [ "Iterate through match result", "index.html#iterate", null ],
         [ "Re-use a match object", "index.html#re-use-a-match-object", null ],
-        [ "Independent match object", "index.html#independent-match-object", null ]
+        [ "RegexMatch object", "index.html#independent-match-object", null ]
       ] ],
       [ "Replace or Substitute", "index.html#replace", [
         [ "Simple replacement", "index.html#simple-replace", null ],
         [ "Using method chain", "index.html#using-method-chain", null ],
-        [ "Independent replace object", "index.html#independent-replace-object", null ],
-        [ "MatchEvaluator", "index.html#matchevaluator", null ]
+        [ "RegexReplace object", "index.html#independent-replace-object", null ],
+        [ "MatchEvaluator", "index.html#matchevaluator", [
+          [ "Simple example", "index.html#simple-example", null ],
+          [ "MatchEvaluator with lambda", "index.html#matchevaluator-with-lambda", null ],
+          [ "MatchEvaluator only", "index.html#matchevaluator-only", null ],
+          [ "MatchEvaluator object", "index.html#matchevaluator-object", null ],
+          [ "Re-use match data", "index.html#re-use-match-data", null ]
+        ] ]
       ] ]
     ] ],
     [ "Modifiers", "index.html#modifiers", [
@@ -43,7 +49,13 @@ var NAVTREE =
       [ "Use of vectors for match result", "index.html#use-of-vectors-for-match-result", null ],
       [ "Other typedefs", "index.html#other-typedefs", null ]
     ] ],
-    [ "Error handling", "index.html#error-handling", null ],
+    [ "Error handling", "index.html#error-handling", [
+      [ "Runtime error", "index.html#runtime-error", null ],
+      [ "Assertion failure", "index.html#assertion-failure", [
+        [ "Null pointer error", "index.html#null-pointer-error", null ],
+        [ "Value error", "index.html#value-error", null ]
+      ] ]
+    ] ],
     [ "Multi threading", "index.html#multi-threading", [
       [ "Functions", "index.html#functions-thread-safety", null ],
       [ "Objects", "index.html#objects-thread-safety", null ]
@@ -54,10 +66,12 @@ var NAVTREE =
     [ "Test suit", "index.html#test-suit", null ],
     [ "The configure script", "index.html#the-configure-script", null ],
     [ "LICENCE", "index.html#licence", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -68,8 +82,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
@@ -86,7 +100,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"jpcre2_8hpp.html#a1992f5f6f7d03fe854ad0c4de3352ec5"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

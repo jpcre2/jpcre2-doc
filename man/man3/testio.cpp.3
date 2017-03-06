@@ -1,4 +1,4 @@
-.TH "testio.cpp" 3 "Sat Mar 4 2017" "Version 10.29.02" "JPCRE2" \" -*- nroff -*-
+.TH "testio.cpp" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -70,6 +70,9 @@ int main(){
     //check for validity of replace
     assert(rec\&.replace("123456789", "d$1") == "d123456789");
     assert(rec\&.replace("123456789", "d$1", "g") == "d1d2d3d4d5d6d7d8d9");
+    
+    rec\&.compile("\\w*\\K\\w*");
+    jpc::MatchEvaluator(&rec)\&.setSubject("----fdsjflfsd8fds68")\&.nreplace();
     
     
     jpw::Regex rew;

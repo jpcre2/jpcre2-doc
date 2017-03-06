@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Sat Mar 4 2017" "Version 10.29.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,7 +19,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .ti -1c
 .RI "\fBRegexReplace\fP (const \fBRegex\fP *r)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP (const \fBRegexReplace\fP &rr)"
 .br
@@ -95,7 +95,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetSubject\fP (const \fBString\fP *s)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetReplaceWith\fP (const \fBString\fP &s)"
 .br
@@ -103,7 +103,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetReplaceWith\fP (const \fBString\fP *s)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetModifier\fP (const std::string &s)"
 .br
@@ -161,7 +161,7 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .br
 .RI "Perform regex replace by retrieving subject string, replacement string, modifier and other options from class variables\&. "
 .ti -1c
-.RI "\fBString\fP \fBnreplace\fP (\fBMatchEvaluator\fP me)"
+.RI "\fBString\fP \fBnreplace\fP (\fBMatchEvaluator\fP me, bool do_match=true)"
 .br
 .RI "JPCRE2 native replace function\&. "
 .in -1c
@@ -179,8 +179,8 @@ Examples:
 .PP
 .PP
 .nf
-Regex re;
-RegexReplace rr;
+jp::Regex re;
+jp::RegexReplace rr;
 rr\&.setRegexObject(&re);
 rr\&.replace("subject", "me");  // returns 'subject'
 re\&.compile("\\w+");
@@ -197,7 +197,7 @@ Default constructor\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::RegexReplace (const \fBRegex\fP * r)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Creates a \fBRegexReplace\fP object associating a \fBRegex\fP object\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Creates a \fBRegexReplace\fP object associating a \fBRegex\fP object\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -537,24 +537,28 @@ Pointer to subject string
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::nreplace (\fBMatchEvaluator\fP me)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::nreplace (\fBMatchEvaluator\fP me, bool do_match = \fCtrue\fP)"
 
 .PP
 JPCRE2 native replace function\&. A different name is adopted to distinguish itself from the regular \fBreplace()\fP function which uses pcre2_substitute() to do the replacement; contrary to that, it will provide a JPCRE2 native way of replacement operation\&. It takes a \fBMatchEvaluator\fP object which provides a callback function that is used to generate replacement string on the fly\&. Any replacement string set with \fC\fBRegexReplace::setReplaceWith()\fP\fP function will have no effect\&. The string returned by the callback function will be treated as literal and will not go through any further processing\&.
 .PP
-This function works on a copy of the \fBMatchEvaluator\fP, and thus makes no changes to the original\&. The copy is modified as below:
+This function works on a copy of the \fBMatchEvaluator\fP, and thus makes no changes to the original\&. The copy is modified (if the second param is true) as below:
 .PP
 .IP "1." 4
-Global replacment will set FIND_ALL for match, unset otherwise\&.
+Global replacement will set FIND_ALL for match, unset otherwise\&.
 .IP "2." 4
 Bad matching options such as \fCPCRE2_PARTIAL_HARD|PCRE2_PARTIAL_SOFT\fP will be removed\&.
 .IP "3." 4
 subject, start_offset and \fBRegex\fP object will change according to the \fBRegexReplace\fP object\&.
 .PP
 .PP
+It calls \fBMatchEvaluator::nreplace()\fP on the \fBMatchEvaluator\fP object to perform the replacement\&. 
+.PP
 \fBParameters:\fP
 .RS 4
 \fIme\fP A \fBMatchEvaluator\fP object\&. 
+.br
+\fIdo_match\fP Perform a new match operation if true, otherwise use existing match result\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -564,20 +568,22 @@ The resultant string after replacement\&.
 .PP
 \fBSee also:\fP
 .RS 4
+\fBMatchEvaluator::nreplace()\fP 
+.PP
 \fBMatchEvaluator\fP 
 .PP
-\fBMatchEvaluatorCallBack\fP 
+\fBMatchEvaluatorCallback\fP 
 .RE
 .PP
 
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::operator= (const \fBRegexReplace\fP & rr)\fC [inline]\fP"
 
 .PP
-Overloaded Copy assignment operator\&. Allows object assignment like this: 
+Overloaded Copy assignment operator\&. Allows object assignment: 
 .PP
 .nf
-RegexReplace rr;
-rr = RegexReplace(&re);
+jp::RegexReplace rr;
+rr = jp::RegexReplace(&re);
 
 .fi
 .PP
@@ -811,7 +817,7 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceWith (const \fBString\fP * s)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -866,7 +872,7 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setSubject (const \fBString\fP * s)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Set pointer to the subject string for replace 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Set pointer to the subject string for replace 
 .PP
 \fBParameters:\fP
 .RS 4

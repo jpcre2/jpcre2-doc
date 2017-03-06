@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.29.02</span>
+   &#160;<span id="projectnumber">10.29.03</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -88,7 +88,8 @@ $(document).ready(function(){initNavTree('namespacejpcre2.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">jpcre2 Namespace Reference</div>  </div>
 </div><!--header-->
@@ -129,9 +130,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#ace32c5cb1dfea02d9b64a7d0d61522ce">Ush</a></td></tr>
 <tr class="memdesc:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 bit unsigned integer.  <a href="#ace32c5cb1dfea02d9b64a7d0d61522ce">More...</a><br /></td></tr>
 <tr class="separator:ace32c5cb1dfea02d9b64a7d0d61522ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a172f78561bee79e25606d69c1b488137"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; PCRE2_SIZE &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">VecOff</a></td></tr>
-<tr class="memdesc:a172f78561bee79e25606d69c1b488137"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of size_t  <a href="#a172f78561bee79e25606d69c1b488137">More...</a><br /></td></tr>
-<tr class="separator:a172f78561bee79e25606d69c1b488137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183672f239daa2a262b1fb321039abca"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a183672f239daa2a262b1fb321039abca">VecOff</a></td></tr>
+<tr class="memdesc:a183672f239daa2a262b1fb321039abca"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of size_t  <a href="#a183672f239daa2a262b1fb321039abca">More...</a><br /></td></tr>
+<tr class="separator:a183672f239daa2a262b1fb321039abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf513ced7a87393062267af2678fbe0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a>&lt; char16_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">Convert16</a></td></tr>
 <tr class="memdesc:a9bf513ced7a87393062267af2678fbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="#a9bf513ced7a87393062267af2678fbe0">More...</a><br /></td></tr>
 <tr class="separator:a9bf513ced7a87393062267af2678fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +152,12 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a85c143271501e383843f45b9999c2f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">These constants provide JPCRE2 options.  <a href="namespacejpcre2.html#a85c143271501e383843f45b9999c2f00">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a85c143271501e383843f45b9999c2f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5249f3599a63e71f1263910398d36ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a5249f3599a63e71f1263910398d36ad6">assert</a> (bool cond, std::string msg, std::string file, size_t line)</td></tr>
+<tr class="memdesc:a5249f3599a63e71f1263910398d36ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">JPCRE2 assert function.  <a href="#a5249f3599a63e71f1263910398d36ad6">More...</a><br /></td></tr>
+<tr class="separator:a5249f3599a63e71f1263910398d36ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Top level namespace of JPCRE2. </p>
@@ -237,14 +244,14 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a id="a172f78561bee79e25606d69c1b488137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a172f78561bee79e25606d69c1b488137">&#9670;&nbsp;</a></span>VecOff</h2>
+<a id="a183672f239daa2a262b1fb321039abca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183672f239daa2a262b1fb321039abca">&#9670;&nbsp;</a></span>VecOff</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::vector&lt;PCRE2_SIZE&gt; <a class="el" href="namespacejpcre2.html#a172f78561bee79e25606d69c1b488137">jpcre2::VecOff</a></td>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a>&gt; <a class="el" href="namespacejpcre2.html#a183672f239daa2a262b1fb321039abca">jpcre2::VecOff</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -275,6 +282,58 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e"></a>JIT_COMPILE&#160;</td><td class="fielddoc"><p>Perform JIT compilation for optimization. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a5249f3599a63e71f1263910398d36ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5249f3599a63e71f1263910398d36ad6">&#9670;&nbsp;</a></span>assert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpcre2::assert </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cond</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JPCRE2 assert function. </p>
+<p>Aborts with an error message if condition fails. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cond</td><td>boolean condition </td></tr>
+    <tr><td class="paramname">msg</td><td>message (std::string) </td></tr>
+    <tr><td class="paramname">file</td><td>file where assert was called. </td></tr>
+    <tr><td class="paramname">line</td><td>line number where assert was called. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

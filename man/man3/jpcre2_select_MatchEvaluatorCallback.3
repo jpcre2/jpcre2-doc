@@ -1,8 +1,8 @@
-.TH "jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 >" 3 "Sat Mar 4 2017" "Version 10.29.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 > \- This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback function to the \fC\fBMatchEvaluator\fP\fP\&.  
+jpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 > \- This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback function to the \fC\fBMatchEvaluator\fP\fP\&.  
 
 .SH SYNOPSIS
 .br
@@ -16,7 +16,7 @@ jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 > \- This class
 .br
 template<typename T1, typename T2, typename T3>
 .br
-struct jpcre2::select< Char_T, BS >::MatchEvaluatorCallBack< T1, T2, T3 >"
+struct jpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 >"
 This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback function to the \fC\fBMatchEvaluator\fP\fP\&. 
 
 \fCstd::function\fP is used when \fC>=C++11\fP is being used , otherwise function pointer is used\&. You can force using function pointer instead of \fCstd::function\fP when \fC>=C++11\fP is used by defining the macro \fCJPCRE2_USE_FUNCTION_POINTER_CALLBACK\fP before including \fBjpcre2\&.hpp\fP\&. If you are using lambda function with capture, you must use the \fCstd::function\fP approach\&.
@@ -36,15 +36,15 @@ The callback function takes exactly three positional arguments:
 .PP
 .nf
 typedef jpcre2::select<char> jp;
-jp::String myCallBack1(const jp::NumSub& m1, void*, void*){
+jp::String myCallback1(const jp::NumSub& m1, void*, void*){
     return "("+m1[0]+")";
 }
 
-jp::String myCallBack2(const jp::NumSub& m1, const jp::MapNas& m2, void*){
+jp::String myCallback2(const jp::NumSub& m1, const jp::MapNas& m2, void*){
     return "("+m1[0]+"/"+m2\&.at("total")+")";
 }
 //Now you can pass these functions in MatchEvaluator constructors to create a match evaluator
-jp::MatchEvaluator me1(myCallBack1); 
+jp::MatchEvaluator me1(myCallback1); 
 
 //Examples with lambda (>=C++11)
 jp::MatchEvaluator me2([](const jp::NumSub& m1, void*, void*)

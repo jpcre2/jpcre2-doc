@@ -10,6 +10,7 @@ var searchData=
   ['test_5freplace_2ecpp',['test_replace.cpp',['../test__replace_8cpp.html',1,'']]],
   ['test_5freplace2_2ecpp',['test_replace2.cpp',['../test__replace2_8cpp.html',1,'']]],
   ['test_5fshorts_2ecpp',['test_shorts.cpp',['../test__shorts_8cpp.html',1,'']]],
+  ['testcovme_2ecpp',['testcovme.cpp',['../testcovme_8cpp.html',1,'']]],
   ['testio_2ecpp',['testio.cpp',['../testio_8cpp.html',1,'']]],
   ['testme_2ecpp',['testme.cpp',['../testme_8cpp.html',1,'']]],
   ['teststdthread_2ecpp',['teststdthread.cpp',['../teststdthread_8cpp.html',1,'']]]

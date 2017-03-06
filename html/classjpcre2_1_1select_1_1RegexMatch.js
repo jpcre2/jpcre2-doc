@@ -14,6 +14,8 @@ var classjpcre2_1_1select_1_1RegexMatch =
     [ "getErrorNumber", "classjpcre2_1_1select_1_1RegexMatch.html#a874b5abfee52d4341779a04169d1ce6c", null ],
     [ "getErrorOffset", "classjpcre2_1_1select_1_1RegexMatch.html#a6a74bbf3483f47507edb4bfb854f7815", null ],
     [ "getJpcre2Option", "classjpcre2_1_1select_1_1RegexMatch.html#a315e221296ddf30043ba8a2a1d9db403", null ],
+    [ "getMatchEndOffsetVector", "classjpcre2_1_1select_1_1RegexMatch.html#a7ad9dcd98d12e58168b52ce5c93b21f1", null ],
+    [ "getMatchStartOffsetVector", "classjpcre2_1_1select_1_1RegexMatch.html#af45295959611189ad03560adc8bb52f7", null ],
     [ "getModifier", "classjpcre2_1_1select_1_1RegexMatch.html#abed3e888cc5f7b86530a57cbc533320e", null ],
     [ "getNamedSubstringVector", "classjpcre2_1_1select_1_1RegexMatch.html#a64025afadc1b314e2feb72a1cb61c41f", null ],
     [ "getNameToNumberMapVector", "classjpcre2_1_1select_1_1RegexMatch.html#a2613ce2b66614532ae9ecb70fd2260bc", null ],

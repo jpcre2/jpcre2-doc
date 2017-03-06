@@ -1,0 +1,102 @@
+.TH "jpcre2::select< Char_T, BS >::callback" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2::select< Char_T, BS >::callback \- Provides some default static callback functions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <jpcre2\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBString\fP \fBeraseFill\fP (const \fBNumSub\fP &num, const \fBMapNas\fP &nas, const \fBMapNtN\fP &ntn)"
+.br
+.RI "Callback funcition that removes the matched part/s in the subject string and takes all match vectors as argument\&. "
+.ti -1c
+.RI "static \fBString\fP \fBerase\fP (void *, void *, void *)"
+.br
+.RI "Callback function that removes the matched part/s in the subject string and does not take any match vector\&. "
+.ti -1c
+.RI "static \fBString\fP \fBfill\fP (const \fBNumSub\fP &num, const \fBMapNas\fP &nas, const \fBMapNtn\fP &ntn)"
+.br
+.RI "Callback function for populating match vectors that does not modify the subject string\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
+.br
+struct jpcre2::select< Char_T, BS >::callback"
+Provides some default static callback functions\&. 
+
+The primary goal of this class is to provide default callback function to \fBMatchEvaluator\fP default constructor which is essentially \fBcallback::erase\fP\&. This class does not allow object instantiation\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::erase (void *, void *, void *)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Callback function that removes the matched part/s in the subject string and does not take any match vector\&. This is a minimum cost pattern deleting callback function\&.
+.PP
+It's the default callback function when you Instantiate a \fBMatchEvaluator\fP object with its default constructor: 
+.PP
+.nf
+MatchEvaluator me;
+
+.fi
+.PP
+ 
+.PP
+\fBReturns:\fP
+.RS 4
+empty string\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::eraseFill (const \fBNumSub\fP & num, const \fBMapNas\fP & nas, const \fBMapNtN\fP & ntn)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Callback funcition that removes the matched part/s in the subject string and takes all match vectors as argument\&. Even though this function itself does not use the vectors, it still takes them so that the caller can perform a match and populate all the match data to perform further evaluation of other callback functions without doing the match again\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP \fBjp::NumSub\fP vector\&. 
+.br
+\fInas\fP \fBjp::MapNas\fP map\&. 
+.br
+\fIntn\fP \fBjp::MapNtN\fP map\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+empty string\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::fill (const \fBNumSub\fP & num, const \fBMapNas\fP & nas, const \fBMapNtn\fP & ntn)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Callback function for populating match vectors that does not modify the subject string\&. It always returns the total matched part and thus the subject string remains the same\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP \fBjp::NumSub\fP vector\&. 
+.br
+\fInas\fP \fBjp::MapNas\fP map\&. 
+.br
+\fIntn\fP \fBjp::MapNtN\fP map\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+total match (group 0) of current match\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.
