@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,6 +19,8 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 \fC#include <cwchar>\fP
 .br
+\fC#include <utility>\fP
+.br
 \fC#include <locale>\fP
 .br
 \fC#include <functional>\fP
@@ -27,6 +29,14 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .SS "Classes"
 
 .in +1c
+.ti -1c
+.RI "class \fBjpcre2::Modifier\fP"
+.br
+.RI "Class to take a std::string modifier value with null safety\&. "
+.ti -1c
+.RI "class \fBjpcre2::ModifierTable\fP"
+.br
+.RI "Lets you create custom modifier tables\&. "
 .ti -1c
 .RI "struct \fBjpcre2::ConvUTF< Char_T >\fP"
 .br
@@ -88,11 +98,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "This macro does not have any significance in JPCRE2 context\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_ASSERT\fP(cond,  msg)   \fBjpcre2::assert\fP(cond, msg, __FILE__, __LINE__)"
+.RI "#define \fBJPCRE2_ASSERT\fP(cond,  msg)   \fBjpcre2::jassert\fP(cond, msg, __FILE__, __LINE__)"
 .br
-.RI "Macro to call \fC\fBjpcre2::assert()\fP\fP with file path and line number\&. "
+.RI "Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_VERSION\fP   102903L"
+.RI "#define \fBJPCRE2_VERSION\fP   103001L"
 .br
 .RI "Define for JPCRE2 version\&. "
 .ti -1c
@@ -126,7 +136,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "typedef std::vector< SIZE_T > \fBjpcre2::VecOff\fP"
 .br
-.RI "vector of size_t "
+.RI "vector of size_t\&. "
+.ti -1c
+.RI "typedef std::vector< Uint > \fBjpcre2::VecOpt\fP"
+.br
+.RI "vector for Uint option values\&. "
 .ti -1c
 .RI "typedef ConvUTF< char16_t >::Converter \fBjpcre2::Convert16\fP"
 .br
@@ -152,7 +166,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "void \fBjpcre2::assert\fP (bool cond, std::string msg, std::string file, size_t line)"
+.RI "static void \fBjpcre2::jassert\fP (bool cond, const char *msg, const char *f, size_t line)"
 .br
 .RI "JPCRE2 assert function\&. "
 .in -1c
@@ -164,7 +178,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.29\&.03'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.30\&.01'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -172,11 +186,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Generation, depends on original PCRE2 version\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '29'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '30'"
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '03'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '01'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
@@ -198,10 +212,10 @@ It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2
 
 .SH "Macro Definition Documentation"
 .PP 
-.SS "#define JPCRE2_ASSERT(cond, msg)   \fBjpcre2::assert\fP(cond, msg, __FILE__, __LINE__)"
+.SS "#define JPCRE2_ASSERT(cond, msg)   \fBjpcre2::jassert\fP(cond, msg, __FILE__, __LINE__)"
 
 .PP
-Macro to call \fC\fBjpcre2::assert()\fP\fP with file path and line number\&. When NDEBUG is defined before including this header, this macro will be defined as \fC((void)0)\fP thus eliminating this assertion\&. 
+Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. When NDEBUG is defined before including this header, this macro will be defined as \fC((void)0)\fP thus eliminating this assertion\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -212,7 +226,7 @@ Macro to call \fC\fBjpcre2::assert()\fP\fP with file path and line number\&. Whe
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::MatchEvaluator::match()\&.
+Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "#define JPCRE2_DISABLE_CHAR1632"
 
 .PP
@@ -227,7 +241,7 @@ By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BI
 Use function pointer in all cases for MatchEvaluatorCallback function\&. By default function pointer is used for callback in MatchEvaluator when using <C++11 compiler, but for \fC>=C++11\fP compiler \fCstd::function\fP instead of function pointer is used\&. If this macro is defined before including \fBjpcre2\&.hpp\fP, function pointer will be used in all cases\&. It you are using lambda function with captures, stick with \fCstd::function\fP, on the other hand, if you are using older compilers, you might want to use function pointer instead\&.
 .PP
 For example, with gcc-4\&.7, \fCstd::function\fP will give compile error in C++11 mode, in such cases where full C++11 support is not available, use function pointer\&. 
-.SS "#define JPCRE2_VERSION   102903L"
+.SS "#define JPCRE2_VERSION   103001L"
 
 .PP
 Define for JPCRE2 version\&. It can be used to support changes in different versions of the lib\&. 

@@ -1,4 +1,4 @@
-.TH "jpcre2::ConvInt< Char_T, T >" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ConvInt< Char_T, T >" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,11 +9,11 @@ jpcre2::ConvInt< Char_T, T > \- Contains a function to convert integer to string
 .PP
 .PP
 \fC#include <jpcre2\&.hpp>\fP
-.SS "Public Member Functions"
+.SS "Static Public Member Functions"
 
 .in +1c
 .ti -1c
-.RI "std::basic_string< Char_T > \fBtoString\fP (int x)"
+.RI "static std::basic_string< Char_T > \fBtoString\fP (int x)"
 .br
 .RI "Converts an integer to string\&. "
 .in -1c
@@ -35,7 +35,7 @@ Integer is converted to \fCstd::basic_string<Char_T>\fP
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T , typename T  = Char_T> std::basic_string<Char_T> \fBjpcre2::ConvInt\fP< Char_T, T >::toString (int x)"
+.SS "template<typename Char_T , typename T  = Char_T> static std::basic_string<Char_T> \fBjpcre2::ConvInt\fP< Char_T, T >::toString (int x)\fC [static]\fP"
 
 .PP
 Converts an integer to string\&. String may be \fCstd::string\fP, \fCstd::wstring\fP (+ \fCstd::u16string\fP, \fCstd::u32string\fP if \fC>=C++11\fP is used) 

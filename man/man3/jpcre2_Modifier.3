@@ -1,0 +1,131 @@
+.TH "jpcre2::Modifier" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2::Modifier \- Class to take a std::string modifier value with null safety\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <jpcre2\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifier\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBModifier\fP (std::string x)"
+.br
+.RI "Constructor that takes a std::string\&. "
+.ti -1c
+.RI "\fBModifier\fP (char const *x)"
+.br
+.RI "Constructor that takes char const * (null safety is provided by this one) "
+.ti -1c
+.RI "std::string \fBstr\fP () const"
+.br
+.RI "Returns the modifier string\&. "
+.ti -1c
+.RI "char const  * \fBc_str\fP () const"
+.br
+.RI "Returns the \fBc_str()\fP of modifier string\&. "
+.ti -1c
+.RI "const \fBSIZE_T\fP \fBlength\fP () const"
+.br
+.RI "Returns the length of the modifier string\&. "
+.ti -1c
+.RI "const char \fBoperator[]\fP (\fBSIZE_T\fP i) const"
+.br
+.RI "operator[] overload to access character by index\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class to take a std::string modifier value with null safety\&. 
+
+You don't need to make an instance of this class to pass modifier, just pass std::string or char const*, whatever seems feasible, implicit conversion will kick in and take care of things for you\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jpcre2::Modifier::Modifier ()\fC [inline]\fP"
+
+.PP
+Default constructor\&. 
+.SS "jpcre2::Modifier::Modifier (std::string x)\fC [inline]\fP"
+
+.PP
+Constructor that takes a std::string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP std::string 
+.RE
+.PP
+
+.SS "jpcre2::Modifier::Modifier (char const * x)\fC [inline]\fP"
+
+.PP
+Constructor that takes char const * (null safety is provided by this one) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP char const * 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "char const* jpcre2::Modifier::c_str () const\fC [inline]\fP"
+
+.PP
+Returns the \fBc_str()\fP of modifier string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+char const * 
+.RE
+.PP
+
+.SS "const \fBSIZE_T\fP jpcre2::Modifier::length () const\fC [inline]\fP"
+
+.PP
+Returns the length of the modifier string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+length 
+.RE
+.PP
+
+.SS "const char jpcre2::Modifier::operator[] (\fBSIZE_T\fP i) const\fC [inline]\fP"
+
+.PP
+operator[] overload to access character by index\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIi\fP index 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+character at index i\&. 
+.RE
+.PP
+
+.SS "std::string jpcre2::Modifier::str () const\fC [inline]\fP"
+
+.PP
+Returns the modifier string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+modifier string (std::string) 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

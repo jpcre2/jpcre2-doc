@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,29 +25,29 @@ The callback function takes exactly three positional arguments:
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
-\fIT1\fP The first argument must be \fCconst \fBjp::NumSub\fP&\fP aka \fCconst std::vector<String>&\fP (or \fCvoid*\fP if not needed)\&. 
+\fIT1\fP The first argument must be \fC\fBjp::NumSub\fP const &\fP aka \fCstd::vector<String> const &\fP (or \fCvoid*\fP if not needed)\&. 
 .br
-\fIT2\fP The second argument must be \fCconst \fBjp::MapNas\fP&\fP aka \fCconst std::map<String, size_t>&\fP (or \fCvoid*\fP if not needed)\&. 
+\fIT2\fP The second argument must be \fC\fBjp::MapNas\fP const &\fP aka \fCstd::map<String, size_t> const &\fP (or \fCvoid*\fP if not needed)\&. 
 .br
-\fIT3\fP The third argument must be \fCconst \fBjp::MapNtN\fP&\fP aka \fCconst std::map<String, String>&\fP (or \fCvoid*\fP if not needed)\&.
+\fIT3\fP The third argument must be \fC\fBjp::MapNtN\fP const &\fP aka \fCstd::map<String, String> const &\fP (or \fCvoid*\fP if not needed)\&.
 .RE
 .PP
 \fBExamples:\fP 
 .PP
 .nf
 typedef jpcre2::select<char> jp;
-jp::String myCallback1(const jp::NumSub& m1, void*, void*){
+jp::String myCallback1(jp::NumSub const &m1, void*, void*){
     return "("+m1[0]+")";
 }
 
-jp::String myCallback2(const jp::NumSub& m1, const jp::MapNas& m2, void*){
+jp::String myCallback2(jp::NumSub const &m1, jp::MapNas const &m2, void*){
     return "("+m1[0]+"/"+m2\&.at("total")+")";
 }
 //Now you can pass these functions in MatchEvaluator constructors to create a match evaluator
 jp::MatchEvaluator me1(myCallback1); 
 
 //Examples with lambda (>=C++11)
-jp::MatchEvaluator me2([](const jp::NumSub& m1, void*, void*)
+jp::MatchEvaluator me2([](jp::NumSub const &m1, void*, void*)
                         {
                             return "("+m1[0]+")";
                         });

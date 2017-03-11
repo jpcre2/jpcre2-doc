@@ -1,4 +1,4 @@
-.TH "test_replace.cpp" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "test_replace.cpp" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -43,12 +43,12 @@ int main(){
     
     jp::RegexReplace rr;
     std::cout<<"\nreplaced string: \n"<<
-    rr\&.setRegexObject(&re)                                              //set associated Regex object
-      \&.setSubject(s)                                                    //Set various parameters
-      \&.setReplaceWith("(replaced:$1)(replaced:$2)(replaced:${word})")   //\&.\&.\&.
-      \&.addModifier("xEafds")                                            //
-      \&.addPcre2Option(0)                                                //\&.\&.\&.
-      \&.replace();                                                       //Finally perform the replace operation\&.
+    rr\&.setRegexObject(&re)                                               //set associated Regex object
+      \&.setSubject(&s)                                                    //Set various parameters
+      \&.setReplaceWith("(replaced:$1)(replaced:$2)(replaced:${word})")    //\&.\&.\&.
+      \&.addModifier("xEafds")                                             //
+      \&.addPcre2Option(0)                                                 //\&.\&.\&.
+      \&.replace();                                                        //Finally perform the replace operation\&.
     
     if(rr\&.getErrorNumber() != 0)
         std::cerr<<"\n"<<rr\&.getErrorMessage();

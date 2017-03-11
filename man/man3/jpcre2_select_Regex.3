@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,45 +17,53 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Default Constructor\&. "
 .ti -1c
-.RI "\fBRegex\fP (const \fBString\fP &re)"
+.RI "\fBRegex\fP (\fBString\fP const &re)"
 .br
 .RI "Compile pattern with initialization\&. "
 .ti -1c
-.RI "\fBRegex\fP (const \fBString\fP *re)"
-.br
-.RI "Compile pattern with initialization\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP &re, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP *re, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP &re, \fBUint\fP pcre2_opts)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP *re, \fBUint\fP pcre2_opts)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP &re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBString\fP *re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBRegex\fP (const \fBRegex\fP &r)"
+.RI "\fBRegex\fP (\fBString\fP const *re)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBoperator=\fP (const \fBRegex\fP &r)"
+.RI "\fBRegex\fP (\fBString\fP const &re, \fBModifier\fP mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBString\fP const *re, \fBModifier\fP mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBString\fP const &re, \fBUint\fP po)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBString\fP const *re, \fBUint\fP po)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBString\fP const &re, \fBUint\fP po, \fBUint\fP jo)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBString\fP const *re, \fBUint\fP po, \fBUint\fP jo)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBRegex\fP const &r)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.ti -1c
+.RI "\fBRegex\fP & \fBoperator=\fP (\fBRegex\fP const &r)"
 .br
 .RI "Overloaded assignment operator\&. "
+.ti -1c
+.RI "\fBRegex\fP (\fBRegex\fP &&r)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.ti -1c
+.RI "\fBRegex\fP & \fBoperator=\fP (\fBRegex\fP &&r)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
 .RI "\fBoperator bool\fP () const"
 .br
@@ -65,13 +73,13 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Provides boolean check for the status of the object\&. "
 .ti -1c
-.RI "virtual \fB~Regex\fP ()"
-.br
-.RI "Destructor\&. "
-.ti -1c
 .RI "\fBRegex\fP & \fBreset\fP ()"
 .br
-.RI "Reset all class variables to its default (initial) state\&. "
+.RI "Reset all class variables to its default (initial) state including memory\&. "
+.ti -1c
+.RI "\fBRegex\fP & \fBclear\fP ()"
+.br
+.RI "Clear all class variables to its default (initial) state (some memory may retain for further use)\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBresetErrors\fP ()"
 .br
@@ -79,27 +87,17 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .ti -1c
 .RI "\fBRegex\fP & \fBresetCharacterTables\fP ()"
 .br
-.RI "Reset character tables used by PCRE2\&. "
+.RI "Recreate character tables used by PCRE2\&. "
 .ti -1c
-.RI "\fBRegexMatch\fP & \fBinitMatch\fP ()"
+.RI "Pcre2Code const  * \fBgetPcre2Code\fP () const"
 .br
-.RI "Create and initialize a new match object and return a reference to it\&. "
-.ti -1c
-.RI "\fBRegexReplace\fP & \fBinitReplace\fP ()"
-.br
-.RI "Creates a new \fBRegexReplace\fP object and returns its reference\&. "
-.ti -1c
-.RI "\fBRegex\fP & \fBinitMatchFrom\fP (const \fBRegexMatch\fP &rmo)"
-.br
-.ti -1c
-.RI "\fBRegex\fP & \fBinitReplaceFrom\fP (const \fBRegexReplace\fP &rro)"
-.br
+.RI "Get Pcre2 raw compiled code pointer\&. "
 .ti -1c
 .RI "\fBString\fP \fBgetPattern\fP () const"
 .br
 .RI "Get pattern string\&. "
 .ti -1c
-.RI "const \fBString\fP * \fBgetPatternPointer\fP () const"
+.RI "\fBString\fP const  * \fBgetPatternPointer\fP () const"
 .br
 .RI "Get pointer to pattern string\&. "
 .ti -1c
@@ -127,31 +125,33 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Returns the last error message\&. "
 .ti -1c
-.RI "\fBRegexMatch\fP & \fBgetMatchObject\fP ()"
-.br
-.ti -1c
-.RI "\fBRegexReplace\fP & \fBgetReplaceObject\fP ()"
-.br
-.ti -1c
 .RI "\fBUint\fP \fBgetNewLine\fP ()"
 .br
 .RI "Get new line convention from compiled code\&. "
+.ti -1c
+.RI "\fBModifierTable\fP const  * \fBgetModifierTable\fP ()"
+.br
+.RI "Get the modifier table that is set,\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetNewLine\fP (\fBUint\fP value)"
 .br
 .RI "Set new line convention\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBsetPattern\fP (const \fBString\fP &re)"
+.RI "\fBRegex\fP & \fBsetPattern\fP (\fBString\fP const &re)"
 .br
 .RI "Set the pattern string to compile\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBsetPattern\fP (const \fBString\fP *re)"
+.RI "\fBRegex\fP & \fBsetPattern\fP (\fBString\fP const *re)"
 .br
-.RI "Set pointer to the pattern string to compile\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBsetModifier\fP (const std::string &x)"
+.RI "\fBRegex\fP & \fBsetModifier\fP (\fBModifier\fP x)"
 .br
 .RI "set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. "
+.ti -1c
+.RI "\fBRegex\fP & \fBsetModifierTable\fP (\fBModifierTable\fP const *mdt)"
+.br
+.RI "Set a custom modifier table to be used\&. "
 .ti -1c
 .RI "\fBRegex\fP & \fBsetJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -161,7 +161,7 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Set PCRE2 option for compile (overwrites existing option) "
 .ti -1c
-.RI "\fBRegex\fP & \fBchangeModifier\fP (const std::string &, bool)"
+.RI "\fBRegex\fP & \fBchangeModifier\fP (\fBModifier\fP mod, bool x)"
 .br
 .RI "Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. "
 .ti -1c
@@ -173,7 +173,7 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Add or remove a PCRE2 option\&. "
 .ti -1c
-.RI "\fBRegex\fP & \fBaddModifier\fP (const std::string &mod)"
+.RI "\fBRegex\fP & \fBaddModifier\fP (\fBModifier\fP mod)"
 .br
 .RI "Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. "
 .ti -1c
@@ -189,108 +189,85 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Compile pattern using info from class variables\&. "
 .ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP &re, \fBUint\fP po, \fBUint\fP jo)"
+.RI "void \fBcompile\fP (\fBString\fP const &re, \fBUint\fP po, \fBUint\fP jo)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP *re, \fBUint\fP po, \fBUint\fP jo)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP &re, \fBUint\fP po)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP *re, \fBUint\fP po)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP &re, const std::string &mod)"
+.RI "void \fBcompile\fP (\fBString\fP const *re, \fBUint\fP po, \fBUint\fP jo)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP *re, const std::string &mod)"
+.RI "void \fBcompile\fP (\fBString\fP const &re, \fBUint\fP po)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP &re)"
+.RI "void \fBcompile\fP (\fBString\fP const *re, \fBUint\fP po)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "void \fBcompile\fP (const \fBString\fP *re)"
+.RI "void \fBcompile\fP (\fBString\fP const &re, \fBModifier\fP mod)"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod, PCRE2_SIZE start_offset)"
+.RI "void \fBcompile\fP (\fBString\fP const *re, \fBModifier\fP mod)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "void \fBcompile\fP (\fBString\fP const &re)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "void \fBcompile\fP (\fBString\fP const *re)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP \fBinitMatch\fP ()"
+.br
+.RI "Returns a default constructed \fBRegexMatch\fP object by value\&. "
+.ti -1c
+.RI "\fBRegexMatch\fP \fBgetMatchObject\fP ()"
+.br
+.RI "Synonym for \fBinitMatch()\fP "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, \fBModifier\fP mod, PCRE2_SIZE start_offset=0)"
 .br
 .RI "Perform regex match and return match count using a temporary match object\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod, PCRE2_SIZE start_offset)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const *s, \fBModifier\fP mod, PCRE2_SIZE start_offset=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, const std::string &mod)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const &s, PCRE2_SIZE start_offset=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, const std::string &mod)"
+.RI "\fBSIZE_T\fP \fBmatch\fP (\fBString\fP const *s, PCRE2_SIZE start_offset=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s, PCRE2_SIZE start_offset)"
+.RI "\fBRegexReplace\fP \fBinitReplace\fP ()"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.RI "Returns a default constructed \fBRegexReplace\fP object by value\&. "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s, PCRE2_SIZE start_offset)"
+.RI "\fBRegexReplace\fP \fBgetReplaceObject\fP ()"
 .br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.RI "Synonym for \fBinitReplace()\fP "
 .ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP &s)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP (const \fBString\fP *s)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBSIZE_T\fP \fBmatch\fP ()"
-.br
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl, const std::string &mod)"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const &repl, \fBModifier\fP mod='')"
 .br
 .RI "Perform regex replace and return the replaced string using a temporary replace object\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl, const std::string &mod)"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const &repl, \fBModifier\fP mod='')"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const *repl, \fBModifier\fP mod='')"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl, const std::string &mod)"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const *repl, \fBModifier\fP mod='')"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl, const std::string &mod)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP &repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP &repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP &mains, const \fBString\fP *repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP (const \fBString\fP *mains, const \fBString\fP *repl)"
-.br
-.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
-.ti -1c
-.RI "\fBString\fP \fBreplace\fP ()"
-.br
-.RI "Shorthand for \fBgetReplaceObject()\fP\&.\fBreplace()\fP All previously set options will be used\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -302,16 +279,13 @@ Provides public constructors to create \fBRegex\fP object\&.
 
 Each regex pattern needs an object of this class and each pattern needs to be compiled\&. Pattern compilation can be done using one of its' overloaded constructors or the \fC\fBRegex::compile()\fP\fP member function\&.
 .PP
-This class can contain a \fBRegexMatch\fP or \fBRegexReplace\fP object if desired\&. \fBRegexMatch\fP object can be created either with \fBRegex::initMatch()\fP or \fBRegex::getMatchObject()\fP member function\&. Similar functions are available for \fBRegexReplace\fP\&.
-.PP
 Examples:
 .PP
 .PP
 .nf
-jp::Regex re;
+jp::Regex re; //does not perform a compile
 re\&.compile("pattern", "modifier");
-jp::Regex re2("pattern", "modifier");
-re\&.getReplaceObject()\&.setReplaceWith("$0");
+jp::Regex re2("pattern", "modifier"); //performs a compile
 .fi
 .PP
  
@@ -321,10 +295,10 @@ re\&.getReplaceObject()\&.setReplaceWith("$0");
 
 .PP
 Default Constructor\&. Initializes all class variables to defaults\&. Does not perform any pattern compilation\&. 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const & re)\fC [inline]\fP"
 
 .PP
-Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+Compile pattern with initialization\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -332,116 +306,121 @@ Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compi
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const * re)\fC [inline]\fP"
 
 .PP
-Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const & re, \fBModifier\fP mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pattern string 
+\fIre\fP Pattern string \&. 
 .br
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const * re, \fBModifier\fP mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pattern string 
+\fIre\fP Pattern string \&. 
 .br
-\fIpcre2_opts\fP PCRE2 option value 
+\fIpo\fP PCRE2 option value 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, \fBUint\fP pcre2_opts)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
-\fIpcre2_opts\fP PCRE2 option value 
+\fIpo\fP PCRE2 option value 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP & re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pattern string 
+\fIre\fP Pattern string \&. 
 .br
-\fIpcre2_opts\fP PCRE2 option value 
+\fIpo\fP PCRE2 option value 
 .br
-\fIopt_bits\fP JPCRE2 option value 
+\fIjo\fP JPCRE2 option value 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBString\fP * re, \fBUint\fP pcre2_opts, \fBUint\fP opt_bits)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Compile pattern with initialization\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
-\fIpcre2_opts\fP PCRE2 option value 
+\fIpo\fP PCRE2 option value 
 .br
-\fIopt_bits\fP JPCRE2 option value 
+\fIjo\fP JPCRE2 option value 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (const \fBRegex\fP & r)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBRegex\fP const & r)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Copy constructor. Performs a deep copy\&. The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&. A separate and new compile is performed from the copied options\&.
-.PP
-Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Copy constructor\&. A separate and new compile is performed from the copied options\&.
 .PP
 \fBParameters:\fP
 .RS 4
-\fIr\fP Constant reference to a \fBRegex\fP object\&. 
+\fIr\fP Constant \fBRegex\fP object reference\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBjpcre2::select\fP< Char_T, BS >::Regex::~Regex ()\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::Regex::Regex (\fBRegex\fP && r)\fC [inline]\fP"
 
 .PP
-Destructor\&. Deletes all memory used by \fBRegex\fP, \fBRegexMatch\fP and \fBRegexReplace\fP object including compiled code and JIT memory\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Move constructor\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIr\fP rvalue reference to a \fBRegex\fP object\&. 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
@@ -467,16 +446,14 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addModifier (const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::addModifier (\fBModifier\fP mod)\fC [inline]\fP"
 
 .PP
-Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegex::changeModifier()\fP provided for convenience\&.
-.PP
-\fBNote:\fP If speed of operation is very crucial, use \fBRegex::addJpcre2Option()\fP and \fBRegex::addPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
+Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegex::changeModifier()\fP provided for convenience\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -540,18 +517,16 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBRegex\fP & \fBjpcre2::select\fP< Char_T, BS >::Regex::changeModifier (const std::string & mod, bool x)"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changeModifier (\fBModifier\fP mod, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
-.PP
-\fBNote:\fP If speed of operation is very crucial, use \fBRegex::changeJpcre2Option()\fP and \fBRegex::changePcre2Option()\fP with equivalent options\&. It will be faster that way\&.
 .PP
 If invalid modifier is detected, then the error number for the \fBRegex\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegex::getErrorMessage()\fP function\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .br
 \fIx\fP Whether to add or remove option 
 .RE
@@ -569,6 +544,8 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
+.PP
+References jpcre2::ModifierTable::toCompileOption()\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
@@ -594,37 +571,40 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::clear ()\fC [inline]\fP"
+
+.PP
+Clear all class variables to its default (initial) state (some memory may retain for further use)\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegex\fP object\&. 
+.RE
+.PP
+
 .SS "template<typename Char_T , jpcre2::Ush BS> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (void)"
 
 .PP
-Compile pattern using info from class variables\&. \fBThread safety:\fP
-.PP
-.IP "1." 4
-(C) MT safe if JIT compile is not done\&.
-.IP "2." 4
-MT unsafe if JIT compile is done (e\&.g passing the 'S' modifier)
-.PP
+Compile pattern using info from class variables\&. 
 .PP
 \fBSee also:\fP
 .RS 4
-\fBRegex::compile(const String& re, Uint po, Uint jo)\fP 
+\fBRegex::compile(String const &re, Uint po, Uint jo)\fP 
 .PP
-\fBRegex::compile(const String& re, Uint po)\fP 
+\fBRegex::compile(String const &re, Uint po)\fP 
 .PP
-\fBRegex::compile(const String& re, const std::string& mod)\fP 
+\fBRegex::compile(String const &re, Modifier mod)\fP 
 .PP
-\fBRegex::compile(const String& re)\fP 
+\fBRegex::compile(String const &re)\fP 
 .RE
 .PP
 
 .PP
-References jpcre2::select< Char_T, BS >::RegexReplace::changeModifier(), and jpcre2::JIT_COMPILE\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+References jpcre2::JIT_COMPILE\&.
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using information from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -636,16 +616,14 @@ Set the specified parameters, then compile the pattern using information from cl
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using information from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
 \fIpo\fP PCRE2 option 
 .br
@@ -653,12 +631,10 @@ Set the specified parameters, then compile the pattern using information from cl
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, \fBUint\fP po)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -668,74 +644,64 @@ Set the specified parameters, then compile the pattern using options from class 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, \fBUint\fP po)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
 \fIpo\fP PCRE2 option 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const & re, \fBModifier\fP mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
 \fIre\fP Pattern string 
 .br
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const * re, \fBModifier\fP mod)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
-\fImod\fP Modifier string 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const & re)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pattern string 
+\fIre\fP Pattern string \&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (const \fBString\fP * re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> void \fBjpcre2::select\fP< Char_T, BS >::Regex::compile (\fBString\fP const * re)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&.
-.PP
-Set the specified parameters, then compile the pattern using options from class variables\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pointer to pattern string 
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .RE
 .PP
 
@@ -790,33 +756,21 @@ Compile time JPCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getMatchObject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getMatchObject ()\fC [inline]\fP"
 
 .PP
-\fBDeprecated\fP
-.RS 4
-Returns a reference to existing match object\&.
-.RE
-.PP
-If there was no match object, it will create a new and act similarly to \fBRegex::initMatch()\fP 
+Synonym for \fBinitMatch()\fP 
 .PP
 \fBReturns:\fP
 .RS 4
-Reference to a \fBRegexMatch\fP object 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegex::initMatch()\fP 
+\fBRegexMatch\fP object by value\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier () const"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> std::string \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifier () const\fC [inline]\fP"
 
 .PP
-Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegex::setModifier()\fP will re-set them\&.
-.PP
-\fBMixed or combined modifier\fP\&.
+Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. \fBMixed or combined modifier\fP\&.
 .PP
 Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegex::changeModifier()\fP\fP), both will get removed\&. 
 .PP
@@ -835,6 +789,19 @@ Calculated modifier string (std::string)
 \fBRegexMatch::getModifier()\fP 
 .PP
 \fBRegexReplace::getModifier()\fP 
+.RE
+.PP
+
+.PP
+References jpcre2::ModifierTable::fromCompileOption()\&.
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, BS >::Regex::getModifierTable ()\fC [inline]\fP"
+
+.PP
+Get the modifier table that is set,\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+constant \fBModifierTable\fP pointer\&. 
 .RE
 .PP
 
@@ -871,14 +838,25 @@ pattern string of type \fBjpcre2::select::String\fP
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> const \fBString\fP* \fBjpcre2::select\fP< Char_T, BS >::Regex::getPatternPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP const* \fBjpcre2::select\fP< Char_T, BS >::Regex::getPatternPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to pattern string\&. 
 .PP
 \fBReturns:\fP
 .RS 4
-Pointer to pattern string 
+Pointer to constant pattern string 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> Pcre2Code const* \fBjpcre2::select\fP< Char_T, BS >::Regex::getPcre2Code () const\fC [inline]\fP"
+
+.PP
+Get Pcre2 raw compiled code pointer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+pointer to constant pcre2_code or null\&. 
 .RE
 .PP
 
@@ -900,127 +878,49 @@ Compile time PCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::getReplaceObject ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::getReplaceObject ()\fC [inline]\fP"
 
 .PP
-\fBDeprecated\fP
-.RS 4
-Returns a reference to the existing \fBRegexReplace\fP object\&.
-.RE
-.PP
-If there was no replace object, it will create a new one and act similarly to \fBRegex::initReplace()\fP\&. 
+Synonym for \fBinitReplace()\fP 
 .PP
 \fBReturns:\fP
 .RS 4
-reference to a \fBRegexReplace\fP object 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegex::initReplace()\fP 
+\fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatch ()\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatch ()\fC [inline]\fP"
 
 .PP
-Create and initialize a new match object and return a reference to it\&. 
-.PP
-\fBDeprecated\fP
-.RS 4
-
-.RE
-.PP
-Options can be set with the setter functions of \fBRegexMatch\fP class in-between the \fBRegex::initMatch()\fP and \fBRegexMatch::match()\fP call\&.
+Returns a default constructed \fBRegexMatch\fP object by value\&. This object is initialized with the same modifier table as this \fBRegex\fP object\&. 
 .PP
 \fBReturns:\fP
 .RS 4
-Reference to a new \fBRegexMatch\fP object 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegex::getMatchObject()\fP 
+\fBRegexMatch\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initMatchFrom (const \fBRegexMatch\fP & rmo)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::initReplace ()\fC [inline]\fP"
 
 .PP
-\fBDeprecated\fP
+Returns a default constructed \fBRegexReplace\fP object by value\&. This object is initialized with the same modifier table as this \fBRegex\fP object\&. 
+.PP
+\fBReturns:\fP
 .RS 4
-Copy the match object into this \fBRegex\fP object\&.
+\fBRegexReplace\fP object\&. 
 .RE
 .PP
-The match object passed is copied into the \fBRegex\fP object leaving the original unchanged\&. After copying, the associated \fBRegex\fP object for this new internal match object is set (corrected) to this object\&. 
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (\fBString\fP const & s, \fBModifier\fP mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Perform regex match and return match count using a temporary match object\&. This temporary match object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIrmo\fP Constant reference to a \fBRegexMatch\fP object 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Reference to the calling \fBRegex\fP object 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initReplace ()\fC [inline]\fP"
-
-.PP
-Creates a new \fBRegexReplace\fP object and returns its reference\&. 
-.PP
-\fBDeprecated\fP
-.RS 4
-
-.RE
-.PP
-Options can be set with the setter functions of \fBRegexReplace\fP class in-between the \fBRegex::initReplace()\fP and \fBRegexReplace::replace()\fP call\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-Reference to a new \fBRegexReplace\fP object\&. 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegex::getReplaceObject()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::initReplaceFrom (const \fBRegexReplace\fP & rro)\fC [inline]\fP"
-
-.PP
-\fBDeprecated\fP
-.RS 4
-Copy the replace object into this \fBRegex\fP object\&.
-.RE
-.PP
-The replace object passed is copied into the \fBRegex\fP object leaving the original unchanged\&. After copying, the associated \fBRegex\fP object for this new internal replace object is changed to this object\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIrro\fP Constant reference to a \fBRegexReplace\fP object 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Reference to the calling \fBRegex\fP object 
-.RE
-.PP
-
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
-
-.PP
-Perform regex match and return match count using a temporary match object\&. No previously set options are used or changed\&. A match is performed with just the options that were passed as parameters\&.
-.PP
-This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Subject string\&. 
+\fIs\fP Subject string \&. 
 .br
-\fImod\fP Modifier string\&. 
+\fImod\fP \fBModifier\fP string\&. 
 .br
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
@@ -1036,18 +936,16 @@ Match count
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, const std::string & mod, PCRE2_SIZE start_offset)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (\fBString\fP const * s, \fBModifier\fP mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIs\fP Pointer to subject string\&. 
+\fIs\fP Pointer to subject string\&. A null pointer will unset the subject and perform a match with empty subject\&. 
 .br
-\fImod\fP Modifier string\&. 
+\fImod\fP \fBModifier\fP string\&. 
 .br
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
@@ -1058,66 +956,14 @@ Match count
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (\fBString\fP const & s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIs\fP Subject string\&. 
-.br
-\fImod\fP Modifier string\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, const std::string & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Pointer to subject string\&. 
-.br
-\fImod\fP Modifier string\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setModifier(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s, PCRE2_SIZE start_offset)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Subject string 
+\fIs\fP Subject string \&. 
 .br
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
@@ -1133,85 +979,16 @@ Match count
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s, PCRE2_SIZE start_offset)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (\fBString\fP const * s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIs\fP Pointer to subject string 
+\fIs\fP Pointer to subject string\&. A null pointer will unset the subject and perform a match with empty subject\&. 
 .br
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), jpcre2::select< Char_T, BS >::RegexMatch::setStartOffset(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP & s)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&.
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (const \fBString\fP * s)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Pointer to subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexMatch::match(), and jpcre2::select< Char_T, BS >::RegexMatch::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::match (void)\fC [inline]\fP"
-
-.PP
-\fBDeprecated\fP
-.RS 4
-Shorthand for \fBgetMatchObject()\fP\&.\fBmatch()\fP This uses previously initiated match object i\&.e call \fBRegexMatch::match()\fP with all previous options intact\&.
 .RE
 .PP
 \fBReturns:\fP
@@ -1289,26 +1066,14 @@ true if regex compile failed, false otherwise\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (const \fBRegex\fP & r)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (\fBRegex\fP const & r)\fC [inline]\fP"
 
 .PP
-Overloaded assignment operator\&. Performs a deep copy\&.
-.PP
-The associated \fBRegexMatch\fP and \fBRegexReplace\fP objects (if any) are copied and their associated \fBRegex\fP object is set to this \fBRegex\fP Object\&. No change is made to the original \fBRegex\fP object or their associated \fBRegexMatch\fP and \fBRegexReplace\fP objects\&.
-.PP
-Allows assigning objects: 
-.PP
-.nf
-jp::Regex re2;
-re2 = re;
-
-.fi
-.PP
- Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+Overloaded assignment operator\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIr\fP const \fBRegex\fP& 
+\fIr\fP \fBRegex\fP const & 
 .RE
 .PP
 \fBReturns:\fP
@@ -1317,20 +1082,34 @@ re2 = re;
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (\fBRegex\fP && r)\fC [inline]\fP"
 
 .PP
-Perform regex replace and return the replaced string using a temporary replace object\&. This function takes the parameters, creates a temporary replace object and then sets the parameters to the newly created \fBRegexReplace\fP object and calls \fBRegexReplace::replace()\fP which returns the result\&.
-.PP
-This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Overloaded move-assignment operator\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fImains\fP Subject string 
+\fIr\fP \fBRegex\fP&& 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
+
+.PP
+Perform regex replace and return the replaced string using a temporary replace object\&. This temporary replace object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImains\fP Subject string\&. 
 .br
 \fIrepl\fP String to replace with 
 .br
-\fImod\fP Modifier string (std::string) 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1344,12 +1123,10 @@ Resultant string after regex replace
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP & repl, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1357,7 +1134,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .br
 \fIrepl\fP String to replace with 
 .br
-\fImod\fP Modifier string (std::string) 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1371,12 +1148,10 @@ Resultant string after regex replace
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1384,7 +1159,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .br
 \fIrepl\fP Pointer to string to replace with 
 .br
-\fImod\fP Modifier string (std::string) 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1398,12 +1173,10 @@ Resultant string after regex replace
 .RE
 .PP
 
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP * repl, const std::string & mod)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1411,7 +1184,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .br
 \fIrepl\fP Pointer to string to replace with 
 .br
-\fImod\fP Modifier string (std::string) 
+\fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1426,134 +1199,11 @@ Resultant string after regex replace
 .PP
 
 .PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setModifier(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP & repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP String to replace with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP & repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP String to replace with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP & mains, const \fBString\fP * repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string 
-.br
-\fIrepl\fP Pointer to string to replace with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (const \fBString\fP * mains, const \fBString\fP * repl)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This action doesn not affect any class variables\&. The temporary object that is created is not further usable\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Pointer to string to replace with 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.PP
-References jpcre2::select< Char_T, BS >::RegexReplace::replace(), jpcre2::select< Char_T, BS >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, BS >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (void)\fC [inline]\fP"
-
-.PP
-Shorthand for \fBgetReplaceObject()\fP\&.\fBreplace()\fP All previously set options will be used\&. 
-.PP
-\fBDeprecated\fP
-.RS 4
-
-.RE
-.PP
-It's just a short hand for calling \fCre\&.getReplaceObject()\&.\fBreplace()\fP\fP 
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
+References JPCRE2_ASSERT\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::reset ()\fC [inline]\fP"
 
 .PP
-Reset all class variables to its default (initial) state\&. Release any memory used by existing compiled pattern, \fBRegexMatch\fP, \fBRegexReplace\fP objects etc\&.\&. 
+Reset all class variables to its default (initial) state including memory\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -1564,7 +1214,7 @@ Reference to the calling \fBRegex\fP object\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetCharacterTables ()\fC [inline]\fP"
 
 .PP
-Reset character tables used by PCRE2\&. You should call this function after changing the locale to remake the character tables according to the new locale\&. These character tables are used to compile the regex and used by match and replace operation\&. A separate call to \fBcompile()\fP will be required to apply the new character tables\&. 
+Recreate character tables used by PCRE2\&. You should call this function after changing the locale to remake the character tables according to the new locale\&. These character tables are used to compile the regex and used by match and replace operation\&. A separate call to \fBcompile()\fP will be required to apply the new character tables\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -1575,7 +1225,7 @@ Reference to the calling \fBRegex\fP object\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::resetErrors ()\fC [inline]\fP"
 
 .PP
-Reset regex compile related errors to zero\&. If you want to examine the error status of a function call in the method chain, add this function just before your target function so that the error is set to zero before that target function is called, and leave everything out after the target function so that there will be no additional errors from other function calls\&. 
+Reset regex compile related errors to zero\&. 
 .PP
 \fBReturns:\fP
 .RS 4
@@ -1613,16 +1263,14 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifier (const std::string & x)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifier (\fBModifier\fP x)\fC [inline]\fP"
 
 .PP
-set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&.
-.PP
-\fBNote:\fP If speed of operation is very crucial, use \fBRegex::setJpcre2Option()\fP and \fBRegex::setPcre2Option()\fP with equivalent options\&. It will be faster that way\&. 
+set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP Modifier string 
+\fIx\fP \fBModifier\fP string\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1635,6 +1283,22 @@ Reference to the calling \fBRegex\fP object\&.
 \fBRegexMatch::setModifier()\fP 
 .PP
 \fBRegexReplace::setModifier()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP"
+
+.PP
+Set a custom modifier table to be used\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImdt\fP pointer to \fBModifierTable\fP object\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
@@ -1665,7 +1329,7 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (const \fBString\fP & re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (\fBString\fP const & re)\fC [inline]\fP"
 
 .PP
 Set the pattern string to compile\&. 
@@ -1681,14 +1345,14 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (const \fBString\fP * re)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::setPattern (\fBString\fP const * re)\fC [inline]\fP"
 
 .PP
-Set pointer to the pattern string to compile\&. 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIre\fP Pattern string 
+\fIre\fP Pattern string pointer, null pointer will unset it\&. 
 .RE
 .PP
 \fBReturns:\fP

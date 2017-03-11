@@ -1,5 +1,7 @@
 var jpcre2_8hpp =
 [
+    [ "Modifier", "classjpcre2_1_1Modifier.html", "classjpcre2_1_1Modifier" ],
+    [ "ModifierTable", "classjpcre2_1_1ModifierTable.html", "classjpcre2_1_1ModifierTable" ],
     [ "ConvUTF", "structjpcre2_1_1ConvUTF.html", null ],
     [ "ConvInt", "structjpcre2_1_1ConvInt.html", "structjpcre2_1_1ConvInt" ],
     [ "select", "structjpcre2_1_1select.html", "structjpcre2_1_1select" ],
@@ -21,12 +23,13 @@ var jpcre2_8hpp =
     [ "Uint", "jpcre2_8hpp.html#a078242d38221a13fb3543b9edd78c099", null ],
     [ "Ush", "jpcre2_8hpp.html#ace32c5cb1dfea02d9b64a7d0d61522ce", null ],
     [ "VecOff", "jpcre2_8hpp.html#a183672f239daa2a262b1fb321039abca", null ],
+    [ "VecOpt", "jpcre2_8hpp.html#a9dada7b65d04dea5ca8c25bb05611f3f", null ],
     [ "NONE", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00aecf4a781b081ff541006fbe84e143fb9", null ],
     [ "FIND_ALL", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00af29fccdb263520155e9c25a826a7200c", null ],
     [ "JIT_COMPILE", "jpcre2_8hpp.html#a85c143271501e383843f45b9999c2f00a5e8bab7c478015b19baf3e84ed00876e", null ],
     [ "INVALID_MODIFIER", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2a4115340549b623f4e2da285bf0aa9bff", null ],
     [ "INSUFFICIENT_OVECTOR", "jpcre2_8hpp.html#a4b2998984439438fa9da8d7043909bc2af2a4a44e41fef68db85e1030a0af2bd9", null ],
-    [ "assert", "jpcre2_8hpp.html#a5249f3599a63e71f1263910398d36ad6", null ],
+    [ "jassert", "jpcre2_8hpp.html#a611d706dc6e080043bdecbb23cf5c5a7", null ],
     [ "FULL_VERSION", "jpcre2_8hpp.html#a5b22133d85a57f47012176fa934a7085", null ],
     [ "NAME", "jpcre2_8hpp.html#a057688caad3ff7866a6449be627224a5", null ],
     [ "VERSION_GENRE", "jpcre2_8hpp.html#a3ced5e142d1e4d77a651384e5517f1f7", null ],

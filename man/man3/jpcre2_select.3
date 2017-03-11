@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >" 3 "Tue Mar 7 2017" "Version 10.29.03" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -89,7 +89,7 @@ jpcre2::select< Char_T, BS > \- struct to select code unit width and the charact
 .br
 .RI "Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::String\fP\&. "
 .ti -1c
-.RI "static \fBString\fP \fBtoString\fP (const \fBChar\fP *a)"
+.RI "static \fBString\fP \fBtoString\fP (\fBChar\fP const *a)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
@@ -243,14 +243,14 @@ Converts a Char_T (char, wchar_t, char16_t, char32_t) to \fBjpcre2::select::Stri
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (const \fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::toString (\fBChar\fP const * a)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a const Char_T* (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP 
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a Char_T const * (char*, wchar_t*, char16_t*, char32_t*) to \fBjpcre2::select::String\fP 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIa\fP const Char_T* 
+\fIa\fP Char_T const * 
 .RE
 .PP
 \fBReturns:\fP
@@ -266,7 +266,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 \fBParameters:\fP
 .RS 4
-\fIa\fP const Char_T* 
+\fIa\fP Char_T const * 
 .RE
 .PP
 \fBReturns:\fP

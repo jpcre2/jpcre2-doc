@@ -1,0 +1,592 @@
+.TH "jpcre2::ModifierTable" 3 "Sat Mar 11 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+jpcre2::ModifierTable \- Lets you create custom modifier tables\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <jpcre2\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifierTable\fP ()"
+.br
+.RI "Default constructor that creates an empty modifier table\&. "
+.ti -1c
+.RI "\fBModifierTable\fP (bool deflt)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBresetMatchModifierTable\fP ()"
+.br
+.RI "Reset the match modifier table to its initial (empty) state including memory\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBresetReplaceModifierTable\fP ()"
+.br
+.RI "Reset the replace modifier table to its initial (empty) state including memory\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBresetCompileModifierTable\fP ()"
+.br
+.RI "Reset the compile modifier table to its initial (empty) state including memory\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBreset\fP ()"
+.br
+.RI "Reset the modifier tables to their initial (empty) state including memory\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBclearMatchModifierTable\fP ()"
+.br
+.RI "Clear the match modifier table to its initial (empty) state\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBclearReplaceModifierTable\fP ()"
+.br
+.RI "Clear the replace modifier table to its initial (empty) state\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBclearCompileModifierTable\fP ()"
+.br
+.RI "Clear the compile modifier table to its initial (empty) state\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBclear\fP ()"
+.br
+.RI "Clear the modifier tables to their initial (empty) state\&. "
+.ti -1c
+.RI "void \fBtoMatchOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.br
+.RI "\fBModifier\fP parser for match related options\&. "
+.ti -1c
+.RI "void \fBtoReplaceOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.br
+.RI "\fBModifier\fP parser for replace related options\&. "
+.ti -1c
+.RI "void \fBtoCompileOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.br
+.RI "\fBModifier\fP parser for compile related options\&. "
+.ti -1c
+.RI "std::string \fBfromMatchOption\fP (\fBUint\fP po, \fBUint\fP jo) const"
+.br
+.RI "Take match related option value and convert to modifier string\&. "
+.ti -1c
+.RI "std::string \fBfromReplaceOption\fP (\fBUint\fP po, \fBUint\fP jo) const"
+.br
+.RI "Take replace related option value and convert to modifier string\&. "
+.ti -1c
+.RI "std::string \fBfromCompileOption\fP (\fBUint\fP po, \fBUint\fP jo) const"
+.br
+.RI "Take compile related option value and convert to modifier string\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.br
+.RI "Set modifier table for match\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.br
+.RI "Set modifier table for match\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (const char *tabsp, const \fBUint\fP *tabvp)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.br
+.RI "Set modifier table for replace\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.br
+.RI "Set modifier table for replace\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (const char *tabsp, const \fBUint\fP *tabvp)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.br
+.RI "Set modifier table for compile\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.br
+.RI "Set modifier table for compile\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (const char *tabsp, const \fBUint\fP *tabvp)"
+.br
+.RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTableToDefault\fP ()"
+.br
+.RI "Set match modifie table to default\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTableToDefault\fP ()"
+.br
+.RI "Set replace modifier table to default\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTableToDefault\fP ()"
+.br
+.RI "Set compile modifier table to default\&. "
+.ti -1c
+.RI "\fBModifierTable\fP & \fBsetAllToDefault\fP ()"
+.br
+.RI "Set all tables to default\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Lets you create custom modifier tables\&. 
+
+An instance of this class can be passed to match, replace or compile related class objects\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "jpcre2::ModifierTable::ModifierTable ()\fC [inline]\fP"
+
+.PP
+Default constructor that creates an empty modifier table\&. 
+.SS "jpcre2::ModifierTable::ModifierTable (bool deflt)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdeflt\fP Initialize with default table if true, otherwise keep empty\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::clear ()\fC [inline]\fP"
+
+.PP
+Clear the modifier tables to their initial (empty) state\&. Memory may retain for further use\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+Referenced by clearCompileModifierTable(), clearMatchModifierTable(), and clearReplaceModifierTable()\&.
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::clearCompileModifierTable ()\fC [inline]\fP"
+
+.PP
+Clear the compile modifier table to its initial (empty) state\&. Memory may retain for further use\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+References clear()\&.
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::clearMatchModifierTable ()\fC [inline]\fP"
+
+.PP
+Clear the match modifier table to its initial (empty) state\&. Memory may retain for further use\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+References clear()\&.
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::clearReplaceModifierTable ()\fC [inline]\fP"
+
+.PP
+Clear the replace modifier table to its initial (empty) state\&. Memory may retain for further use\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+References clear()\&.
+.SS "std::string jpcre2::ModifierTable::fromCompileOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
+
+.PP
+Take compile related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpo\fP PCRE2 option\&. 
+.br
+\fIjo\fP JPCRE2 option\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::getModifier()\&.
+.SS "std::string jpcre2::ModifierTable::fromMatchOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
+
+.PP
+Take match related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpo\fP PCRE2 option\&. 
+.br
+\fIjo\fP JPCRE2 option\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::RegexMatch::getModifier()\&.
+.SS "std::string jpcre2::ModifierTable::fromReplaceOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
+
+.PP
+Take replace related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpo\fP PCRE2 option\&. 
+.br
+\fIjo\fP JPCRE2 option\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::RegexReplace::getModifier()\&.
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::reset ()\fC [inline]\fP"
+
+.PP
+Reset the modifier tables to their initial (empty) state including memory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::resetCompileModifierTable ()\fC [inline]\fP"
+
+.PP
+Reset the compile modifier table to its initial (empty) state including memory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::resetMatchModifierTable ()\fC [inline]\fP"
+
+.PP
+Reset the match modifier table to its initial (empty) state including memory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::resetReplaceModifierTable ()\fC [inline]\fP"
+
+.PP
+Reset the replace modifier table to its initial (empty) state including memory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setAllToDefault ()\fC [inline]\fP"
+
+.PP
+Set all tables to default\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.PP
+References jpcre2::ERROR::INSUFFICIENT_OVECTOR, and jpcre2::ERROR::INVALID_MODIFIER\&.
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+
+.PP
+Set modifier table for compile\&. Takes a string and a vector of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabv\fP vector of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+Set modifier table for compile\&. Takes a string and an array of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabvp\fP array of Uint (options)\&. If null, table is set to empty\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (const char * tabsp, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This one takes modifier and value by array\&. If the arrays are not of the same length, the behavior is undefined\&. If any of the argument is null, the table is set empty\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabsp\fP modifier string (list of modifiers)\&. 
+.br
+\fItabvp\fP array of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTableToDefault ()\fC [inline]\fP"
+
+.PP
+Set compile modifier table to default\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+
+.PP
+Set modifier table for match\&. Takes a string and a vector of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabv\fP vector of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+Set modifier table for match\&. Takes a string and an array of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabvp\fP array of Uint (options)\&. If null, table is set to empty\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (const char * tabsp, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This one takes modifier and value by array\&. If the arrays are not of the same length, the behavior is undefined\&. If any of the argument is null, the table is set empty\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabsp\fP modifier string (list of modifiers)\&. 
+.br
+\fItabvp\fP array of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTableToDefault ()\fC [inline]\fP"
+
+.PP
+Set match modifie table to default\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+
+.PP
+Set modifier table for replace\&. Takes a string and a vector of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabv\fP vector of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+Set modifier table for replace\&. Takes a string and an array of sequential options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabs\fP modifier string (list of modifiers) 
+.br
+\fItabvp\fP array of Uint (options)\&. If null, table is set to empty\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (const char * tabsp, const \fBUint\fP * tabvp)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. This one takes modifier and value by array\&. If the arrays are not of the same length, the behavior is undefined\&. If any of the argument is null, the table is set empty\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItabsp\fP modifier string (list of modifiers)\&. 
+.br
+\fItabvp\fP array of Uint (options)\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTableToDefault ()\fC [inline]\fP"
+
+.PP
+Set replace modifier table to default\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBModifierTable\fP object\&. 
+.RE
+.PP
+
+.SS "void jpcre2::ModifierTable::toCompileOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+
+.PP
+\fBModifier\fP parser for compile related options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImod\fP modifier string 
+.br
+\fIx\fP whether to add or remove the modifers\&. 
+.br
+\fIpo\fP pointer to PCRE2 compile option that will be modified\&. 
+.br
+\fIjo\fP pointer to JPCRE2 compile option that will be modified\&. 
+.br
+\fIen\fP where to put the error number\&. 
+.br
+\fIeo\fP where to put the error offset\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::Regex::changeModifier()\&.
+.SS "void jpcre2::ModifierTable::toMatchOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+
+.PP
+\fBModifier\fP parser for match related options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImod\fP modifier string 
+.br
+\fIx\fP whether to add or remove the modifers\&. 
+.br
+\fIpo\fP pointer to PCRE2 match option that will be modified\&. 
+.br
+\fIjo\fP pointer to JPCRE2 match option that will be modified\&. 
+.br
+\fIen\fP where to put the error number\&. 
+.br
+\fIeo\fP where to put the error offset\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::RegexMatch::changeModifier()\&.
+.SS "void jpcre2::ModifierTable::toReplaceOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+
+.PP
+\fBModifier\fP parser for replace related options\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImod\fP modifier string 
+.br
+\fIx\fP whether to add or remove the modifers\&. 
+.br
+\fIpo\fP pointer to PCRE2 replace option that will be modified\&. 
+.br
+\fIjo\fP pointer to JPCRE2 replace option that will be modified\&. 
+.br
+\fIen\fP where to put the error number\&. 
+.br
+\fIeo\fP where to put the error offset\&. 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, BS >::RegexReplace::changeModifier()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for JPCRE2 from the source code\&.

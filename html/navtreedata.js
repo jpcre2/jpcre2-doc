@@ -18,7 +18,6 @@ var NAVTREE =
         [ "Access a capture group by name", "index.html#access-substring-by-name", null ],
         [ "Get the position of a capture group name", "index.html#get-number-to-name", null ],
         [ "Iterate through match result", "index.html#iterate", null ],
-        [ "Re-use a match object", "index.html#re-use-a-match-object", null ],
         [ "RegexMatch object", "index.html#independent-match-object", null ]
       ] ],
       [ "Replace or Substitute", "index.html#replace", [
@@ -35,13 +34,15 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Modifiers", "index.html#modifiers", [
-      [ "Compile modifiers", "index.html#compile-modifier", null ],
-      [ "Action modifiers", "index.html#action-modifiers", null ]
+      [ "Modifier table", "index.html#modifier-table", null ],
+      [ "Default Compile modifiers", "index.html#compile-modifier", null ],
+      [ "Default Replace or Match modifiers", "index.html#action-modifiers", null ]
     ] ],
     [ "Options", "index.html#options", [
       [ "JPCRE2 options", "index.html#jpcre-options", null ],
       [ "PCRE2 options", "index.html#pcre2-options", null ]
     ] ],
+    [ "JPCRE2 vs PCRE2 spec", "index.html#jpcre2-vs-pcre2-spec", null ],
     [ "Code unit width & character type", "index.html#code-unit-and-character-type", null ],
     [ "Portable coding", "index.html#portable-coding", [
       [ "Code unit width quirk", "index.html#code-unit-width-quirk", null ],
@@ -52,9 +53,11 @@ var NAVTREE =
     [ "Error handling", "index.html#error-handling", [
       [ "Runtime error", "index.html#runtime-error", null ],
       [ "Assertion failure", "index.html#assertion-failure", [
-        [ "Null pointer error", "index.html#null-pointer-error", null ],
         [ "Value error", "index.html#value-error", null ]
       ] ]
+    ] ],
+    [ "Null safety", "index.html#null-safety", [
+      [ "Null safety with std::string", "index.html#null-safety-with-std-string", null ]
     ] ],
     [ "Multi threading", "index.html#multi-threading", [
       [ "Functions", "index.html#functions-thread-safety", null ],
@@ -65,8 +68,8 @@ var NAVTREE =
     [ "API change notice", "index.html#api-change-notice", null ],
     [ "Test suit", "index.html#test-suit", null ],
     [ "The configure script", "index.html#the-configure-script", null ],
+    [ "Contributing/Pull request", "index.html#contributing-pull-request", null ],
     [ "LICENCE", "index.html#licence", null ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -100,7 +103,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"index.html"
+"classjpcre2_1_1select_1_1RegexReplace.html#a80ec6cbc2a0e7d5a20eee7c55977f3c5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

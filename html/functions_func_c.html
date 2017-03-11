@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.29.03</span>
+   &#160;<span id="projectnumber">10.30.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -87,6 +87,9 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 &#160;
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>c_str()
+: <a class="el" href="classjpcre2_1_1Modifier.html#a4c356942ab0c2bd044185568d63cfdd3">jpcre2::Modifier</a>
+</li>
 <li>changeJpcre2Option()
 : <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a09d46b07fd08d9ab83cdb7f6c27f283f">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
 , <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a84f3542f63c747daae933aa998a0a2b2">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
@@ -94,10 +97,10 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 , <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a554b84a4d851ce257eb7440e41511472">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
 <li>changeModifier()
-: <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a1451c759b96b3def52693dc311382496">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
-, <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6cdeb1b6091cdc2deddcca2f4d98d8a6">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
-, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a187707ab77beddc9a5f46c33461429b5">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
-, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a1f6e1a92897edc7a2d700a9992fbc80c">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+: <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a765a4b29acaf8a8af5c72a6dd4bd0849">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
+, <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a52f6fee59835f97a2f1f29d9fc452353">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aabe533f09b42906b0d84047cf0f92a42">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#adbff205380675e06d0c0dedb5ec32a11">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
 <li>changePcre2Option()
 : <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#ad3bde0398a8dd40f355f2716d3fc22b9">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
@@ -105,11 +108,27 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 , <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a3e21845b1b87a65114bb1a953a27a841">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
 , <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a55042dbf57ffb515ea569a091d5a8b97">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
 </li>
-<li>clearMatchDataVectors()
-: <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#ac4508385fdeaa3ef0e09ad96dc45f514">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
+<li>clear()
+: <a class="el" href="classjpcre2_1_1ModifierTable.html#a758813f937d60504e2eb6da4163b3a2b">jpcre2::ModifierTable</a>
+, <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a4c0ea3562eda9f6b2dc9b05e020ab964">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
+, <a class="el" href="classjpcre2_1_1select_1_1Regex.html#ad0e01868db519798c1da0823a5ae5af6">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae59e32b72ded821c83eca2ebb03376f1">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a8a087c6b47f3ab0a41ef31989fea8448">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a>
+</li>
+<li>clearCompileModifierTable()
+: <a class="el" href="classjpcre2_1_1ModifierTable.html#ac5c2a8fb57922df1c2741b894c65da5e">jpcre2::ModifierTable</a>
+</li>
+<li>clearMatchData()
+: <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a488cbe8af99c3cac6f306af781827942">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a>
+</li>
+<li>clearMatchModifierTable()
+: <a class="el" href="classjpcre2_1_1ModifierTable.html#ae672621f97a7085328374b9ccc1d2b8e">jpcre2::ModifierTable</a>
+</li>
+<li>clearReplaceModifierTable()
+: <a class="el" href="classjpcre2_1_1ModifierTable.html#a67a0ee2ebacb8c44c94fb9e65d29f8f0">jpcre2::ModifierTable</a>
 </li>
 <li>compile()
-: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a084c687b2c44e9c2c0ad28ecd85d73e3">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
+: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6044f8494f28fd960d064c360932d66c">jpcre2::select&lt; Char_T, BS &gt;::Regex</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -13,6 +13,7 @@ var files =
     [ "test_shorts.cpp", "test__shorts_8cpp.html", null ],
     [ "testcovme.cpp", "testcovme_8cpp.html", null ],
     [ "testio.cpp", "testio_8cpp.html", null ],
+    [ "testmd.cpp", "testmd_8cpp.html", null ],
     [ "testme.cpp", "testme_8cpp.html", null ],
     [ "teststdthread.cpp", "teststdthread_8cpp.html", null ]
 ];
