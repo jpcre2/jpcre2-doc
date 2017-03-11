@@ -403,13 +403,10 @@ Runtime error</h2>
 <h2><a class="anchor" id="assertion-failure"></a>
 Assertion failure</h2>
 <p>JPCRE2 asserts some errors with descriptive error messages. These errors are mistakes in your code and not to be shipped to the client without fixing.</p>
-<p>In no situation these errors should be bypassed by <code>#define NDEBUG</code> before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code>. You should investigate the error message and fix cause.</p>
+<p>In no situation these errors should be bypassed by <code>#define NDEBUG</code> before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code>. You should investigate the error message and fix the cause.</p>
 <blockquote class="doxtable">
 <p>When there is no such errors in your finalized code, you may use <code>#define NDEBUG</code> to strip out these assertions. </p>
 </blockquote>
-<h3><a class="anchor" id="value-error"></a>
-Value error</h3>
-<p>This error occurs when you pass bad values to some functions or unintentionally mess up or forget to set some values the right way.</p>
 <h1><a class="anchor" id="null-safety"></a>
 Null safety</h1>
 <p>JPCRE2 treats null as valid input and its usage have well-defined behavior throughout JPCRE2 interface. Most of the time a null is treated as 'set something to its initial or empty state'. And also, initial state doesn't necessarily have to be an empty state, and empty state doesn't necessarily have to be an initial state. It depends on what you are working with, refer to the <a href="http://docs.neurobin.org/jpcre2">doc</a> when you are in a bind.</p>
@@ -459,7 +456,7 @@ Test suit</h1>
 <p>Some test programs are written to check for major flaws like segfault, memory leak and crucial input/output validation. Before trying to run the tests, make sure you have all 3 PCRE2 libraries installed on your system.</p>
 <p>For the simplest (minimal) test, run:</p>
 <div class="fragment"><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-test</div><div class="line">make check</div></div><!-- fragment --><p> To check with <code>valgrind</code>, run:</p>
-<div class="fragment"><div class="line">#requires valgrind to be installed on the system</div><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-valgrind</div><div class="line">make check</div></div><!-- fragment --><p> To check the multi threaded example with helgrind, run:</p>
+<div class="fragment"><div class="line">#requires valgrind to be installed on the system</div><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-valgrind</div><div class="line">make check</div></div><!-- fragment --><p> To check the multi threaded examples with <code>drd</code>, run:</p>
 <div class="fragment"><div class="line">#requires valgrind to be installed on the system</div><div class="line">#You can add --enable-cpp11 to test cpp11 features.</div><div class="line">./configure --enable-thread-check</div><div class="line">make check</div></div><!-- fragment --><p>To prepare a coverage report, run:</p>
 <div class="fragment"><div class="line">#requires lcov and genhtml to be installed on the system</div><div class="line">#enable cpp11 to cover cpp11 codes.</div><div class="line">#clean any previous make</div><div class="line">make distclean #ignore errors</div><div class="line">./configure --enable-coverage --enable-cpp11</div><div class="line">make coverage</div></div><!-- fragment --><h1><a class="anchor" id="the-configure-script"></a>
 The configure script</h1>

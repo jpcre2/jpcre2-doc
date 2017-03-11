@@ -1,5 +1,0 @@
-<map id="jpcre2::select::Regex::replace" name="jpcre2::select::Regex::replace">
-<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexReplace.html#aaba6964fdc26c8039c1f2d986107a856" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr..." alt="" coords="200,5,395,47"/>
-<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1RegexReplace.html#a9a1ad5f1af91ce858c5d89e2dec9df34" title="Set the replacement string. " alt="" coords="200,71,395,112"/>
-<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1RegexReplace.html#aa07c3051ff2bdd7d1f968fa60b8c76ac" title="Set the subject string for replace. " alt="" coords="200,136,395,177"/>
-</map>

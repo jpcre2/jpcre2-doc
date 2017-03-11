@@ -52,9 +52,7 @@ var NAVTREE =
     ] ],
     [ "Error handling", "index.html#error-handling", [
       [ "Runtime error", "index.html#runtime-error", null ],
-      [ "Assertion failure", "index.html#assertion-failure", [
-        [ "Value error", "index.html#value-error", null ]
-      ] ]
+      [ "Assertion failure", "index.html#assertion-failure", null ]
     ] ],
     [ "Null safety", "index.html#null-safety", [
       [ "Null safety with std::string", "index.html#null-safety-with-std-string", null ]
