@@ -426,7 +426,7 @@ Functions</h2>
 Objects</h2>
 <ol type="1">
 <li>There is no data race between two separate objects (<code>Regex</code>, <code>RegexMatch</code>, <code>RegexReplace</code> etc..) because the classes do not contain any static variables.</li>
-<li>Temporary class objects will always be thread safe.</li>
+<li>Temporary class objects are always thread safe.</li>
 <li>Temporary class object that uses another third party object reference or pointer is thread safe provided that the access to the third party object is thread safe.</li>
 <li>Simultaneous access of the same object is MT unsafe. You can use mutex lock or other mechanisms to ensure thread safety.</li>
 </ol>
