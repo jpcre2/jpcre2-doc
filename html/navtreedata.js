@@ -34,9 +34,9 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Modifiers", "index.html#modifiers", [
-      [ "Modifier table", "index.html#modifier-table", null ],
       [ "Default Compile modifiers", "index.html#compile-modifier", null ],
-      [ "Default Replace or Match modifiers", "index.html#action-modifiers", null ]
+      [ "Default Replace or Match modifiers", "index.html#action-modifiers", null ],
+      [ "Modifier table", "index.html#modifier-table", null ]
     ] ],
     [ "Options", "index.html#options", [
       [ "JPCRE2 options", "index.html#jpcre-options", null ],
