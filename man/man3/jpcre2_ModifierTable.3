@@ -1,4 +1,4 @@
-.TH "jpcre2::ModifierTable" 3 "Fri Mar 17 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ModifierTable" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -208,7 +208,7 @@ References clear()\&.
 .SS "std::string jpcre2::ModifierTable::fromCompileOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
 
 .PP
-Take compile related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+Take compile related option value and convert to modifier string\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -219,7 +219,7 @@ Take compile related option value and convert to modifier string\&. The modifier
 .PP
 \fBReturns:\fP
 .RS 4
-A reference to the calling \fBModifierTable\fP object\&. 
+modifier string (std::string) 
 .RE
 .PP
 
@@ -228,7 +228,7 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::getModifier()\&.
 .SS "std::string jpcre2::ModifierTable::fromMatchOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
 
 .PP
-Take match related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+Take match related option value and convert to modifier string\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -239,7 +239,7 @@ Take match related option value and convert to modifier string\&. The modifier s
 .PP
 \fBReturns:\fP
 .RS 4
-A reference to the calling \fBModifierTable\fP object\&. 
+modifier string (std::string) 
 .RE
 .PP
 
@@ -248,7 +248,7 @@ Referenced by jpcre2::select< Char_T, BS >::RegexMatch::getModifier()\&.
 .SS "std::string jpcre2::ModifierTable::fromReplaceOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
 
 .PP
-Take replace related option value and convert to modifier string\&. The modifier string can be get by calling the str() function\&. 
+Take replace related option value and convert to modifier string\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -259,7 +259,7 @@ Take replace related option value and convert to modifier string\&. The modifier
 .PP
 \fBReturns:\fP
 .RS 4
-A reference to the calling \fBModifierTable\fP object\&. 
+modifier string (std::string) 
 .RE
 .PP
 
