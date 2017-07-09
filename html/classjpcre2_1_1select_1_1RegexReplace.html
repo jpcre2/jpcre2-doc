@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.30.01</span>
+   &#160;<span id="projectnumber">10.30.02</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -174,6 +174,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e53d5dc8ccd3c010d1b97b76f8ac082"><td class="memItemLeft" align="right" valign="top">PCRE2_SIZE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a9e53d5dc8ccd3c010d1b97b76f8ac082">getBufferSize</a> ()</td></tr>
 <tr class="memdesc:a9e53d5dc8ccd3c010d1b97b76f8ac082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial buffer size that is being used by internal function pcre2_substitute.  <a href="#a9e53d5dc8ccd3c010d1b97b76f8ac082">More...</a><br /></td></tr>
 <tr class="separator:a9e53d5dc8ccd3c010d1b97b76f8ac082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6377f15289aa7413571fcbfe18889212"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a6377f15289aa7413571fcbfe18889212">getLastReplaceCount</a> ()</td></tr>
+<tr class="memdesc:a6377f15289aa7413571fcbfe18889212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of replacement in last replace operation.  <a href="#a6377f15289aa7413571fcbfe18889212">More...</a><br /></td></tr>
+<tr class="separator:a6377f15289aa7413571fcbfe18889212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e65ff688f99a8f5ae8e745db9e6412"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a20e65ff688f99a8f5ae8e745db9e6412">setReplaceCounter</a> (<a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> *counter)</td></tr>
+<tr class="memdesc:a20e65ff688f99a8f5ae8e745db9e6412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an external counter variable to store the replacement count.  <a href="#a20e65ff688f99a8f5ae8e745db9e6412">More...</a><br /></td></tr>
+<tr class="separator:a20e65ff688f99a8f5ae8e745db9e6412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a9fe53a7d0e9560c7bb458511ccea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">RegexReplace</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a42a9fe53a7d0e9560c7bb458511ccea8">setRegexObject</a> (<a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> const *r)</td></tr>
 <tr class="memdesc:a42a9fe53a7d0e9560c7bb458511ccea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the associated <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object.  <a href="#a42a9fe53a7d0e9560c7bb458511ccea8">More...</a><br /></td></tr>
 <tr class="separator:a42a9fe53a7d0e9560c7bb458511ccea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -608,7 +614,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#aabe533f09b42906b0d84047cf0f92a42" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. ">RegexMatch::changeModifier()</a> </dd></dl>
 
-<p>References <a class="el" href="classjpcre2_1_1ModifierTable.html#ad68c894da7a7befe4e43178fee5c098a">jpcre2::ModifierTable::toReplaceOption()</a>.</p>
+<p>References <a class="el" href="classjpcre2_1_1ModifierTable.html#a46704d9bbba899ffcb335f3de3458bdb">jpcre2::ModifierTable::toReplaceOption()</a>.</p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -616,7 +622,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classjpcre2_1_1select_1_1RegexReplace_adbff205380675e06d0c0dedb5ec32a11_cgraph.png" border="0" usemap="#classjpcre2_1_1select_1_1RegexReplace_adbff205380675e06d0c0dedb5ec32a11_cgraph" alt=""/></div>
 <map name="classjpcre2_1_1select_1_1RegexReplace_adbff205380675e06d0c0dedb5ec32a11_cgraph" id="classjpcre2_1_1select_1_1RegexReplace_adbff205380675e06d0c0dedb5ec32a11_cgraph">
-<area shape="rect" id="node2" href="classjpcre2_1_1ModifierTable.html#ad68c894da7a7befe4e43178fee5c098a" title="Modifier parser for replace related options. " alt="" coords="248,5,391,47"/>
+<area shape="rect" id="node2" href="classjpcre2_1_1ModifierTable.html#a46704d9bbba899ffcb335f3de3458bdb" title="Modifier parser for replace related options. " alt="" coords="248,5,391,47"/>
 </map>
 </div>
 
@@ -710,8 +716,6 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classjpcre2_1_1select_1_1RegexReplace_a8a087c6b47f3ab0a41ef31989fea8448_cgraph.png" border="0" usemap="#classjpcre2_1_1select_1_1RegexReplace_a8a087c6b47f3ab0a41ef31989fea8448_cgraph" alt=""/></div>
-<map name="classjpcre2_1_1select_1_1RegexReplace_a8a087c6b47f3ab0a41ef31989fea8448_cgraph" id="classjpcre2_1_1select_1_1RegexReplace_a8a087c6b47f3ab0a41ef31989fea8448_cgraph">
-</map>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -877,6 +881,36 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1Regex.html#a6c516f91756dc7e6717eb2bb2c9dc695" title="Get JPCRE2 option. ">Regex::getJpcre2Option()</a> </dd>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a315e221296ddf30043ba8a2a1d9db403" title="Get JPCRE2 option. ">RegexMatch::getJpcre2Option()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6377f15289aa7413571fcbfe18889212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6377f15289aa7413571fcbfe18889212">&#9670;&nbsp;</a></span>getLastReplaceCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::getLastReplaceCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of replacement in last replace operation. </p>
+<p>If you set an external counter with <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a20e65ff688f99a8f5ae8e745db9e6412" title="Set an external counter variable to store the replacement count. ">RegexReplace::setReplaceCounter()</a>, make sure that the counter variable exists, otherwise this function will try to dereference an invalid pointer. </p><dl class="section return"><dt>Returns</dt><dd>Last replace count </dd></dl>
 
 </div>
 </div>
@@ -1267,7 +1301,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <li>subject, start_offset and <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object will change according to the <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html" title="Provides public constructors to create RegexReplace objects. ">RegexReplace</a> object.</li>
 <li>match context, and match data block will be changed according to the <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html" title="Provides public constructors to create RegexReplace objects. ">RegexReplace</a> object.</li>
 </ol>
-<p>It calls <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#ad84d81fda11dd5eae21a06590607af3d" title="Perform regex replace with this match evaluator. ">MatchEvaluator::nreplace()</a> on the <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a> object to perform the replacement.</p>
+<p>It calls <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a58cb2ebe105f4c0afbedad73cb1fce46" title="Perform regex replace with this match evaluator. ">MatchEvaluator::nreplace()</a> on the <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a> object to perform the replacement.</p>
 <p>It always performs a new match. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">me</td><td>A <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a> object. </td></tr>
@@ -1276,7 +1310,7 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The resultant string after replacement. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#ad84d81fda11dd5eae21a06590607af3d" title="Perform regex replace with this match evaluator. ">MatchEvaluator::nreplace()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html#a58cb2ebe105f4c0afbedad73cb1fce46" title="Perform regex replace with this match evaluator. ">MatchEvaluator::nreplace()</a> </dd>
 <dd>
 <a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a> </dd>
 <dd>
@@ -1788,6 +1822,43 @@ template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
 <p><a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object is not modified. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>Pointer to a <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the calling <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html" title="Provides public constructors to create RegexReplace objects. ">RegexReplace</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="a20e65ff688f99a8f5ae8e745db9e6412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e65ff688f99a8f5ae8e745db9e6412">&#9670;&nbsp;</a></span>setReplaceCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">RegexReplace</a>&amp; <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, BS &gt;::RegexReplace::setReplaceCounter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacejpcre2.html#a1992f5f6f7d03fe854ad0c4de3352ec5">SIZE_T</a> *&#160;</td>
+          <td class="paramname"><em>counter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set an external counter variable to store the replacement count. </p>
+<p>This counter will be updated after each replacement operation on this object. A call to this method will reset the internal counter to 0, thus when you reset the counter to internal counter (by giving null as param), the previous replace count won't be available. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">counter</td><td>Pointer to a counter variable. Null sets the counter to default internal counter. </td></tr>
   </table>
   </dd>
 </dl>

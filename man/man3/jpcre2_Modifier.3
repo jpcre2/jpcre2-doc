@@ -1,4 +1,4 @@
-.TH "jpcre2::Modifier" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::Modifier" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,7 +17,7 @@ jpcre2::Modifier \- Class to take a std::string modifier value with null safety\
 .br
 .RI "Default constructor\&. "
 .ti -1c
-.RI "\fBModifier\fP (std::string x)"
+.RI "\fBModifier\fP (std::string const &x)"
 .br
 .RI "Constructor that takes a std::string\&. "
 .ti -1c
@@ -52,14 +52,14 @@ You don't need to make an instance of this class to pass modifier, just pass std
 
 .PP
 Default constructor\&. 
-.SS "jpcre2::Modifier::Modifier (std::string x)\fC [inline]\fP"
+.SS "jpcre2::Modifier::Modifier (std::string const & x)\fC [inline]\fP"
 
 .PP
 Constructor that takes a std::string\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIx\fP std::string 
+\fIx\fP std::string as a reference\&. 
 .RE
 .PP
 

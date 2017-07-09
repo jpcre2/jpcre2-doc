@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::RegexReplace" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -112,6 +112,14 @@ jpcre2::select< Char_T, BS >::RegexReplace \- Provides public constructors to cr
 .RI "PCRE2_SIZE \fBgetBufferSize\fP ()"
 .br
 .RI "Get the initial buffer size that is being used by internal function pcre2_substitute\&. "
+.ti -1c
+.RI "\fBSIZE_T\fP \fBgetLastReplaceCount\fP ()"
+.br
+.RI "Get the number of replacement in last replace operation\&. "
+.ti -1c
+.RI "\fBRegexReplace\fP & \fBsetReplaceCounter\fP (\fBSIZE_T\fP *counter)"
+.br
+.RI "Set an external counter variable to store the replacement count\&. "
 .ti -1c
 .RI "\fBRegexReplace\fP & \fBsetRegexObject\fP (\fBRegex\fP const *r)"
 .br
@@ -487,6 +495,17 @@ JPCRE2 option for replace
 \fBRegex::getJpcre2Option()\fP 
 .PP
 \fBRegexMatch::getJpcre2Option()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getLastReplaceCount ()\fC [inline]\fP"
+
+.PP
+Get the number of replacement in last replace operation\&. If you set an external counter with \fBRegexReplace::setReplaceCounter()\fP, make sure that the counter variable exists, otherwise this function will try to dereference an invalid pointer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Last replace count 
 .RE
 .PP
 
@@ -933,6 +952,22 @@ Set the associated \fBRegex\fP object\&. \fBRegex\fP object is not modified\&.
 \fBParameters:\fP
 .RS 4
 \fIr\fP Pointer to a \fBRegex\fP object\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Reference to the calling \fBRegexReplace\fP object\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::setReplaceCounter (\fBSIZE_T\fP * counter)\fC [inline]\fP"
+
+.PP
+Set an external counter variable to store the replacement count\&. This counter will be updated after each replacement operation on this object\&. A call to this method will reset the internal counter to 0, thus when you reset the counter to internal counter (by giving null as param), the previous replace count won't be available\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcounter\fP Pointer to a counter variable\&. Null sets the counter to default internal counter\&. 
 .RE
 .PP
 \fBReturns:\fP

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::MatchEvaluator" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::MatchEvaluator" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -205,11 +205,11 @@ jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatc
 .br
 .RI "Perform match and return the match count\&. "
 .ti -1c
-.RI "\fBString\fP \fBnreplace\fP (bool do_match=true, \fBUint\fP jro=0)"
+.RI "\fBString\fP \fBnreplace\fP (bool do_match=true, \fBUint\fP jro=0, \fBSIZE_T\fP *counter=0)"
 .br
 .RI "Perform regex replace with this match evaluator\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (bool do_match=true, \fBUint\fP ro=0)"
+.RI "\fBString\fP \fBreplace\fP (bool do_match=true, \fBUint\fP ro=0, \fBSIZE_T\fP *counter=0)"
 .br
 .RI "PCRE2 compatible replace function that uses this \fBMatchEvaluator\fP\&. "
 .ti -1c
@@ -357,7 +357,7 @@ me\&.setCallback(callback2)\&.nreplace();
 .SH "Replace options"
 .PP
 .PP
-\fBMatchEvaluator\fP can not take replace options\&. Replace options are taken directly by the replace functions: \fC\fBnreplace()\fP\fP and \fC\fBreplace()\fP\fP (second param)\&.
+\fBMatchEvaluator\fP can not take replace options\&. Replace options are taken directly by the replace functions: \fC\fBnreplace()\fP\fP and \fC\fBreplace()\fP\fP\&.
 .PP
 .SH "Using as a match object"
 .PP
@@ -794,7 +794,7 @@ Get the modifier table that is set,\&.
 .PP
 \fBReturns:\fP
 .RS 4
-constant \fBModifierTable\fP pointer\&. 
+pointer to constant \fBModifierTable\fP\&. 
 .RE
 .PP
 
@@ -916,7 +916,7 @@ match count\&.
 
 .PP
 Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::nreplace (bool do_match = \fCtrue\fP, \fBUint\fP jro = \fC0\fP)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::nreplace (bool do_match = \fCtrue\fP, \fBUint\fP jro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
 
 .PP
 Perform regex replace with this match evaluator\&. This is a JPCRE2 native replace function (thus the name nreplace)\&. It uses the \fC\fBMatchEvaluatorCallback\fP\fP function that was set with a constructor or \fC\fBMatchEvaluator::setCallback()\fP\fP function to generate the replacement strings on the fly\&. The string returned by the callback function will be treated as literal and will not go through any further processing\&.
@@ -941,6 +941,8 @@ If the associated \fBRegex\fP object or subject string changes, a new match must
 \fIdo_match\fP Perform a new matching operation if true, otherwise use existing match data\&. 
 .br
 \fIjro\fP JPCRE2 replace options\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -993,7 +995,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::replace (bool do_match = \fCtrue\fP, \fBUint\fP ro = \fC0\fP)"
+.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::replace (bool do_match = \fCtrue\fP, \fBUint\fP ro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
 
 .PP
 PCRE2 compatible replace function that uses this \fBMatchEvaluator\fP\&. Performs regex replace with pcre2_substitute function by generating the replacement strings dynamically with \fBMatchEvaluator\fP callback\&. The string returned by callback function is processed by internal pcre2_substitute, thus allowing all options that are provided by PCRE2 itself\&.
@@ -1018,6 +1020,8 @@ If the associated \fBRegex\fP object or subject string changes, a new match must
 \fIro\fP replace related PCRE2 options\&. 
 .br
 \fIdo_match\fP perform a new match if if true, otherwise use existing data\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP

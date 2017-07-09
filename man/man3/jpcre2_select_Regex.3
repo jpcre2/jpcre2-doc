@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >::Regex" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -253,19 +253,19 @@ jpcre2::select< Char_T, BS >::Regex \- Provides public constructors to create \f
 .br
 .RI "Synonym for \fBinitReplace()\fP "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const &repl, \fBModifier\fP mod='')"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const &repl, \fBModifier\fP mod='', \fBSIZE_T\fP *counter=0)"
 .br
 .RI "Perform regex replace and return the replaced string using a temporary replace object\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const &repl, \fBModifier\fP mod='')"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const &repl, \fBModifier\fP mod='', \fBSIZE_T\fP *counter=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const *repl, \fBModifier\fP mod='')"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const &mains, \fBString\fP const *repl, \fBModifier\fP mod='', \fBSIZE_T\fP *counter=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const *repl, \fBModifier\fP mod='')"
+.RI "\fBString\fP \fBreplace\fP (\fBString\fP const *mains, \fBString\fP const *repl, \fBModifier\fP mod='', \fBSIZE_T\fP *counter=0)"
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .in -1c
@@ -1069,7 +1069,7 @@ true if regex compile failed, false otherwise\&.
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, BS >::Regex::operator= (\fBRegex\fP const & r)\fC [inline]\fP"
 
 .PP
-Overloaded assignment operator\&. Thread safety: same as \fC\fBRegex::compile()\fP\fP\&. 
+Overloaded assignment operator\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1098,7 +1098,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 Perform regex replace and return the replaced string using a temporary replace object\&. This temporary replace object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
@@ -1110,6 +1110,8 @@ Perform regex replace and return the replaced string using a temporary replace o
 \fIrepl\fP String to replace with 
 .br
 \fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1123,7 +1125,7 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const & repl, \fBModifier\fP mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -1135,6 +1137,8 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIrepl\fP String to replace with 
 .br
 \fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1148,7 +1152,7 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
@@ -1160,6 +1164,8 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIrepl\fP Pointer to string to replace with 
 .br
 \fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP
@@ -1173,7 +1179,7 @@ Resultant string after regex replace
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP)\fC [inline]\fP"
+.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::Regex::replace (\fBString\fP const * mains, \fBString\fP const * repl, \fBModifier\fP mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
@@ -1185,6 +1191,8 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIrepl\fP Pointer to string to replace with 
 .br
 \fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
 \fBReturns:\fP

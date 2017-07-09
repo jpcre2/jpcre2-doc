@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.30.01</span>
+   &#160;<span id="projectnumber">10.30.02</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;cwchar&gt;</code><br />
+<code>#include &lt;climits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;locale&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
@@ -114,8 +115,6 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="jpcre2_8hpp__incl.png" border="0" usemap="#jpcre2_8hpp" alt=""/></div>
-<map name="jpcre2_8hpp" id="jpcre2_8hpp">
-</map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -200,7 +199,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a3328f677f2e83856d319fd0b31687ca9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a3328f677f2e83856d319fd0b31687ca9">JPCRE2_ASSERT</a>(cond,  msg)&#160;&#160;&#160;<a class="el" href="namespacejpcre2.html#a611d706dc6e080043bdecbb23cf5c5a7">jpcre2::jassert</a>(cond, msg, __FILE__, __LINE__)</td></tr>
 <tr class="memdesc:a3328f677f2e83856d319fd0b31687ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to call <code><a class="el" href="namespacejpcre2.html#a611d706dc6e080043bdecbb23cf5c5a7" title="JPCRE2 assert function. ">jpcre2::jassert()</a></code> with file path and line number.  <a href="#a3328f677f2e83856d319fd0b31687ca9">More...</a><br /></td></tr>
 <tr class="separator:a3328f677f2e83856d319fd0b31687ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a4400c8d4fe1babf6ada271b994ee7cdd">JPCRE2_VERSION</a>&#160;&#160;&#160;103001L</td></tr>
+<tr class="memitem:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a4400c8d4fe1babf6ada271b994ee7cdd">JPCRE2_VERSION</a>&#160;&#160;&#160;103002L</td></tr>
 <tr class="memdesc:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define for JPCRE2 version.  <a href="#a4400c8d4fe1babf6ada271b994ee7cdd">More...</a><br /></td></tr>
 <tr class="separator:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434a0d7dc30641770fbc3cc9199a62c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a434a0d7dc30641770fbc3cc9199a62c8">JPCRE2_DISABLE_CHAR1632</a></td></tr>
@@ -269,7 +268,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a057688caad3ff7866a6449be627224a5"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5">jpcre2::INFO::NAME</a> [] = &quot;JPCRE2&quot;</td></tr>
 <tr class="memdesc:a057688caad3ff7866a6449be627224a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the project.  <a href="namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5">More...</a><br /></td></tr>
 <tr class="separator:a057688caad3ff7866a6449be627224a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b22133d85a57f47012176fa934a7085"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">jpcre2::INFO::FULL_VERSION</a> [] = &quot;10.30.01&quot;</td></tr>
+<tr class="memitem:a5b22133d85a57f47012176fa934a7085"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">jpcre2::INFO::FULL_VERSION</a> [] = &quot;10.30.02&quot;</td></tr>
 <tr class="memdesc:a5b22133d85a57f47012176fa934a7085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full version string.  <a href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">More...</a><br /></td></tr>
 <tr class="separator:a5b22133d85a57f47012176fa934a7085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ced5e142d1e4d77a651384e5517f1f7"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a3ced5e142d1e4d77a651384e5517f1f7">jpcre2::INFO::VERSION_GENRE</a> [] = &quot;10&quot;</td></tr>
@@ -278,7 +277,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a959830e1cf1d7aa5932363b84452947e"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a959830e1cf1d7aa5932363b84452947e">jpcre2::INFO::VERSION_MAJOR</a> [] = &quot;30&quot;</td></tr>
 <tr class="memdesc:a959830e1cf1d7aa5932363b84452947e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version, updated when API change is made.  <a href="namespacejpcre2_1_1INFO.html#a959830e1cf1d7aa5932363b84452947e">More...</a><br /></td></tr>
 <tr class="separator:a959830e1cf1d7aa5932363b84452947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7724bf02b0c6ecef1371926c97729b9a"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">jpcre2::INFO::VERSION_MINOR</a> [] = &quot;01&quot;</td></tr>
+<tr class="memitem:a7724bf02b0c6ecef1371926c97729b9a"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">jpcre2::INFO::VERSION_MINOR</a> [] = &quot;02&quot;</td></tr>
 <tr class="memdesc:a7724bf02b0c6ecef1371926c97729b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version, includes bug fix or minor feature upgrade.  <a href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">More...</a><br /></td></tr>
 <tr class="separator:a7724bf02b0c6ecef1371926c97729b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478b949e145c0c694d2074acddeb1789"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a478b949e145c0c694d2074acddeb1789">jpcre2::INFO::VERSION_PRE_RELEASE</a> [] = &quot;&quot;</td></tr>
@@ -325,7 +324,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a31225e50bcd0019cdef9386cb55e3639">jpcre2::select&lt; Char_T, BS &gt;::Regex::replace()</a>.</p>
+<p>Referenced by <a class="el" href="classjpcre2_1_1select_1_1Regex.html#af146f065b2351f0aa592fd2832f4d949">jpcre2::select&lt; Char_T, BS &gt;::Regex::replace()</a>.</p>
 
 </div>
 </div>
@@ -388,7 +387,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JPCRE2_VERSION&#160;&#160;&#160;103001L</td>
+          <td class="memname">#define JPCRE2_VERSION&#160;&#160;&#160;103002L</td>
         </tr>
       </table>
 </div><div class="memdoc">

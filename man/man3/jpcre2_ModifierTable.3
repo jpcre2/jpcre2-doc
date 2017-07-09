@@ -1,4 +1,4 @@
-.TH "jpcre2::ModifierTable" 3 "Wed May 24 2017" "Version 10.30.01" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ModifierTable" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -53,15 +53,15 @@ jpcre2::ModifierTable \- Lets you create custom modifier tables\&.
 .br
 .RI "Clear the modifier tables to their initial (empty) state\&. "
 .ti -1c
-.RI "void \fBtoMatchOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.RI "void \fBtoMatchOption\fP (\fBModifier\fP const &mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
 .br
 .RI "\fBModifier\fP parser for match related options\&. "
 .ti -1c
-.RI "void \fBtoReplaceOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.RI "void \fBtoReplaceOption\fP (\fBModifier\fP const &mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
 .br
 .RI "\fBModifier\fP parser for replace related options\&. "
 .ti -1c
-.RI "void \fBtoCompileOption\fP (\fBModifier\fP mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
+.RI "void \fBtoCompileOption\fP (\fBModifier\fP const &mod, bool x, \fBUint\fP *po, \fBUint\fP *jo, int *en, \fBSIZE_T\fP *eo) const"
 .br
 .RI "\fBModifier\fP parser for compile related options\&. "
 .ti -1c
@@ -77,11 +77,11 @@ jpcre2::ModifierTable \- Lets you create custom modifier tables\&.
 .br
 .RI "Take compile related option value and convert to modifier string\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string const &tabs, \fBVecOpt\fP const &tabv)"
 .br
 .RI "Set modifier table for match\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.RI "\fBModifierTable\fP & \fBsetMatchModifierTable\fP (std::string const &tabs, const \fBUint\fP *tabvp)"
 .br
 .RI "Set modifier table for match\&. "
 .ti -1c
@@ -89,11 +89,11 @@ jpcre2::ModifierTable \- Lets you create custom modifier tables\&.
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string const &tabs, \fBVecOpt\fP const &tabv)"
 .br
 .RI "Set modifier table for replace\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.RI "\fBModifierTable\fP & \fBsetReplaceModifierTable\fP (std::string const &tabs, const \fBUint\fP *tabvp)"
 .br
 .RI "Set modifier table for replace\&. "
 .ti -1c
@@ -101,11 +101,11 @@ jpcre2::ModifierTable \- Lets you create custom modifier tables\&.
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string tabs, \fBVecOpt\fP tabv)"
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string const &tabs, \fBVecOpt\fP const &tabv)"
 .br
 .RI "Set modifier table for compile\&. "
 .ti -1c
-.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string tabs, const \fBUint\fP *tabvp)"
+.RI "\fBModifierTable\fP & \fBsetCompileModifierTable\fP (std::string const &tabs, const \fBUint\fP *tabvp)"
 .br
 .RI "Set modifier table for compile\&. "
 .ti -1c
@@ -322,7 +322,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 
 .PP
 References jpcre2::ERROR::INSUFFICIENT_OVECTOR, and jpcre2::ERROR::INVALID_MODIFIER\&.
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string const & tabs, \fBVecOpt\fP const & tabv)\fC [inline]\fP"
 
 .PP
 Set modifier table for compile\&. Takes a string and a vector of sequential options\&. 
@@ -340,7 +340,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setCompileModifierTable (std::string const & tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
 
 .PP
 Set modifier table for compile\&. Takes a string and an array of sequential options\&. 
@@ -387,7 +387,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string const & tabs, \fBVecOpt\fP const & tabv)\fC [inline]\fP"
 
 .PP
 Set modifier table for match\&. Takes a string and a vector of sequential options\&. 
@@ -405,7 +405,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setMatchModifierTable (std::string const & tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
 
 .PP
 Set modifier table for match\&. Takes a string and an array of sequential options\&. 
@@ -452,7 +452,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string tabs, \fBVecOpt\fP tabv)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string const & tabs, \fBVecOpt\fP const & tabv)\fC [inline]\fP"
 
 .PP
 Set modifier table for replace\&. Takes a string and a vector of sequential options\&. 
@@ -470,7 +470,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
+.SS "\fBModifierTable\fP& jpcre2::ModifierTable::setReplaceModifierTable (std::string const & tabs, const \fBUint\fP * tabvp)\fC [inline]\fP"
 
 .PP
 Set modifier table for replace\&. Takes a string and an array of sequential options\&. 
@@ -517,7 +517,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .RE
 .PP
 
-.SS "void jpcre2::ModifierTable::toCompileOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+.SS "void jpcre2::ModifierTable::toCompileOption (\fBModifier\fP const & mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
 
 .PP
 \fBModifier\fP parser for compile related options\&. 
@@ -540,7 +540,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 
 .PP
 Referenced by jpcre2::select< Char_T, BS >::Regex::changeModifier()\&.
-.SS "void jpcre2::ModifierTable::toMatchOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+.SS "void jpcre2::ModifierTable::toMatchOption (\fBModifier\fP const & mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
 
 .PP
 \fBModifier\fP parser for match related options\&. 
@@ -563,7 +563,7 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::changeModifier()\&.
 
 .PP
 Referenced by jpcre2::select< Char_T, BS >::RegexMatch::changeModifier()\&.
-.SS "void jpcre2::ModifierTable::toReplaceOption (\fBModifier\fP mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
+.SS "void jpcre2::ModifierTable::toReplaceOption (\fBModifier\fP const & mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
 
 .PP
 \fBModifier\fP parser for replace related options\&. 
