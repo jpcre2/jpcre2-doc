@@ -501,7 +501,7 @@ JPCRE2 option for replace
 .SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::RegexReplace::getLastReplaceCount ()\fC [inline]\fP"
 
 .PP
-Get the number of replacement in last replace operation\&. If you set an external counter with \fBRegexReplace::setReplaceCounter()\fP, make sure that the counter variable exists, otherwise this function will try to dereference an invalid pointer\&. 
+Get the number of replacement in last replace operation\&. If you set an external counter with \fBRegexReplace::setReplaceCounter()\fP, a call to this getter method will dereference the pointer to the external counter and return the value\&. 
 .PP
 \fBReturns:\fP
 .RS 4
