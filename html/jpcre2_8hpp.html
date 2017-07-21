@@ -153,10 +153,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lets you create custom modifier tables.  <a href="classjpcre2_1_1ModifierTable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvUTF.html">jpcre2::ConvUTF&lt; Char_T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11).  <a href="structjpcre2_1_1ConvUTF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvInt.html">jpcre2::ConvInt&lt; Char_T, T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a function to convert integer to string.  <a href="structjpcre2_1_1ConvInt.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select&lt; Char_T, BS &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select code unit width and the character type.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
@@ -204,13 +202,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define for JPCRE2 version.  <a href="#a4400c8d4fe1babf6ada271b994ee7cdd">More...</a><br /></td></tr>
 <tr class="separator:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434a0d7dc30641770fbc3cc9199a62c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a434a0d7dc30641770fbc3cc9199a62c8">JPCRE2_DISABLE_CHAR1632</a></td></tr>
-<tr class="memdesc:a434a0d7dc30641770fbc3cc9199a62c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable support for <code>char16_t</code> and <code>char32_t</code>.  <a href="#a434a0d7dc30641770fbc3cc9199a62c8">More...</a><br /></td></tr>
 <tr class="separator:a434a0d7dc30641770fbc3cc9199a62c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a8dcf61fb5c7bf406008106e9c9f80cb5">JPCRE2_USE_FUNCTION_POINTER_CALLBACK</a></td></tr>
 <tr class="memdesc:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use function pointer in all cases for MatchEvaluatorCallback function.  <a href="#a8dcf61fb5c7bf406008106e9c9f80cb5">More...</a><br /></td></tr>
 <tr class="separator:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2ed8f7e16b413e7b160fc968b6395f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#ac2ed8f7e16b413e7b160fc968b6395f2">JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</a></td></tr>
-<tr class="memdesc:ac2ed8f7e16b413e7b160fc968b6395f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error.  <a href="#ac2ed8f7e16b413e7b160fc968b6395f2">More...</a><br /></td></tr>
 <tr class="separator:ac2ed8f7e16b413e7b160fc968b6395f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -231,10 +227,8 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a9dada7b65d04dea5ca8c25bb05611f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector for Uint option values.  <a href="namespacejpcre2.html#a9dada7b65d04dea5ca8c25bb05611f3f">More...</a><br /></td></tr>
 <tr class="separator:a9dada7b65d04dea5ca8c25bb05611f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf513ced7a87393062267af2678fbe0"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char16_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">jpcre2::Convert16</a></td></tr>
-<tr class="memdesc:a9bf513ced7a87393062267af2678fbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-16.  <a href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">More...</a><br /></td></tr>
 <tr class="separator:a9bf513ced7a87393062267af2678fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40a961b20d74d0da112a2a010ca8bac6"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char32_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">jpcre2::Convert32</a></td></tr>
-<tr class="memdesc:a40a961b20d74d0da112a2a010ca8bac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a convenience typedef (&gt;=C++11) to convert between UTF-8 &lt;&gt; UTF-32.  <a href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">More...</a><br /></td></tr>
 <tr class="separator:a40a961b20d74d0da112a2a010ca8bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -340,8 +334,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Disable support for <code>char16_t</code> and <code>char32_t</code>. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Disable support for <code>char16_t</code> and <code>char32_t</code>.</dd></dl>
 <p>Older compiler which supposedly supports C++11 but does not have <code>std::wstring_convert</code> will not work with <code>char16_t</code> and <code>char32_t</code>, in this case define this macro before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> to disable <code>char16_t</code> and <code>char32_t</code> support. </p>
 
 </div>
@@ -357,8 +350,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error.</dd></dl>
 <p>This check can be disabled by defining this macro. </p>
 
 </div>

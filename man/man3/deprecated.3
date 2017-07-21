@@ -1,0 +1,24 @@
+.TH "deprecated" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+deprecatedDeprecated List 
+ \- 
+.IP "\fBMember \fBjpcre2::Convert16\fP \fP" 1c
+This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. 
+.IP "\fBMember \fBjpcre2::Convert32\fP \fP" 1c
+This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. 
+.IP "\fBClass \fBjpcre2::ConvInt< Char_T, T >\fP \fP" 1c
+.PP
+Contains a function to convert integer to string\&. 
+.IP "\fBMember \fBjpcre2::ConvInt< Char_T, T >::toString\fP (int x)\fP" 1c
+Converts an integer to string\&. 
+.IP "\fBClass \fBjpcre2::ConvUTF< Char_T >\fP \fP" 1c
+.PP
+\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (>=C++11)\&. 
+.IP "\fBMember \fBJPCRE2_DISABLE_CHAR1632\fP \fP" 1c
+Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&. 
+.IP "\fBMember \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP \fP" 1c
+By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&.
+.PP
+

@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,11 +44,9 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "struct \fBjpcre2::ConvUTF< Char_T >\fP"
 .br
-.RI "\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (>=C++11)\&. "
 .ti -1c
 .RI "struct \fBjpcre2::ConvInt< Char_T, T >\fP"
 .br
-.RI "Contains a function to convert integer to string\&. "
 .ti -1c
 .RI "struct \fBjpcre2::select< Char_T, BS >\fP"
 .br
@@ -112,7 +110,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "#define \fBJPCRE2_DISABLE_CHAR1632\fP"
 .br
-.RI "Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&. "
 .ti -1c
 .RI "#define \fBJPCRE2_USE_FUNCTION_POINTER_CALLBACK\fP"
 .br
@@ -120,7 +117,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "#define \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP"
 .br
-.RI "By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -148,11 +144,9 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "typedef ConvUTF< char16_t >::Converter \fBjpcre2::Convert16\fP"
 .br
-.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. "
 .ti -1c
 .RI "typedef ConvUTF< char32_t >::Converter \fBjpcre2::Convert32\fP"
 .br
-.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. "
 .in -1c
 .SS "Enumerations"
 
@@ -234,11 +228,21 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
 .SS "#define JPCRE2_DISABLE_CHAR1632"
 
 .PP
-Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&. Older compiler which supposedly supports C++11 but does not have \fCstd::wstring_convert\fP will not work with \fCchar16_t\fP and \fCchar32_t\fP, in this case define this macro before including \fC\fBjpcre2\&.hpp\fP\fP to disable \fCchar16_t\fP and \fCchar32_t\fP support\&. 
+\fBDeprecated\fP
+.RS 4
+Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&.
+.RE
+.PP
+Older compiler which supposedly supports C++11 but does not have \fCstd::wstring_convert\fP will not work with \fCchar16_t\fP and \fCchar32_t\fP, in this case define this macro before including \fC\fBjpcre2\&.hpp\fP\fP to disable \fCchar16_t\fP and \fCchar32_t\fP support\&. 
 .SS "#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION"
 
 .PP
-By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&. This check can be disabled by defining this macro\&. 
+\fBDeprecated\fP
+.RS 4
+By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&.
+.RE
+.PP
+This check can be disabled by defining this macro\&. 
 .SS "#define JPCRE2_USE_FUNCTION_POINTER_CALLBACK"
 
 .PP

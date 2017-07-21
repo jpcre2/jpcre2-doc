@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classjpcre2_1_1select_1_1Regex.html#a28ae9a7b5565f1f5ac42d5d8df584c4f',1,'jpcre2::select::Regex']]],
-  ['operator_21',['operator!',['../classjpcre2_1_1select_1_1Regex.html#a7bdac3bf6fd9729f050119d72b3b7543',1,'jpcre2::select::Regex']]],
-  ['operator_3d',['operator=',['../classjpcre2_1_1select_1_1RegexMatch.html#a5c23eaf7a3dc2b3b6a20308d6cb6867e',1,'jpcre2::select::RegexMatch::operator=(RegexMatch const &amp;rm)'],['../classjpcre2_1_1select_1_1RegexMatch.html#a5fa3758f2cb6188cb2e36de9c7462fdb',1,'jpcre2::select::RegexMatch::operator=(RegexMatch &amp;&amp;rm)'],['../classjpcre2_1_1select_1_1MatchEvaluator.html#a32221d29eb538c44f5f80d168da4be9b',1,'jpcre2::select::MatchEvaluator::operator=(MatchEvaluator const &amp;me)'],['../classjpcre2_1_1select_1_1MatchEvaluator.html#ae99cad71e5fef93c8d6e39114335ce34',1,'jpcre2::select::MatchEvaluator::operator=(MatchEvaluator &amp;&amp;me)'],['../classjpcre2_1_1select_1_1RegexReplace.html#acdd9170d14e9484ea54dae915cd2a9e1',1,'jpcre2::select::RegexReplace::operator=(RegexReplace const &amp;rr)'],['../classjpcre2_1_1select_1_1RegexReplace.html#a92fec7b505b347d6b15f7b53c9df0748',1,'jpcre2::select::RegexReplace::operator=(RegexReplace &amp;&amp;rr)'],['../classjpcre2_1_1select_1_1Regex.html#a163d257cd46533b1e14bab974c525fc0',1,'jpcre2::select::Regex::operator=(Regex const &amp;r)'],['../classjpcre2_1_1select_1_1Regex.html#aff8fe5b60a0ddff54c94c505982b9969',1,'jpcre2::select::Regex::operator=(Regex &amp;&amp;r)']]],
-  ['operator_5b_5d',['operator[]',['../classjpcre2_1_1Modifier.html#a286dcd492af21c948a43b426e75d5e5a',1,'jpcre2::Modifier']]]
+  ['name',['NAME',['../namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5',1,'jpcre2::INFO']]],
+  ['none',['NONE',['../namespacejpcre2.html#a85c143271501e383843f45b9999c2f00aecf4a781b081ff541006fbe84e143fb9',1,'jpcre2']]],
+  ['nreplace',['nreplace',['../classjpcre2_1_1select_1_1MatchEvaluator.html#a58cb2ebe105f4c0afbedad73cb1fce46',1,'jpcre2::select::MatchEvaluator::nreplace()'],['../classjpcre2_1_1select_1_1RegexReplace.html#ae7bcd252d2ead842f70b46dca839aadc',1,'jpcre2::select::RegexReplace::nreplace()']]],
+  ['numsub',['NumSub',['../structjpcre2_1_1select.html#a8c0e25dacfe6eb3e2573861d9ee6e3cd',1,'jpcre2::select']]]
 ];

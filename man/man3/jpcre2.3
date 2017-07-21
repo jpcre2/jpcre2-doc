@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,11 +25,9 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .ti -1c
 .RI "struct \fBConvInt\fP"
 .br
-.RI "Contains a function to convert integer to string\&. "
 .ti -1c
 .RI "struct \fBConvUTF\fP"
 .br
-.RI "\fCUTF-8 <> UTF-16\fP and \fCUTF-8 <> UTF32\fP converter (>=C++11)\&. "
 .ti -1c
 .RI "class \fBModifier\fP"
 .br
@@ -69,11 +67,9 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .ti -1c
 .RI "typedef \fBConvUTF\fP< char16_t >::Converter \fBConvert16\fP"
 .br
-.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. "
 .ti -1c
 .RI "typedef \fBConvUTF\fP< char32_t >::Converter \fBConvert32\fP"
 .br
-.RI "This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. "
 .in -1c
 .SS "Enumerations"
 
@@ -103,7 +99,12 @@ If you want to use any PCRE2 functions or constants, remember that they are in t
 .SS "typedef \fBConvUTF\fP<char16_t>::Converter \fBjpcre2::Convert16\fP"
 
 .PP
-This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&. Convert UTF-16 to UTF-8: 
+\fBDeprecated\fP
+.RS 4
+This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&.
+.RE
+.PP
+Convert UTF-16 to UTF-8: 
 .PP
 .nf
 Convert16 conv;
@@ -122,7 +123,12 @@ std::u16string us = conv\&.from_bytes(utf8string);
 .SS "typedef \fBConvUTF\fP<char32_t>::Converter \fBjpcre2::Convert32\fP"
 
 .PP
-This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&. Convert UTF-32 to UTF-8 
+\fBDeprecated\fP
+.RS 4
+This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&.
+.RE
+.PP
+Convert UTF-32 to UTF-8 
 .PP
 .nf
 Convert32 conv;

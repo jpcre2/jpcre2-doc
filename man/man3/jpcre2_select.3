@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, BS >" 3 "Mon Jul 10 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, BS >" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -119,20 +119,20 @@ struct to select code unit width and the character type\&.
 
 Usage: \fC\fBjpcre2::select\fP<Char_T, BS>\fP\&.
 .PP
-The character type (\fCChar_T\fP) must be in accordance with its' code unit width (BS)\&. If it doesn't match with the character type, compile error will be produced if not suppressed by defining the macro \fCJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP\&. 
+The character type (\fCChar_T\fP) must be in accordance with its' code unit width (BS)\&. If it doesn't match with the character type, compile error will be produced if not suppressed by defining the macro \fCJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP\&.
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
-\fIBS\fP Code unit width (8, 16 or 32) 
+\fIChar_T\fP Character type (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) 
 .br
-\fIChar_T\fP Character type (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP)
+\fIBS\fP Code unit width (8, 16 or 32)\&. \fB[deprecated]\fP
 .RE
 .PP
 If BS is not given, i\&.e it is called like \fC\fBjpcre2::select\fP<Char_T>\fP\&. then \fCsizeof(Char_T)*CHAR_BIT\fP will be taken as the value for BS\&.
 .PP
 It is possible to write portable code by using \fC\fBjpcre2::select\fP<Char_T>\fP i\&.e by not defining the bit size explicitly\&.
 .PP
-If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector\&. e\&.g: 
+If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector (\fBdeprecated\fP)\&. e\&.g: 
 .PP
 .nf
 jpcre2::select<char, 8>::Regex re;

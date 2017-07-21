@@ -91,15 +91,12 @@ $(document).ready(function(){initNavTree('structjpcre2_1_1ConvUTF.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11).  
- <a href="structjpcre2_1_1ConvUTF.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="jpcre2_8hpp_source.html">jpcre2.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename Char_T&gt;<br />
 struct jpcre2::ConvUTF&lt; Char_T &gt;</h3>
 
-<p><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11). </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11).</dd></dl>
 <p>Convert <code>UTF-16 &lt;&gt; UTF-8</code>: </p><div class="fragment"><div class="line">ConvUTF&lt;char16_t&gt;::Converter conv;</div><div class="line"><span class="comment">//UTF-16 to UTF-8</span></div><div class="line">std::string s = conv.to_bytes(utf16string);</div><div class="line"><span class="comment">//UTF-8 to UTF-16</span></div><div class="line">std::u16string us = conv.from_bytes(utf8string);</div></div><!-- fragment --><p> Convert <code>UTF-8 &lt;&gt; UTF-16</code>: </p><div class="fragment"><div class="line">ConvUTF&lt;char32_t&gt;::Converter conv;</div><div class="line"><span class="comment">//UTF-8 to UTF-32</span></div><div class="line">std::u16string us = conv.from_bytes(utf8string);</div><div class="line"><span class="comment">//UTF-32 to UTF-8</span></div><div class="line">std::string s = conv.to_bytes(utf32string);</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.13-->

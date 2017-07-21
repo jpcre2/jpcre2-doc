@@ -68,6 +68,7 @@ var NAVTREE =
     [ "The configure script", "index.html#the-configure-script", null ],
     [ "Contributing/Pull request", "index.html#contributing-pull-request", null ],
     [ "LICENCE", "index.html#licence", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [

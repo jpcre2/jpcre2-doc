@@ -180,16 +180,17 @@ struct jpcre2::select&lt; Char_T, BS &gt;</h3>
 
 <p>struct to select code unit width and the character type. </p>
 <p>Usage: <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T, BS&gt;</code>.</p>
-<p>The character type (<code>Char_T</code>) must be in accordance with its' code unit width (BS). If it doesn't match with the character type, compile error will be produced if not suppressed by defining the macro <code>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>The character type (<code>Char_T</code>) must be in accordance with its' code unit width (BS). If it doesn't match with the character type, compile error will be produced if not suppressed by defining the macro <code>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</code>.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">BS</td><td>Code unit width (8, 16 or 32) </td></tr>
-    <tr><td class="paramname">Char_T</td><td>Character type (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>)</td></tr>
+    <tr><td class="paramname">Char_T</td><td>Character type (<code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code>) </td></tr>
+    <tr><td class="paramname">BS</td><td>Code unit width (8, 16 or 32). <b>[deprecated]</b></td></tr>
   </table>
   </dd>
 </dl>
 <p>If BS is not given, i.e it is called like <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T&gt;</code>. then <code>sizeof(Char_T)*CHAR_BIT</code> will be taken as the value for BS.</p>
 <p>It is possible to write portable code by using <code><a class="el" href="structjpcre2_1_1select.html" title="struct to select code unit width and the character type. ">jpcre2::select</a>&lt;Char_T&gt;</code> i.e by not defining the bit size explicitly.</p>
-<p>If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector. e.g: </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char, 8&gt;::Regex</a> re;</div></div><!-- fragment --><p> We will use the following typedef throughout this doc: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a> jp;</div></div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<p>If you want to fix the code unit width for a character type, pass the value as the second templated parameter for the selector (<b>deprecated</b>). e.g: </p><div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt;char, 8&gt;::Regex</a> re;</div></div><!-- fragment --><p> We will use the following typedef throughout this doc: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;Char_T&gt;</a> jp;</div></div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a8f2f9cae503d0f1020c435d406e925df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f2f9cae503d0f1020c435d406e925df">&#9670;&nbsp;</a></span>Char</h2>
 
