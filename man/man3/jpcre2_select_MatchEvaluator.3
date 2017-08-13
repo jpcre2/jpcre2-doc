@@ -1,8 +1,8 @@
-.TH "jpcre2::select< Char_T, BS >::MatchEvaluator" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::MatchEvaluator" 3 "Sun Aug 13 2017" "Version 10.31.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatch\fP and provides a similar functionality\&.  
+jpcre2::select< Char_T, Map >::MatchEvaluator \- This class inherits \fBRegexMatch\fP and provides a similar functionality\&.  
 
 .SH SYNOPSIS
 .br
@@ -133,9 +133,9 @@ jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatc
 .br
 .RI "This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. "
 .ti -1c
-.RI "\fBMatchEvaluator\fP & \fBsetModifier\fP (\fBModifier\fP s)"
+.RI "\fBMatchEvaluator\fP & \fBsetModifier\fP (\fBModifier\fP const &s)"
 .br
-.RI "Call \fBRegexMatch::setModifier(Modifier s)\fP\&. "
+.RI "Call \fBRegexMatch::setModifier(Modifier const& s)\fP\&. "
 .ti -1c
 .RI "\fBMatchEvaluator\fP & \fBsetModifierTable\fP (\fBModifierTable\fP const *mdt)"
 .br
@@ -177,9 +177,9 @@ jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatc
 .br
 .RI "Get the initial buffer size that is being used by internal function pcre2_substitute\&. "
 .ti -1c
-.RI "\fBMatchEvaluator\fP & \fBchangeModifier\fP (\fBModifier\fP mod, bool x)"
+.RI "\fBMatchEvaluator\fP & \fBchangeModifier\fP (\fBModifier\fP const &mod, bool x)"
 .br
-.RI "Call \fBRegexMatch::changeModifier(Modifier mod, bool x)\fP\&. "
+.RI "Call \fBRegexMatch::changeModifier(Modifier const& mod, bool x)\fP\&. "
 .ti -1c
 .RI "\fBMatchEvaluator\fP & \fBchangeJpcre2Option\fP (\fBUint\fP opt, bool x)"
 .br
@@ -189,9 +189,9 @@ jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatc
 .br
 .RI "Call \fBRegexMatch::changePcre2Option(Uint opt, bool x)\fP\&. "
 .ti -1c
-.RI "\fBMatchEvaluator\fP & \fBaddModifier\fP (\fBModifier\fP mod)"
+.RI "\fBMatchEvaluator\fP & \fBaddModifier\fP (\fBModifier\fP const &mod)"
 .br
-.RI "Call \fBRegexMatch::addModifier(Modifier mod)\fP\&. "
+.RI "Call \fBRegexMatch::addModifier(Modifier const& mod)\fP\&. "
 .ti -1c
 .RI "\fBMatchEvaluator\fP & \fBaddJpcre2Option\fP (\fBUint\fP x)"
 .br
@@ -288,9 +288,9 @@ jpcre2::select< Char_T, BS >::MatchEvaluator \- This class inherits \fBRegexMatc
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map>
 .br
-class jpcre2::select< Char_T, BS >::MatchEvaluator"
+class jpcre2::select< Char_T, Map >::MatchEvaluator"
 This class inherits \fBRegexMatch\fP and provides a similar functionality\&. 
 
 All public member functions from \fBRegexMatch\fP class are publicly available except the following:
@@ -331,7 +331,7 @@ jp::String callback5(NumSub const &m, void*, MapNtn const &n){
     return m[0];
 }
 jp::String callback4(void*, void*, MapNtn const &n){
-    return jpcre2::ConvInt<char>::toString(n\&.at("name")); //position of group 'name'\&.
+    return std::to_string(n\&.at("name")); //position of group 'name'\&.
 }
 jp::String callback2(void*, MapNas const &m, void*){
     return m\&.at('name'); //substring by name
@@ -381,7 +381,7 @@ match vectors are internal to this class, you can not set them manually (without
 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator ()\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator ()\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 Default constructor\&. Sets \fBcallback::erase\fP as the callback function\&. Removes matched part/s from the subject string if the callback is not changed\&. 
@@ -399,7 +399,7 @@ me\&.setRegexObject(&re);
 .fi
 .PP
  
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (\fBRegex\fP const * r)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (\fBRegex\fP const * r)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Constructor taking a \fBRegex\fP object pointer\&. It sets the associated \fBRegex\fP object and initializes the \fBMatchEvaluator\fP object with \fBcallback::erase\fP callback function\&. Underlying data is not modified\&. 
@@ -410,7 +410,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, void *, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, void *, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Constructor taking a callback function\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -421,7 +421,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -432,7 +432,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -443,7 +443,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -454,7 +454,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -465,7 +465,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -476,7 +476,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -487,7 +487,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (typename \fBMatchEvaluatorCallback\fP< void *, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. It calls a corresponding \fBMatchEvaluator::setCallback()\fP function to set the callback function\&. 
@@ -498,7 +498,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (\fBMatchEvaluator\fP const & me)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (\fBMatchEvaluator\fP const & me)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Copy constructor\&. 
@@ -509,7 +509,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::MatchEvaluator (\fBMatchEvaluator\fP && me)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::MatchEvaluator (\fBMatchEvaluator\fP && me)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Move constructor\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
@@ -522,7 +522,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::addJpcre2Option(Uint x)\fP\&. 
@@ -539,11 +539,11 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::addModifier (\fBModifier\fP mod)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::addModifier (\fBModifier\fP const & mod)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Call \fBRegexMatch::addModifier(Modifier mod)\fP\&. 
+Call \fBRegexMatch::addModifier(Modifier const& mod)\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -557,8 +557,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::addPcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::addPcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::addPcre2Option(Uint x)\fP\&. 
@@ -575,8 +575,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::changeJpcre2Option(Uint opt, bool x)\fP\&. 
@@ -595,11 +595,11 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::changeModifier (\fBModifier\fP mod, bool x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::changeModifier (\fBModifier\fP const & mod, bool x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Call \fBRegexMatch::changeModifier(Modifier mod, bool x)\fP\&. 
+Call \fBRegexMatch::changeModifier(Modifier const& mod, bool x)\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -615,8 +615,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::changePcre2Option(Uint opt, bool x)\fP\&. 
@@ -635,16 +635,23 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::clear ()\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::clear ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Clears \fBMatchEvaluator\fP\&. Returns everything to initial state (some memory may retain for further and faster use)\&. 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
+\fBReturns:\fP
+.RS 4
+A reference to the calling \fBMatchEvaluator\fP object\&. 
+.RE
 .PP
-Referenced by jpcre2::select< Char_T, BS >::MatchEvaluator::clearMatchData()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::clearMatchData ()\fC [inline]\fP"
+
+.PP
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.PP
+Referenced by jpcre2::select< Char_T, Map >::MatchEvaluator::clearMatchData()\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::clearMatchData ()\fC [inline]\fP"
 
 .PP
 Clear match data\&. It clears all match data from all vectors (without shrinking)\&. For shrinking the vectors, use \fC\fBresetMatchData()\fP\fP A call to \fC\fBmatch()\fP\fP or \fBnreplace()\fP will be required to produce match data again\&. 
@@ -656,8 +663,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-References jpcre2::select< Char_T, BS >::MatchEvaluator::clear()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::getBufferSize ()\fC [inline]\fP"
+References jpcre2::select< Char_T, Map >::MatchEvaluator::clear()\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::getBufferSize ()\fC [inline]\fP"
 
 .PP
 Get the initial buffer size that is being used by internal function pcre2_substitute\&. 
@@ -668,7 +675,7 @@ buffer_size
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorMessage () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getErrorMessage () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Returns the last error message\&. 
@@ -679,7 +686,9 @@ Last error message
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual int \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorNumber () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::getErrorMessage()\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual int \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getErrorNumber () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Returns the last error number\&. 
@@ -690,7 +699,7 @@ Last error number
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual int \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getErrorOffset () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual int \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getErrorOffset () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Returns the last error offset\&. 
@@ -701,7 +710,7 @@ Last error offset
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getJpcre2Option () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getJpcre2Option () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get JPCRE2 option\&. 
@@ -719,7 +728,7 @@ JPCRE2 options for math operation
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> MatchContext* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getMatchContext ()\fC [inline]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> MatchContext* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchContext ()\fC [inline]\fP, \fC [inherited]\fP"
 
 .PP
 Return pointer to the match context that was previously set with \fBsetMatchContext()\fP\&. Handling memory is the callers' responsibility\&. 
@@ -730,7 +739,7 @@ pointer to the match context (default: null)\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual MatchData* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getMatchDataBlock ()\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual MatchData* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchDataBlock ()\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get the pointer to the match data block that was set previously with setMatchData() Handling memory is the callers' responsibility\&. 
@@ -741,7 +750,7 @@ pointer to the match data (default: null)\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getMatchEndOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchEndOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get match end offset vector pointer\&. 
@@ -752,7 +761,7 @@ pointer to the const end start offset vector
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getMatchStartOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchStartOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get match start offset vector pointer\&. 
@@ -763,7 +772,7 @@ pointer to the const match start offset vector
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual std::string \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getModifier () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual std::string \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getModifier () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegexMatch::setModifier()\fP will re-set them\&.
@@ -787,7 +796,7 @@ Calculated modifier string (std::string)
 
 .PP
 References jpcre2::ModifierTable::fromMatchOption()\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getModifierTable ()\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getModifierTable ()\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get the modifier table that is set,\&. 
@@ -798,7 +807,7 @@ pointer to constant \fBModifierTable\fP\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBVecNas\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getNamedSubstringVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecNas\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getNamedSubstringVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get pointer to named substring vector\&. 
@@ -809,7 +818,7 @@ Pointer to const named substring vector\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBVecNtN\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getNameToNumberMapVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecNtN\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getNameToNumberMapVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get pointer to name to number map vector\&. 
@@ -820,7 +829,7 @@ Pointer to const name to number map vector\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBVecNum\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getNumberedSubstringVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecNum\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getNumberedSubstringVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get pointer to numbered substring vector\&. 
@@ -831,7 +840,7 @@ Pointer to const numbered substring vector\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBUint\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getPcre2Option () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getPcre2Option () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get PCRE2 option\&. 
@@ -849,7 +858,7 @@ PCRE2 option for match operation
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBRegex\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getRegexObject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBRegex\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getRegexObject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get a pointer to the associated \fBRegex\fP object\&. If no actual \fBRegex\fP object is associated, null is returned\&. 
@@ -860,7 +869,7 @@ A pointer to the associated constant \fBRegex\fP object or null\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual PCRE2_SIZE \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getStartOffset () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getStartOffset () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get offset from where match will start in the subject\&. 
@@ -871,7 +880,7 @@ Start offset
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getSubject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get subject string (by value)\&. 
@@ -887,7 +896,7 @@ subject string
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> virtual \fBString\fP const* \fBjpcre2::select\fP< Char_T, BS >::RegexMatch::getSubjectPointer () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getSubjectPointer () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get pointer to subject string\&. Data can not be changed with this pointer\&. 
@@ -903,7 +912,7 @@ constant subject string pointer
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::match (void)\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::match (void)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Perform match and return the match count\&. This function strips off matching options (PCRE2_PARTIAL_HARD|PCRE2_PARTIAL_SOFT) that are considered bad options for replacement operation and then calls \fBRegexMatch::match()\fP to perform the match\&. 
@@ -915,8 +924,8 @@ match count\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::nreplace (bool do_match = \fCtrue\fP, \fBUint\fP jro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map> \fBjpcre2::select\fP< Char_T, Map >::\fBString\fP \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::nreplace (bool do_match = \fCtrue\fP, \fBUint\fP jro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
 
 .PP
 Perform regex replace with this match evaluator\&. This is a JPCRE2 native replace function (thus the name nreplace)\&. It uses the \fC\fBMatchEvaluatorCallback\fP\fP function that was set with a constructor or \fC\fBMatchEvaluator::setCallback()\fP\fP function to generate the replacement strings on the fly\&. The string returned by the callback function will be treated as literal and will not go through any further processing\&.
@@ -958,7 +967,7 @@ resultant string after replace\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::operator= (\fBMatchEvaluator\fP const & me)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::operator= (\fBMatchEvaluator\fP const & me)\fC [inline]\fP"
 
 .PP
 Overloaded copy-assignment operator\&. 
@@ -974,7 +983,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::operator= (\fBMatchEvaluator\fP && me)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::operator= (\fBMatchEvaluator\fP && me)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Overloaded move-assignment operator\&. It steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
@@ -995,7 +1004,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T , jpcre2::Ush BS> \fBjpcre2::select\fP< Char_T, BS >::\fBString\fP \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::replace (bool do_match = \fCtrue\fP, \fBUint\fP ro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map> \fBjpcre2::select\fP< Char_T, Map >::\fBString\fP \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::replace (bool do_match = \fCtrue\fP, \fBUint\fP ro = \fC0\fP, \fBSIZE_T\fP * counter = \fC0\fP)"
 
 .PP
 PCRE2 compatible replace function that uses this \fBMatchEvaluator\fP\&. Performs regex replace with pcre2_substitute function by generating the replacement strings dynamically with \fBMatchEvaluator\fP callback\&. The string returned by callback function is processed by internal pcre2_substitute, thus allowing all options that are provided by PCRE2 itself\&.
@@ -1017,9 +1026,9 @@ If the associated \fBRegex\fP object or subject string changes, a new match must
 .PP
 \fBParameters:\fP
 .RS 4
-\fIro\fP replace related PCRE2 options\&. 
-.br
 \fIdo_match\fP perform a new match if true, otherwise use existing data\&. 
+.br
+\fIro\fP replace related PCRE2 options\&. 
 .br
 \fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
@@ -1030,7 +1039,7 @@ resultant string after replacement\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::reset ()\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::reset ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Reset \fBMatchEvaluator\fP to initial state including memory\&. 
@@ -1042,8 +1051,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::resetErrors ()\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::resetErrors ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::resetErrors()\fP\&. 
@@ -1055,8 +1064,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::resetMatchData ()\fC [inline]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::resetMatchData ()\fC [inline]\fP"
 
 .PP
 Reset match data to initial state\&. It deletes all match data from all vectors shrinking their capacity\&. A call to \fC\fBmatch()\fP\fP or \fBnreplace()\fP will be required to produce match data again\&. 
@@ -1067,7 +1076,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
 
 .PP
 Set the buffer size that will be used by pcre2_substitute (\fBreplace()\fP)\&. If buffer size proves to be enough to fit the resultant string from each match (not the total resultant string), it will yield one less call to pcre2_substitute for each match\&. 
@@ -1083,7 +1092,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, void *, void *>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, void *, void *>::Callback mef)\fC [inline]\fP"
 
 .PP
 Member function to set a callback function with no vector reference\&. Callback function is always overwritten\&. The implemented vectors are set to be filled with match data\&. Other vectors that were set previously, are not unset and thus they will be filled with match data too when \fC\fBmatch()\fP\fP or \fC\fBnreplace()\fP\fP is called\&. 
@@ -1099,7 +1108,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, void *>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, void *>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::NumSub\fP vector\&. You will be working with a reference to the constant vector\&. 
@@ -1115,7 +1124,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::NumSub\fP and \fBjp::MapNas\fP\&. You will be working with references of the constant vectors\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1147,7 +1156,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::NumSub\fP and \fBjp::MapNtN\fP\&. You will be working with references of the constant vectors\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1179,7 +1188,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< \fBNumSub\fP const &, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::NumSub\fP, \fBjp::MapNas\fP, \fBjp::MapNtN\fP\&. You will be working with references of the constant vectors\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1211,7 +1220,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, void *>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::MapNas\fP\&. You will be working with reference of the constant vector\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1243,7 +1252,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, \fBMapNas\fP const &, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::MapNas\fP, \fBjp::MapNtN\fP\&. You will be working with reference of the constant vector\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1275,7 +1284,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setCallback (typename \fBMatchEvaluatorCallback\fP< void *, void *, \fBMapNtN\fP const &>::Callback mef)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Sets a callback function with a \fBjp::MapNtN\fP\&. You will be working with references of the constant vectors\&. For maps, you won't be able to use \fC[]\fP operator with reference to constant map, use at() instead: 
@@ -1307,7 +1316,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setFindAll (bool x)\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setFindAll (bool x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setFindAll(bool x)\fP\&. 
@@ -1324,8 +1333,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setFindAll ()\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setFindAll ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setFindAll()\fP\&. 
@@ -1337,8 +1346,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setJpcre2Option(Uint x)\fP\&. 
@@ -1355,8 +1364,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setMatchContext (MatchContext * match_context)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setMatchContext (MatchContext * match_context)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setMatchContext(MatchContext *match_context)\fP\&. 
@@ -1373,8 +1382,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setMatchDataBlock (MatchData * mdt)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setMatchDataBlock (MatchData * mdt)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call RegexMatch::setMatchDataBlock(MatchContext * mdt);\&. 
@@ -1391,11 +1400,11 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setModifier (\fBModifier\fP s)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setModifier (\fBModifier\fP const & s)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
-Call \fBRegexMatch::setModifier(Modifier s)\fP\&. 
+Call \fBRegexMatch::setModifier(Modifier const& s)\fP\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -1409,8 +1418,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setModifierTable(ModifierTable const * s)\fP\&. 
@@ -1427,8 +1436,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setPcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setPcre2Option (\fBUint\fP x)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setPcre2Option\fP (Uint x)\&. 
@@ -1445,8 +1454,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setRegexObject (\fBRegex\fP const * r)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setRegexObject (\fBRegex\fP const * r)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call RegexMatch::setRegexObject(r)\&. 
@@ -1463,8 +1472,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setStartOffset (PCRE2_SIZE offset)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setStartOffset (PCRE2_SIZE offset)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setStartOffset\fP (PCRE2_SIZE offset)\&. 
@@ -1481,8 +1490,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setSubject (\fBString\fP const & s)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setSubject (\fBString\fP const & s)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Call \fBRegexMatch::setSubject(String const &s)\fP\&. 
@@ -1499,8 +1508,8 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, BS >::MatchEvaluator::setSubject (\fBString\fP const * s)\fC [inline]\fP, \fC [virtual]\fP"
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBMatchEvaluator\fP& \fBjpcre2::select\fP< Char_T, Map >::MatchEvaluator::setSubject (\fBString\fP const * s)\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
@@ -1517,7 +1526,7 @@ A reference to the calling \fBMatchEvaluator\fP object\&.
 .PP
 
 .PP
-Reimplemented from \fBjpcre2::select< Char_T, BS >::RegexMatch\fP\&.
+Reimplemented from \fBjpcre2::select< Char_T, Map >::RegexMatch\fP\&.
 
 .SH "Author"
 .PP 

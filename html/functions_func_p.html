@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JPCRE2: jpcre2::ConvUTF&lt; Char_T &gt; Struct Template Reference</title>
+<title>JPCRE2: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.30.02</span>
+   &#160;<span id="projectnumber">10.31.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -66,7 +66,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('structjpcre2_1_1ConvUTF.html','');});
+$(document).ready(function(){initNavTree('functions_func_p.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -83,27 +83,21 @@ $(document).ready(function(){initNavTree('structjpcre2_1_1ConvUTF.html','');});
 </iframe>
 </div>
 
-<div class="header">
-  <div class="summary">
-<a href="structjpcre2_1_1ConvUTF-members.html">List of all members</a>  </div>
-  <div class="headertitle">
-<div class="title">jpcre2::ConvUTF&lt; Char_T &gt; Struct Template Reference</div>  </div>
-</div><!--header-->
 <div class="contents">
+&#160;
 
-<p><code>#include &lt;<a class="el" href="jpcre2_8hpp_source.html">jpcre2.hpp</a>&gt;</code></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Char_T&gt;<br />
-struct jpcre2::ConvUTF&lt; Char_T &gt;</h3>
-
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd><code>UTF-8 &lt;&gt; UTF-16</code> and <code>UTF-8 &lt;&gt; UTF32</code> converter (&gt;=C++11).</dd></dl>
-<p>Convert <code>UTF-16 &lt;&gt; UTF-8</code>: </p><div class="fragment"><div class="line">ConvUTF&lt;char16_t&gt;::Converter conv;</div><div class="line"><span class="comment">//UTF-16 to UTF-8</span></div><div class="line">std::string s = conv.to_bytes(utf16string);</div><div class="line"><span class="comment">//UTF-8 to UTF-16</span></div><div class="line">std::u16string us = conv.from_bytes(utf8string);</div></div><!-- fragment --><p> Convert <code>UTF-8 &lt;&gt; UTF-16</code>: </p><div class="fragment"><div class="line">ConvUTF&lt;char32_t&gt;::Converter conv;</div><div class="line"><span class="comment">//UTF-8 to UTF-32</span></div><div class="line">std::u16string us = conv.from_bytes(utf8string);</div><div class="line"><span class="comment">//UTF-32 to UTF-8</span></div><div class="line">std::string s = conv.to_bytes(utf32string);</div></div><!-- fragment --> </div></div><!-- contents -->
+<h3><a id="index_p"></a>- p -</h3><ul>
+<li>preplace()
+: <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a7f26c3a8146c82f96f78c3309282b6f3">jpcre2::select&lt; Char_T, Map &gt;::Regex</a>
+, <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html#a4334db23d14eb002921cf0672085f2f5">jpcre2::select&lt; Char_T, Map &gt;::RegexReplace</a>
+</li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacejpcre2.html">jpcre2</a></li><li class="navelem"><a class="el" href="structjpcre2_1_1ConvUTF.html">ConvUTF</a></li>
     <li class="footer">Authored by <a href="https://github.com/neurobin">Md Jahidul Hamid</a>.
     Doc created with <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.13 </li>
   </ul>

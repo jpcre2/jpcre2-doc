@@ -1,4 +1,4 @@
-.TH "jpcre2" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Sun Aug 13 2017" "Version 10.31.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,12 +23,6 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 
 .in +1c
 .ti -1c
-.RI "struct \fBConvInt\fP"
-.br
-.ti -1c
-.RI "struct \fBConvUTF\fP"
-.br
-.ti -1c
 .RI "class \fBModifier\fP"
 .br
 .RI "Class to take a std::string modifier value with null safety\&. "
@@ -39,7 +33,7 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .ti -1c
 .RI "struct \fBselect\fP"
 .br
-.RI "struct to select code unit width and the character type\&. "
+.RI "struct to select the types\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -64,12 +58,6 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .RI "typedef std::vector< \fBUint\fP > \fBVecOpt\fP"
 .br
 .RI "vector for Uint option values\&. "
-.ti -1c
-.RI "typedef \fBConvUTF\fP< char16_t >::Converter \fBConvert16\fP"
-.br
-.ti -1c
-.RI "typedef \fBConvUTF\fP< char32_t >::Converter \fBConvert32\fP"
-.br
 .in -1c
 .SS "Enumerations"
 
@@ -96,54 +84,6 @@ All functions, classes/structs, constants, enums that are provided by JPCRE2 bel
 If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such\&. 
 .SH "Typedef Documentation"
 .PP 
-.SS "typedef \fBConvUTF\fP<char16_t>::Converter \fBjpcre2::Convert16\fP"
-
-.PP
-\fBDeprecated\fP
-.RS 4
-This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-16\&.
-.RE
-.PP
-Convert UTF-16 to UTF-8: 
-.PP
-.nf
-Convert16 conv;
-std::string s = conv\&.to_bytes(utf16string);
-
-.fi
-.PP
- Convert UTF-8 to UTF-16: 
-.PP
-.nf
-std::u16string us = conv\&.from_bytes(utf8string);
-
-.fi
-.PP
- 
-.SS "typedef \fBConvUTF\fP<char32_t>::Converter \fBjpcre2::Convert32\fP"
-
-.PP
-\fBDeprecated\fP
-.RS 4
-This is a convenience typedef (>=C++11) to convert between UTF-8 <> UTF-32\&.
-.RE
-.PP
-Convert UTF-32 to UTF-8 
-.PP
-.nf
-Convert32 conv;
-std::string s = conv\&.to_bytes(utf32string);
-
-.fi
-.PP
- Convert UTF-8 to UTF-32 
-.PP
-.nf
-std::u32string us = conv\&.from_bytes(utf8string);
-
-.fi
-.PP
- 
 .SS "typedef PCRE2_SIZE \fBjpcre2::SIZE_T\fP"
 
 .PP

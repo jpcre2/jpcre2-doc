@@ -1,8 +1,8 @@
-.TH "jpcre2::select< Char_T, BS >::callback" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::callback" 3 "Sun Aug 13 2017" "Version 10.31.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2::select< Char_T, BS >::callback \- Provides some default static callback functions\&.  
+jpcre2::select< Char_T, Map >::callback \- Provides some default static callback functions\&.  
 
 .SH SYNOPSIS
 .br
@@ -15,7 +15,7 @@ jpcre2::select< Char_T, BS >::callback \- Provides some default static callback 
 .ti -1c
 .RI "static \fBString\fP \fBeraseFill\fP (\fBNumSub\fP const &num, \fBMapNas\fP const &nas, \fBMapNtN\fP const &ntn)"
 .br
-.RI "Callback funcition that removes the matched part/s in the subject string and takes all match vectors as argument\&. "
+.RI "Callback function that removes the matched part/s in the subject string and takes all match vectors as argument\&. "
 .ti -1c
 .RI "static \fBString\fP \fBerase\fP (void *, void *, void *)"
 .br
@@ -28,15 +28,15 @@ jpcre2::select< Char_T, BS >::callback \- Provides some default static callback 
 .SH "Detailed Description"
 .PP 
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT>
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map>
 .br
-struct jpcre2::select< Char_T, BS >::callback"
+struct jpcre2::select< Char_T, Map >::callback"
 Provides some default static callback functions\&. 
 
 The primary goal of this class is to provide default callback function to \fBMatchEvaluator\fP default constructor which is essentially \fBcallback::erase\fP\&. This class does not allow object instantiation\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::erase (void *, void *, void *)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::callback::erase (void *, void *, void *)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Callback function that removes the matched part/s in the subject string and does not take any match vector\&. This is a minimum cost pattern deleting callback function\&.
@@ -56,10 +56,10 @@ empty string\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::eraseFill (\fBNumSub\fP const & num, \fBMapNas\fP const & nas, \fBMapNtN\fP const & ntn)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::callback::eraseFill (\fBNumSub\fP const & num, \fBMapNas\fP const & nas, \fBMapNtN\fP const & ntn)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
-Callback funcition that removes the matched part/s in the subject string and takes all match vectors as argument\&. Even though this function itself does not use the vectors, it still takes them so that the caller can perform a match and populate all the match data to perform further evaluation of other callback functions without doing the match again\&. 
+Callback function that removes the matched part/s in the subject string and takes all match vectors as argument\&. Even though this function itself does not use the vectors, it still takes them so that the caller can perform a match and populate all the match data to perform further evaluation of other callback functions without doing the match again\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -76,7 +76,7 @@ empty string\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, Ush BS = sizeof( Char_T ) * CHAR_BIT> static \fBString\fP \fBjpcre2::select\fP< Char_T, BS >::callback::fill (\fBNumSub\fP const & num, \fBMapNas\fP const & nas, \fBMapNtn\fP const & ntn)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::callback::fill (\fBNumSub\fP const & num, \fBMapNas\fP const & nas, \fBMapNtn\fP const & ntn)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Callback function for populating match vectors that does not modify the subject string\&. It always returns the total matched part and thus the subject string remains the same\&. 

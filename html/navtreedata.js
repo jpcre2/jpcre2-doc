@@ -68,7 +68,6 @@ var NAVTREE =
     [ "The configure script", "index.html#the-configure-script", null ],
     [ "Contributing/Pull request", "index.html#contributing-pull-request", null ],
     [ "LICENCE", "index.html#licence", null ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -102,7 +101,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classjpcre2_1_1select_1_1RegexReplace.html#a6377f15289aa7413571fcbfe18889212"
+"classjpcre2_1_1select_1_1RegexReplace.html#a6323d0128f2bee9879544ef16b14e7d4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,4 @@
-.TH "jpcre2.hpp" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Sun Aug 13 2017" "Version 10.31.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,15 +17,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 \fC#include <cstdio>\fP
 .br
-\fC#include <cwchar>\fP
-.br
 \fC#include <climits>\fP
 .br
 \fC#include <cstdlib>\fP
 .br
 \fC#include <utility>\fP
-.br
-\fC#include <locale>\fP
 .br
 \fC#include <functional>\fP
 .br
@@ -42,37 +38,31 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Lets you create custom modifier tables\&. "
 .ti -1c
-.RI "struct \fBjpcre2::ConvUTF< Char_T >\fP"
+.RI "struct \fBjpcre2::select< Char_T, Map >\fP"
 .br
+.RI "struct to select the types\&. "
 .ti -1c
-.RI "struct \fBjpcre2::ConvInt< Char_T, T >\fP"
-.br
-.ti -1c
-.RI "struct \fBjpcre2::select< Char_T, BS >\fP"
-.br
-.RI "struct to select code unit width and the character type\&. "
-.ti -1c
-.RI "class \fBjpcre2::select< Char_T, BS >::RegexMatch\fP"
+.RI "class \fBjpcre2::select< Char_T, Map >::RegexMatch\fP"
 .br
 .RI "Provides public constructors to create \fBRegexMatch\fP objects\&. "
 .ti -1c
-.RI "struct \fBjpcre2::select< Char_T, BS >::MatchEvaluatorCallback< T1, T2, T3 >\fP"
+.RI "struct \fBjpcre2::select< Char_T, Map >::MatchEvaluatorCallback< T1, T2, T3 >\fP"
 .br
 .RI "This class contains a typedef of a function pointer or a templated function wrapper (\fCstd::function\fP) to provide callback function to the \fC\fBMatchEvaluator\fP\fP\&. "
 .ti -1c
-.RI "struct \fBjpcre2::select< Char_T, BS >::callback\fP"
+.RI "struct \fBjpcre2::select< Char_T, Map >::callback\fP"
 .br
 .RI "Provides some default static callback functions\&. "
 .ti -1c
-.RI "class \fBjpcre2::select< Char_T, BS >::MatchEvaluator\fP"
+.RI "class \fBjpcre2::select< Char_T, Map >::MatchEvaluator\fP"
 .br
 .RI "This class inherits \fBRegexMatch\fP and provides a similar functionality\&. "
 .ti -1c
-.RI "class \fBjpcre2::select< Char_T, BS >::RegexReplace\fP"
+.RI "class \fBjpcre2::select< Char_T, Map >::RegexReplace\fP"
 .br
 .RI "Provides public constructors to create \fBRegexReplace\fP objects\&. "
 .ti -1c
-.RI "class \fBjpcre2::select< Char_T, BS >::Regex\fP"
+.RI "class \fBjpcre2::select< Char_T, Map >::Regex\fP"
 .br
 .RI "Provides public constructors to create \fBRegex\fP object\&. "
 .in -1c
@@ -104,19 +94,17 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_VERSION\fP   103002L"
+.RI "#define \fBJPCRE2_VERSION\fP   103101L"
 .br
 .RI "Define for JPCRE2 version\&. "
-.ti -1c
-.RI "#define \fBJPCRE2_DISABLE_CHAR1632\fP"
-.br
 .ti -1c
 .RI "#define \fBJPCRE2_USE_FUNCTION_POINTER_CALLBACK\fP"
 .br
 .RI "Use function pointer in all cases for MatchEvaluatorCallback function\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION\fP"
+.RI "#define \fBJPCRE2_NDEBUG\fP"
 .br
+.RI "Macro to remove debug codes\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -141,12 +129,6 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .RI "typedef std::vector< Uint > \fBjpcre2::VecOpt\fP"
 .br
 .RI "vector for Uint option values\&. "
-.ti -1c
-.RI "typedef ConvUTF< char16_t >::Converter \fBjpcre2::Convert16\fP"
-.br
-.ti -1c
-.RI "typedef ConvUTF< char32_t >::Converter \fBjpcre2::Convert32\fP"
-.br
 .in -1c
 .SS "Enumerations"
 
@@ -176,7 +158,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.30\&.02'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.31\&.01'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -184,11 +166,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Generation, depends on original PCRE2 version\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '30'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MAJOR\fP [] = '31'"
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '02'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '01'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
@@ -213,7 +195,7 @@ It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2
 .SS "#define JPCRE2_ASSERT(cond, msg)   \fBjpcre2::jassert\fP(cond, msg, __FILE__, __LINE__)"
 
 .PP
-Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. When NDEBUG is defined before including this header, this macro will be defined as \fC((void)0)\fP thus eliminating this assertion\&. 
+Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. When \fCNDEBUG\fP or \fCJPCRE2_NDEBUG\fP is defined before including this header, this macro will be defined as \fC((void)0)\fP thus eliminating this assertion\&. 
 .PP
 \fBParameters:\fP
 .RS 4
@@ -224,32 +206,20 @@ Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. Wh
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::Regex::replace()\&.
-.SS "#define JPCRE2_DISABLE_CHAR1632"
+Referenced by jpcre2::select< Char_T, Map >::Regex::preplace()\&.
+.SS "#define JPCRE2_NDEBUG"
 
 .PP
-\fBDeprecated\fP
-.RS 4
-Disable support for \fCchar16_t\fP and \fCchar32_t\fP\&.
-.RE
+Macro to remove debug codes\&. Using this macro is discouraged even in production mode but provided for completeness\&. You should not use this macro to bypass any error in your program\&. Define this macro before including this header if you want to remove debug codes included in this library\&.
 .PP
-Older compiler which supposedly supports C++11 but does not have \fCstd::wstring_convert\fP will not work with \fCchar16_t\fP and \fCchar32_t\fP, in this case define this macro before including \fC\fBjpcre2\&.hpp\fP\fP to disable \fCchar16_t\fP and \fCchar32_t\fP support\&. 
-.SS "#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION"
-
-.PP
-\fBDeprecated\fP
-.RS 4
-By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error\&.
-.RE
-.PP
-This check can be disabled by defining this macro\&. 
+Using the standard \fCNDEBUG\fP macro will have the same effect, but it is recommended that you use \fCJPCRE2_NDEBUG\fP to strip out debug codes specifically for this library\&. 
 .SS "#define JPCRE2_USE_FUNCTION_POINTER_CALLBACK"
 
 .PP
 Use function pointer in all cases for MatchEvaluatorCallback function\&. By default function pointer is used for callback in MatchEvaluator when using <C++11 compiler, but for \fC>=C++11\fP compiler \fCstd::function\fP instead of function pointer is used\&. If this macro is defined before including \fBjpcre2\&.hpp\fP, function pointer will be used in all cases\&. It you are using lambda function with captures, stick with \fCstd::function\fP, on the other hand, if you are using older compilers, you might want to use function pointer instead\&.
 .PP
 For example, with gcc-4\&.7, \fCstd::function\fP will give compile error in C++11 mode, in such cases where full C++11 support is not available, use function pointer\&. 
-.SS "#define JPCRE2_VERSION   103002L"
+.SS "#define JPCRE2_VERSION   103101L"
 
 .PP
 Define for JPCRE2 version\&. It can be used to support changes in different versions of the lib\&. 

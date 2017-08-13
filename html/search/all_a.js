@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['name',['NAME',['../namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5',1,'jpcre2::INFO']]],
-  ['none',['NONE',['../namespacejpcre2.html#a85c143271501e383843f45b9999c2f00aecf4a781b081ff541006fbe84e143fb9',1,'jpcre2']]],
-  ['nreplace',['nreplace',['../classjpcre2_1_1select_1_1MatchEvaluator.html#a58cb2ebe105f4c0afbedad73cb1fce46',1,'jpcre2::select::MatchEvaluator::nreplace()'],['../classjpcre2_1_1select_1_1RegexReplace.html#ae7bcd252d2ead842f70b46dca839aadc',1,'jpcre2::select::RegexReplace::nreplace()']]],
-  ['numsub',['NumSub',['../structjpcre2_1_1select.html#a8c0e25dacfe6eb3e2573861d9ee6e3cd',1,'jpcre2::select']]]
+  ['operator_20bool',['operator bool',['../classjpcre2_1_1select_1_1Regex.html#a25d236f4be9e7757d1f12c6419328d65',1,'jpcre2::select::Regex']]],
+  ['operator_21',['operator!',['../classjpcre2_1_1select_1_1Regex.html#af1eacdc196cfb8cd3f60e4643273917e',1,'jpcre2::select::Regex']]],
+  ['operator_3d',['operator=',['../classjpcre2_1_1select_1_1RegexMatch.html#af762ab9c52e8239ef73452f7e4293f71',1,'jpcre2::select::RegexMatch::operator=(RegexMatch const &amp;rm)'],['../classjpcre2_1_1select_1_1RegexMatch.html#aeaecc150faae84c60335731eb3a580b0',1,'jpcre2::select::RegexMatch::operator=(RegexMatch &amp;&amp;rm)'],['../classjpcre2_1_1select_1_1MatchEvaluator.html#adc72baefdde79f23b92ac4d4fa795505',1,'jpcre2::select::MatchEvaluator::operator=(MatchEvaluator const &amp;me)'],['../classjpcre2_1_1select_1_1MatchEvaluator.html#af2f34d77105d9b5e7fe7cb3024b08439',1,'jpcre2::select::MatchEvaluator::operator=(MatchEvaluator &amp;&amp;me)'],['../classjpcre2_1_1select_1_1RegexReplace.html#a22f464767464ee5c9fbc6badc288b549',1,'jpcre2::select::RegexReplace::operator=(RegexReplace const &amp;rr)'],['../classjpcre2_1_1select_1_1RegexReplace.html#a6b4b6664d8be85c2bd0bd1f8b88b959f',1,'jpcre2::select::RegexReplace::operator=(RegexReplace &amp;&amp;rr)'],['../classjpcre2_1_1select_1_1Regex.html#a463d9478d6dfd9711217c80eb7158fd8',1,'jpcre2::select::Regex::operator=(Regex const &amp;r)'],['../classjpcre2_1_1select_1_1Regex.html#a10f470eedaaab085dfcffee5e69869cf',1,'jpcre2::select::Regex::operator=(Regex &amp;&amp;r)']]],
+  ['operator_5b_5d',['operator[]',['../classjpcre2_1_1Modifier.html#a286dcd492af21c948a43b426e75d5e5a',1,'jpcre2::Modifier']]]
 ];

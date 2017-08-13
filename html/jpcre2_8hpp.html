@@ -32,7 +32,7 @@
   <td id="projectlogo"><img alt="Logo" src="thumb0.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JPCRE2
-   &#160;<span id="projectnumber">10.30.02</span>
+   &#160;<span id="projectnumber">10.31.01</span>
    </div>
    <div id="projectbrief">C++ wrapper for PCRE2 library</div>
   </td>
@@ -104,11 +104,9 @@ $(document).ready(function(){initNavTree('jpcre2_8hpp.html','');});
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
-<code>#include &lt;cwchar&gt;</code><br />
 <code>#include &lt;climits&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &lt;locale&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for jpcre2.hpp:</div>
@@ -152,29 +150,25 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1ModifierTable.html">jpcre2::ModifierTable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lets you create custom modifier tables.  <a href="classjpcre2_1_1ModifierTable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvUTF.html">jpcre2::ConvUTF&lt; Char_T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select&lt; Char_T, Map &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select the types.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1ConvInt.html">jpcre2::ConvInt&lt; Char_T, T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select.html">jpcre2::select&lt; Char_T, BS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to select code unit width and the character type.  <a href="structjpcre2_1_1select.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">jpcre2::select&lt; Char_T, BS &gt;::RegexMatch</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">jpcre2::select&lt; Char_T, Map &gt;::RegexMatch</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> objects.  <a href="classjpcre2_1_1select_1_1RegexMatch.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1MatchEvaluatorCallback.html">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluatorCallback&lt; T1, T2, T3 &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1MatchEvaluatorCallback.html">jpcre2::select&lt; Char_T, Map &gt;::MatchEvaluatorCallback&lt; T1, T2, T3 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains a typedef of a function pointer or a templated function wrapper (<code>std::function</code>) to provide callback function to the <code><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. ">MatchEvaluator</a></code>.  <a href="structjpcre2_1_1select_1_1MatchEvaluatorCallback.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1callback.html">jpcre2::select&lt; Char_T, BS &gt;::callback</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjpcre2_1_1select_1_1callback.html">jpcre2::select&lt; Char_T, Map &gt;::callback</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides some default static callback functions.  <a href="structjpcre2_1_1select_1_1callback.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html">jpcre2::select&lt; Char_T, BS &gt;::MatchEvaluator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1MatchEvaluator.html">jpcre2::select&lt; Char_T, Map &gt;::MatchEvaluator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class inherits <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. ">RegexMatch</a> and provides a similar functionality.  <a href="classjpcre2_1_1select_1_1MatchEvaluator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">jpcre2::select&lt; Char_T, BS &gt;::RegexReplace</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html">jpcre2::select&lt; Char_T, Map &gt;::RegexReplace</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1RegexReplace.html" title="Provides public constructors to create RegexReplace objects. ">RegexReplace</a> objects.  <a href="classjpcre2_1_1select_1_1RegexReplace.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt; Char_T, BS &gt;::Regex</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select&lt; Char_T, Map &gt;::Regex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides public constructors to create <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object.  <a href="classjpcre2_1_1select_1_1Regex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -198,16 +192,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a3328f677f2e83856d319fd0b31687ca9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a3328f677f2e83856d319fd0b31687ca9">JPCRE2_ASSERT</a>(cond,  msg)&#160;&#160;&#160;<a class="el" href="namespacejpcre2.html#a611d706dc6e080043bdecbb23cf5c5a7">jpcre2::jassert</a>(cond, msg, __FILE__, __LINE__)</td></tr>
 <tr class="memdesc:a3328f677f2e83856d319fd0b31687ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to call <code><a class="el" href="namespacejpcre2.html#a611d706dc6e080043bdecbb23cf5c5a7" title="JPCRE2 assert function. ">jpcre2::jassert()</a></code> with file path and line number.  <a href="#a3328f677f2e83856d319fd0b31687ca9">More...</a><br /></td></tr>
 <tr class="separator:a3328f677f2e83856d319fd0b31687ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a4400c8d4fe1babf6ada271b994ee7cdd">JPCRE2_VERSION</a>&#160;&#160;&#160;103002L</td></tr>
+<tr class="memitem:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a4400c8d4fe1babf6ada271b994ee7cdd">JPCRE2_VERSION</a>&#160;&#160;&#160;103101L</td></tr>
 <tr class="memdesc:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define for JPCRE2 version.  <a href="#a4400c8d4fe1babf6ada271b994ee7cdd">More...</a><br /></td></tr>
 <tr class="separator:a4400c8d4fe1babf6ada271b994ee7cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a434a0d7dc30641770fbc3cc9199a62c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a434a0d7dc30641770fbc3cc9199a62c8">JPCRE2_DISABLE_CHAR1632</a></td></tr>
-<tr class="separator:a434a0d7dc30641770fbc3cc9199a62c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#a8dcf61fb5c7bf406008106e9c9f80cb5">JPCRE2_USE_FUNCTION_POINTER_CALLBACK</a></td></tr>
 <tr class="memdesc:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use function pointer in all cases for MatchEvaluatorCallback function.  <a href="#a8dcf61fb5c7bf406008106e9c9f80cb5">More...</a><br /></td></tr>
 <tr class="separator:a8dcf61fb5c7bf406008106e9c9f80cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ed8f7e16b413e7b160fc968b6395f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#ac2ed8f7e16b413e7b160fc968b6395f2">JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</a></td></tr>
-<tr class="separator:ac2ed8f7e16b413e7b160fc968b6395f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef6ea96c095e035ae2a30fc6b5f71f4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpcre2_8hpp.html#aef6ea96c095e035ae2a30fc6b5f71f4a">JPCRE2_NDEBUG</a></td></tr>
+<tr class="memdesc:aef6ea96c095e035ae2a30fc6b5f71f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to remove debug codes.  <a href="#aef6ea96c095e035ae2a30fc6b5f71f4a">More...</a><br /></td></tr>
+<tr class="separator:aef6ea96c095e035ae2a30fc6b5f71f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -226,10 +219,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9dada7b65d04dea5ca8c25bb05611f3f"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; Uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9dada7b65d04dea5ca8c25bb05611f3f">jpcre2::VecOpt</a></td></tr>
 <tr class="memdesc:a9dada7b65d04dea5ca8c25bb05611f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector for Uint option values.  <a href="namespacejpcre2.html#a9dada7b65d04dea5ca8c25bb05611f3f">More...</a><br /></td></tr>
 <tr class="separator:a9dada7b65d04dea5ca8c25bb05611f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf513ced7a87393062267af2678fbe0"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char16_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a9bf513ced7a87393062267af2678fbe0">jpcre2::Convert16</a></td></tr>
-<tr class="separator:a9bf513ced7a87393062267af2678fbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a961b20d74d0da112a2a010ca8bac6"><td class="memItemLeft" align="right" valign="top">typedef ConvUTF&lt; char32_t &gt;::Converter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2.html#a40a961b20d74d0da112a2a010ca8bac6">jpcre2::Convert32</a></td></tr>
-<tr class="separator:a40a961b20d74d0da112a2a010ca8bac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -263,16 +252,16 @@ Variables</h2></td></tr>
 <tr class="memitem:a057688caad3ff7866a6449be627224a5"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5">jpcre2::INFO::NAME</a> [] = &quot;JPCRE2&quot;</td></tr>
 <tr class="memdesc:a057688caad3ff7866a6449be627224a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the project.  <a href="namespacejpcre2_1_1INFO.html#a057688caad3ff7866a6449be627224a5">More...</a><br /></td></tr>
 <tr class="separator:a057688caad3ff7866a6449be627224a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b22133d85a57f47012176fa934a7085"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">jpcre2::INFO::FULL_VERSION</a> [] = &quot;10.30.02&quot;</td></tr>
+<tr class="memitem:a5b22133d85a57f47012176fa934a7085"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">jpcre2::INFO::FULL_VERSION</a> [] = &quot;10.31.01&quot;</td></tr>
 <tr class="memdesc:a5b22133d85a57f47012176fa934a7085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full version string.  <a href="namespacejpcre2_1_1INFO.html#a5b22133d85a57f47012176fa934a7085">More...</a><br /></td></tr>
 <tr class="separator:a5b22133d85a57f47012176fa934a7085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ced5e142d1e4d77a651384e5517f1f7"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a3ced5e142d1e4d77a651384e5517f1f7">jpcre2::INFO::VERSION_GENRE</a> [] = &quot;10&quot;</td></tr>
 <tr class="memdesc:a3ced5e142d1e4d77a651384e5517f1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generation, depends on original PCRE2 version.  <a href="namespacejpcre2_1_1INFO.html#a3ced5e142d1e4d77a651384e5517f1f7">More...</a><br /></td></tr>
 <tr class="separator:a3ced5e142d1e4d77a651384e5517f1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959830e1cf1d7aa5932363b84452947e"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a959830e1cf1d7aa5932363b84452947e">jpcre2::INFO::VERSION_MAJOR</a> [] = &quot;30&quot;</td></tr>
+<tr class="memitem:a959830e1cf1d7aa5932363b84452947e"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a959830e1cf1d7aa5932363b84452947e">jpcre2::INFO::VERSION_MAJOR</a> [] = &quot;31&quot;</td></tr>
 <tr class="memdesc:a959830e1cf1d7aa5932363b84452947e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version, updated when API change is made.  <a href="namespacejpcre2_1_1INFO.html#a959830e1cf1d7aa5932363b84452947e">More...</a><br /></td></tr>
 <tr class="separator:a959830e1cf1d7aa5932363b84452947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7724bf02b0c6ecef1371926c97729b9a"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">jpcre2::INFO::VERSION_MINOR</a> [] = &quot;02&quot;</td></tr>
+<tr class="memitem:a7724bf02b0c6ecef1371926c97729b9a"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">jpcre2::INFO::VERSION_MINOR</a> [] = &quot;01&quot;</td></tr>
 <tr class="memdesc:a7724bf02b0c6ecef1371926c97729b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version, includes bug fix or minor feature upgrade.  <a href="namespacejpcre2_1_1INFO.html#a7724bf02b0c6ecef1371926c97729b9a">More...</a><br /></td></tr>
 <tr class="separator:a7724bf02b0c6ecef1371926c97729b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a478b949e145c0c694d2074acddeb1789"><td class="memItemLeft" align="right" valign="top">static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejpcre2_1_1INFO.html#a478b949e145c0c694d2074acddeb1789">jpcre2::INFO::VERSION_PRE_RELEASE</a> [] = &quot;&quot;</td></tr>
@@ -311,7 +300,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Macro to call <code><a class="el" href="namespacejpcre2.html#a611d706dc6e080043bdecbb23cf5c5a7" title="JPCRE2 assert function. ">jpcre2::jassert()</a></code> with file path and line number. </p>
-<p>When NDEBUG is defined before including this header, this macro will be defined as <code>((void)0)</code> thus eliminating this assertion. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>When <code>NDEBUG</code> or <code>JPCRE2_NDEBUG</code> is defined before including this header, this macro will be defined as <code>((void)0)</code> thus eliminating this assertion. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cond</td><td>condtion (boolean) </td></tr>
     <tr><td class="paramname">msg</td><td>message </td></tr>
@@ -319,39 +308,25 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="classjpcre2_1_1select_1_1Regex.html#af146f065b2351f0aa592fd2832f4d949">jpcre2::select&lt; Char_T, BS &gt;::Regex::replace()</a>.</p>
+<p>Referenced by <a class="el" href="classjpcre2_1_1select_1_1Regex.html#a09d9ad429d2005a0e86e61fca2f768c0">jpcre2::select&lt; Char_T, Map &gt;::Regex::preplace()</a>.</p>
 
 </div>
 </div>
-<a id="a434a0d7dc30641770fbc3cc9199a62c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a434a0d7dc30641770fbc3cc9199a62c8">&#9670;&nbsp;</a></span>JPCRE2_DISABLE_CHAR1632</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define JPCRE2_DISABLE_CHAR1632</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Disable support for <code>char16_t</code> and <code>char32_t</code>.</dd></dl>
-<p>Older compiler which supposedly supports C++11 but does not have <code>std::wstring_convert</code> will not work with <code>char16_t</code> and <code>char32_t</code>, in this case define this macro before including <code><a class="el" href="jpcre2_8hpp.html" title="Main header file for JPCRE2 library to be included by programs that uses its functionalities. ">jpcre2.hpp</a></code> to disable <code>char16_t</code> and <code>char32_t</code> support. </p>
-
-</div>
-</div>
-<a id="ac2ed8f7e16b413e7b160fc968b6395f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2ed8f7e16b413e7b160fc968b6395f2">&#9670;&nbsp;</a></span>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</h2>
+<a id="aef6ea96c095e035ae2a30fc6b5f71f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6ea96c095e035ae2a30fc6b5f71f4a">&#9670;&nbsp;</a></span>JPCRE2_NDEBUG</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</td>
+          <td class="memname">#define JPCRE2_NDEBUG</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>By default JPCRE2 checks if the code unit width equals to sizeof(Char_T)*CHAR_BIT, if not,it will produce compile error.</dd></dl>
-<p>This check can be disabled by defining this macro. </p>
+
+<p>Macro to remove debug codes. </p>
+<p>Using this macro is discouraged even in production mode but provided for completeness. You should not use this macro to bypass any error in your program. Define this macro before including this header if you want to remove debug codes included in this library.</p>
+<p>Using the standard <code>NDEBUG</code> macro will have the same effect, but it is recommended that you use <code>JPCRE2_NDEBUG</code> to strip out debug codes specifically for this library. </p>
 
 </div>
 </div>
@@ -380,7 +355,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JPCRE2_VERSION&#160;&#160;&#160;103002L</td>
+          <td class="memname">#define JPCRE2_VERSION&#160;&#160;&#160;103101L</td>
         </tr>
       </table>
 </div><div class="memdoc">

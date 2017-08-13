@@ -1,4 +1,4 @@
-.TH "jpcre2::ModifierTable" 3 "Fri Jul 21 2017" "Version 10.30.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::ModifierTable" 3 "Sun Aug 13 2017" "Version 10.31.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -224,7 +224,7 @@ modifier string (std::string)
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::Regex::getModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::Regex::getModifier()\&.
 .SS "std::string jpcre2::ModifierTable::fromMatchOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
 
 .PP
@@ -244,7 +244,7 @@ modifier string (std::string)
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::RegexMatch::getModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::RegexMatch::getModifier()\&.
 .SS "std::string jpcre2::ModifierTable::fromReplaceOption (\fBUint\fP po, \fBUint\fP jo) const\fC [inline]\fP"
 
 .PP
@@ -264,7 +264,7 @@ modifier string (std::string)
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::RegexReplace::getModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::RegexReplace::getModifier()\&.
 .SS "\fBModifierTable\fP& jpcre2::ModifierTable::reset ()\fC [inline]\fP"
 
 .PP
@@ -539,7 +539,7 @@ A reference to the calling \fBModifierTable\fP object\&.
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::Regex::changeModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::Regex::changeModifier()\&.
 .SS "void jpcre2::ModifierTable::toMatchOption (\fBModifier\fP const & mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
 
 .PP
@@ -562,7 +562,7 @@ Referenced by jpcre2::select< Char_T, BS >::Regex::changeModifier()\&.
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::RegexMatch::changeModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::RegexMatch::changeModifier()\&.
 .SS "void jpcre2::ModifierTable::toReplaceOption (\fBModifier\fP const & mod, bool x, \fBUint\fP * po, \fBUint\fP * jo, int * en, \fBSIZE_T\fP * eo) const\fC [inline]\fP"
 
 .PP
@@ -585,7 +585,7 @@ Referenced by jpcre2::select< Char_T, BS >::RegexMatch::changeModifier()\&.
 .PP
 
 .PP
-Referenced by jpcre2::select< Char_T, BS >::RegexReplace::changeModifier()\&.
+Referenced by jpcre2::select< Char_T, Map >::RegexReplace::changeModifier()\&.
 
 .SH "Author"
 .PP 
