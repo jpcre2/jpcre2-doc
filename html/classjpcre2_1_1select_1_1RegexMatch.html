@@ -160,10 +160,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3444fa40d5ae5083a395695a3481d0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get offset from where match will start in the subject.  <a href="#a3444fa40d5ae5083a395695a3481d0bd">More...</a><br /></td></tr>
 <tr class="separator:a3444fa40d5ae5083a395695a3481d0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3009fe94b0c87496087de53ca7261a9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacejpcre2.html#a183672f239daa2a262b1fb321039abca">VecOff</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae3009fe94b0c87496087de53ca7261a9">getMatchStartOffsetVector</a> () const</td></tr>
-<tr class="memdesc:ae3009fe94b0c87496087de53ca7261a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get match start offset vector pointer.  <a href="#ae3009fe94b0c87496087de53ca7261a9">More...</a><br /></td></tr>
+<tr class="memdesc:ae3009fe94b0c87496087de53ca7261a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pre-set match start offset vector pointer.  <a href="#ae3009fe94b0c87496087de53ca7261a9">More...</a><br /></td></tr>
 <tr class="separator:ae3009fe94b0c87496087de53ca7261a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27cb923db964d7de0ba57fcb1da58fb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacejpcre2.html#a183672f239daa2a262b1fb321039abca">VecOff</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ad27cb923db964d7de0ba57fcb1da58fb">getMatchEndOffsetVector</a> () const</td></tr>
-<tr class="memdesc:ad27cb923db964d7de0ba57fcb1da58fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get match end offset vector pointer.  <a href="#ad27cb923db964d7de0ba57fcb1da58fb">More...</a><br /></td></tr>
+<tr class="memdesc:ad27cb923db964d7de0ba57fcb1da58fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pre-set match end offset vector pointer.  <a href="#ad27cb923db964d7de0ba57fcb1da58fb">More...</a><br /></td></tr>
 <tr class="separator:ad27cb923db964d7de0ba57fcb1da58fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5baeab170246d50bc3953748e8593ac4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjpcre2_1_1select_1_1Regex.html">Regex</a> const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a5baeab170246d50bc3953748e8593ac4">getRegexObject</a> () const</td></tr>
 <tr class="memdesc:a5baeab170246d50bc3953748e8593ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the associated <a class="el" href="classjpcre2_1_1select_1_1Regex.html" title="Provides public constructors to create Regex object. ">Regex</a> object.  <a href="#a5baeab170246d50bc3953748e8593ac4">More...</a><br /></td></tr>
@@ -768,8 +768,6 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classjpcre2_1_1select_1_1RegexMatch_aac809e554574777ac6576a6826aad719_cgraph.png" border="0" usemap="#classjpcre2_1_1select_1_1RegexMatch_aac809e554574777ac6576a6826aad719_cgraph" alt=""/></div>
-<map name="classjpcre2_1_1select_1_1RegexMatch_aac809e554574777ac6576a6826aad719_cgraph" id="classjpcre2_1_1select_1_1RegexMatch_aac809e554574777ac6576a6826aad719_cgraph">
-</map>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1004,8 +1002,8 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
 </table>
 </div><div class="memdoc">
 
-<p>Get match end offset vector pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd>pointer to the const end start offset vector </dd></dl>
+<p>Get pre-set match end offset vector pointer. </p>
+<p>The pointer must be set with <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae7ee75e5dcb6231a672dfde021866cc3" title="Set the pointer to a vector to store the offsets where matches end in the subject. ">RegexMatch::setMatchEndOffsetVector()</a> beforehand for this to work i.e it is just a convenience method to get the pre-set vector pointer. </p><dl class="section return"><dt>Returns</dt><dd>pointer to the const end offset vector </dd></dl>
 
 </div>
 </div>
@@ -1034,8 +1032,8 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
 </table>
 </div><div class="memdoc">
 
-<p>Get match start offset vector pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd>pointer to the const match start offset vector </dd></dl>
+<p>Get pre-set match start offset vector pointer. </p>
+<p>The pointer must be set with <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a7990b221576ac46b5b5fe798c2717f5d" title="Set the pointer to a vector to store the offsets where matches start in the subject. ">RegexMatch::setMatchStartOffsetVector()</a> beforehand for this to work i.e it is just a convenience method to get the pre-set vector pointer. </p><dl class="section return"><dt>Returns</dt><dd>pointer to the const match start offset vector </dd></dl>
 
 </div>
 </div>

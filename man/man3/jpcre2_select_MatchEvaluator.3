@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::MatchEvaluator" 3 "Thu Nov 9 2017" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::MatchEvaluator" 3 "Tue Jul 10 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -255,11 +255,11 @@ jpcre2::select< Char_T, Map >::MatchEvaluator \- This class inherits \fBRegexMat
 .ti -1c
 .RI "virtual \fBVecOff\fP const  * \fBgetMatchStartOffsetVector\fP () const"
 .br
-.RI "Get match start offset vector pointer\&. "
+.RI "Get pre-set match start offset vector pointer\&. "
 .ti -1c
 .RI "virtual \fBVecOff\fP const  * \fBgetMatchEndOffsetVector\fP () const"
 .br
-.RI "Get match end offset vector pointer\&. "
+.RI "Get pre-set match end offset vector pointer\&. "
 .ti -1c
 .RI "virtual \fBRegex\fP const  * \fBgetRegexObject\fP () const"
 .br
@@ -753,18 +753,18 @@ pointer to the match data (default: null)\&.
 .SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchEndOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
-Get match end offset vector pointer\&. 
+Get pre-set match end offset vector pointer\&. The pointer must be set with \fBRegexMatch::setMatchEndOffsetVector()\fP beforehand for this to work i\&.e it is just a convenience method to get the pre-set vector pointer\&. 
 .PP
 \fBReturns:\fP
 .RS 4
-pointer to the const end start offset vector 
+pointer to the const end offset vector 
 .RE
 .PP
 
 .SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual \fBVecOff\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchStartOffsetVector () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
-Get match start offset vector pointer\&. 
+Get pre-set match start offset vector pointer\&. The pointer must be set with \fBRegexMatch::setMatchStartOffsetVector()\fP beforehand for this to work i\&.e it is just a convenience method to get the pre-set vector pointer\&. 
 .PP
 \fBReturns:\fP
 .RS 4
