@@ -225,9 +225,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae780334546f9318129f464963775efd4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae780334546f9318129f464963775efd4">setMatchContext</a> (MatchContext *match_context)</td></tr>
 <tr class="memdesc:ae780334546f9318129f464963775efd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the match context.  <a href="#ae780334546f9318129f464963775efd4">More...</a><br /></td></tr>
 <tr class="separator:ae780334546f9318129f464963775efd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c180cc60fc3ac7d87d26bf1f8c3cc6"><td class="memItemLeft" align="right" valign="top">MatchContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae0c180cc60fc3ac7d87d26bf1f8c3cc6">getMatchContext</a> ()</td></tr>
-<tr class="memdesc:ae0c180cc60fc3ac7d87d26bf1f8c3cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the match context that was previously set with <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae780334546f9318129f464963775efd4" title="Set the match context. ">setMatchContext()</a>.  <a href="#ae0c180cc60fc3ac7d87d26bf1f8c3cc6">More...</a><br /></td></tr>
-<tr class="separator:ae0c180cc60fc3ac7d87d26bf1f8c3cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9793f46fa3a58d561408a6a7cf5ef78d"><td class="memItemLeft" align="right" valign="top">virtual MatchContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a9793f46fa3a58d561408a6a7cf5ef78d">getMatchContext</a> ()</td></tr>
+<tr class="memdesc:a9793f46fa3a58d561408a6a7cf5ef78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pointer to the match context that was previously set with <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#ae780334546f9318129f464963775efd4" title="Set the match context. ">setMatchContext()</a>.  <a href="#a9793f46fa3a58d561408a6a7cf5ef78d">More...</a><br /></td></tr>
+<tr class="separator:a9793f46fa3a58d561408a6a7cf5ef78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27c10cd9993c6a7899bce9fdb5643d21"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html">RegexMatch</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjpcre2_1_1select_1_1RegexMatch.html#a27c10cd9993c6a7899bce9fdb5643d21">setMatchDataBlock</a> (MatchData *madt)</td></tr>
 <tr class="memdesc:a27c10cd9993c6a7899bce9fdb5643d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the match data block to be used.  <a href="#a27c10cd9993c6a7899bce9fdb5643d21">More...</a><br /></td></tr>
 <tr class="separator:a27c10cd9993c6a7899bce9fdb5643d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -917,8 +917,8 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
 
 </div>
 </div>
-<a id="ae0c180cc60fc3ac7d87d26bf1f8c3cc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0c180cc60fc3ac7d87d26bf1f8c3cc6">&#9670;&nbsp;</a></span>getMatchContext()</h2>
+<a id="a9793f46fa3a58d561408a6a7cf5ef78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9793f46fa3a58d561408a6a7cf5ef78d">&#9670;&nbsp;</a></span>getMatchContext()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -929,7 +929,7 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MatchContext* <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, Map &gt;::RegexMatch::getMatchContext </td>
+          <td class="memname">virtual MatchContext* <a class="el" href="structjpcre2_1_1select.html">jpcre2::select</a>&lt; Char_T, Map &gt;::RegexMatch::getMatchContext </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -937,7 +937,7 @@ template&lt;typename Char_T, template&lt; typename... &gt; class Map = std::map&
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

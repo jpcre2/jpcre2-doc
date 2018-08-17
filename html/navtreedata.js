@@ -62,6 +62,7 @@ var NAVTREE =
       [ "Objects", "index.html#objects-thread-safety", null ]
     ] ],
     [ "Compatibility with compilers", "index.html#compatibility-with-compilers", null ],
+    [ "Examples", "index.html#examples", null ],
     [ "Short examples", "index.html#short-examples", null ],
     [ "API change notice", "index.html#api-change-notice", null ],
     [ "Test suit", "index.html#test-suit", null ],

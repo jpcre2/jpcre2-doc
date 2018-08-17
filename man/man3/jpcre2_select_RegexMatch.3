@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::RegexMatch" 3 "Tue Jul 10 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::RegexMatch" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -181,7 +181,7 @@ jpcre2::select< Char_T, Map >::RegexMatch \- Provides public constructors to cre
 .br
 .RI "Set the match context\&. "
 .ti -1c
-.RI "MatchContext * \fBgetMatchContext\fP ()"
+.RI "virtual MatchContext * \fBgetMatchContext\fP ()"
 .br
 .RI "Return pointer to the match context that was previously set with \fBsetMatchContext()\fP\&. "
 .ti -1c
@@ -517,7 +517,7 @@ JPCRE2 options for math operation
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> MatchContext* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchContext ()\fC [inline]\fP"
+.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual MatchContext* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getMatchContext ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Return pointer to the match context that was previously set with \fBsetMatchContext()\fP\&. Handling memory is the callers' responsibility\&. 
