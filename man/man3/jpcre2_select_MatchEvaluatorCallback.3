@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,7 +23,7 @@ This class contains a typedef of a function pointer or a templated function wrap
 .PP
 The callback function takes exactly three positional arguments: 
 .PP
-\fBTemplate Parameters:\fP
+\fBTemplate Parameters\fP
 .RS 4
 \fIT1\fP The first argument must be \fC\fBjp::NumSub\fP const &\fP aka \fCstd::vector<String> const &\fP (or \fCvoid*\fP if not needed)\&. 
 .br
@@ -54,9 +54,8 @@ jp::MatchEvaluator me2([](jp::NumSub const &m1, void*, void*)
 
 .fi
 .PP
- 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBMatchEvaluator\fP 
 .RE

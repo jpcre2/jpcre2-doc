@@ -1,3 +1,4 @@
 <map id="jpcre2::select::RegexReplace::getErrorMessage" name="jpcre2::select::RegexReplace::getErrorMessage">
-<area shape="rect" id="node2" href="$structjpcre2_1_1select.html#a4d8468ec55bed30b095c15992002a49c" title="Returns error message (either JPCRE2 or PCRE2) from error number and error offset. " alt="" coords="248,5,403,47"/>
+<area shape="rect" id="node1" title="Returns the last error message." alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node2" href="$structjpcre2_1_1select.html#a4d8468ec55bed30b095c15992002a49c" title="Returns error message (either JPCRE2 or PCRE2) from error number and error offset." alt="" coords="264,5,433,47"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="jpcre2::ModifierTable::reset" name="jpcre2::ModifierTable::reset">
+<area shape="rect" id="node1" title="Reset the modifier tables to their initial (empty) state including memory." alt="" coords="5,71,164,112"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#a581638ee276eb9f6c88b20f388425c1c" title="Reset the compile modifier table to its initial (empty) state including memory." alt="" coords="212,5,417,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1ModifierTable.html#a6c8448804f512aae2e32b23fa3a3cfae" title="Reset the match modifier table to its initial (empty) state including memory." alt="" coords="219,71,410,112"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1ModifierTable.html#a488c7501478e8137618b2064584d8cd8" title="Reset the replace modifier table to its initial (empty) state including memory." alt="" coords="213,136,416,177"/>
+</map>

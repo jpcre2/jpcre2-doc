@@ -1,0 +1,8 @@
+<map id="jpcre2::select::RegexMatch::changeModifier" name="jpcre2::select::RegexMatch::changeModifier">
+<area shape="rect" id="node1" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options." alt="" coords="539,71,737,112"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#a3b596ecf0bd76994eac0cff42e6320b2" title="Parse modifier string and add equivalent PCRE2 and JPCRE2 options." alt="" coords="282,5,481,47"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#af9b8bf78034ea8b33bb924a54616b8ed" title="Call RegexMatch::changeModifier(Modifier const&amp; mod, bool x)." alt="" coords="272,71,491,112"/>
+<area shape="rect" id="node5" href="$classjpcre2_1_1select_1_1RegexMatch.html#af989d0e0223e5088b938a85e866f5bb8" title="Set the modifier (resets all JPCRE2 and PCRE2 options) by calling RegexMatch::changeModifier()." alt="" coords="282,136,481,177"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a0e45941b9e60f6faba818e5bfa272d87" title="Call RegexMatch::addModifier(Modifier const&amp; mod)." alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node6" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a2f5019178812d44015051a097260f51a" title="Call RegexMatch::setModifier(Modifier const&amp; s)." alt="" coords="5,136,224,177"/>
+</map>

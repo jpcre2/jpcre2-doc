@@ -1,3 +1,4 @@
 <map id="jpcre2::select::RegexMatch::getModifier" name="jpcre2::select::RegexMatch::getModifier">
-<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#ab456e2dbd9b37101fb4862292ca84149" title="Take match related option value and convert to modifier string. " alt="" coords="236,5,379,47"/>
+<area shape="rect" id="node1" title="Calculate modifier string from PCRE2 and JPCRE2 options and return it." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#ab456e2dbd9b37101fb4862292ca84149" title="Take match related option value and convert to modifier string." alt="" coords="252,5,411,47"/>
 </map>

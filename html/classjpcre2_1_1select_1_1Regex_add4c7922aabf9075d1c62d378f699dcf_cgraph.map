@@ -1,0 +1,11 @@
+<map id="jpcre2::select::Regex::replace" name="jpcre2::select::Regex::replace">
+<area shape="rect" id="node1" title="This is an overloaded member function, provided for convenience. It differs from the above function o..." alt="" coords="5,169,164,211"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#ad0cab91c44f6f01e3f3a959a848cc79f" title="Returns a default constructed RegexReplace object by value." alt="" coords="238,5,397,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1RegexReplace.html#afbd99cc287436226e3510b71ba21eb8a" title="Perform regex replace by retrieving subject string, replacement string, modifier and other options fr..." alt="" coords="212,71,423,112"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1RegexReplace.html#ac00bea21c0a4d15b0310389bb634815f" title="Set the modifier string (resets all JPCRE2 and PCRE2 options) by calling RegexReplace::changeModifier..." alt="" coords="212,136,423,177"/>
+<area shape="rect" id="node7" href="$classjpcre2_1_1select_1_1RegexReplace.html#a4d40916b14c5f69234a33960c0a06be1" title="Set an external counter variable to store the replacement count." alt="" coords="212,201,423,243"/>
+<area shape="rect" id="node8" href="$classjpcre2_1_1select_1_1RegexReplace.html#ad3b9aa22d7d410db1d53002c824ecd72" title="Set the replacement string." alt="" coords="212,267,423,308"/>
+<area shape="rect" id="node9" href="$classjpcre2_1_1select_1_1RegexReplace.html#a454e9333152df917153d0265da4ea668" title="Set the subject string for replace." alt="" coords="212,332,423,373"/>
+<area shape="rect" id="node5" href="$classjpcre2_1_1select_1_1RegexReplace.html#a15e0602e91730ce4469e51e1e8528f4d" title="After a call to this function PCRE2 and JPCRE2 options will be properly set." alt="" coords="471,136,681,177"/>
+<area shape="rect" id="node6" href="$classjpcre2_1_1ModifierTable.html#a46704d9bbba899ffcb335f3de3458bdb" title="Modifier parser for replace related options." alt="" coords="729,136,888,177"/>
+</map>

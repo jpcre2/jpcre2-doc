@@ -1,0 +1,4 @@
+<map id="jpcre2::select::MatchEvaluator::setModifierTable" name="jpcre2::select::MatchEvaluator::setModifierTable">
+<area shape="rect" id="node1" title="Call RegexMatch::setModifierTable(ModifierTable const * s)." alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#a3d6f5d2e1bcbf7cf0b753f7bad74e05c" title="Set a custom modifier table to be used." alt="" coords="272,5,471,47"/>
+</map>

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -71,15 +71,21 @@ jpcre2::select< Char_T, Map > \- struct to select the types\&.
 .ti -1c
 .RI "typedef std::vector< \fBMapNtN\fP > \fBVecNtN\fP"
 .br
-.RI "Vector of substring name to substring number map\&. "
+.RI "Vector of substring name to substring number map\&. 
+.br
+ "
 .ti -1c
 .RI "typedef \fBVecNtN\fP \fBVecNtn\fP"
 .br
-.RI "Allow spelling mistake of VecNtN as VecNtn\&. "
+.RI "Allow spelling mistake of VecNtN as VecNtn\&. 
+.br
+ "
 .ti -1c
 .RI "typedef std::vector< \fBNumSub\fP > \fBVecNum\fP"
 .br
-.RI "Vector of matches with numbered substrings\&. "
+.RI "Vector of matches with numbered substrings\&. 
+.br
+ "
 .in -1c
 .SS "Static Public Member Functions"
 
@@ -119,7 +125,7 @@ struct to select the types\&.
 
 
 .PP
-\fBTemplate Parameters:\fP
+\fBTemplate Parameters\fP
 .RS 4
 \fIChar_T\fP Character type (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) 
 .br
@@ -159,61 +165,67 @@ typedef jpcre2::select<Char_T> jp;
  
 .SH "Member Typedef Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef Char_T \fBjpcre2::select\fP< Char_T, Map >::\fBChar\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef Char_T \fBjpcre2::select\fP< Char_T, Map >::\fBChar\fP"
 
 .PP
 Typedef for character (\fCchar\fP, \fCwchar_t\fP, \fCchar16_t\fP, \fCchar32_t\fP) 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef class Map< \fBString\fP, \fBString\fP > \fBjpcre2::select\fP< Char_T, Map >::\fBMapNas\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef class Map< \fBString\fP, \fBString\fP > \fBjpcre2::select\fP< Char_T, Map >::\fBMapNas\fP"
 
 .PP
 Map for Named substrings\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef class Map< \fBString\fP, \fBSIZE_T\fP > \fBjpcre2::select\fP< Char_T, Map >::\fBMapNtN\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef class Map< \fBString\fP, \fBSIZE_T\fP > \fBjpcre2::select\fP< Char_T, Map >::\fBMapNtN\fP"
 
 .PP
 Substring name to Substring number map\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef \fBMapNtN\fP \fBjpcre2::select\fP< Char_T, Map >::\fBMapNtn\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef \fBMapNtN\fP \fBjpcre2::select\fP< Char_T, Map >::\fBMapNtn\fP"
 
 .PP
 Allow spelling mistake of MapNtN as MapNtn\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBString\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBNumSub\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBString\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBNumSub\fP"
 
 .PP
 Vector for Numbered substrings (Sub container)\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef std::basic_string<Char_T> \fBjpcre2::select\fP< Char_T, Map >::\fBString\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef std::basic_string<Char_T> \fBjpcre2::select\fP< Char_T, Map >::\fBString\fP"
 
 .PP
-Typedef for string (\fCstd::string\fP, \fCstd::wstring\fP, \fCstd::u16string\fP, \fCstd::u32string\fP)\&. Defined as \fCstd::basic_string<Char_T>\fP\&. May be this list will make more sense: Character String  char std::string wchar_t std::wstring char16_t std::u16string (>=C++11) char32_t std::u32string (>=C++11) 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBMapNas\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNas\fP"
+Typedef for string (\fCstd::string\fP, \fCstd::wstring\fP, \fCstd::u16string\fP, \fCstd::u32string\fP)\&. Defined as \fCstd::basic_string<Char_T>\fP\&. May be this list will make more sense: Character String  char std::string  wchar_t std::wstring  char16_t std::u16string (>=C++11)  char32_t std::u32string (>=C++11)  
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBMapNas\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNas\fP"
 
 .PP
 Vector of matches with named substrings\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBMapNtN\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNtN\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBMapNtN\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNtN\fP"
 
 .PP
 Vector of substring name to substring number map\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef \fBVecNtN\fP \fBjpcre2::select\fP< Char_T, Map >::\fBVecNtn\fP"
+.br
+ 
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef \fBVecNtN\fP \fBjpcre2::select\fP< Char_T, Map >::\fBVecNtn\fP"
 
 .PP
 Allow spelling mistake of VecNtN as VecNtn\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBNumSub\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNum\fP"
+.br
+ 
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> typedef std::vector<\fBNumSub\fP> \fBjpcre2::select\fP< Char_T, Map >::\fBVecNum\fP"
 
 .PP
 Vector of matches with numbered substrings\&. 
+.br
+ 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::getErrorMessage (int err_num, int err_off)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::getErrorMessage (int err_num, int err_off)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Returns error message (either JPCRE2 or PCRE2) from error number and error offset\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIerr_num\fP error number (negative for PCRE2, positive for JPCRE2) 
 .br
 \fIerr_off\fP error offset 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 message as \fBjpcre2::select::String\fP\&. 
 .RE
@@ -223,81 +235,81 @@ message as \fBjpcre2::select::String\fP\&.
 References jpcre2::ERROR::INVALID_MODIFIER\&.
 .PP
 Referenced by jpcre2::select< Char_T, Map >::RegexMatch::getErrorMessage(), jpcre2::select< Char_T, Map >::RegexReplace::getErrorMessage(), and jpcre2::select< Char_T, Map >::Regex::getErrorMessage()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::getPcre2ErrorMessage (int err_num)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::getPcre2ErrorMessage (int err_num)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 Retruns error message from PCRE2 error number\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIerr_num\fP error number (negative) 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 message as \fBjpcre2::select::String\fP\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP a)\fC [inline]\fP, \fC [static]\fP"
-
-.PP
-Converts a Char_T to \fBjpcre2::select::String\fP\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIa\fP Char_T 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-\fBjpcre2::select::String\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP const * a)\fC [inline]\fP, \fC [static]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a Char_T const * to \fBjpcre2::select::String\fP 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIa\fP Char_T const * 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-\fBjpcre2::select::String\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP * a)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a Char_T* to \fBjpcre2::select::String\fP 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIa\fP Char_T const * 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBjpcre2::select::String\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (Pcre2Uchar * a)\fC [inline]\fP, \fC [static]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Converts a Char_T to \fBjpcre2::select::String\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP Char_T 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBjpcre2::select::String\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (\fBChar\fP const * a)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a Char_T const * to \fBjpcre2::select::String\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP Char_T const * 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBjpcre2::select::String\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> static \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::toString (Pcre2Uchar * a)\fC [inline]\fP, \fC [static]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Converts a PCRE2_UCHAR to String 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIa\fP PCRE2_UCHAR 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBjpcre2::select::String\fP 
 .RE

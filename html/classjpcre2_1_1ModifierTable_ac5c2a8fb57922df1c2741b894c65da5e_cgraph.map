@@ -1,3 +1,6 @@
 <map id="jpcre2::ModifierTable::clearCompileModifierTable" name="jpcre2::ModifierTable::clearCompileModifierTable">
-<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#a758813f937d60504e2eb6da4163b3a2b" title="Clear the modifier tables to their initial (empty) state. " alt="" coords="237,5,380,47"/>
+<area shape="rect" id="node1" title="Clear the compile modifier table to its initial (empty) state." alt="" coords="5,39,209,80"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#a758813f937d60504e2eb6da4163b3a2b" title="Clear the modifier tables to their initial (empty) state." alt="" coords="257,39,416,80"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1ModifierTable.html#ae672621f97a7085328374b9ccc1d2b8e" title="Clear the match modifier table to its initial (empty) state." alt="" coords="470,5,661,47"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1ModifierTable.html#a67a0ee2ebacb8c44c94fb9e65d29f8f0" title="Clear the replace modifier table to its initial (empty) state." alt="" coords="464,71,667,112"/>
 </map>

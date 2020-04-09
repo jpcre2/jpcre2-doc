@@ -1,0 +1,4 @@
+<map id="jpcre2::select::RegexMatch::changeJpcre2Option" name="jpcre2::select::RegexMatch::changeJpcre2Option">
+<area shape="rect" id="node1" title="Add or remove a JPCRE2 option." alt="" coords="272,5,471,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a8ffae7d620f99134f2292aab65c1f67a" title="Call RegexMatch::changeJpcre2Option(Uint opt, bool x)." alt="" coords="5,5,224,47"/>
+</map>

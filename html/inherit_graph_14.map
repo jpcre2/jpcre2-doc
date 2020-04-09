@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects. " alt="" coords="5,5,169,47"/>
-<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality. " alt="" coords="217,5,399,47"/>
+<area shape="rect" id="node1" href="$classjpcre2_1_1select_1_1RegexMatch.html" title="Provides public constructors to create RegexMatch objects." alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1MatchEvaluator.html" title="This class inherits RegexMatch and provides a similar functionality." alt="" coords="231,5,429,47"/>
 </map>

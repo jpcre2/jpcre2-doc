@@ -1,0 +1,6 @@
+<map id="jpcre2::select::Regex::initReplace" name="jpcre2::select::Regex::initReplace">
+<area shape="rect" id="node1" title="Returns a default constructed RegexReplace object by value." alt="" coords="212,71,371,112"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#a2de440221b27740fd70c88e13191eccf" title="Synonym for initReplace()" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1Regex.html#a7f26c3a8146c82f96f78c3309282b6f3" title="Perl compatible replace method." alt="" coords="5,71,164,112"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1Regex.html#a6cf544defa7a782ea221f190cb3ebef9" title="Perform regex replace and return the replaced string using a temporary replace object." alt="" coords="5,136,164,177"/>
+</map>

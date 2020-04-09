@@ -1,0 +1,6 @@
+<map id="jpcre2::select::MatchEvaluator::setModifier" name="jpcre2::select::MatchEvaluator::setModifier">
+<area shape="rect" id="node1" title="Call RegexMatch::setModifier(Modifier const&amp; s)." alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#af989d0e0223e5088b938a85e866f5bb8" title="Set the modifier (resets all JPCRE2 and PCRE2 options) by calling RegexMatch::changeModifier()." alt="" coords="272,5,471,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1RegexMatch.html#ac5c2a5834773982b0aaf74182c7be810" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options." alt="" coords="519,5,717,47"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1ModifierTable.html#ae9e79a11672969416e0fa1e661695a4f" title="Modifier parser for match related options." alt="" coords="765,5,924,47"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="jpcre2::select::MatchEvaluator::reset" name="jpcre2::select::MatchEvaluator::reset">
+<area shape="rect" id="node1" title="Reset MatchEvaluator to initial state including memory." alt="" coords="5,39,224,80"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#a49a353408223c1657df2fe208e36d0b8" title="Reset all class variables to its default (initial) state including memory." alt="" coords="282,5,481,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a7211c3c2f131f64e1e563181acec594e" title="Reset match data to initial state." alt="" coords="272,71,491,112"/>
+</map>

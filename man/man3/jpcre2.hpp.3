@@ -1,8 +1,8 @@
-.TH "jpcre2.hpp" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2.hpp" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs that uses its functionalities\&.  
+jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs that uses its functionalities\&. It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2\&.h\fP, neither should you define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fC\fBjpcre2\&.hpp\fP\fP\&. If your \fCpcre2\&.h\fP header is not in standard include paths, you may include \fCpcre2\&.h\fP with correct path before including \fC\fBjpcre2\&.hpp\fP\fP manually\&. In this case you will have to define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fCpcre2\&.h\fP\&. Make sure to link required PCRE2 libraries when compiling\&.  
 
 .SH SYNOPSIS
 .br
@@ -72,15 +72,12 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI " \fBjpcre2\fP"
 .br
-.RI "Top level namespace of JPCRE2\&. "
 .ti -1c
 .RI " \fBjpcre2::INFO\fP"
 .br
-.RI "Namespace to provide information about JPCRE2 library itself\&. "
 .ti -1c
 .RI " \fBjpcre2::ERROR\fP"
 .br
-.RI "Namespace for error codes\&. "
 .in -1c
 .SS "Macros"
 
@@ -88,23 +85,19 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .ti -1c
 .RI "#define \fBPCRE2_CODE_UNIT_WIDTH\fP   0"
 .br
-.RI "This macro does not have any significance in JPCRE2 context\&. "
 .ti -1c
 .RI "#define \fBJPCRE2_ASSERT\fP(cond,  msg)   \fBjpcre2::jassert\fP(cond, msg, __FILE__, __LINE__)"
 .br
-.RI "Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. "
 .ti -1c
-.RI "#define \fBJPCRE2_VERSION\fP   103102L"
+.RI "#define \fBJPCRE2_VERSION\fP   103104L"
 .br
 .RI "Define for JPCRE2 version\&. "
 .ti -1c
 .RI "#define \fBJPCRE2_USE_FUNCTION_POINTER_CALLBACK\fP"
 .br
-.RI "Use function pointer in all cases for MatchEvaluatorCallback function\&. "
 .ti -1c
 .RI "#define \fBJPCRE2_NDEBUG\fP"
 .br
-.RI "Macro to remove debug codes\&. "
 .in -1c
 .SS "Typedefs"
 
@@ -134,13 +127,13 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 
 .in +1c
 .ti -1c
-.RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2, \fBjpcre2::ERROR::INSUFFICIENT_OVECTOR\fP = 3 }
-.RI "Error numbers for JPCRE2\&. ""
+.RI "enum { \fBjpcre2::ERROR::INVALID_MODIFIER\fP = 2, \fBjpcre2::ERROR::INSUFFICIENT_OVECTOR\fP = 3 }"
 .br
+.RI "Error numbers for JPCRE2\&. "
 .ti -1c
-.RI "enum { \fBjpcre2::NONE\fP = 0x0000000u, \fBjpcre2::FIND_ALL\fP = 0x0000002u, \fBjpcre2::JIT_COMPILE\fP = 0x0000004u }
-.RI "These constants provide JPCRE2 options\&. ""
+.RI "enum { \fBjpcre2::NONE\fP = 0x0000000u, \fBjpcre2::FIND_ALL\fP = 0x0000002u, \fBjpcre2::JIT_COMPILE\fP = 0x0000004u }"
 .br
+.RI "These constants provide JPCRE2 options\&. "
 .in -1c
 .SS "Functions"
 
@@ -158,7 +151,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Name of the project\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.31\&.02'"
+.RI "static const char \fBjpcre2::INFO::FULL_VERSION\fP [] = '10\&.31\&.04'"
 .br
 .RI "Full version string\&. "
 .ti -1c
@@ -170,7 +163,7 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .br
 .RI "Major version, updated when API change is made\&. "
 .ti -1c
-.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '02'"
+.RI "static const char \fBjpcre2::INFO::VERSION_MINOR\fP [] = '04'"
 .br
 .RI "Minor version, includes bug fix or minor feature upgrade\&. "
 .ti -1c
@@ -180,11 +173,11 @@ jpcre2.hpp \- Main header file for JPCRE2 library to be included by programs tha
 .in -1c
 .SH "Detailed Description"
 .PP 
-Main header file for JPCRE2 library to be included by programs that uses its functionalities\&. 
+Main header file for JPCRE2 library to be included by programs that uses its functionalities\&. It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2\&.h\fP, neither should you define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fC\fBjpcre2\&.hpp\fP\fP\&. If your \fCpcre2\&.h\fP header is not in standard include paths, you may include \fCpcre2\&.h\fP with correct path before including \fC\fBjpcre2\&.hpp\fP\fP manually\&. In this case you will have to define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fCpcre2\&.h\fP\&. Make sure to link required PCRE2 libraries when compiling\&. 
 
-It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2\&.h\fP, neither should you define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fC\fBjpcre2\&.hpp\fP\fP\&. If your \fCpcre2\&.h\fP header is not in standard include paths, you may include \fCpcre2\&.h\fP with correct path before including \fC\fBjpcre2\&.hpp\fP\fP manually\&. In this case you will have to define \fCPCRE2_CODE_UNIT_WIDTH\fP before including \fCpcre2\&.h\fP\&. Make sure to link required PCRE2 libraries when compiling\&.
+
 .PP
-\fBAuthor:\fP
+\fBAuthor\fP
 .RS 4
 \fCMd Jahidul Hamid\fP 
 .RE
@@ -193,11 +186,9 @@ It includes the \fCpcre2\&.h\fP header, therefore you shouldn't include \fCpcre2
 .SH "Macro Definition Documentation"
 .PP 
 .SS "#define JPCRE2_ASSERT(cond, msg)   \fBjpcre2::jassert\fP(cond, msg, __FILE__, __LINE__)"
-
-.PP
 Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. When \fCNDEBUG\fP or \fCJPCRE2_NDEBUG\fP is defined before including this header, this macro will be defined as \fC((void)0)\fP thus eliminating this assertion\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcond\fP condtion (boolean) 
 .br
@@ -205,27 +196,19 @@ Macro to call \fC\fBjpcre2::jassert()\fP\fP with file path and line number\&. Wh
 .RE
 .PP
 
-.PP
-Referenced by jpcre2::select< Char_T, Map >::Regex::preplace()\&.
 .SS "#define JPCRE2_NDEBUG"
-
-.PP
 Macro to remove debug codes\&. Using this macro is discouraged even in production mode but provided for completeness\&. You should not use this macro to bypass any error in your program\&. Define this macro before including this header if you want to remove debug codes included in this library\&.
 .PP
 Using the standard \fCNDEBUG\fP macro will have the same effect, but it is recommended that you use \fCJPCRE2_NDEBUG\fP to strip out debug codes specifically for this library\&. 
 .SS "#define JPCRE2_USE_FUNCTION_POINTER_CALLBACK"
-
-.PP
 Use function pointer in all cases for MatchEvaluatorCallback function\&. By default function pointer is used for callback in MatchEvaluator when using <C++11 compiler, but for \fC>=C++11\fP compiler \fCstd::function\fP instead of function pointer is used\&. If this macro is defined before including \fBjpcre2\&.hpp\fP, function pointer will be used in all cases\&. It you are using lambda function with captures, stick with \fCstd::function\fP, on the other hand, if you are using older compilers, you might want to use function pointer instead\&.
 .PP
 For example, with gcc-4\&.7, \fCstd::function\fP will give compile error in C++11 mode, in such cases where full C++11 support is not available, use function pointer\&. 
-.SS "#define JPCRE2_VERSION   103102L"
+.SS "#define JPCRE2_VERSION   103104L"
 
 .PP
 Define for JPCRE2 version\&. It can be used to support changes in different versions of the lib\&. 
 .SS "#define PCRE2_CODE_UNIT_WIDTH   0"
-
-.PP
 This macro does not have any significance in JPCRE2 context\&. It is defined as 0 by default\&. Defining it before including \fBjpcre2\&.hpp\fP will override the default (discouraged as it will make it harder for you to detect problems), but still it will have no effect in a JPCRE2 perspective\&. Defining it with an invalid value will yield to compile error\&. 
 .SH "Author"
 .PP 

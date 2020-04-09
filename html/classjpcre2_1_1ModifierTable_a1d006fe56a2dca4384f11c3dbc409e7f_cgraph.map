@@ -1,0 +1,6 @@
+<map id="jpcre2::ModifierTable::setAllToDefault" name="jpcre2::ModifierTable::setAllToDefault">
+<area shape="rect" id="node1" title="Set all tables to default." alt="" coords="5,86,164,127"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#aa2504b372c5e6fb06a45b9adacd74177" title="Set compile modifier table to default." alt="" coords="229,5,435,61"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1ModifierTable.html#acdafcdc7202638b2750c9f4155f821bb" title="Set match modifie table to default." alt="" coords="212,86,452,127"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1ModifierTable.html#a6b29b11077aa67a6e3a1c5c4c31fc341" title="Set replace modifier table to default." alt="" coords="230,152,434,208"/>
+</map>

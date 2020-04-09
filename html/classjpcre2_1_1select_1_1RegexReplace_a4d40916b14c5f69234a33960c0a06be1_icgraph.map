@@ -1,0 +1,5 @@
+<map id="jpcre2::select::RegexReplace::setReplaceCounter" name="jpcre2::select::RegexReplace::setReplaceCounter">
+<area shape="rect" id="node1" title="Set an external counter variable to store the replacement count." alt="" coords="212,39,423,80"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#a7f26c3a8146c82f96f78c3309282b6f3" title="Perl compatible replace method." alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1Regex.html#a6cf544defa7a782ea221f190cb3ebef9" title="Perform regex replace and return the replaced string using a temporary replace object." alt="" coords="5,71,164,112"/>
+</map>

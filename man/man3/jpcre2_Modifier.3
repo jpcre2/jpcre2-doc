@@ -1,4 +1,4 @@
-.TH "jpcre2::Modifier" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::Modifier" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -29,15 +29,15 @@ jpcre2::Modifier \- Class to take a std::string modifier value with null safety\
 .br
 .RI "Returns the modifier string\&. "
 .ti -1c
-.RI "char const  * \fBc_str\fP () const"
+.RI "const char * \fBc_str\fP () const"
 .br
 .RI "Returns the \fBc_str()\fP of modifier string\&. "
 .ti -1c
-.RI "const \fBSIZE_T\fP \fBlength\fP () const"
+.RI "\fBSIZE_T\fP \fBlength\fP () const"
 .br
 .RI "Returns the length of the modifier string\&. "
 .ti -1c
-.RI "const char \fBoperator[]\fP (\fBSIZE_T\fP i) const"
+.RI "char \fBoperator[]\fP (\fBSIZE_T\fP i) const"
 .br
 .RI "operator[] overload to access character by index\&. "
 .in -1c
@@ -57,7 +57,7 @@ Default constructor\&.
 .PP
 Constructor that takes a std::string\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP std::string as a reference\&. 
 .RE
@@ -68,7 +68,7 @@ Constructor that takes a std::string\&.
 .PP
 Constructor that takes char const * (null safety is provided by this one) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP char const * 
 .RE
@@ -76,39 +76,39 @@ Constructor that takes char const * (null safety is provided by this one)
 
 .SH "Member Function Documentation"
 .PP 
-.SS "char const* jpcre2::Modifier::c_str () const\fC [inline]\fP"
+.SS "const char* jpcre2::Modifier::c_str () const\fC [inline]\fP"
 
 .PP
 Returns the \fBc_str()\fP of modifier string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 char const * 
 .RE
 .PP
 
-.SS "const \fBSIZE_T\fP jpcre2::Modifier::length () const\fC [inline]\fP"
+.SS "\fBSIZE_T\fP jpcre2::Modifier::length () const\fC [inline]\fP"
 
 .PP
 Returns the length of the modifier string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 length 
 .RE
 .PP
 
-.SS "const char jpcre2::Modifier::operator[] (\fBSIZE_T\fP i) const\fC [inline]\fP"
+.SS "char jpcre2::Modifier::operator[] (\fBSIZE_T\fP i) const\fC [inline]\fP"
 
 .PP
 operator[] overload to access character by index\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIi\fP index 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 character at index i\&. 
 .RE
@@ -119,7 +119,7 @@ character at index i\&.
 .PP
 Returns the modifier string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 modifier string (std::string) 
 .RE

@@ -1,0 +1,5 @@
+<map id="jpcre2::select::MatchEvaluator::clear" name="jpcre2::select::MatchEvaluator::clear">
+<area shape="rect" id="node1" title="Clears MatchEvaluator." alt="" coords="5,63,224,104"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#aac809e554574777ac6576a6826aad719" title="Clear all class variables (may retain some memory for further use)." alt="" coords="282,29,481,71"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a63699461d6a85d857ea2863718c28b23" title="Clear match data." alt="" coords="272,95,491,136"/>
+</map>

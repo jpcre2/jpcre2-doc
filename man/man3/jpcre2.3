@@ -1,9 +1,8 @@
-.TH "jpcre2" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-jpcre2 \- Top level namespace of JPCRE2\&.  
-
+jpcre2
 .SH SYNOPSIS
 .br
 .PP
@@ -13,11 +12,9 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .ti -1c
 .RI " \fBERROR\fP"
 .br
-.RI "Namespace for error codes\&. "
 .ti -1c
 .RI " \fBINFO\fP"
 .br
-.RI "Namespace to provide information about JPCRE2 library itself\&. "
 .in -1c
 .SS "Classes"
 
@@ -63,9 +60,9 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 
 .in +1c
 .ti -1c
-.RI "enum { \fBNONE\fP = 0x0000000u, \fBFIND_ALL\fP = 0x0000002u, \fBJIT_COMPILE\fP = 0x0000004u }
-.RI "These constants provide JPCRE2 options\&. ""
+.RI "enum { \fBNONE\fP = 0x0000000u, \fBFIND_ALL\fP = 0x0000002u, \fBJIT_COMPILE\fP = 0x0000004u }"
 .br
+.RI "These constants provide JPCRE2 options\&. "
 .in -1c
 .SS "Functions"
 
@@ -77,8 +74,8 @@ jpcre2 \- Top level namespace of JPCRE2\&.
 .in -1c
 .SH "Detailed Description"
 .PP 
-Top level namespace of JPCRE2\&. 
-
+Top level namespace of JPCRE2\&.
+.PP
 All functions, classes/structs, constants, enums that are provided by JPCRE2 belong to this namespace while \fBPCRE2\fP structs, functions, constants remain outside of its scope\&.
 .PP
 If you want to use any PCRE2 functions or constants, remember that they are in the global scope and should be used as such\&. 
@@ -129,7 +126,7 @@ Perform JIT compilation for optimization\&.
 .PP
 JPCRE2 assert function\&. Aborts with an error message if condition fails\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcond\fP boolean condition 
 .br

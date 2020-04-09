@@ -1,0 +1,5 @@
+<map id="jpcre2::select::Regex::addModifier" name="jpcre2::select::Regex::addModifier">
+<area shape="rect" id="node1" title="Parse modifier string and add equivalent PCRE2 and JPCRE2 options." alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#aeecd73bbba6ace8de5bd0fea804084cf" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options." alt="" coords="212,5,371,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1ModifierTable.html#a05d9f16b535e3d4f82aa1b7dd0b225c3" title="Modifier parser for compile related options." alt="" coords="419,5,577,47"/>
+</map>

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::RegexReplace" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::RegexReplace" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,7 +65,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get replacement string\&. "
 .ti -1c
-.RI "\fBString\fP const  * \fBgetReplaceWithPointer\fP () const"
+.RI "const \fBString\fP * \fBgetReplaceWithPointer\fP () const"
 .br
 .RI "Get pointer to replacement string\&. "
 .ti -1c
@@ -73,7 +73,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get subject string\&. "
 .ti -1c
-.RI "\fBString\fP const  * \fBgetSubjectPointer\fP () const"
+.RI "const \fBString\fP * \fBgetSubjectPointer\fP () const"
 .br
 .RI "Get pointer to subject string\&. "
 .ti -1c
@@ -97,7 +97,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get JPCRE2 option\&. "
 .ti -1c
-.RI "\fBRegex\fP const  * \fBgetRegexObject\fP () const"
+.RI "const \fBRegex\fP * \fBgetRegexObject\fP () const"
 .br
 .RI "Get a pointer to the associated \fBRegex\fP object\&. "
 .ti -1c
@@ -242,38 +242,38 @@ rr\&.replace();  // replaces 'subject' with 'me' i\&.e returns 'me'
  
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace ()\fC [inline]\fP"
 
 .PP
 Default constructor\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegex\fP const * r)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegex\fP const * r)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Creates a \fBRegexReplace\fP object associating a \fBRegex\fP object\&. \fBRegex\fP object is not modified\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIr\fP pointer to a \fBRegex\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegexReplace\fP const & rr)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegexReplace\fP const & rr)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Copy constructor\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrr\fP \fBRegexReplace\fP object reference 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegexReplace\fP && rr)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::RegexReplace (\fBRegexReplace\fP && rr)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Move constructor\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrr\fP rvalue reference to a \fBRegexReplace\fP object reference 
 .RE
@@ -281,22 +281,22 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified JPCRE2 option to existing options for replace\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addJpcre2Option()\fP 
 .PP
@@ -304,22 +304,22 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addModifier (\fBModifier\fP const & mod)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addModifier (\fBModifier\fP const & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegexReplace::changeModifier()\fP provided for convenience\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addModifier()\fP 
 .PP
@@ -327,22 +327,24 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::RegexReplace::changeModifier()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add specified PCRE2 option to existing options for replace\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addPcre2Option()\fP 
 .PP
@@ -350,24 +352,24 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. Add or remove a JPCRE2 option 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIopt\fP JPCRE2 option value 
 .br
 \fIx\fP Add the option if it's true, remove otherwise\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::changeJpcre2Option()\fP 
 .PP
@@ -375,26 +377,26 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changeModifier (\fBModifier\fP const & mod, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changeModifier (\fBModifier\fP const & mod, bool x)\fC [inline]\fP"
 
 .PP
 After a call to this function PCRE2 and JPCRE2 options will be properly set\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
 .PP
 If invalid modifier is detected, then the error number for the \fBRegexReplace\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegexReplace::getErrorMessage()\fP function\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImod\fP \fBModifier\fP string\&. 
 .br
 \fIx\fP Whether to add or remove option 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegex::changeModifier()\fP 
 .PP
@@ -404,24 +406,26 @@ Reference to the \fBRegexReplace\fP object
 
 .PP
 References jpcre2::ModifierTable::toReplaceOption()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::RegexReplace::addModifier(), and jpcre2::select< Char_T, Map >::RegexReplace::setModifier()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIopt\fP PCRE2 option value 
 .br
 \fIx\fP Add the option if it's true, remove otherwise\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::changePcre2Option()\fP 
 .PP
@@ -429,12 +433,12 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::clear ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::clear ()\fC [inline]\fP"
 
 .PP
 Clear all class variables to its default (initial) state (some memory may retain for further use)\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
@@ -444,23 +448,23 @@ Reference to the calling \fBRegexReplace\fP object\&.
 References jpcre2::select< Char_T, Map >::RegexReplace::clear()\&.
 .PP
 Referenced by jpcre2::select< Char_T, Map >::RegexReplace::clear(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getBufferSize ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getBufferSize ()\fC [inline]\fP"
 
 .PP
 Get the initial buffer size that is being used by internal function pcre2_substitute\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 buffer_size 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorMessage () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorMessage () const\fC [inline]\fP"
 
 .PP
 Returns the last error message\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error message 
 .RE
@@ -468,39 +472,39 @@ Last error message
 
 .PP
 References jpcre2::select< Char_T, Map >::getErrorMessage()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorNumber () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorNumber () const\fC [inline]\fP"
 
 .PP
 Returns the last error number\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error number 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorOffset () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getErrorOffset () const\fC [inline]\fP"
 
 .PP
 Returns the last error offset\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error offset 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getJpcre2Option () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getJpcre2Option () const\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 JPCRE2 option for replace 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegex::getJpcre2Option()\fP 
 .PP
@@ -508,40 +512,40 @@ JPCRE2 option for replace
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getLastReplaceCount ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getLastReplaceCount ()\fC [inline]\fP"
 
 .PP
 Get the number of replacement in last replace operation\&. If you set an external counter with \fBRegexReplace::setReplaceCounter()\fP, a call to this getter method will dereference the pointer to the external counter and return the value\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last replace count 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> MatchContext* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getMatchContext ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> MatchContext* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getMatchContext ()\fC [inline]\fP"
 
 .PP
 Return pointer to the match context that was previously set with \fBsetMatchContext()\fP\&. Handling memory is the callers' responsibility\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 pointer to the match context (default: null)\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> virtual MatchData* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getMatchDataBlock ()\fC [inline]\fP, \fC [virtual]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> virtual MatchData* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getMatchDataBlock ()\fC [inline]\fP, \fC [virtual]\fP"
 
 .PP
 Get the pointer to the match data block that was set previously with setMatchData() Handling memory is the callers' responsibility\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 pointer to the match data (default: null)\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> std::string \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getModifier () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> std::string \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getModifier () const\fC [inline]\fP"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do remember that modifiers (or PCRE2 and JPCRE2 options) do not change or get initialized as long as you don't do that explicitly\&. Calling \fBRegexReplace::setModifier()\fP will re-set them\&.
@@ -550,12 +554,12 @@ Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. Do reme
 .PP
 Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegexReplace::changeModifier()\fP\fP), both will get removed\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated modifier string (std::string) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::getModifier()\fP 
 .PP
@@ -565,28 +569,28 @@ Calculated modifier string (std::string)
 
 .PP
 References jpcre2::ModifierTable::fromReplaceOption()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getModifierTable ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getModifierTable ()\fC [inline]\fP"
 
 .PP
 Get the modifier table that is set,\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 constant \fBModifierTable\fP pointer\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getPcre2Option () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getPcre2Option () const\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 PCRE2 option for replace 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegex::getPcre2Option()\fP 
 .PP
@@ -594,83 +598,83 @@ PCRE2 option for replace
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getRegexObject () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBRegex\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getRegexObject () const\fC [inline]\fP"
 
 .PP
 Get a pointer to the associated \fBRegex\fP object\&. If no actual \fBRegex\fP object is associated, null is returned 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A pointer to the associated constant \fBRegex\fP object or null 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWith () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWith () const\fC [inline]\fP"
 
 .PP
 Get replacement string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replacement string 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWithPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWithPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to replacement string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 pointer to replacement string 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getStartOffset () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> PCRE2_SIZE \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getStartOffset () const\fC [inline]\fP"
 
 .PP
 Get start offset\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 the start offset where matching starts for replace operation 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubject () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubject () const\fC [inline]\fP"
 
 .PP
 Get subject string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 subject string 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::getSubject()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubjectPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubjectPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to subject string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pointer to constant subject string 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::getSubjectPointer()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::nreplace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::nreplace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
 
 .PP
 JPCRE2 native replace function\&. A different name is adopted to distinguish itself from the regular \fBreplace()\fP function which uses pcre2_substitute() to do the replacement; contrary to that, it will provide a JPCRE2 native way of replacement operation\&. It takes a \fBMatchEvaluator\fP object which provides a callback function that is used to generate replacement string on the fly\&. Any replacement string set with \fC\fBRegexReplace::setReplaceWith()\fP\fP function will have no effect\&. The string returned by the callback function will be treated as literal and will not go through any further processing\&.
@@ -691,17 +695,17 @@ It calls \fBMatchEvaluator::nreplace()\fP on the \fBMatchEvaluator\fP object to 
 .PP
 It always performs a new match\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIme\fP A \fBMatchEvaluator\fP object\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 The resultant string after replacement\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBMatchEvaluator::nreplace()\fP 
 .PP
@@ -711,66 +715,91 @@ The resultant string after replacement\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::operator= (\fBRegexReplace\fP const & rr)\fC [inline]\fP"
-
-.PP
-Overloaded Copy assignment operator\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIrr\fP \fBRegexReplace\fP object reference 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-A reference to the calling \fBRegexReplace\fP object 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::operator= (\fBRegexReplace\fP && rr)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::operator= (\fBRegexReplace\fP && rr)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Overloaded move assignment operator\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIrr\fP rvalue reference to a \fBRegexReplace\fP object reference 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::preplace (void)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::operator= (\fBRegexReplace\fP const & rr)\fC [inline]\fP"
 
 .PP
-Perl compatible replace method\&. Modifies subject string in-place and returns replace count\&.
+Overloaded Copy assignment operator\&. 
 .PP
-The replacement is performed with \fC\fBRegexReplace::replace()\fP\fP which uses \fCpcre2_substitute()\fP\&. 
-.PP
-\fBReturns:\fP
+\fBParameters\fP
 .RS 4
-replace count 
+\fIrr\fP \fBRegexReplace\fP object reference 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::preplace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::preplace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
 
 .PP
 Perl compatible replace method with match evaluator\&. Modifies subject string in-place and returns replace count\&. \fBMatchEvaluator\fP class does not have a implementation of this replace method, thus it is not possible to re-use match data with \fBpreplace()\fP method\&. Re-using match data with preplace doesn't actually make any sense, because new subject will always require new match data\&.
 .PP
 The replacement is performed with \fC\fBRegexReplace::replace()\fP\fP which uses \fCpcre2_substitute()\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIme\fP \fBMatchEvaluator\fP object\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replace count 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::preplace (void)\fC [inline]\fP"
+
+.PP
+Perl compatible replace method\&. Modifies subject string in-place and returns replace count\&.
+.PP
+The replacement is performed with \fC\fBRegexReplace::replace()\fP\fP which uses \fCpcre2_substitute()\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+replace count 
+.RE
+.PP
+
+.PP
+References jpcre2::select< Char_T, Map >::RegexReplace::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::replace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
+
+.PP
+PCRE2 compatible replace function that takes a \fBMatchEvaluator\fP\&. String returned by callback function is processed by pcre2_substitute, thus all PCRE2 substitute options are supported by this replace function\&.
+.PP
+It always performs a new match\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIme\fP \fBMatchEvaluator\fP instance, (copied and modified according to this object)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+resultant string\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBreplace()\fP 
 .RE
 .PP
 
@@ -792,57 +821,36 @@ All options supported by pcre2_substitute is available\&.
 .PP
 Note: This function calls pcre2_substitute() to do the replacement\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Replaced string 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::replace (\fBMatchEvaluator\fP me)\fC [inline]\fP"
-
 .PP
-PCRE2 compatible replace function that takes a \fBMatchEvaluator\fP\&. String returned by callback function is processed by pcre2_substitute, thus all PCRE2 substitute options are supported by this replace function\&.
-.PP
-It always performs a new match\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIme\fP \fBMatchEvaluator\fP instance, (copied and modified according to this object)\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-resultant string\&. 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBreplace()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::reset ()\fC [inline]\fP"
+Referenced by jpcre2::select< Char_T, Map >::RegexReplace::preplace(), jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state including memory\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::resetErrors ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::resetErrors ()\fC [inline]\fP"
 
 .PP
 Reset replace related errors to zero\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegex::resetErrors()\fP 
 .PP
@@ -850,38 +858,38 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setBufferSize (PCRE2_SIZE x)\fC [inline]\fP"
 
 .PP
 Set the initial buffer size to be allocated for replaced string (used by PCRE2) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Buffer size 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for replace (overwrite existing option) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setJpcre2Option()\fP 
 .PP
@@ -889,54 +897,54 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setMatchContext (MatchContext * match_context)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setMatchContext (MatchContext * match_context)\fC [inline]\fP"
 
 .PP
 Set the match context to be used\&. Native PCRE2 API may be used to create match context\&. The memory of the match context is not handled by \fBRegexReplace\fP object and not freed\&. User will be responsible for freeing memory\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImatch_context\fP Pointer to match context\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setMatchDataBlock (MatchData * match_data)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setMatchDataBlock (MatchData * match_data)\fC [inline]\fP"
 
 .PP
 Set the match data block to be used\&. Native PCRE2 API may be used to create match data block\&. The memory of the match data is not handled by \fBRegexReplace\fP object and not freed\&. User will be responsible for creating/freeing memory\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImatch_data\fP Pointer to match data\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setModifier (\fBModifier\fP const & s)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setModifier (\fBModifier\fP const & s)\fC [inline]\fP"
 
 .PP
 Set the modifier string (resets all JPCRE2 and PCRE2 options) by calling \fBRegexReplace::changeModifier()\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setModifier()\fP 
 .PP
@@ -944,38 +952,42 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::RegexReplace::changeModifier()\&.
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP"
 
 .PP
 Set a custom modifier table to be used\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImdt\fP pointer to \fBModifierTable\fP object\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option replace (overwrite existing option) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setPcre2Option()\fP 
 .PP
@@ -983,39 +995,41 @@ Reference to the calling \fBRegexReplace\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setRegexObject (\fBRegex\fP const * r)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setRegexObject (\fBRegex\fP const * r)\fC [inline]\fP"
 
 .PP
 Set the associated \fBRegex\fP object\&. \fBRegex\fP object is not modified\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIr\fP Pointer to a \fBRegex\fP object\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceCounter (\fBSIZE_T\fP * counter)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceCounter (\fBSIZE_T\fP * counter)\fC [inline]\fP"
 
 .PP
 Set an external counter variable to store the replacement count\&. This counter will be updated after each replacement operation on this object\&. A call to this method will reset the internal counter to 0, thus when you reset the counter to internal counter (by giving null as param), the previous replace count won't be available\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIcounter\fP Pointer to a counter variable\&. Null sets the counter to default internal counter\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceWith (\fBString\fP const & s)\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceWith (\fBString\fP const & s)\fC [inline]\fP"
 
 .PP
 Set the replacement string\&. \fC$\fP is a special character which implies captured group\&.
@@ -1030,28 +1044,30 @@ A literal \fC$\fP can be given as \fC$$\fP\&.
 .PP
 \fBNote:\fP This function makes a copy of the string\&. If no copy is desired or you are working with big text, consider passing the string with pointer\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP String to replace with 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceWith (\fBString\fP const * s)\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setReplaceWith (\fBString\fP const * s)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP Pointer to the string to replace with, null pointer unsets it\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
@@ -1059,59 +1075,38 @@ Reference to the calling \fBRegexReplace\fP object
 
 .PP
 References jpcre2::select< Char_T, Map >::RegexReplace::clear()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setStartOffset (PCRE2_SIZE start_offset)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setStartOffset (PCRE2_SIZE start_offset)\fC [inline]\fP"
 
 .PP
 Set start offset\&. Set the offset where matching starts for replace operation 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIstart_offset\fP The offset where matching starts for replace operation 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setSubject (\fBString\fP const & s)\fC [inline]\fP"
-
-.PP
-Set the subject string for replace\&. This makes a copy of the string\&. If no copy is desired or you are working with big text, consider passing by pointer\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Subject string 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Reference to the calling \fBRegexReplace\fP object 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::setSubject()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setSubject (\fBString\fP * s)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setSubject (\fBString\fP * s)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Set pointer to the subject string for replace, null pointer unsets it\&. The underlined data is not modified unless \fBRegexReplace::preplace()\fP method is used\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP Pointer to subject string 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegexReplace\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setSubject()\fP 
 .RE
@@ -1119,6 +1114,29 @@ Reference to the calling \fBRegexReplace\fP object
 
 .PP
 References jpcre2::select< Char_T, Map >::RegexReplace::clear()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP& \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::setSubject (\fBString\fP const & s)\fC [inline]\fP"
+
+.PP
+Set the subject string for replace\&. This makes a copy of the string\&. If no copy is desired or you are working with big text, consider passing by pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP Subject string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Reference to the calling \fBRegexReplace\fP object 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBRegexMatch::setSubject()\fP 
+.RE
+.PP
+
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
 
 .SH "Author"
 .PP 

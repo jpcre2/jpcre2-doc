@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::Regex" 3 "Sat Aug 18 2018" "Version 10.31.02" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::Regex" 3 "Thu Apr 9 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -97,7 +97,7 @@ jpcre2::select< Char_T, Map >::Regex \- Provides public constructors to create \
 .br
 .RI "Get pattern string\&. "
 .ti -1c
-.RI "\fBString\fP const  * \fBgetPatternPointer\fP () const"
+.RI "const \fBString\fP * \fBgetPatternPointer\fP () const"
 .br
 .RI "Get pointer to pattern string\&. "
 .ti -1c
@@ -313,38 +313,40 @@ jp::Regex re2("pattern", "modifier"); //performs a compile
  
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex ()\fC [inline]\fP"
 
 .PP
 Default Constructor\&. Initializes all class variables to defaults\&. Does not perform any pattern compilation\&. 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re)\fC [inline]\fP"
 
 .PP
 Compile pattern with initialization\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string 
+.br
+ 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBModifier\fP const & mod)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBModifier\fP const & mod)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string \&. 
 .br
@@ -352,12 +354,12 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBModifier\fP const & mod)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBModifier\fP const & mod)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
@@ -365,12 +367,12 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string \&. 
 .br
@@ -378,12 +380,12 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
@@ -391,12 +393,12 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string \&. 
 .br
@@ -406,12 +408,12 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
 .br
@@ -421,23 +423,23 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBRegex\fP const & r)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBRegex\fP const & r)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Copy constructor\&. A separate and new compile is performed from the copied options\&.
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIr\fP Constant \fBRegex\fP object reference\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBRegex\fP && r)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::Regex (\fBRegex\fP && r)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Move constructor\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIr\fP rvalue reference to a \fBRegex\fP object\&. 
 .RE
@@ -445,22 +447,22 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 
 .SH "Member Function Documentation"
 .PP 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing JPCRE2 options for compile\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addJpcre2Option()\fP 
 .PP
@@ -468,22 +470,22 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addModifier (\fBModifier\fP const & mod)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addModifier (\fBModifier\fP const & mod)\fC [inline]\fP"
 
 .PP
 Parse modifier string and add equivalent PCRE2 and JPCRE2 options\&. This is just a wrapper of the original function \fBRegex::changeModifier()\fP provided for convenience\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addModifier()\fP 
 .PP
@@ -491,22 +493,24 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::changeModifier()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::addPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Add option to existing PCRE2 options for compile\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::addPcre2Option()\fP 
 .PP
@@ -514,24 +518,24 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changeJpcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a JPCRE2 option\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIopt\fP JPCRE2 option value 
 .br
 \fIx\fP Add the option if it's true, remove otherwise\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::changeJpcre2Option()\fP 
 .PP
@@ -539,26 +543,26 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changeModifier (\fBModifier\fP const & mod, bool x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changeModifier (\fBModifier\fP const & mod, bool x)\fC [inline]\fP"
 
 .PP
 Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options\&. This function does not initialize or re-initialize options\&. If you want to set options from scratch, initialize them to 0 before calling this function\&.
 .PP
 If invalid modifier is detected, then the error number for the \fBRegex\fP object will be \fBjpcre2::ERROR::INVALID_MODIFIER\fP and error offset will be the modifier character\&. You can get the message with \fBRegex::getErrorMessage()\fP function\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImod\fP \fBModifier\fP string\&. 
 .br
 \fIx\fP Whether to add or remove option 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::changeModifier()\fP 
 .PP
@@ -568,24 +572,26 @@ Reference to the calling \fBRegex\fP object
 
 .PP
 References jpcre2::ModifierTable::toCompileOption()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::addModifier(), and jpcre2::select< Char_T, Map >::Regex::setModifier()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::changePcre2Option (\fBUint\fP opt, bool x)\fC [inline]\fP"
 
 .PP
 Add or remove a PCRE2 option\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIopt\fP PCRE2 option value 
 .br
 \fIx\fP Add the option if it's true, remove otherwise\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::changePcre2Option()\fP 
 .PP
@@ -593,14 +599,118 @@ Reference to the calling \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::clear ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::clear ()\fC [inline]\fP"
 
 .PP
 Clear all class variables to its default (initial) state (some memory may retain for further use)\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pattern string \&. 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBModifier\fP const & mod)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pattern string 
+.br
+\fImod\fP \fBModifier\fP string\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pattern string 
+.br
+\fIpo\fP PCRE2 option 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pattern string 
+.br
+\fIpo\fP PCRE2 option 
+.br
+\fIjo\fP JPCRE2 option 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBModifier\fP const & mod)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
+.br
+\fImod\fP \fBModifier\fP string\&. 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
+.br
+\fIpo\fP PCRE2 option 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
+.br
+\fIpo\fP PCRE2 option 
+.br
+\fIjo\fP JPCRE2 option 
 .RE
 .PP
 
@@ -609,7 +719,7 @@ Reference to the calling \fBRegex\fP object\&.
 .PP
 Compile pattern using info from class variables\&. 
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegex::compile(String const &re, Uint po, Uint jo)\fP 
 .PP
@@ -623,116 +733,12 @@ Regex::compile(String const &re, Modifier mod)
 
 .PP
 References jpcre2::JIT_COMPILE\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Set the specified parameters, then compile the pattern using information from class variables\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pattern string 
-.br
-\fIpo\fP PCRE2 option 
-.br
-\fIjo\fP JPCRE2 option 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBUint\fP po, \fBUint\fP jo)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
-.br
-\fIpo\fP PCRE2 option 
-.br
-\fIjo\fP JPCRE2 option 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBUint\fP po)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pattern string 
-.br
-\fIpo\fP PCRE2 option 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBUint\fP po)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
-.br
-\fIpo\fP PCRE2 option 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re, \fBModifier\fP const & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pattern string 
-.br
-\fImod\fP \fBModifier\fP string\&. 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re, \fBModifier\fP const & mod)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
-.br
-\fImod\fP \fBModifier\fP string\&. 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const & re)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pattern string \&. 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> void \fBjpcre2::select\fP< Char_T, Map >::Regex::compile (\fBString\fP const * re)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIre\fP Pointer to pattern string\&. A null pointer will unset the pattern and perform a compile with empty pattern\&. 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorMessage () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorMessage () const\fC [inline]\fP"
 
 .PP
 Returns the last error message\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error message 
 .RE
@@ -740,39 +746,39 @@ Last error message
 
 .PP
 References jpcre2::select< Char_T, Map >::getErrorMessage()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorNumber () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorNumber () const\fC [inline]\fP"
 
 .PP
 Returns the last error number\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error number 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorOffset () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> int \fBjpcre2::select\fP< Char_T, Map >::Regex::getErrorOffset () const\fC [inline]\fP"
 
 .PP
 Returns the last error offset\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Last error offset 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getJpcre2Option () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getJpcre2Option () const\fC [inline]\fP"
 
 .PP
 Get JPCRE2 option\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Compile time JPCRE2 option value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexReplace::getJpcre2Option()\fP 
 .PP
@@ -780,35 +786,37 @@ Compile time JPCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getMatchObject ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getMatchObject ()\fC [inline]\fP"
 
 .PP
 Synonym for \fBinitMatch()\fP 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBRegexMatch\fP object by value\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> std::string \fBjpcre2::select\fP< Char_T, Map >::Regex::getModifier () const\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initMatch()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> std::string \fBjpcre2::select\fP< Char_T, Map >::Regex::getModifier () const\fC [inline]\fP"
 
 .PP
 Calculate modifier string from PCRE2 and JPCRE2 options and return it\&. \fBMixed or combined modifier\fP\&.
 .PP
 Some modifier may include other modifiers i\&.e they have the same meaning of some modifiers combined together\&. For example, the 'n' modifier includes the 'u' modifier and together they are equivalent to \fCPCRE2_UTF | PCRE2_UCP\fP\&. When you set a modifier like this, both options get set, and when you remove the 'n' modifier (with \fC\fBRegex::changeModifier()\fP\fP), both will get removed\&. 
 .PP
-\fBTemplate Parameters:\fP
+\fBTemplate Parameters\fP
 .RS 4
 \fIChar_T\fP Character type 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Calculated modifier string (std::string) 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::getModifier()\fP 
 .PP
@@ -818,23 +826,23 @@ Calculated modifier string (std::string)
 
 .PP
 References jpcre2::ModifierTable::fromCompileOption()\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getModifierTable ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBModifierTable\fP const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getModifierTable ()\fC [inline]\fP"
 
 .PP
 Get the modifier table that is set,\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 constant \fBModifierTable\fP pointer\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getNewLine ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getNewLine ()\fC [inline]\fP"
 
 .PP
 Get new line convention from compiled code\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 New line option value or 0\&. 
 .PP
@@ -851,50 +859,50 @@ PCRE2_NEWLINE_ANY       Any Unicode newline sequence
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getPattern () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getPattern () const\fC [inline]\fP"
 
 .PP
 Get pattern string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 pattern string of type \fBjpcre2::select::String\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPatternPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPatternPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to pattern string\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Pointer to constant pattern string 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> Pcre2Code const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPcre2Code () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> Pcre2Code const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPcre2Code () const\fC [inline]\fP"
 
 .PP
 Get Pcre2 raw compiled code pointer\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 pointer to constant pcre2_code or null\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getPcre2Option () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBUint\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getPcre2Option () const\fC [inline]\fP"
 
 .PP
 Get PCRE2 option\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Compile time PCRE2 option value 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexReplace::getPcre2Option()\fP 
 .PP
@@ -902,45 +910,51 @@ Compile time PCRE2 option value
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getReplaceObject ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::getReplaceObject ()\fC [inline]\fP"
 
 .PP
 Synonym for \fBinitReplace()\fP 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::initMatch ()\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexMatch\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::initMatch ()\fC [inline]\fP"
 
 .PP
 Returns a default constructed \fBRegexMatch\fP object by value\&. This object is initialized with the same modifier table as this \fBRegex\fP object\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBRegexMatch\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::initReplace ()\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::getMatchObject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegexReplace\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::initReplace ()\fC [inline]\fP"
 
 .PP
 Returns a default constructed \fBRegexReplace\fP object by value\&. This object is initialized with the same modifier table as this \fBRegex\fP object\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 \fBRegexReplace\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const & s, \fBModifier\fP const & mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
+.PP
+Referenced by jpcre2::select< Char_T, Map >::Regex::getReplaceObject(), jpcre2::select< Char_T, Map >::Regex::preplace(), and jpcre2::select< Char_T, Map >::Regex::replace()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const & s, \fBModifier\fP const & mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
 Perform regex match and return match count using a temporary match object\&. This temporary match object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP Subject string \&. 
 .br
@@ -949,23 +963,46 @@ Perform regex match and return match count using a temporary match object\&. Thi
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Match count 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::match()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const * s, \fBModifier\fP const & mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const & s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
+.RS 4
+\fIs\fP Subject string \&. 
+.br
+\fIstart_offset\fP Offset from where matching will start in the subject string\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Match count 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBRegexMatch::match()\fP 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const * s, \fBModifier\fP const & mod, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
+.PP
+\fBParameters\fP
 .RS 4
 \fIs\fP Pointer to subject string\&. A null pointer will unset the subject and perform a match with empty subject\&. 
 .br
@@ -974,59 +1011,36 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Match count 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const & s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const * s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
-\fBParameters:\fP
-.RS 4
-\fIs\fP Subject string \&. 
-.br
-\fIstart_offset\fP Offset from where matching will start in the subject string\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Match count 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexMatch::match()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::match (\fBString\fP const * s, PCRE2_SIZE start_offset = \fC0\fP)\fC [inline]\fP"
-
-.PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
-.PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIs\fP Pointer to subject string\&. A null pointer will unset the subject and perform a match with empty subject\&. 
 .br
 \fIstart_offset\fP Offset from where matching will start in the subject string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Match count 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::match()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBjpcre2::select\fP< Char_T, Map >::Regex::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
 
 .PP
 Provides boolean check for the status of the object\&. This overloaded boolean operator needs to be declared explicit to prevent implicit conversion and overloading issues\&.
@@ -1047,15 +1061,14 @@ if(re) {
 }
 .fi
 .PP
- 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if regex compiled successfully, false otherwise\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> bool \fBjpcre2::select\fP< Char_T, Map >::Regex::operator! () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> bool \fBjpcre2::select\fP< Char_T, Map >::Regex::operator! () const\fC [inline]\fP"
 
 .PP
 Provides boolean check for the status of the object\&. This is a safe boolean approach (no implicit conversion or overloading)\&. We don't need the explicit keyword here and thus it's the preferable method to check for object status that will work well with older compilers\&. e\&.g:
@@ -1070,7 +1083,8 @@ if(!re) {
 }
 .fi
 .PP
- Double bang trick:
+.PP
+Double bang trick:
 .PP
 .PP
 .nf
@@ -1082,54 +1096,53 @@ if(!!re) {
 }
 .fi
 .PP
- 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 true if regex compile failed, false otherwise\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::operator= (\fBRegex\fP const & r)\fC [inline]\fP"
-
-.PP
-Overloaded assignment operator\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fIr\fP \fBRegex\fP const & 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-*this 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::operator= (\fBRegex\fP && r)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::operator= (\fBRegex\fP && r)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. Overloaded move-assignment operator\&. This constructor steals resources from the argument\&. It leaves the argument in a valid but indeterminate sate\&. The indeterminate state can be returned to normal by calling \fBreset()\fP on that object\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIr\fP \fBRegex\fP&& 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 *this 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP * mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::operator= (\fBRegex\fP const & r)\fC [inline]\fP"
+
+.PP
+Overloaded assignment operator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP \fBRegex\fP const & 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP * mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
 Perl compatible replace method\&. Modifies subject string in-place and returns replace count\&.
 .PP
 It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImains\fP Pointer to subject string\&. 
 .br
@@ -1138,13 +1151,15 @@ It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&.
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replace count\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP * mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP * mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
@@ -1153,7 +1168,7 @@ Perl compatible replace method\&. Modifies subject string in-place and returns r
 .PP
 It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImains\fP Pointer to subject string\&. 
 .br
@@ -1162,13 +1177,15 @@ It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&.
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replace count\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
@@ -1177,7 +1194,7 @@ Perl compatible replace method\&. Returns replace count and discards subject str
 .PP
 It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImains\fP Subject string\&. 
 .br
@@ -1186,13 +1203,15 @@ It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&.
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replace count\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBSIZE_T\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::preplace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&.
@@ -1201,7 +1220,7 @@ Perl compatible replace method\&. Returns replace count and discards subject str
 .PP
 It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImains\fP Subject string\&. 
 .br
@@ -1210,47 +1229,20 @@ It's a shorthand method to \fC\fBRegexReplace::preplace()\fP\fP\&.
 \fImod\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 replace count\&. 
 .RE
 .PP
 
 .PP
-References JPCRE2_ASSERT\&.
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
-
-.PP
-Perform regex replace and return the replaced string using a temporary replace object\&. This temporary replace object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Subject string\&. 
-.br
-\fIrepl\fP String to replace with 
-.br
-\fImod\fP \fBModifier\fP string\&. 
-.br
-\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP * mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP * mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImains\fP Pointer to subject string 
 .br
@@ -1261,23 +1253,83 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Resultant string after regex replace 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexReplace::replace()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP * mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
+.RS 4
+\fImains\fP Pointer to subject string 
+.br
+\fIrepl\fP Pointer to string to replace with 
+.br
+\fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Resultant string after regex replace 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBRegexReplace::replace()\fP 
+.RE
+.PP
+
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP const & mains, \fBString\fP const & repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Perform regex replace and return the replaced string using a temporary replace object\&. This temporary replace object will get available options from this \fBRegex\fP object, that includes modifier table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImains\fP Subject string\&. 
+.br
+\fIrepl\fP String to replace with 
+.br
+\fImod\fP \fBModifier\fP string\&. 
+.br
+\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Resultant string after regex replace 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBRegexReplace::replace()\fP 
+.RE
+.PP
+
+.PP
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP const & mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
+
+.PP
+This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
+.PP
+\fBParameters\fP
 .RS 4
 \fImains\fP Subject string 
 .br
@@ -1288,77 +1340,52 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 \fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Resultant string after regex replace 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexReplace::replace()\fP 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBString\fP \fBjpcre2::select\fP< Char_T, Map >::Regex::replace (\fBString\fP * mains, \fBString\fP const * repl, \fBModifier\fP const & mod = \fC''\fP, \fBSIZE_T\fP * counter = \fC0\fP)\fC [inline]\fP"
-
 .PP
-This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. \&.\&.\&. 
-.PP
-\fBParameters:\fP
-.RS 4
-\fImains\fP Pointer to subject string 
-.br
-\fIrepl\fP Pointer to string to replace with 
-.br
-\fImod\fP \fBModifier\fP string\&. 
-.br
-\fIcounter\fP Pointer to a counter to store the number of replacement done\&. 
-.RE
-.PP
-\fBReturns:\fP
-.RS 4
-Resultant string after regex replace 
-.RE
-.PP
-\fBSee also:\fP
-.RS 4
-\fBRegexReplace::replace()\fP 
-.RE
-.PP
-
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::reset ()\fC [inline]\fP"
+References jpcre2::select< Char_T, Map >::Regex::initReplace(), jpcre2::select< Char_T, Map >::RegexReplace::replace(), jpcre2::select< Char_T, Map >::RegexReplace::setModifier(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceCounter(), jpcre2::select< Char_T, Map >::RegexReplace::setReplaceWith(), and jpcre2::select< Char_T, Map >::RegexReplace::setSubject()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::reset ()\fC [inline]\fP"
 
 .PP
 Reset all class variables to its default (initial) state including memory\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::resetCharacterTables ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::resetCharacterTables ()\fC [inline]\fP"
 
 .PP
 Recreate character tables used by PCRE2\&. You should call this function after changing the locale to remake the character tables according to the new locale\&. These character tables are used to compile the regex and used by match and replace operation\&. A separate call to \fBcompile()\fP will be required to apply the new character tables\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::resetErrors ()\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::resetErrors ()\fC [inline]\fP"
 
 .PP
 Reset regex compile related errors to zero\&. 
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 A reference to the \fBRegex\fP object 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexReplace::resetErrors()\fP 
 .PP
@@ -1366,22 +1393,22 @@ A reference to the \fBRegex\fP object
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setJpcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set JPCRE2 option for compile (overwrites existing option) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setJpcre2Option()\fP 
 .PP
@@ -1389,22 +1416,22 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setModifier (\fBModifier\fP const & x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setModifier (\fBModifier\fP const & x)\fC [inline]\fP"
 
 .PP
 set the modifier (resets all JPCRE2 and PCRE2 options) by calling \fBRegex::changeModifier()\fP\&. Re-initializes the option bits for PCRE2 and JPCRE2 options, then parses the modifier and sets equivalent PCRE2 and JPCRE2 options\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP \fBModifier\fP string\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setModifier()\fP 
 .PP
@@ -1412,28 +1439,30 @@ Reference to the calling \fBRegex\fP object\&.
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP"
+.PP
+References jpcre2::select< Char_T, Map >::Regex::changeModifier()\&.
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setModifierTable (\fBModifierTable\fP const * mdt)\fC [inline]\fP"
 
 .PP
 Set a custom modifier table to be used\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fImdt\fP pointer to \fBModifierTable\fP object\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setNewLine (\fBUint\fP value)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setNewLine (\fBUint\fP value)\fC [inline]\fP"
 
 .PP
 Set new line convention\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIvalue\fP New line option value\&. 
 .PP
@@ -1446,63 +1475,62 @@ PCRE2_NEWLINE_ANY       Any Unicode newline sequence
 
 .fi
 .PP
- 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPattern (\fBString\fP const & re)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPattern (\fBString\fP const & re)\fC [inline]\fP"
 
 .PP
 Set the pattern string to compile\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPattern (\fBString\fP const * re)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPattern (\fBString\fP const * re)\fC [inline]\fP"
 
 .PP
 This is an overloaded member function, provided for convenience\&. It differs from the above function only in what argument(s) it accepts\&. 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIre\fP Pattern string pointer, null pointer will unset it\&. 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
 
-.SS "template<typename Char_T, template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP& \fBjpcre2::select\fP< Char_T, Map >::Regex::setPcre2Option (\fBUint\fP x)\fC [inline]\fP"
 
 .PP
 Set PCRE2 option for compile (overwrites existing option) 
 .PP
-\fBParameters:\fP
+\fBParameters\fP
 .RS 4
 \fIx\fP Option value 
 .RE
 .PP
-\fBReturns:\fP
+\fBReturns\fP
 .RS 4
 Reference to the calling \fBRegex\fP object\&. 
 .RE
 .PP
-\fBSee also:\fP
+\fBSee also\fP
 .RS 4
 \fBRegexMatch::setPcre2Option()\fP 
 .PP

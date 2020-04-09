@@ -1,0 +1,4 @@
+<map id="jpcre2::select::RegexMatch::addModifier" name="jpcre2::select::RegexMatch::addModifier">
+<area shape="rect" id="node1" title="Parse modifier string and add equivalent PCRE2 and JPCRE2 options." alt="" coords="272,5,471,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a0e45941b9e60f6faba818e5bfa272d87" title="Call RegexMatch::addModifier(Modifier const&amp; mod)." alt="" coords="5,5,224,47"/>
+</map>

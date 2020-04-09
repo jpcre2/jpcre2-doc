@@ -1,3 +1,6 @@
 <map id="jpcre2::ModifierTable::toCompileOption" name="jpcre2::ModifierTable::toCompileOption">
-<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#aeecd73bbba6ace8de5bd0fea804084cf" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options. " alt="" coords="196,5,343,47"/>
+<area shape="rect" id="node1" title="Modifier parser for compile related options." alt="" coords="419,39,577,80"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1Regex.html#aeecd73bbba6ace8de5bd0fea804084cf" title="Parse modifier and add/remove equivalent PCRE2 and JPCRE2 options." alt="" coords="212,39,371,80"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1Regex.html#a68a42b8e6ab68824e7a955a093030377" title="Parse modifier string and add equivalent PCRE2 and JPCRE2 options." alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1Regex.html#a3deb993133d100cd50b6f8d8d3aadb57" title="set the modifier (resets all JPCRE2 and PCRE2 options) by calling Regex::changeModifier()." alt="" coords="5,71,164,112"/>
 </map>

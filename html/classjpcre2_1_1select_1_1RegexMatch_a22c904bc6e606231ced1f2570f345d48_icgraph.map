@@ -1,0 +1,4 @@
+<map id="jpcre2::select::RegexMatch::setSubject" name="jpcre2::select::RegexMatch::setSubject">
+<area shape="rect" id="node1" title="Set the subject string for match." alt="" coords="272,5,471,47"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1MatchEvaluator.html#a217a3076e370f2da91aa927ebd4b5bb8" title="Call RegexMatch::setSubject(String const &amp;s)." alt="" coords="5,5,224,47"/>
+</map>

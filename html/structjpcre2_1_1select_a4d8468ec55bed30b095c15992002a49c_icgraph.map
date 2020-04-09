@@ -1,5 +1,6 @@
 <map id="jpcre2::select::getErrorMessage" name="jpcre2::select::getErrorMessage">
-<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#a02a220051003bc12b1edfea2bd4ef915" title="Returns the last error message. " alt="" coords="214,5,397,47"/>
-<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1RegexReplace.html#abf43d9b8dbc8f99d4102a88f7eb0d79d" title="Returns the last error message. " alt="" coords="208,71,403,112"/>
-<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1Regex.html#a165f25d654a9a2a3b750cfd8dbe877ec" title="Returns the last error message. " alt="" coords="232,136,379,177"/>
+<area shape="rect" id="node1" title="Returns error message (either JPCRE2 or PCRE2) from error number and error offset." alt="" coords="264,71,433,112"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1select_1_1RegexMatch.html#a02a220051003bc12b1edfea2bd4ef915" title="Returns the last error message." alt="" coords="11,5,210,47"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1select_1_1RegexReplace.html#abf43d9b8dbc8f99d4102a88f7eb0d79d" title="Returns the last error message." alt="" coords="5,71,216,112"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1select_1_1Regex.html#a165f25d654a9a2a3b750cfd8dbe877ec" title="Returns the last error message." alt="" coords="31,136,190,177"/>
 </map>

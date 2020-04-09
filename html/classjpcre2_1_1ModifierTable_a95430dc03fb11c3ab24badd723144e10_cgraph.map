@@ -1,0 +1,8 @@
+<map id="jpcre2::ModifierTable::setReplaceModifierTable" name="jpcre2::ModifierTable::setReplaceModifierTable">
+<area shape="rect" id="node1" title="This is an overloaded member function, provided for convenience. It differs from the above function o..." alt="" coords="5,72,196,113"/>
+<area shape="rect" id="node2" href="$classjpcre2_1_1ModifierTable.html#a67a0ee2ebacb8c44c94fb9e65d29f8f0" title="Clear the replace modifier table to its initial (empty) state." alt="" coords="244,39,447,80"/>
+<area shape="rect" id="node6" href="$classjpcre2_1_1ModifierTable.html#afe8db7f8218e67cedaac6f91c8892162" title="Set modifier table for replace." alt="" coords="250,104,441,145"/>
+<area shape="rect" id="node3" href="$classjpcre2_1_1ModifierTable.html#a758813f937d60504e2eb6da4163b3a2b" title="Clear the modifier tables to their initial (empty) state." alt="" coords="495,39,653,80"/>
+<area shape="rect" id="node4" href="$classjpcre2_1_1ModifierTable.html#ac5c2a8fb57922df1c2741b894c65da5e" title="Clear the compile modifier table to its initial (empty) state." alt="" coords="701,5,905,47"/>
+<area shape="rect" id="node5" href="$classjpcre2_1_1ModifierTable.html#ae672621f97a7085328374b9ccc1d2b8e" title="Clear the match modifier table to its initial (empty) state." alt="" coords="708,71,899,112"/>
+</map>
