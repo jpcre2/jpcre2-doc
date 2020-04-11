@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>PCRE2 is the name used for a revised API for the PCRE library, which is a set of functions, written in C, that implement regular expression pattern matching using the same syntax and semantics as Perl, with just a few differences. Some features that appeared in Python and the original PCRE before they appeared in Perl are also available using the Python syntax. </p>
 </blockquote>
 <p>This provides some C++ wrapper classes/functions to perform regex operations such as regex match and regex replace.</p>
-<p>You can read the complete documentation <a href="http://docs.neurobin.org/jpcre2/index.html">here</a> or download it from <a href="https://github.com/jpcre2/jpcre2-doc">jpcre2-doc repository</a>.</p>
+<p>You can read the complete documentation <a href="http://docs.neurobin.org/jpcre2/">here</a> or download it from <a href="https://github.com/jpcre2/jpcre2-doc">jpcre2-doc repository</a>.</p>
 <h1><a class="anchor" id="dependency"></a>
 Dependency</h1>
 <ol type="1">
@@ -116,7 +116,9 @@ Getting started</h1>
 </ul>
 <p><b>Install:</b></p>
 <p>You can copy this header to a standard include directory (folder) so that it becomes available from a standard include path.</p>
-<p>On Unix you can do:</p>
+<p><b><a href="https://github.com/jpcre2/jpcre2/archive/release.zip">Download</a> or clone the release branch unless you want the master (continuous dev) branch specifically:</b></p>
+<div class="fragment"><div class="line">git clone --branch release https://github.com/jpcre2/jpcre2</div>
+</div><!-- fragment --><p>On Unix you can do:</p>
 <div class="fragment"><div class="line">./configure</div>
 <div class="line">make</div>
 <div class="line">make install #(may require root privilege)</div>
@@ -129,7 +131,7 @@ Getting started</h1>
 </div><!-- fragment --><p>If PCRE2 is not installed in the standard path, add the path with <code>-L</code> option:</p>
 <div class="fragment"><div class="line">g++ main.cpp -L/my/library/path -lpcre2-8</div>
 </div><!-- fragment --><h1><a class="anchor" id="coding-guide"></a>
-Coding guide</h1>
+Basic usage</h1>
 <p>Performing a match or replacement against regex pattern involves two steps:</p>
 <ol type="1">
 <li>Compiling the pattern</li>
@@ -848,18 +850,7 @@ Short examples</h1>
 <div class="line"><a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html">jp::RegexReplace</a>(&amp;re).<a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html#a454e9333152df917153d0265da4ea668">setSubject</a>(<span class="stringliteral">&quot;I am the subject\tTo be swapped according to tab&quot;</span>)</div>
 <div class="line">                     .<a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html#ad3b9aa22d7d410db1d53002c824ecd72">setReplaceWith</a>(<span class="stringliteral">&quot;$2 $1&quot;</span>)</div>
 <div class="line">                     .<a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html#afbd99cc287436226e3510b71ba21eb8a">replace</a>();</div>
-</div><!-- fragment --><h1><a class="anchor" id="api-change-notice"></a>
-API change notice</h1>
-<ul>
-<li><code><a class="el" href="structjpcre2_1_1select.html" title="struct to select the types.">jpcre2::select</a></code> no longer permits explicit bit size specification.</li>
-<li><code>ConvInt</code>, <code>ConvUTF</code> (including <code>Convert16</code> and <code>Convert32</code>) is removed.</li>
-<li><code><a class="el" href="structjpcre2_1_1select.html" title="struct to select the types.">jpcre2::select</a></code> can take an optional second template parameter to specify the map container.</li>
-<li>Macro <code>JPCRE2_DISABLE_CHAR1632</code> and <code>JPCRE2_DISABLE_CODE_UNIT_WIDTH_VALIDATION</code> is removed.</li>
-</ul>
-<blockquote class="doxtable">
-<p>For complete changes see the changelog file </p>
-</blockquote>
-<h1><a class="anchor" id="test-suit"></a>
+</div><!-- fragment --><h1><a class="anchor" id="test-suit"></a>
 Test suit</h1>
 <p>Some test programs are written to check for major flaws like segfault, memory leak and crucial input/output validation. Before trying to run the tests, make sure you have all 3 PCRE2 libraries installed on your system.</p>
 <p>For the simplest (minimal) test, run:</p>
@@ -904,7 +895,7 @@ The configure script</h1>
 </table>
 <h1><a class="anchor" id="contributing-pull-request"></a>
 Contributing/Pull request</h1>
-<p><b>Please do all pull requests against the master branch. The default branch is 'release' which is not where continuous development of JPCRE2 is done.</b></p>
+<p><strike><b>Please do all pull requests against the master branch. The default branch is 'release' which is not where continuous development of JPCRE2 is done.</b></strike></p>
 <p>If you find any error in the documentation or confusing/misleading use of terms, or anything that cathces your eye and feels not right, please open an issue in the <a href="https://github.com/jpcre2/jpcre2/issues">issue page</a>. Or if you want to fix it and do pull request then use the master branch.</p>
 <p>This page is generated from doxy/doxydoc.md file, thus changing the README.md file will have no impact.</p>
 <h1><a class="anchor" id="licence"></a>
