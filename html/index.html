@@ -154,7 +154,7 @@ Compile the regex</h3>
 <div class="fragment"><div class="line">re.setPattern(<span class="stringliteral">&quot;(?:(?&lt;word&gt;[?.#@:]+)|(?&lt;word&gt;\\w+))\\s*(?&lt;digit&gt;\\d+)&quot;</span>)  <span class="comment">//set pattern</span></div>
 <div class="line">  .addModifier(<span class="stringliteral">&quot;iJ&quot;</span>)                                                    <span class="comment">//add modifier (J for PCRE2_DUPNAMES)</span></div>
 <div class="line">  .compile();                                                           <span class="comment">//Finally compile it.</span></div>
-<div class="line">      </div>
+<div class="line"> </div>
 <div class="line"><span class="comment">//Do not use setModifier() after adding any modifier/s, it will reset them.</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//Another way is to use constructor to initialize and compile at the same time:</span></div>
@@ -337,7 +337,7 @@ Simple example</h4>
 <div class="line">rr.setRegexObject(&amp;re)</div>
 <div class="line">  .setSubject(&amp;s3)</div>
 <div class="line">  .setModifier(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line">  </div>
+<div class="line"> </div>
 <div class="line">std::cout&lt;&lt;<span class="stringliteral">&quot;Result:\n&quot;</span>&lt;&lt;</div>
 <div class="line">    rr.nreplace(<a class="code" href="classjpcre2_1_1select_1_1MatchEvaluator.html">jp::MatchEvaluator</a>(callback1)); <span class="comment">//replace() function can take the same argument</span></div>
 </div><!-- fragment --><p>Detailed examples are in the <a class="el" href="testme_8cpp.html">testme.cpp</a> file.</p>
@@ -388,7 +388,7 @@ Re-use match data</h4>
 <div class="fragment"><div class="line"><a class="code" href="classjpcre2_1_1select_1_1MatchEvaluator.html">jp::MatchEvaluator</a> me; <span class="comment">//no vector with jp::callback::erase callback</span></div>
 <div class="line">me.setSubject(sub).setRegexObject(&amp;re); <span class="comment">//no data yet.</span></div>
 </div><!-- fragment --><p>Let's say, we have a callback <code>cb3</code> that implements NumSub and MapNas and we do this:</p>
-<div class="fragment"><div class="line">me.setCallback(cb3).nreplace(); </div>
+<div class="fragment"><div class="line">me.setCallback(cb3).nreplace();</div>
 <div class="line"><span class="comment">//this creates match data for NumSub and MapNas and performs the replacement.</span></div>
 </div><!-- fragment --><p>Now, if we want to perform the replacement with a different callback function <code>cb2</code> which implements only MapNas or NumSub or both, we can re-use the data created above:</p>
 <div class="fragment"><div class="line">me.setCallback(cb2).nreplace(<span class="keyword">false</span>);</div>
@@ -409,7 +409,8 @@ Modifiers</h1>
 <p><b>JPCRE2</b> uses a default set of modifier to provide an easy path to setting different options for different operations. There are three basic operations, namely compile, match and replace and thus the set is divided into three subset of modifiers. For convenience, we call them modifier tables.</p>
 <p>If the default modifier table is not suitable for your application, you may use a custom modifier table instead of the default one. The <code><a class="el" href="classjpcre2_1_1ModifierTable.html" title="Lets you create custom modifier tables.">jpcre2::ModifierTable</a></code> class provides this interface. (note the namespace, it's directly under <code><a class="el" href="namespacejpcre2.html">jpcre2</a></code>).</p>
 <blockquote class="doxtable">
-<p>All modifier strings are parsed and converted to equivalent PCRE2 and JPCRE2 options on the fly. If you don't want it to spend any time parsing modifier then pass the equivalent option directly with one of the many variants of <code>addJpcre2Option()</code> and <code>addPcre2Option()</code> functions. </p>
+<p>All modifier strings are parsed and converted to equivalent PCRE2 and JPCRE2 options on the fly. If you don't want it to spend any time parsing modifier then pass the equivalent option directly with one of the many variants of <code>addJpcre2Option()</code> and <code>addPcre2Option()</code> functions.</p>
+<p>Be careful when you pass these options. A common mistake is to pass compile related options such as <code>PCRE2_CASELESS</code> (modifier i) to match operation; <code>PCRE2_CASELESS</code> needs to be compiled in the regex, passing it during match will have no effect. </p>
 </blockquote>
 <p><b>Types of modifiers:</b></p>
 <ol type="1">
@@ -486,9 +487,9 @@ Modifier table</h2>
 <p>Modifier table is an instance of the <code><a class="el" href="classjpcre2_1_1ModifierTable.html" title="Lets you create custom modifier tables.">jpcre2::ModifierTable</a></code> class. You can bind this table with any of the compile, match and replace related class objects. Different objects can have different tables.</p>
 <p>Examples:</p>
 <div class="fragment"><div class="line">        <span class="comment">/* ***************************</span></div>
-<div class="line"><span class="comment">         * Compile modifier table </span></div>
+<div class="line"><span class="comment">         * Compile modifier table</span></div>
 <div class="line"><span class="comment">         * ***************************/</span></div>
-<div class="line">             </div>
+<div class="line"> </div>
 <div class="line"><span class="comment">//character table is either std::string or const char* (not jp::String)</span></div>
 <div class="line">std::string nametab = <span class="stringliteral">&quot;IJMS&quot;</span>; <span class="comment">//arbitrary modifier characters.</span></div>
 <div class="line"><span class="comment">//now the option values sequentially</span></div>
@@ -554,7 +555,7 @@ Code unit width quirk</h2>
 <div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ...</span></div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>This is what will happen when you compile:</p>
@@ -804,7 +805,7 @@ Short examples</h1>
 <div class="line">std::cout&lt;&lt;<span class="stringliteral">&quot;\nCaptured group (digit) of first match: &quot;</span>&lt;&lt;vec_nas[0][<span class="stringliteral">&quot;digit&quot;</span>];</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//Trying to access a non-existence named substirng with [] operator will give you empty string</span></div>
-<div class="line"><span class="comment">//If the existence of a substring is important, use the std::map::find() or std::map::at() </span></div>
+<div class="line"><span class="comment">//If the existence of a substring is important, use the std::map::find() or std::map::at()</span></div>
 <div class="line"><span class="comment">//(&gt;=C++11) function to access map elements.</span></div>
 <div class="line"><span class="comment">/* //&gt;=C++11</span></div>
 <div class="line"><span class="comment">try{</span></div>
@@ -826,7 +827,7 @@ Short examples</h1>
 <div class="line"><span class="comment"> * Replace pattern in a string with a replacement string</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * The Regex::replace() function can take a subject and replacement string as argument.</span></div>
-<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * You can also pass the subject with setSubject() function in method chain,</span></div>
 <div class="line"><span class="comment"> * replacement string with setReplaceWith() function in method chain, etc ...</span></div>
 <div class="line"><span class="comment"> * A call to RegexReplace::replace() in the method chain will return the resultant string</span></div>
@@ -844,7 +845,7 @@ Short examples</h1>
 <div class="line">std::cout&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>&lt;&lt;</div>
 <div class="line"><a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a>(<span class="stringliteral">&quot;^([^\t]+)\t([^\t]+)$&quot;</span>)</div>
 <div class="line">    .<a class="code" href="classjpcre2_1_1select_1_1Regex.html#a6cf544defa7a782ea221f190cb3ebef9">replace</a>(<span class="stringliteral">&quot;I am the subject\tTo be swapped according to tab&quot;</span>, <span class="stringliteral">&quot;$2 $1&quot;</span>);</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line"><span class="comment">//Doing the above with method chain:</span></div>
 <div class="line">re.compile(<span class="stringliteral">&quot;^([^\t]+)\t([^\t]+)$&quot;</span>);</div>
 <div class="line"><a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html">jp::RegexReplace</a>(&amp;re).<a class="code" href="classjpcre2_1_1select_1_1RegexReplace.html#a454e9333152df917153d0265da4ea668">setSubject</a>(<span class="stringliteral">&quot;I am the subject\tTo be swapped according to tab&quot;</span>)</div>
