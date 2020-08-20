@@ -116,11 +116,59 @@ $(document).ready(function(){initNavTree('test__issue__29_8cpp.html',''); initRe
 </map>
 </div>
 </div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Test cases for issue 29 on Github. </p><div class="fragment"></div><!-- fragment --> <dl class="section author"><dt>Author</dt><dd><a href="https://github.com/neurobin">Md Jahidul Hamid</a> </dd>
+<div class="textblock"><p>Test cases for <a href="https://github.com/jpcre2/jpcre2/issues/29">issue 29 on Github</a> </p><div class="fragment"><div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="jpcre2_8hpp.html">jpcre2.hpp</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <a class="code" href="structjpcre2_1_1select.html">jpcre2::select&lt;char&gt;</a> <a class="code" href="structjpcre2_1_1select.html">jp</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> test_match(<a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> &amp;re, std::string <span class="keyword">const</span> &amp;subject) {</div>
+<div class="line">    <a class="code" href="classjpcre2_1_1select_1_1RegexMatch.html">jp::RegexMatch</a> rm;</div>
+<div class="line">    <a class="code" href="structjpcre2_1_1select.html#aa0ee995740f7f2c7bd176058e16049a4">jp::VecNum</a> matches;</div>
+<div class="line">    <span class="keywordtype">bool</span> out_of_range_occured = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordtype">size_t</span> num = rm</div>
+<div class="line">        .setRegexObject(&amp;re)</div>
+<div class="line">        .setNumberedSubstringVector(&amp;matches)</div>
+<div class="line">        .setSubject(subject)</div>
+<div class="line">        .match();</div>
+<div class="line">    assert(num &gt; 0);</div>
+<div class="line">    assert(matches[0][1] != <span class="stringliteral">&quot;dummy&quot;</span>); <span class="comment">// idx 1 should be accessible</span></div>
+<div class="line">    assert(matches[0][2] != <span class="stringliteral">&quot;dummy&quot;</span>); <span class="comment">// idx 2 should be accessible</span></div>
+<div class="line">    assert(matches[0][3] != <span class="stringliteral">&quot;dummy&quot;</span>); <span class="comment">// idx 3 should be accessible</span></div>
+<div class="line">    <span class="keywordflow">try</span>{</div>
+<div class="line">        assert(matches[0].at(4) != <span class="stringliteral">&quot;dummy&quot;</span>); <span class="comment">// idx 4 should not be accessible</span></div>
+<div class="line">    } <span class="keywordflow">catch</span>(std::out_of_range <span class="keyword">const</span> &amp; e){</div>
+<div class="line">        out_of_range_occured = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">if</span>(!out_of_range_occured){</div>
+<div class="line">        std::cout&lt;&lt;<span class="stringliteral">&quot;E: std::out_of_range exception was not thrown. vecnum has more capture groups than expected.\n&quot;</span>;</div>
+<div class="line">        exit(1);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(){</div>
+<div class="line">    <span class="comment">// check with a regex pattern with 3 capture groups</span></div>
+<div class="line">    <a class="code" href="classjpcre2_1_1select_1_1Regex.html">jp::Regex</a> re(<span class="stringliteral">&quot;^(\\d+)([abc])?([XYZ])?$&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    test_match(re, <span class="stringliteral">&quot;42bZ&quot;</span>);</div>
+<div class="line">    test_match(re, <span class="stringliteral">&quot;23Z&quot;</span>);</div>
+<div class="line">    test_match(re, <span class="stringliteral">&quot;54b&quot;</span>);</div>
+<div class="line">    test_match(re, <span class="stringliteral">&quot;13&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="section author"><dt>Author</dt><dd><a href="https://github.com/neurobin">Md Jahidul Hamid</a> </dd>
 <dd>
 <a href="https://github.com/mbunkus">Moritz Bunkus</a> </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="astructjpcre2_1_1select_html_aa0ee995740f7f2c7bd176058e16049a4"><div class="ttname"><a href="structjpcre2_1_1select.html#aa0ee995740f7f2c7bd176058e16049a4">jpcre2::select::VecNum</a></div><div class="ttdeci">std::vector&lt; NumSub &gt; VecNum</div><div class="ttdoc">Vector of matches with numbered substrings.</div><div class="ttdef"><b>Definition:</b> jpcre2.hpp:1279</div></div>
+<div class="ttc" id="ajpcre2_8hpp_html"><div class="ttname"><a href="jpcre2_8hpp.html">jpcre2.hpp</a></div><div class="ttdoc">Main header file for JPCRE2 library to be included by programs that uses its functionalities....</div></div>
+<div class="ttc" id="aclassjpcre2_1_1select_1_1Regex_html"><div class="ttname"><a href="classjpcre2_1_1select_1_1Regex.html">jpcre2::select::Regex</a></div><div class="ttdoc">Provides public constructors to create Regex object.</div><div class="ttdef"><b>Definition:</b> jpcre2.hpp:3550</div></div>
+<div class="ttc" id="astructjpcre2_1_1select_html"><div class="ttname"><a href="structjpcre2_1_1select.html">jpcre2::select</a></div><div class="ttdoc">struct to select the types.</div><div class="ttdef"><b>Definition:</b> jpcre2.hpp:1238</div></div>
+<div class="ttc" id="aclassjpcre2_1_1select_1_1RegexMatch_html"><div class="ttname"><a href="classjpcre2_1_1select_1_1RegexMatch.html">jpcre2::select::RegexMatch</a></div><div class="ttdoc">Provides public constructors to create RegexMatch objects.</div><div class="ttdef"><b>Definition:</b> jpcre2.hpp:1375</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
