@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Thu Apr 30 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::MatchEvaluatorCallback< T1, T2, T3 >" 3 "Thu Aug 20 2020" "Version 10.32.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -44,7 +44,7 @@ jp::String myCallback2(jp::NumSub const &m1, jp::MapNas const &m2, void*){
     return "("+m1[0]+"/"+m2\&.at("total")+")";
 }
 //Now you can pass these functions in MatchEvaluator constructors to create a match evaluator
-jp::MatchEvaluator me1(myCallback1); 
+jp::MatchEvaluator me1(myCallback1);
 
 //Examples with lambda (>=C++11)
 jp::MatchEvaluator me2([](jp::NumSub const &m1, void*, void*)

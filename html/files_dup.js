@@ -5,6 +5,7 @@ var files_dup =
     [ "test0.cpp", "test0_8cpp.html", null ],
     [ "test16.cpp", "test16_8cpp.html", null ],
     [ "test32.cpp", "test32_8cpp.html", null ],
+    [ "test_issue_29.cpp", "test__issue__29_8cpp.html", null ],
     [ "test_match.cpp", "test__match_8cpp.html", null ],
     [ "test_match2.cpp", "test__match2_8cpp.html", null ],
     [ "test_pthread.cpp", "test__pthread_8cpp.html", null ],

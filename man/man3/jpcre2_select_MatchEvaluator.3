@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::MatchEvaluator" 3 "Thu Apr 30 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::MatchEvaluator" 3 "Thu Aug 20 2020" "Version 10.32.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -229,7 +229,7 @@ jpcre2::select< Char_T, Map >::MatchEvaluator \- This class inherits \fBRegexMat
 .br
 .RI "Get subject string (by value)\&. "
 .ti -1c
-.RI "virtual const \fBString\fP * \fBgetSubjectPointer\fP () const"
+.RI "virtual \fBString\fP const  * \fBgetSubjectPointer\fP () const"
 .br
 .RI "Get pointer to subject string\&. "
 .ti -1c
@@ -261,7 +261,7 @@ jpcre2::select< Char_T, Map >::MatchEvaluator \- This class inherits \fBRegexMat
 .br
 .RI "Get pre-set match end offset vector pointer\&. "
 .ti -1c
-.RI "virtual const \fBRegex\fP * \fBgetRegexObject\fP () const"
+.RI "virtual \fBRegex\fP const  * \fBgetRegexObject\fP () const"
 .br
 .RI "Get a pointer to the associated \fBRegex\fP object\&. "
 .ti -1c
@@ -338,7 +338,7 @@ me\&.setRegexObject(&re)\&.setSubject("string")\&.setCallback(callback5)\&.nrepl
 //In above, nreplace() populates jp::NumSub and jp::MapNtn with match data\&.
 
 me\&.setCallback(callback4)\&.nreplace(false);
-//the above uses previous match result (note the 'false') which is OK, 
+//the above uses previous match result (note the 'false') which is OK,
 //because, callback4 requires jp::MapNtn which was made available in the previous operation\&.
 
 //but the following is not OK: (assertion failure)
@@ -878,7 +878,7 @@ PCRE2 option for match operation
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> virtual const \fBRegex\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getRegexObject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> virtual \fBRegex\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getRegexObject () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get a pointer to the associated \fBRegex\fP object\&. If no actual \fBRegex\fP object is associated, null is returned\&. 
@@ -916,7 +916,7 @@ subject string
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> virtual const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getSubjectPointer () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> virtual \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexMatch::getSubjectPointer () const\fC [inline]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
 
 .PP
 Get pointer to subject string\&. Data can not be changed with this pointer\&. 
@@ -1123,7 +1123,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_nas["word"]; //wrong
-map_nas\&.at("word"); //ok 
+map_nas\&.at("word"); //ok
 
 .fi
 .PP
@@ -1155,7 +1155,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_nas["word"]; //wrong
-map_nas\&.at("word"); //ok 
+map_nas\&.at("word"); //ok
 
 .fi
 .PP
@@ -1187,7 +1187,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_ntn["word"]; //wrong
-map_ntn\&.at("word"); //ok 
+map_ntn\&.at("word"); //ok
 
 .fi
 .PP
@@ -1235,7 +1235,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_nas["word"]; //wrong
-map_nas\&.at("word"); //ok 
+map_nas\&.at("word"); //ok
 
 .fi
 .PP
@@ -1267,7 +1267,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_nas["word"]; //wrong
-map_nas\&.at("word"); //ok 
+map_nas\&.at("word"); //ok
 
 .fi
 .PP
@@ -1299,7 +1299,7 @@ This is an overloaded member function, provided for convenience\&. It differs fr
 .PP
 .nf
 map_ntn["word"]; //wrong
-map_ntn\&.at("word"); //ok 
+map_ntn\&.at("word"); //ok
 
 .fi
 .PP

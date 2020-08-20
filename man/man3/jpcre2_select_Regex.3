@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::Regex" 3 "Thu Apr 30 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::Regex" 3 "Thu Aug 20 2020" "Version 10.32.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -97,7 +97,7 @@ jpcre2::select< Char_T, Map >::Regex \- Provides public constructors to create \
 .br
 .RI "Get pattern string\&. "
 .ti -1c
-.RI "const \fBString\fP * \fBgetPatternPointer\fP () const"
+.RI "\fBString\fP const  * \fBgetPatternPointer\fP () const"
 .br
 .RI "Get pointer to pattern string\&. "
 .ti -1c
@@ -325,8 +325,6 @@ Compile pattern with initialization\&.
 \fBParameters\fP
 .RS 4
 \fIre\fP Pattern string 
-.br
- 
 .RE
 .PP
 
@@ -870,7 +868,7 @@ pattern string of type \fBjpcre2::select::String\fP
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPatternPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::Regex::getPatternPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to pattern string\&. 

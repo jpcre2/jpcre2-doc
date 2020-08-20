@@ -36,7 +36,7 @@ var classjpcre2_1_1select_1_1Regex =
     [ "getModifierTable", "classjpcre2_1_1select_1_1Regex.html#a993301f3de992bbe6f5d2def3ca9b99b", null ],
     [ "getNewLine", "classjpcre2_1_1select_1_1Regex.html#a56c7f5056c62767b7a8533981948531c", null ],
     [ "getPattern", "classjpcre2_1_1select_1_1Regex.html#ae261f05b9c829f30fee64c9ab317dc6c", null ],
-    [ "getPatternPointer", "classjpcre2_1_1select_1_1Regex.html#af08949390e8d2d59b9744f86fec020ae", null ],
+    [ "getPatternPointer", "classjpcre2_1_1select_1_1Regex.html#a6fdb04c67ddea00f0f079b2824d4f6f6", null ],
     [ "getPcre2Code", "classjpcre2_1_1select_1_1Regex.html#ac8a293fd5c036892703d328e86a340c3", null ],
     [ "getPcre2Option", "classjpcre2_1_1select_1_1Regex.html#a89ffe857fec670236f88f82a9b4f0dfe", null ],
     [ "getReplaceObject", "classjpcre2_1_1select_1_1Regex.html#a2de440221b27740fd70c88e13191eccf", null ],

@@ -1,4 +1,4 @@
-.TH "jpcre2::select< Char_T, Map >::RegexReplace" 3 "Thu Apr 30 2020" "Version 10.31.04" "JPCRE2" \" -*- nroff -*-
+.TH "jpcre2::select< Char_T, Map >::RegexReplace" 3 "Thu Aug 20 2020" "Version 10.32.01" "JPCRE2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -65,7 +65,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get replacement string\&. "
 .ti -1c
-.RI "const \fBString\fP * \fBgetReplaceWithPointer\fP () const"
+.RI "\fBString\fP const  * \fBgetReplaceWithPointer\fP () const"
 .br
 .RI "Get pointer to replacement string\&. "
 .ti -1c
@@ -73,7 +73,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get subject string\&. "
 .ti -1c
-.RI "const \fBString\fP * \fBgetSubjectPointer\fP () const"
+.RI "\fBString\fP const  * \fBgetSubjectPointer\fP () const"
 .br
 .RI "Get pointer to subject string\&. "
 .ti -1c
@@ -97,7 +97,7 @@ jpcre2::select< Char_T, Map >::RegexReplace \- Provides public constructors to c
 .br
 .RI "Get JPCRE2 option\&. "
 .ti -1c
-.RI "const \fBRegex\fP * \fBgetRegexObject\fP () const"
+.RI "\fBRegex\fP const  * \fBgetRegexObject\fP () const"
 .br
 .RI "Get a pointer to the associated \fBRegex\fP object\&. "
 .ti -1c
@@ -598,7 +598,7 @@ PCRE2 option for replace
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBRegex\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getRegexObject () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBRegex\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getRegexObject () const\fC [inline]\fP"
 
 .PP
 Get a pointer to the associated \fBRegex\fP object\&. If no actual \fBRegex\fP object is associated, null is returned 
@@ -620,7 +620,7 @@ replacement string
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWithPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getReplaceWithPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to replacement string\&. 
@@ -658,7 +658,7 @@ subject string
 .RE
 .PP
 
-.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> const \fBString\fP* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubjectPointer () const\fC [inline]\fP"
+.SS "template<typename Char_T , template< typename\&.\&.\&. > class Map = std::map> \fBString\fP const* \fBjpcre2::select\fP< Char_T, Map >::RegexReplace::getSubjectPointer () const\fC [inline]\fP"
 
 .PP
 Get pointer to subject string\&. 
